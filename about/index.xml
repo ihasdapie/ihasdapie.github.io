@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Brian Chen</title>
+    
+    
+    
+    <link>//chenbrian.ca/about/</link>
+    <description>Recent content in Abouts on Brian Chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Brian Chen 2020</copyright>
+    <lastBuildDate>Fri, 31 Jul 2020 15:39:08 -0700</lastBuildDate>
+    
+	<atom:link href="//chenbrian.ca/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>//chenbrian.ca/about/about/</link>
+      <pubDate>Fri, 31 Jul 2020 15:39:08 -0700</pubDate>
+      
+      <guid>//chenbrian.ca/about/about/</guid>
+      <description>
+        
+          &lt;img src=&#34;//chenbrian.ca/about/about/../about_image.png&#34;/&gt;
+          
+        
+        
+        
+          Hi, I&amp;rsquo;m Brian and I&amp;rsquo;m a student, software developer, badminton player, cook, and pokemon go enthusiast Format: 
+          
+        
+        </description>
+    </item>
+    
+  </channel>
+</rss>
