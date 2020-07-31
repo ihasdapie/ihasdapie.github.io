@@ -10,10 +10,50 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Brian Chen 2020</copyright>
-    <lastBuildDate>Fri, 31 Jul 2020 15:39:08 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2020 15:40:50 -0700</lastBuildDate>
     
 	<atom:link href="//chenbrian.ca/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Contact</title>
+      <link>//chenbrian.ca/contact/contact/</link>
+      <pubDate>Fri, 31 Jul 2020 15:40:50 -0700</pubDate>
+      
+      <guid>//chenbrian.ca/contact/contact/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>//chenbrian.ca/projects/projects/</link>
+      <pubDate>Fri, 31 Jul 2020 15:39:28 -0700</pubDate>
+      
+      <guid>//chenbrian.ca/projects/projects/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
+    </item>
     
     <item>
       <title>About</title>
@@ -29,6 +69,26 @@
         
         
           Hi, I&amp;rsquo;m Brian and I&amp;rsquo;m a student, software developer, badminton player, cook, and pokemon go enthusiast Format: 
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Firstpost</title>
+      <link>//chenbrian.ca/posts/firstpost/</link>
+      <pubDate>Fri, 31 Jul 2020 15:16:59 -0700</pubDate>
+      
+      <guid>//chenbrian.ca/posts/firstpost/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Just a first post. while true: print(&amp;#34;here&amp;#39;s a test snippet of code!&amp;#34;) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           
         
         </description>
