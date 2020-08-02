@@ -10,17 +10,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Brian Chen 2020</copyright>
-    <lastBuildDate>Fri, 31 Jul 2020 15:40:50 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2020 15:39:28 -0700</lastBuildDate>
     
 	<atom:link href="//chenbrian.ca/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Contact</title>
-      <link>//chenbrian.ca/contact/contact/</link>
+      <link>//chenbrian.ca/contact/</link>
       <pubDate>Fri, 31 Jul 2020 15:40:50 -0700</pubDate>
       
-      <guid>//chenbrian.ca/contact/contact/</guid>
+      <guid>//chenbrian.ca/contact/</guid>
       <description>
         
           
@@ -29,18 +29,21 @@
         
         
         
-          
+          Let&amp;rsquo;s get in touch. 
+ --- Email me at brianchen.chen@mail.utoronto.ca 
+ --- Check out my projects on Github 
+ --- Connect with me on LinkedIn 
           
         
         </description>
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>//chenbrian.ca/projects/projects/</link>
+      <title>chenbrian.ca</title>
+      <link>//chenbrian.ca/projects/1/this_website/</link>
       <pubDate>Fri, 31 Jul 2020 15:39:28 -0700</pubDate>
       
-      <guid>//chenbrian.ca/projects/projects/</guid>
+      <guid>//chenbrian.ca/projects/1/this_website/</guid>
       <description>
         
           
@@ -49,7 +52,8 @@
         
         
         
-          
+          My hope is that this website can grow into a place to document my work for myself and make publicly available solutions that I come across.
+This website is built with Hugo and hosted on GitHub Pages. Nothing too fancy.
           
         
         </description>
@@ -63,23 +67,25 @@
       <guid>//chenbrian.ca/about/</guid>
       <description>
         
-          &lt;img src=&#34;//chenbrian.ca/about/about-image.png&#34;/&gt;
+          
+          
           
         
         
         
-          and I&amp;rsquo;m a student, software developer, badminton player, cook, and pokemon go enthusiast 
+          And I&amp;rsquo;m a student, software developer, and pokemon go enthusiast Let&amp;rsquo;s put a face to the name  I&amp;rsquo;m a student at the University of Toronto Engineering Science program passionate about identifying problems in the world around me and creating solutions for them. When I&amp;rsquo;m not cramming for school, I enjoy cooking and playing badminton. If you&amp;rsquo;re looking for people to hit with, I&amp;rsquo;m always down.
+Q: How can you tell if someone uses Linux?
           
         
         </description>
     </item>
     
     <item>
-      <title>Firstpost</title>
-      <link>//chenbrian.ca/posts/firstpost/</link>
+      <title>First post</title>
+      <link>//chenbrian.ca/posts/1/first_post/</link>
       <pubDate>Fri, 31 Jul 2020 15:16:59 -0700</pubDate>
       
-      <guid>//chenbrian.ca/posts/firstpost/</guid>
+      <guid>//chenbrian.ca/posts/1/first_post/</guid>
       <description>
         
           
@@ -88,7 +94,9 @@
         
         
         
-          Just a first post. while true: print(&amp;#34;here&amp;#39;s a test snippet of code!&amp;#34;) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          You made it! The first post on my blog. Sorry to get your hopes up, but there&amp;rsquo;s not much to see here.
+Maybe get to know me?
+Have a Pikachu?
           
         
         </description>

@@ -16,11 +16,11 @@
     
     
     <item>
-      <title>Projects</title>
-      <link>//chenbrian.ca/projects/projects/</link>
+      <title>chenbrian.ca</title>
+      <link>//chenbrian.ca/projects/1/this_website/</link>
       <pubDate>Fri, 31 Jul 2020 15:39:28 -0700</pubDate>
       
-      <guid>//chenbrian.ca/projects/projects/</guid>
+      <guid>//chenbrian.ca/projects/1/this_website/</guid>
       <description>
         
           
@@ -29,7 +29,8 @@
         
         
         
-          
+          My hope is that this website can grow into a place to document my work for myself and make publicly available solutions that I come across.
+This website is built with Hugo and hosted on GitHub Pages. Nothing too fancy.
           
         
         </description>

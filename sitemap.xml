@@ -3,27 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>//chenbrian.ca/</loc>
-    <lastmod>2020-07-31T15:40:50-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>//chenbrian.ca/contact/contact/</loc>
-    <lastmod>2020-07-31T15:40:50-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>//chenbrian.ca/contact/</loc>
     <lastmod>2020-07-31T15:40:50-07:00</lastmod>
   </url>
   
   <url>
-    <loc>//chenbrian.ca/projects/</loc>
+    <loc>//chenbrian.ca/</loc>
     <lastmod>2020-07-31T15:39:28-07:00</lastmod>
   </url>
   
   <url>
-    <loc>//chenbrian.ca/projects/projects/</loc>
+    <loc>//chenbrian.ca/projects/1/this_website/</loc>
+    <lastmod>2020-07-31T15:39:28-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//chenbrian.ca/projects/</loc>
     <lastmod>2020-07-31T15:39:28-07:00</lastmod>
   </url>
   
@@ -33,7 +28,7 @@
   </url>
   
   <url>
-    <loc>//chenbrian.ca/posts/firstpost/</loc>
+    <loc>//chenbrian.ca/posts/1/first_post/</loc>
     <lastmod>2020-07-31T15:16:59-07:00</lastmod>
   </url>
   
