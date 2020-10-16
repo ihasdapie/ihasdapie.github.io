@@ -28,8 +28,13 @@
   </url>
   
   <url>
+    <loc>//chenbrian.ca/posts/1/first_post/</loc>
+    <lastmod>2020-07-31T15:16:59-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//chenbrian.ca/posts/</loc>
-    <priority>0</priority>
+    <lastmod>2020-07-31T15:16:59-07:00</lastmod>
   </url>
   
   <url>
