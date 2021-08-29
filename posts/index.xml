@@ -1,40 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Brian Chen</title>
-    
-    
-    
+    <title>Posts on Chenbrian</title>
     <link>//chenbrian.ca/posts/</link>
-    <description>Recent content in Posts on Brian Chen</description>
+    <description>Recent content in Posts on Chenbrian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Brian Chen 2020</copyright>
-    <lastBuildDate>Fri, 31 Jul 2020 15:16:59 -0700</lastBuildDate>
-    
-	<atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>© 2020 — Brian Chen — All rights reserved.</copyright>
+    <lastBuildDate>Sun, 29 Aug 2021 02:33:32 -0700</lastBuildDate><atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>First post</title>
-      <link>//chenbrian.ca/posts/1/first_post/</link>
-      <pubDate>Fri, 31 Jul 2020 15:16:59 -0700</pubDate>
+      <title>2021 08 29 First_post</title>
+      <link>//chenbrian.ca/posts/2021/08/2021-08-29-first_post/</link>
+      <pubDate>Sun, 29 Aug 2021 02:33:32 -0700</pubDate>
       
-      <guid>//chenbrian.ca/posts/1/first_post/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          You made it! The first post on my blog. Sorry to get your hopes up, but there&amp;rsquo;s not much to see here. It&amp;rsquo;s a work in progress!
-Maybe get to know me?
-Have a Pikachu?
-          
-        
-        </description>
+      <guid>//chenbrian.ca/posts/2021/08/2021-08-29-first_post/</guid>
+      <description>Wow, here&amp;rsquo;s a post! But alas, there&amp;rsquo;s no content. What a shame</description>
     </item>
     
   </channel>
