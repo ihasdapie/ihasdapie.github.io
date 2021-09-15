@@ -1,61 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Brian Chen</title>
-    
-    
-    
+    <title>Welcome to my site! on Chenbrian</title>
     <link>//chenbrian.ca/</link>
-    <description>Recent content on Brian Chen</description>
+    <description>Recent content in Welcome to my site! on Chenbrian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Brian Chen 2020</copyright>
-    <lastBuildDate>Fri, 31 Jul 2020 15:39:28 -0700</lastBuildDate>
-    
-	<atom:link href="//chenbrian.ca/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>© 2020 — Brian Chen — All rights reserved.</copyright>
+    <lastBuildDate>Sun, 29 Aug 2021 02:33:32 -0700</lastBuildDate><atom:link href="//chenbrian.ca/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Contact</title>
-      <link>//chenbrian.ca/contact/</link>
-      <pubDate>Fri, 31 Jul 2020 15:40:50 -0700</pubDate>
+      <title>2021 08 29 First_post</title>
+      <link>//chenbrian.ca/posts/2021/08/2021-08-29-first_post/</link>
+      <pubDate>Sun, 29 Aug 2021 02:33:32 -0700</pubDate>
       
-      <guid>//chenbrian.ca/contact/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          Let&amp;rsquo;s get in touch. 
- --- Email me at brianchen.chen@mail.utoronto.ca 
- --- Check out my projects on Github 
- --- Connect with me on LinkedIn 
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>chenbrian.ca</title>
-      <link>//chenbrian.ca/projects/1/this_website/</link>
-      <pubDate>Fri, 31 Jul 2020 15:39:28 -0700</pubDate>
-      
-      <guid>//chenbrian.ca/projects/1/this_website/</guid>
-      <description>
-        
-          &lt;img src=&#34;//chenbrian.ca/projects/1/this_website/../project_1_screenshot.png&#34;/&gt;
-          
-        
-        
-        
-          My hope is that this website can grow into a place to document my work for myself and make publicly available solutions that I come across.
-This website is built with Hugo and hosted on GitHub Pages. Nothing too fancy.
-          
-        
-        </description>
+      <guid>//chenbrian.ca/posts/2021/08/2021-08-29-first_post/</guid>
+      <description>Wow, here&amp;rsquo;s a post! But alas, there&amp;rsquo;s no content. What a shame</description>
     </item>
     
     <item>
@@ -64,41 +23,8 @@ This website is built with Hugo and hosted on GitHub Pages. Nothing too fancy.
       <pubDate>Fri, 31 Jul 2020 15:39:08 -0700</pubDate>
       
       <guid>//chenbrian.ca/about/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          And I&amp;rsquo;m a student, software developer, and pokemon go enthusiast Let&amp;rsquo;s put a face to the name  I&amp;rsquo;m a student at the University of Toronto Engineering Science program passionate about identifying problems in the world around me and creating solutions for them. When I&amp;rsquo;m not cramming for school, I enjoy cooking and playing badminton. If you&amp;rsquo;re looking for people to hit with, I&amp;rsquo;m always down.
-Q: How can you tell if someone uses Linux?
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>First post</title>
-      <link>//chenbrian.ca/posts/1/first_post/</link>
-      <pubDate>Fri, 31 Jul 2020 15:16:59 -0700</pubDate>
-      
-      <guid>//chenbrian.ca/posts/1/first_post/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          You made it! The first post on my blog. Sorry to get your hopes up, but there&amp;rsquo;s not much to see here. It&amp;rsquo;s a work in progress!
-Maybe get to know me?
-Have a Pikachu?
-          
-        
-        </description>
+      <description>And I&amp;rsquo;m a student, software developer, and pokemon go enthusiast I&amp;rsquo;m a student at the University of Toronto Engineering Science program passionate about identifying problems in the world around me and creating solutions for them. When I&amp;rsquo;m not cramming for school, I enjoy cooking and playing badminton. If you&amp;rsquo;re looking for people to hit with, I&amp;rsquo;m always down.
+1 2  Q: How can you tell if someone uses Linux? A: They&amp;#39;ll tell you.</description>
     </item>
     
   </channel>
