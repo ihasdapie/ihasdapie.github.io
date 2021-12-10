@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Thu, 09 Dec 2021 20:48:45 -0500</lastBuildDate><atom:link href="//chenbrian.ca/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Dec 2021 21:20:53 -0500</lastBuildDate><atom:link href="//chenbrian.ca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advent of Code 2021</title>
+      <link>//chenbrian.ca/posts/2021/12/advent-of-code-2021/</link>
+      <pubDate>Thu, 09 Dec 2021 21:20:53 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/12/advent-of-code-2021/</guid>
+      <description>This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.
+Solutions are hosted here. If a day isn&amp;rsquo;t very interesting, I won&amp;rsquo;t post anything for that day.
+Day 4 Bingo is fun &amp;ndash; makes for a good way to play with some object-oriented rust code. See this
+Day 6 So many lanternfish! The key to this puzzle is to represent the lanternfish as a histogram rather than creating a list of all the lanternfish.</description>
+    </item>
+    
     <item>
       <title>(g)o (w)eb (s)erver</title>
       <link>//chenbrian.ca/posts/2021/12/go-web-server/</link>
