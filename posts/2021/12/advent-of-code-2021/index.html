@@ -55,12 +55,16 @@
     <p>This page will track some notes and TILs for <a href="https://adventofcode.com/2021">AoC2021</a>, which I will be completing in <code>rust</code> &ndash; a language I am still learning.</p>
 <p>Solutions are hosted <a href="https://github.com/ihasdapie/aoc2021">here</a>.
 If a day isn&rsquo;t very interesting, I won&rsquo;t post anything for that day.</p>
-<h2 id="day-4">Day 4</h2>
-<p>Bingo is fun &ndash; makes for a good way to play with some object-oriented rust code. See <a href="https://github.com/ihasdapie/aoc2021/tree/main/d4">this</a></p>
-<h2 id="day-6">Day 6</h2>
+<h2 id="day-4httpsadventofcodecom2021day4"><a href="https://adventofcode.com/2021/day/4">Day 4</a></h2>
+<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d4">Solution</a></p>
+<p>Bingo is fun &ndash; makes for a good way to play with some object-oriented rust code.</p>
+<h2 id="day-5httpsadventofcodecom2021day5"><a href="https://adventofcode.com/2021/day/5">Day 5</a></h2>
+<h2 id="day-6httpsadventofcodecom2021day6"><a href="https://adventofcode.com/2021/day/6">Day 6</a></h2>
+<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d6">Solution</a></p>
 <p>So many lanternfish! The key to this puzzle is to represent the lanternfish as a histogram rather than creating a list of all the lanternfish. See <a href="https://github.com/ihasdapie/aoc2021/tree/main/d6">solution</a>.</p>
-<h2 id="day-7">Day 7</h2>
-<p>This was an interesting one. Find the problem <a href="https://adventofcode.com/2021/day/7">here</a>.</p>
+<h2 id="day-7httpsadventofcodecom2021day7"><a href="https://adventofcode.com/2021/day/7">Day 7</a></h2>
+<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d7">Solution</a>
+This was an interesting one. Find the problem <a href="https://adventofcode.com/2021/day/7">here</a>.</p>
 <p>For part a) we can note that given a set of numbers \(x_1, x_2, x_3 \dots x_n \) the point \(p\) that minimizes the cost \(C_a\), \( \sum^n_{i=1} |x_i - p| \), is the median of the set.</p>
 <p>For part b), however, the distance cost, \(C_b\) is the sum of the sequence of numbers up to the point \(p\), i.e. for a distance of \(5\) we have \(C_{a,i}=1+2+3+4+5\).
 We can then note that we can apply Carl Gauss&rsquo;s <a href="https://en.wikipedia.org/wiki/Arithmetic_progression">trick</a> for finding the sum of of an arithmetic progression.</p>
@@ -72,10 +76,32 @@ Where the <a href="https://en.wikipedia.org/wiki/Sign_function">sign function</a
 <p>$$ p = \frac{\sum^n_{i=1}x_i}{n} - \frac{\sum^n_{i=1}sgn(x_i-p)}{2n} $$</p>
 <p>which is simply the mean of of the set, \(\pm\frac{1}{2}\).</p>
 <p>Day 7 was pretty neat.</p>
-<h2 id="day-8">Day 8</h2>
-<p>Day 8 can be solved by inspection and treating it as a logic puzzle.</p>
-<h2 id="day-9">Day 9</h2>
-<p>Flood fill. Note an optimization since we are working with depths: 1</p>
+<h2 id="day-8httpsadventofcodecom2021day8"><a href="https://adventofcode.com/2021/day/8">Day 8</a></h2>
+<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d8">Solution</a>
+Day 8 can be solved by inspection and treating it as a logic puzzle.</p>
+<h2 id="day-9httpsadventofcodecom2021day9"><a href="https://adventofcode.com/2021/day/9">Day 9</a></h2>
+<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d9">Solution</a>
+Flood fill. Note an optimization since we are working with depths: 1</p>
+<h2 id="day-10httpsadventofcodecom2021day10"><a href="https://adventofcode.com/2021/day/10">Day 10</a></h2>
+<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d10">Solution</a></p>
+<p>Braces matching problem. This is a fairly common problem that can be solved recursively or with stacks, so I&rsquo;ll just link to a stackoverflow <a href="https://stackoverflow.com/questions/16874176/parenthesis-brackets-matching-using-stack-algorithm">solution</a> that uses the same stack method that I used.</p>
+<p>The key observation to make is that for part b the remaining open brackets in the stack for an unbalanced string are the ones that must be matched up for it to become balanced.
+So to create the string we can just reverse the stack, substitute closing brackets for opening ones, and <code>collect</code> it into a string.</p>
+<h2 id="day-11httpsadventofcodecom2021day11"><a href="https://adventofcode.com/2021/day/11">Day 11</a></h2>
+<h2 id="day-12httpsadventofcodecom2021day12"><a href="https://adventofcode.com/2021/day/12">Day 12</a></h2>
+<h2 id="day-13httpsadventofcodecom2021day13"><a href="https://adventofcode.com/2021/day/13">Day 13</a></h2>
+<h2 id="day-14httpsadventofcodecom2021day14"><a href="https://adventofcode.com/2021/day/14">Day 14</a></h2>
+<h2 id="day-15httpsadventofcodecom2021day15"><a href="https://adventofcode.com/2021/day/15">Day 15</a></h2>
+<h2 id="day-16httpsadventofcodecom2021day16"><a href="https://adventofcode.com/2021/day/16">Day 16</a></h2>
+<h2 id="day-17httpsadventofcodecom2021day17"><a href="https://adventofcode.com/2021/day/17">Day 17</a></h2>
+<h2 id="day-18httpsadventofcodecom2021day18"><a href="https://adventofcode.com/2021/day/18">Day 18</a></h2>
+<h2 id="day-19httpsadventofcodecom2021day19"><a href="https://adventofcode.com/2021/day/19">Day 19</a></h2>
+<h2 id="day-20httpsadventofcodecom2021day20"><a href="https://adventofcode.com/2021/day/20">Day 20</a></h2>
+<h2 id="day-21httpsadventofcodecom2021day21"><a href="https://adventofcode.com/2021/day/21">Day 21</a></h2>
+<h2 id="day-22httpsadventofcodecom2021day22"><a href="https://adventofcode.com/2021/day/22">Day 22</a></h2>
+<h2 id="day-23httpsadventofcodecom2021day23"><a href="https://adventofcode.com/2021/day/23">Day 23</a></h2>
+<h2 id="day-24httpsadventofcodecom2021day24"><a href="https://adventofcode.com/2021/day/24">Day 24</a></h2>
+<h2 id="day-25httpsadventofcodecom2021day25"><a href="https://adventofcode.com/2021/day/25">Day 25</a></h2>
 
 </article>
 

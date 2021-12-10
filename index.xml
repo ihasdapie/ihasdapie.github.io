@@ -16,8 +16,10 @@
       <guid>//chenbrian.ca/posts/2021/12/advent-of-code-2021/</guid>
       <description>This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.
 Solutions are hosted here. If a day isn&amp;rsquo;t very interesting, I won&amp;rsquo;t post anything for that day.
-Day 4 Bingo is fun &amp;ndash; makes for a good way to play with some object-oriented rust code. See this
-Day 6 So many lanternfish! The key to this puzzle is to represent the lanternfish as a histogram rather than creating a list of all the lanternfish.</description>
+Day 4 Solution
+Bingo is fun &amp;ndash; makes for a good way to play with some object-oriented rust code.
+Day 5 Day 6 Solution
+So many lanternfish! The key to this puzzle is to represent the lanternfish as a histogram rather than creating a list of all the lanternfish.</description>
     </item>
     
     <item>
