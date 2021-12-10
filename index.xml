@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Sun, 29 Aug 2021 02:33:32 -0700</lastBuildDate><atom:link href="//chenbrian.ca/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Dec 2021 20:48:45 -0500</lastBuildDate><atom:link href="//chenbrian.ca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(g)o (w)eb (s)erver</title>
+      <link>//chenbrian.ca/posts/2021/12/go-web-server/</link>
+      <pubDate>Thu, 09 Dec 2021 20:48:45 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/12/go-web-server/</guid>
+      <description>Deploying your personal website onto github pages is so 2013. Why avoid the hassle of self-hosting with a static site generator and server? Why not just use something tried and tested by the community?
+It&amp;rsquo;s just not as fun &amp;hellip; and I didn&amp;rsquo;t feel like studying for a final one afternoon.
+So here&amp;rsquo;s a simple 111-line golang webserver that you can use to deploy your personal website.
+There&amp;rsquo;s also some cute figlet art</description>
+    </item>
+    
     <item>
       <title>2021 08 29 First_post</title>
       <link>//chenbrian.ca/posts/2021/08/2021-08-29-first_post/</link>
@@ -23,8 +35,11 @@
       <pubDate>Fri, 31 Jul 2020 15:39:08 -0700</pubDate>
       
       <guid>//chenbrian.ca/about/</guid>
-      <description>And I&amp;rsquo;m a student, software developer, and pokemon go enthusiast I&amp;rsquo;m a student at the University of Toronto Engineering Science program passionate about identifying problems in the world around me and creating solutions for them. When I&amp;rsquo;m not cramming for school, I enjoy cooking and playing badminton. If you&amp;rsquo;re looking for people to hit with, I&amp;rsquo;m always down.
-1 2  Q: How can you tell if someone uses Linux? A: They&amp;#39;ll tell you.</description>
+      <description>You can find my resume here
+// page under construction //
+Connect with me: Github
+LinkedIn
+Email at brianchen.chen (at) mail.utoronto.ca</description>
     </item>
     
   </channel>
