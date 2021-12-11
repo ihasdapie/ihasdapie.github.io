@@ -6,7 +6,7 @@
 
     <title>Advent of Code 2021 | Chenbrian</title>
 
-    <style>body{margin:40px auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1{line-height:1.2}h2,h3{line-height:1.1}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:18px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}</style>
+    <style>body{margin:40px auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1{line-height:1.2}h2,h3{line-height:1.1}body{font-family:Arial,sans-serif}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:18px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}</style>
 
 
 
@@ -24,16 +24,16 @@
 
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-B0ZFV4LTG2', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-B0ZFV4LTG2', { 'anonymize_ip': false });
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
     
@@ -87,17 +87,27 @@ Where the <a href="https://en.wikipedia.org/wiki/Sign_function">sign function</a
 <p>which is simply the mean of of the set, \(\pm\frac{1}{2}\).</p>
 <p>Day 7 was pretty neat.</p>
 <h2 id="day-8httpsadventofcodecom2021day8"><a href="https://adventofcode.com/2021/day/8">Day 8</a></h2>
-<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d8">Solution</a>
-Day 8 can be solved by inspection and treating it as a logic puzzle.</p>
+<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d8">Solution</a></p>
+<p>Day 8 can be solved by inspection and treating it as a logic puzzle.</p>
+<p><img src="../../../../files/2021/seven_segment_display.png" alt=""></p>
+<p>Inspecting each digit we observe that 1, 4, 7, 8 have an unique number of lit-up segments.
+We can then use this to decode which patterns correspond to which numbers.</p>
+<ul>
+<li>9 is the only 6-segment which contains the all the segments of 3</li>
+<li>0 is the only remaining 6-segment which contains the segments of 1</li>
+<li>6 must be the remaining 6-segment</li>
+<li>3 is the only 5-segment which contains the segments of 1</li>
+<li>2 is the 5-segment which contains 2 segments of 4</li>
+<li>5 is the 5-segment which contains 3 segments of 4</li>
+</ul>
 <h2 id="day-9httpsadventofcodecom2021day9"><a href="https://adventofcode.com/2021/day/9">Day 9</a></h2>
-<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d9">Solution</a>
-Flood fill. Note an optimization since we are working with depths: 1</p>
+<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d9">Solution</a></p>
+<p>Just a recursive <a href="https://en.wikipedia.org/wiki/Flood_fill">flood fill</a> problem</p>
 <h2 id="day-10httpsadventofcodecom2021day10"><a href="https://adventofcode.com/2021/day/10">Day 10</a></h2>
 <p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d10">Solution</a></p>
 <p>Braces matching problem. This is a fairly common problem that can be solved recursively or with stacks, so I&rsquo;ll just link to a stackoverflow <a href="https://stackoverflow.com/questions/16874176/parenthesis-brackets-matching-using-stack-algorithm">solution</a> that uses the same stack method that I used.</p>
 <p>The key observation to make is that for part b the remaining open brackets in the stack for an unbalanced string are the ones that must be matched up for it to become balanced.
 So to create the string we can just reverse the stack, substitute closing brackets for opening ones, and <code>collect</code> it into a string.</p>
-<h2 id="day-11httpsadventofcodecom2021day11"><a href="https://adventofcode.com/2021/day/11">Day 11</a></h2>
 <h2 id="day-12httpsadventofcodecom2021day12"><a href="https://adventofcode.com/2021/day/12">Day 12</a></h2>
 <h2 id="day-13httpsadventofcodecom2021day13"><a href="https://adventofcode.com/2021/day/13">Day 13</a></h2>
 <h2 id="day-14httpsadventofcodecom2021day14"><a href="https://adventofcode.com/2021/day/14">Day 14</a></h2>
