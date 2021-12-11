@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Chenbrian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2020 — Brian Chen — All rights reserved.</copyright>
+    <copyright>© 2021 — Brian Chen — All rights reserved.</copyright>
     <lastBuildDate>Thu, 09 Dec 2021 21:20:53 -0500</lastBuildDate><atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Advent of Code 2021</title>
@@ -18,7 +18,7 @@
 Solutions are hosted here. If a day isn&amp;rsquo;t very interesting, I won&amp;rsquo;t post anything for that day.
 Day 4 Solution
 Bingo is fun &amp;ndash; makes for a good way to play with some object-oriented rust code.
-Day 5 Day 6 Solution
+Day 6 Solution
 So many lanternfish! The key to this puzzle is to represent the lanternfish as a histogram rather than creating a list of all the lanternfish.</description>
     </item>
     
