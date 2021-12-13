@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta lang="en">
 
     <title>Advent of Code 2021 | Chenbrian</title>
 
-    <style>body{margin:40px auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1{line-height:1.2}h2,h3{line-height:1.1}body{font-family:Arial,sans-serif}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:18px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}</style>
+    <style>body{margin:40px auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1{line-height:1.2;font-family:Arial,sans-serif}h2,h3{font-family:Arial,sans-serif;line-height:1.1;color:#444}body{font-family:Arial,sans-serif}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:18px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}</style>
 
 
 
@@ -63,7 +64,55 @@ if (!doNotTrack) {
 </div>
 </header>
 <article>
-    <p>This page will track some notes and TILs for <a href="https://adventofcode.com/2021">AoC2021</a>, which I will be completing in <code>rust</code> &ndash; a language I am still learning.</p>
+    
+
+
+<div >
+    <h2>Table of Contents <button style="font-size: large" id="toc_button" onclick="toggleTOC()"> ▼ </button> </h2>
+    <div id="toc">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#day-6httpsadventofcodecom2021day6"><a href="https://adventofcode.com/2021/day/6">Day 6</a></a></li>
+    <li><a href="#day-7httpsadventofcodecom2021day7"><a href="https://adventofcode.com/2021/day/7">Day 7</a></a></li>
+    <li><a href="#day-8httpsadventofcodecom2021day8"><a href="https://adventofcode.com/2021/day/8">Day 8</a></a></li>
+    <li><a href="#day-9httpsadventofcodecom2021day9"><a href="https://adventofcode.com/2021/day/9">Day 9</a></a></li>
+    <li><a href="#day-10httpsadventofcodecom2021day10"><a href="https://adventofcode.com/2021/day/10">Day 10</a></a></li>
+    <li><a href="#day-12httpsadventofcodecom2021day12"><a href="https://adventofcode.com/2021/day/12">Day 12</a></a></li>
+    <li><a href="#day-13httpsadventofcodecom2021day13"><a href="https://adventofcode.com/2021/day/13">Day 13</a></a></li>
+    <li><a href="#day-14httpsadventofcodecom2021day14"><a href="https://adventofcode.com/2021/day/14">Day 14</a></a></li>
+    <li><a href="#day-15httpsadventofcodecom2021day15"><a href="https://adventofcode.com/2021/day/15">Day 15</a></a></li>
+    <li><a href="#day-16httpsadventofcodecom2021day16"><a href="https://adventofcode.com/2021/day/16">Day 16</a></a></li>
+    <li><a href="#day-17httpsadventofcodecom2021day17"><a href="https://adventofcode.com/2021/day/17">Day 17</a></a></li>
+    <li><a href="#day-18httpsadventofcodecom2021day18"><a href="https://adventofcode.com/2021/day/18">Day 18</a></a></li>
+    <li><a href="#day-19httpsadventofcodecom2021day19"><a href="https://adventofcode.com/2021/day/19">Day 19</a></a></li>
+    <li><a href="#day-20httpsadventofcodecom2021day20"><a href="https://adventofcode.com/2021/day/20">Day 20</a></a></li>
+    <li><a href="#day-21httpsadventofcodecom2021day21"><a href="https://adventofcode.com/2021/day/21">Day 21</a></a></li>
+    <li><a href="#day-22httpsadventofcodecom2021day22"><a href="https://adventofcode.com/2021/day/22">Day 22</a></a></li>
+    <li><a href="#day-23httpsadventofcodecom2021day23"><a href="https://adventofcode.com/2021/day/23">Day 23</a></a></li>
+    <li><a href="#day-24httpsadventofcodecom2021day24"><a href="https://adventofcode.com/2021/day/24">Day 24</a></a></li>
+    <li><a href="#day-25httpsadventofcodecom2021day25"><a href="https://adventofcode.com/2021/day/25">Day 25</a></a></li>
+  </ul>
+</nav>
+    </div>
+    <script>
+        function toggleTOC() {
+            var x = document.getElementById("toc");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+            var y = document.getElementById("toc_button");
+            y.textContent = y.textContent === " ▼ " ? " ▲ " : " ▼ "; 
+        }
+    </script>
+</div>
+
+
+
+
+
+<p>This page will track some notes and TILs for <a href="https://adventofcode.com/2021">AoC2021</a>, which I will be completing in <code>rust</code> &ndash; a language I am still learning.</p>
 <p>Solutions are hosted <a href="https://github.com/ihasdapie/aoc2021">here</a>.
 If a day isn&rsquo;t very interesting, I won&rsquo;t post a writeup for it.</p>
 <h2 id="day-6httpsadventofcodecom2021day6"><a href="https://adventofcode.com/2021/day/6">Day 6</a></h2>

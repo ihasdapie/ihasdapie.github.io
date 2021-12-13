@@ -14,10 +14,7 @@
       <pubDate>Thu, 09 Dec 2021 21:20:53 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/2021/12/advent-of-code-2021/</guid>
-      <description>This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.
-Solutions are hosted here. If a day isn&amp;rsquo;t very interesting, I won&amp;rsquo;t post a writeup for it.
-Day 6 Solution
-So many lanternfish! The key to this puzzle is to represent the lanternfish as a histogram rather than creating a list of all the lanternfish. See solution.</description>
+      <description>Table of Contents ▼    Day 6 Day 7 Day 8 Day 9 Day 10 Day 12 Day 13 Day 14 Day 15 Day 16 Day 17 Day 18 Day 19 Day 20 Day 21 Day 22 Day 23 Day 24 Day 25     function toggleTOC() { var x = document.getElementById(&#34;toc&#34;); if (x.style.display === &#34;none&#34;) { x.style.display = &#34;block&#34;; } else { x.style.display = &#34;</description>
     </item>
     
     <item>
