@@ -14,7 +14,7 @@
       <pubDate>Sat, 11 Dec 2021 22:16:12 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/2021/12/engsci-y2s1-exam-review/</guid>
-      <description>Table of Contents ▼    CHE260  Variables Heat Transfer Mechanisms Steady Heat Transfer  Fins   Transient Heat Transfer  Semi-Infinite Solids   Forced Convection Heat Transfer  General Notes:   Radiation Heat Transfer  Other     ECE253 MAT292 AER210 PHY293 ESC203     function toggleTOC() { var x = document.getElementById(&#34;toc&#34;); if (x.style.display === &#34;none&#34;) { x.style.display = &#34;</description>
+      <description>Table of Contents ▼    CHE260  Variables Heat Transfer Mechanisms Steady Heat Transfer  Fins   Transient Heat Transfer  Semi-Infinite Solids   Forced Convection Heat Transfer  Other:   Radiation Heat Transfer  Other     ECE253 MAT292 AER210 PHY293 ESC203     function toggleTOC() { var x = document.getElementById(&#34;toc&#34;); if (x.style.display === &#34;none&#34;) { x.style.display = &#34;block&#34;; } else { x.</description>
     </item>
     
     <item>
