@@ -76,11 +76,14 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#variables">Variables</a></li>
         <li><a href="#heat-transfer-mechanisms">Heat Transfer Mechanisms</a></li>
-        <li><a href="#fins">Fins</a></li>
+        <li><a href="#steady-heat-transfer">Steady Heat Transfer</a>
+          <ul>
+            <li><a href="#fins">Fins</a></li>
+          </ul>
+        </li>
         <li><a href="#transient-heat-transfer">Transient Heat Transfer</a>
           <ul>
             <li><a href="#semi-infinite-solids">Semi-Infinite Solids</a></li>
-            <li><a href="#misc">Misc</a></li>
           </ul>
         </li>
         <li><a href="#forced-convection-heat-transfer">Forced Convection Heat Transfer</a>
@@ -88,7 +91,11 @@ if (!doNotTrack) {
             <li><a href="#general-notes">General Notes:</a></li>
           </ul>
         </li>
-        <li><a href="#radiation-heat-transfer">Radiation Heat Transfer</a></li>
+        <li><a href="#radiation-heat-transfer">Radiation Heat Transfer</a>
+          <ul>
+            <li><a href="#other">Other</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#ece253">ECE253</a></li>
@@ -126,15 +133,68 @@ if (!doNotTrack) {
 <li>\(h\): Convection heat transfer coefficient</li>
 <li>\(\alpha = \frac{k}{\rho c_p}\): Thermal diffusivity</li>
 <li>\(T_{film} = \frac{T_s + T_\infty}{2}\): Film temperature: estimated temperature at the convection layer</li>
-<li>\(\)</li>
-<li>\(\)</li>
-<li>\(\)</li>
 </ul>
 <h3 id="heat-transfer-mechanisms">Heat Transfer Mechanisms</h3>
-<h3 id="fins">Fins</h3>
+<p>$$Q_{conduction} = -kA\frac{dT}{dx}$$
+$$Q_{convection} = hA(T_s - T_\infty)$$
+$$Q_{radiation} = \varepsilon\sigma A(T_s^4-T_{surr}^4)$$
+Note: for radiation make sure to use Kelvin, not Celsius.</p>
+<h3 id="steady-heat-transfer">Steady Heat Transfer</h3>
+<p>We can apply the thermal resistance concept to build heat transfer resistance networks:</p>
+<p>$$\dot{Q_{tot}} = \frac{T_2 - T_1}{R_{total}}$$</p>
+<p>\(R_{total} \) is obtained through the various expressions for heat resistance for different shapes and methods.
+Draw out the resistance network and then solve for the total resistance which works in the same way as electrical resistance.
+Conduction resistances stacked perpendicular to the direction of heat flow are represented by parallel resistances.</p>
+<p>For example, for two planes of glass,</p>
+<p>$$R_T = R_{conv, 1} + R_{glass,1} + R_{air} + R_{glass, 2} + R_{conv, 2}$$</p>
+<p>Note the convection on either side.</p>
+<p>The temperature at a point is is given using the heat transfer with resistance equation with a known total heat transfer and resistance between points \(a, b \), and temperature at one of the points.</p>
+<p>$$Q_{a\rightarrow b} = \frac{T_a - T_b}{R_{a\rightarrow b}}$$</p>
+<p>For spherical or cylinderical heat transfer there is a critical radius of insulation \(r_{cr} \) for which the heat transfer rate reaches a maximum, i.e. for \(r &lt; r_{cr} \) the heat transfer rate is below maximum and will actually increase with added insulation until \(r = r_{cr} \), after which the heat transfer rate will go back down again.</p>
+<ul>
+<li>For a sphere: $$r_{cr} = \frac{2k_{ins}}{h}$$</li>
+<li>For a cylinder: $$r_{cr} = \frac{k_{ins}}{h}$$</li>
+</ul>
+<h4 id="fins">Fins</h4>
+<p>For these problems just plug and chug.</p>
+<p>$$a = \sqrt{\frac{hP}{kA_c}}$$</p>
+<ol>
+<li>
+<p>Infinitely long fin
+$$\frac{T(x) - T_\infty}{T_b - T_\infty} = exp(-ax)$$
+$$\dot{Q} = \sqrt{kPkA_c}exp(-ax)$$</p>
+</li>
+<li>
+<p>Adiabatic tip/insulated tip fin</p>
+</li>
+</ol>
+<p>$$\frac{T(x) - T_\infty}{T_b - T_\infty} = \frac{\cosh{a(L-x)}}{\cosh{aL}}$$
+$$\dot{Q} = \sqrt{kPkA_c}(T_b - T_\infty)\tanh{aL}$$</p>
+<p>where \(P \) is the perimeter of the fin and \(A_c \) is the cross-sectional area. \(h \) is the convection heat transfer coefficient of the surrounding fluid, and \(k \) the thermal conductivity constant for the fin material</p>
+<p>Misc:</p>
+<ol>
+<li>Fins exposed to convection at tips can be modelled as an adiabatic tip fin with a corrected length</li>
+</ol>
+<p>$$L_c = L + \frac{A_c}{p}$$</p>
+<ol start="2">
+<li>Fin efficiency is the ratio of actual heat transfer (non-uniform temperature) to maximum heat transfer (uniform temperature)</li>
+</ol>
+<p>$$\eta = \frac{\dot{Q_{tot}}}{\dot{Q_{tot\space max}}}$$</p>
+<ol start="3">
+<li>Fin effectiveness is the ratio of heat transfer due to fins to heat transfer if the fins were not present. \(A_b \) denotes the area of the fin bases, not that of the whole surface the fins are attached to.</li>
+</ol>
+<p>$$\varepsilon = \frac{\dot{Q_{fin}}}{\dot{Q_{no\space fin}}} = \frac{\dot{Q_{fin}}}{hA_b(T_b-T\infty)}$$</p>
+<ol start="4">
+<li>Fin effectiveness and efficiency are related by</li>
+</ol>
+<p>$$\varepsilon = \frac{A_{fin}}{A_{base}}\cdot\eta$$</p>
 <h3 id="transient-heat-transfer">Transient Heat Transfer</h3>
-<p>$$L_c = \frac{V}{A_{surface}} \tag{characteristic length}$$
-$$Bi = \frac{hL_c}{k} \tag{Biot number}$$</p>
+<p>TLDR; modelling heat transfer as a function of time as well. If possible, apply lumped system assumption which assumes that the whole system has uniform temperature.</p>
+<ul>
+<li>Characteristic Length: \(L_c = \frac{V}{A_{surface}}\)</li>
+<li>Biot number: \(Bi = \frac{hL_c}{k}\)</li>
+</ul>
+<p>Note: When we look up \(\lambda_1\) and \(A_1\) from tables make sure to use the same formula for Biot&rsquo;s number as used by the reference source. The textbook uses \(Bi = \frac{hr_o}{k}\) for cylinders and spheres.</p>
 <p>Lumped system approximation is valid for $$Bi \leq 0.1$$</p>
 <p>We then can get the following by solving the heat equation</p>
 <p>$$b = \frac{hA_s}{\rho c_p V} = \frac{h}{\rho c_p L_c}, [b] = s^{-1}$$</p>
@@ -166,7 +226,8 @@ $$\frac{T(0, t) - T_\infty}{T_i - T_\infty} = A_1e^{-\lambda_1^2\tau}$$</p>
 <p>we derive a ratio \(\frac{Q(t)}{Q_{max}}\) for different geometries, which should be given.
 \(Q(t)\) is the sum of internal energy changes throughout the entire geometry which can be expressed as a volume integral.</p>
 <h4 id="semi-infinite-solids">Semi-Infinite Solids</h4>
-<p>Used to model temperature change in part of body due to thermal conditions on a single surface</p>
+<p>Used to model temperature change in part of body due to thermal conditions on a single surface
+TLDR; use this for questions where they don&rsquo;t give you dimensions</p>
 <p>$$\eta = \frac{x}{\sqrt{4\alpha t}}$$</p>
 <p>For constant \(T_s\) we obtain</p>
 <p>$$\frac{T(x,t)-T_i}{T_s-T_i} = erfc(\eta)$$</p>
@@ -175,10 +236,8 @@ $$\frac{T(0, t) - T_\infty}{T_i - T_\infty} = A_1e^{-\lambda_1^2\tau}$$</p>
 <p>where</p>
 <p>$$erfc(\eta) = 1- \frac{2}{\sqrt{\pi}}\int^\eta_0 e^{-u^2}du$$</p>
 <p>Generally we will be looking up \(\eta, erfc(\eta)\) in a table.</p>
-<h4 id="misc">Misc</h4>
-<p>Thermal diffusivity</p>
 <h3 id="forced-convection-heat-transfer">Forced Convection Heat Transfer</h3>
-<p>TLDR: What if we forced fluids instead of let the convection happen naturally?</p>
+<p>TLDR: What if we forced fluids instead of letting the convection happen naturally?</p>
 <p>We know that</p>
 <p>$$Q_{conv} = hA(T_s - T_\infty)$$</p>
 <p>But how do we get \(h\) for forced convection? Either look it up from a table, get it experimentally, or do some math.</p>
@@ -208,7 +267,7 @@ Note: \(\nu\) is kinematic viscoscity \(\nu = \frac{\mu}{\rho}\)</p>
 <p>$$Pr = \frac{v}{\alpha} = \frac{\mu c_p}{k}$$</p>
 <ol start="3">
 <li>Nusselt&rsquo;s Number \(Nu\)
-The dimensionless heat transfer coefficient</li>
+The dimensionless heat transfer coefficient which is the ratio of the <em>convective</em> heat transfer rate to the <em>conductive</em> heat transfer rate.</li>
 </ol>
 <p>$$Nu = \frac{hL_c}{k}$$</p>
 <p>We can then apply Buckingham \(\pi\) to represent \(Nu\) w.r.t. \(Re\) and \(Pr\).</p>
@@ -216,9 +275,9 @@ The dimensionless heat transfer coefficient</li>
 <p>Note that here \(Nu\) is local to point \(x\)</p>
 <p>And the coefficients \(c, m, n\) can either be solved for with experimental data or will be given.
 For example, for laminar flow over a flat plate:</p>
-<p>$$Nu = \frac{hL}{k} = 0.664Re_L^{0.5}Pr^{(1/3)}, Re_L &lt; 5*10^5, Pr &gt; 0.6$$</p>
+<p>$$Nu = \frac{hL}{k} = 0.664Re_L^{0.5}Pr^{(1/3)}, \\ Re_L &lt; 5*10^5, Pr &gt; 0.6$$</p>
 <p>&hellip; and for turbulent flow:
-$$Nu = \frac{hL}{k} = 0.037Re_L^{0.8}Pr^{(1/3)}, 5*10^5 \leq Re_L \leq 10^7, 0.6 \leq Pr \leq 60 $$</p>
+$$Nu = \frac{hL}{k} = 0.037Re_L^{0.8}Pr^{(1/3)}, \\ 5*10^5 \leq Re_L \leq 10^7, 0.6 \leq Pr \leq 60 $$</p>
 <p>For isothermal surfaces with an unheated starting section of length \(\xi\) the local Nusselt&rsquo;s number is given by</p>
 <p>laminar :</p>
 <p>$$Nu_x = \frac{hL}{k} = \frac{0.332Re_x^{0.5}Pr^{1/3}}{[1-(\xi/x)^{3/4}]^{1/3}}$$</p>
@@ -229,9 +288,63 @@ The previous equations (e.g. \(c=0.664\)) are valid for a flat plate heated at t
 <h4 id="general-notes">General Notes:</h4>
 <ul>
 <li>No-slip condition applies at walls, so right by the wall heat transfer is conductive. \(\dot{q} = \dot{q_{cond}}\)</li>
-<li></li>
 </ul>
 <h3 id="radiation-heat-transfer">Radiation Heat Transfer</h3>
+<p>For this section everything is just plug and chug and being careful with view factors.
+Most problems involve an energy balance \(\dot{q_{in}} = \dot{q_{out}} \)</p>
+<ol>
+<li>
+<p>Stefan-Boltzmann Law:
+$$E_b(T) = \sigma T^4$$</p>
+</li>
+<li>
+<p>Wein&rsquo;s displacement law: finding the wavelength that gives the maximum power for a specified surface temperature
+$$(\lambda T)_{max power} = 2897.8 \mu \cdot K$$</p>
+</li>
+<li>
+<p>Reciprocity rule:</p>
+</li>
+</ol>
+<p>$$A_iF_{i\rightarrow j} = A_jF_{j\rightarrow i}$$</p>
+<p>Where \(F_{i\rightarrow j} \) is the &lsquo;view factor&rsquo;, i.e. the percent of radiation leaving surface \(i \) that strikes surface \(j \) directly.</p>
+<ul>
+<li>\(\alpha = \frac{G_{absorbed}}{G} \): Absorptivity</li>
+<li>\(\rho = \frac{G_{reflected}}{G} \): Reflectivity</li>
+<li>\(\tau = \frac{G_{transmitted}}{G}\): Transmissivity</li>
+</ul>
+<p>These variables also have the property</p>
+<p>$$\alpha + \rho + \tau = 1$$</p>
+<p>Note: for opaque surfaces \(\tau = 0 \)</p>
+<ol start="4">
+<li>Summation property: the set of view factors that describe radiation beginning at surface \(i \) and ending at all surfaces \(j \) that it touches has a sum of \(1 \).</li>
+</ol>
+<p>$$\sum^N_{j=1}F_{ij} = 1$$</p>
+<ol start="5">
+<li>Putting all together
+When are looking at black body radiation only:
+$$\dot{Q_{1\rightarrow 2}} = A_1 F_{1\rightarrow 2} \sigma (T_1^4 - T_2^4)$$</li>
+</ol>
+<p>Note:
+$$\dot{Q_{1\rightarrow 2}} = A_1\dot{q_{1\rightarrow 2}}$$</p>
+<ol start="6">
+<li>Heat transfer between surfaces</li>
+</ol>
+<p>$$\dot{q_{12}} = \frac{\sigma(T_1^4-T_2^4)}{ \frac{1-\varepsilon_1}{A_1\varepsilon_1} + \frac{1}{A_1F_{12}} + \frac{1-\varepsilon_2}{A_2\varepsilon_2}}$$
+Where the middle term in the denominator denotes the &ldquo;resistivity&rdquo; due to space and the other terms due to radiation.</p>
+<p>So we can build resistance networks by adding up the resistances of each element here as well!</p>
+<ol start="7">
+<li>Kirchhoff&rsquo;s law: Total emissivity of a surface is equal to the absorptivity for radiation coming from a black body at the same temperature</li>
+</ol>
+<p>$$\varepsilon_\lambda(T) = \alpha_\lambda(T)$$</p>
+<ol start="8">
+<li>Radiosity: The radiation emmited + the radiation reflected by surface \(i \)</li>
+</ol>
+<p>$$J_i = \varepsilon_i E_{bi} + (1-\varepsilon)G_i$$</p>
+<p>Note that we know that for an opaque surface (\(\tau=0\)), \(\varepsilon + \rho = 1 \)</p>
+<h4 id="other">Other</h4>
+<ul>
+<li>Radiation heat transfer coefficient \(h_{rad} \) provides radiative heat transfer as \(\dot{q} = h_{rad} T_1-T_2 \)</li>
+</ul>
 <h2 id="ece253">ECE253</h2>
 <h2 id="mat292">MAT292</h2>
 <h2 id="aer210">AER210</h2>
