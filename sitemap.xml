@@ -2,26 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//chenbrian.ca/posts/2021/12/engsci-y2s1-exam-review/</loc>
-    <lastmod>2021-12-11T22:16:12-05:00</lastmod>
-  </url><url>
     <loc>//chenbrian.ca/</loc>
-    <lastmod>2021-12-11T22:16:12-05:00</lastmod>
+    <lastmod>2021-12-13T21:03:35-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/</loc>
+    <lastmod>2021-12-13T21:03:35-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/posts/2021/projects/</loc>
+    <lastmod>2021-12-13T21:03:35-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/posts/2021/notes-aggregator-page/</loc>
+    <lastmod>2021-12-13T19:16:20-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/posts/2021/teaching/</loc>
+    <lastmod>2021-12-12T16:49:34-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</loc>
     <lastmod>2021-12-11T22:16:12-05:00</lastmod>
   </url><url>
-    <loc>//chenbrian.ca/posts/2021/12/advent-of-code-2021/</loc>
+    <loc>//chenbrian.ca/posts/2021/advent-of-code-2021/</loc>
     <lastmod>2021-12-09T21:20:53-05:00</lastmod>
   </url><url>
-    <loc>//chenbrian.ca/posts/2021/12/go-web-server/</loc>
+    <loc>//chenbrian.ca/posts/2021/go-web-server/</loc>
     <lastmod>2021-12-09T20:48:45-05:00</lastmod>
   </url><url>
-    <loc>//chenbrian.ca/posts/2021/08/2021-08-29-first_post/</loc>
-    <lastmod>2021-08-29T02:33:32-07:00</lastmod>
-  </url><url>
     <loc>//chenbrian.ca/about/</loc>
-    <lastmod>2020-07-31T15:39:08-07:00</lastmod>
+    <lastmod>2021-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/categories/</loc>
   </url><url>

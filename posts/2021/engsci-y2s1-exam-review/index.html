@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta lang="en">
+
+    <title>Engsci Y2S1 Exam Review | chenbrian</title>
+
+    <style>body{margin:40px auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1{line-height:1.2;font-family:Arial,sans-serif}h2,h3{font-family:Arial,sans-serif;line-height:1.1;color:#444}body{font-family:Arial,sans-serif}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:18px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%}td,th{border:1px solid #444;padding:.5rem;text-align:left}</style>
+
+
+
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-B0ZFV4LTG2', { 'anonymize_ip': false });
+}
+</script>
+
+
+    
+</head>
+
+
+<body>
+<div class="header">
+    <h1>
+        <a href="//chenbrian.ca">chenbrian</a>
+        <div class="header-menu">
+            <a href="/posts/">blog</a>
+            <a href="/about/">about</a>
+        </div>
+    </h1>
+</div>
+<div id="content">
+
+<header>
+    <h1>Engsci Y2S1 Exam Review</h1>
+    
+
+<div class="post-meta">
+    Date &#x5b;
+    <time datetime="2021-12-11">Dec 11, 2021</time>
+    &#x5d;
+</div>
+</header>
+<article>
+    <p>Exam &lsquo;cheat sheets&rsquo; for EngSci 2nd year semester fall semester.
+These were made as part of my own studying for the exams.</p>
+<p>I do not guarantee content correctness &ndash; but if you find a mistake, please let me know!</p>
+
+
+
+<div>
+    <h2>Table of Contents <button style="font-size: large" id="toc_button" onclick="toggleTOC()"> ▼ </button> </h2>
+    <div id="toc">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#che260">CHE260</a>
+      <ul>
+        <li><a href="#variables">Variables</a></li>
+        <li><a href="#heat-transfer-mechanisms">Heat Transfer Mechanisms</a></li>
+        <li><a href="#steady-heat-transfer">Steady Heat Transfer</a></li>
+        <li><a href="#transient-heat-transfer">Transient Heat Transfer</a></li>
+        <li><a href="#forced-convection-heat-transfer">Forced Convection Heat Transfer</a></li>
+        <li><a href="#radiation-heat-transfer">Radiation Heat Transfer</a></li>
+      </ul>
+    </li>
+    <li><a href="#ece253">ECE253</a></li>
+    <li><a href="#mat292">MAT292</a></li>
+    <li><a href="#aer210">AER210</a></li>
+    <li><a href="#phy293">PHY293</a></li>
+    <li><a href="#esc203">ESC203</a></li>
+  </ul>
+</nav>
+    </div>
+    <script>
+        function toggleTOC() {
+            var x = document.getElementById("toc");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+            var y = document.getElementById("toc_button");
+            y.textContent = y.textContent === " ▼ " ? " ▲ " : " ▼ "; 
+        }
+    </script>
+</div>
+
+
+
+
+
+<h2 id="che260">CHE260</h2>
+<p>Note: the following only contains materials for the final exam, so it will <em>only</em> cover the heat-transfer portion of CHE260.</p>
+<h3 id="variables">Variables</h3>
+<p>Below are some variables and what they generally mean in the context of CHE260</p>
+<ul>
+<li>\(k\): Thermal conductivity constant. Larger for good heat conductors, lower for ones that do so poorly</li>
+<li>\(h\): Convection heat transfer coefficient</li>
+<li>\(\alpha = \frac{k}{\rho c_p}\): Thermal diffusivity</li>
+<li>\(T_{film} = \frac{T_s + T_\infty}{2}\): Film temperature: estimated temperature at the convection layer</li>
+</ul>
+<h3 id="heat-transfer-mechanisms">Heat Transfer Mechanisms</h3>
+<p>$$Q_{conduction} = -kA\frac{dT}{dx}$$
+$$Q_{convection} = hA(T_s - T_\infty)$$
+$$Q_{radiation} = \varepsilon\sigma A(T_s^4-T_{surr}^4)$$
+Note: for radiation make sure to use Kelvin, not Celsius.</p>
+<h3 id="steady-heat-transfer">Steady Heat Transfer</h3>
+<p>We can apply the thermal resistance concept to build heat transfer resistance networks:</p>
+<p>$$\dot{Q_{tot}} = \frac{T_2 - T_1}{R_{total}}$$</p>
+<p>\(R_{total} \) is obtained through the various expressions for heat resistance for different shapes and methods.
+Draw out the resistance network and then solve for the total resistance which works in the same way as electrical resistance.
+Conduction resistances stacked perpendicular to the direction of heat flow are represented by parallel resistances.</p>
+<p>For example, for two planes of glass,</p>
+<p>$$R_T = R_{conv, 1} + R_{glass,1} + R_{air} + R_{glass, 2} + R_{conv, 2}$$</p>
+<p>Note the convection on either side.</p>
+<p>The temperature at a point is is given using the heat transfer with resistance equation with a known total heat transfer and resistance between points \(a, b \), and temperature at one of the points.</p>
+<p>$$Q_{a\rightarrow b} = \frac{T_a - T_b}{R_{a\rightarrow b}}$$</p>
+<p>For spherical or cylindrical heat transfer there is a critical radius of insulation \(r_{cr} \) for which the heat transfer rate reaches a maximum, i.e. for \(r &lt; r_{cr} \) the heat transfer rate is below maximum and will actually increase with added insulation until \(r = r_{cr} \), after which the heat transfer rate will go back down again.</p>
+<ul>
+<li>For a sphere: $$r_{cr} = \frac{2k_{ins}}{h}$$</li>
+<li>For a cylinder: $$r_{cr} = \frac{k_{ins}}{h}$$</li>
+</ul>
+<h4 id="fins">Fins</h4>
+<p>For these problems just plug and chug.</p>
+<p>$$a = \sqrt{\frac{hP}{kA_c}}$$</p>
+<ol>
+<li>
+<p>Infinitely long fin
+$$\frac{T(x) - T_\infty}{T_b - T_\infty} = exp(-ax)$$
+$$\dot{Q} = \sqrt{kPkA_c}exp(-ax)$$</p>
+</li>
+<li>
+<p>Adiabatic tip/insulated tip fin</p>
+</li>
+</ol>
+<p>$$\frac{T(x) - T_\infty}{T_b - T_\infty} = \frac{\cosh{a(L-x)}}{\cosh{aL}}$$
+$$\dot{Q} = \sqrt{kPkA_c}(T_b - T_\infty)\tanh{aL}$$</p>
+<p>where \(P \) is the perimeter of the fin and \(A_c \) is the cross-sectional area. \(h \) is the convection heat transfer coefficient of the surrounding fluid, and \(k \) the thermal conductivity constant for the fin material</p>
+<p>Misc:</p>
+<ol>
+<li>Fins exposed to convection at tips can be modelled as an adiabatic tip fin with a corrected length</li>
+</ol>
+<p>$$L_c = L + \frac{A_c}{p}$$</p>
+<ol start="2">
+<li>Fin efficiency is the ratio of actual heat transfer (non-uniform temperature) to maximum heat transfer (uniform temperature)</li>
+</ol>
+<p>$$\eta = \frac{\dot{Q_{tot}}}{\dot{Q_{tot\space max}}}$$</p>
+<ol start="3">
+<li>Fin effectiveness is the ratio of heat transfer due to fins to heat transfer if the fins were not present. \(A_b \) denotes the area of the fin bases, not that of the whole surface the fins are attached to.</li>
+</ol>
+<p>$$\varepsilon = \frac{\dot{Q_{fin}}}{\dot{Q_{no\space fin}}} = \frac{\dot{Q_{fin}}}{hA_b(T_b-T\infty)}$$</p>
+<ol start="4">
+<li>Fin effectiveness and efficiency are related by</li>
+</ol>
+<p>$$\varepsilon = \frac{A_{fin}}{A_{base}}\cdot\eta$$</p>
+<h3 id="transient-heat-transfer">Transient Heat Transfer</h3>
+<p>TLDR; modelling heat transfer as a function of time as well. If possible, apply lumped system assumption which assumes that the whole system has uniform temperature.</p>
+<ul>
+<li>Characteristic Length: \(L_c = \frac{V}{A_{surface}}\)</li>
+<li>Biot number: \(Bi = \frac{hL_c}{k}\)</li>
+</ul>
+<p>Note: When we look up \(\lambda_1\) and \(A_1\) from tables make sure to use the same formula for Biot&rsquo;s number as used by the reference source. The textbook uses \(Bi = \frac{hr_o}{k}\) for cylinders and spheres.</p>
+<p>Lumped system approximation is valid for $$Bi \leq 0.1$$</p>
+<p>We then can get the following by solving the heat equation</p>
+<p>$$b = \frac{hA_s}{\rho c_p V} = \frac{h}{\rho c_p L_c}, [b] = s^{-1}$$</p>
+<p>$$\frac{T(t) - T_\infty}{T_i - T_\infty} = e^{-bt}$$</p>
+<p>Most questions will then get you to plug in the boundary conditions \(T_i, T(t), T_\infty\)  and then have you solve for \(t\) or some combination thereof.</p>
+<p>Procedure:</p>
+<ol>
+<li>Determine \(L_c\)</li>
+<li>Determine \(Bi\) and check if lumped system is valid</li>
+<li>Plug into heat equation and solve for unknown</li>
+</ol>
+<p>if \(Bi &gt; 0.1\), then you will have to do some more work.</p>
+<ol>
+<li>Assume \(\tau&gt;0.2\) so one-term approximation is valid</li>
+<li>Given \(Bi\), look up in reference table to find \(\lambda_1\) and \(A_1\)</li>
+<li>Plug into the right expression for dimensionless temperature \(\theta = e^{-Bi*\tau}\). Below is the one-term expression for a plane wall. They all generally have a similar form.</li>
+</ol>
+<p>$$\frac{T(x, t) - T_\infty}{T_i - T_\infty} = A_1e^{-\lambda_1^2\tau}\cos{\frac{\lambda_1 x}{L}}$$
+and note that in this expression time is w.r.t. dimensionless time \(\tau\) &ndash; so to convert back to dimensioned time we apply
+$$\tau = \frac{\alpha t}{L^2}$$
+to recover \(t\).</p>
+<p>Note that at the center of a plane wall/cylinder/sphere/etc the above expression can be simplified to
+$$\frac{T(0, t) - T_\infty}{T_i - T_\infty} = A_1e^{-\lambda_1^2\tau}$$</p>
+<p>For some questions (for example a plane wall cooled on both sides) we can express \(T(x,t)\) w.r.t \(T(0, t)\), i.e. \(T(x, t) = T(0, t)\cos{\lambda_1 x/L}\)</p>
+<p>For heat transfer we express it as a % of the maximum heat transfer.</p>
+<p>Given</p>
+<p>$$Q_{max} = mc_p(T_\infty - T_i)$$</p>
+<p>which denotes heat transfer as \(t\rightarrow\infty\)</p>
+<p>we derive a ratio \(\frac{Q(t)}{Q_{max}}\) for different geometries, which should be given.
+\(Q(t)\) is the sum of internal energy changes throughout the entire geometry which can be expressed as a volume integral.</p>
+<h4 id="semi-infinite-solids">Semi-Infinite Solids</h4>
+<p>Used to model temperature change in part of body due to thermal conditions on a single surface
+TLDR; use this for questions where they don&rsquo;t give you dimensions</p>
+<p>$$\eta = \frac{x}{\sqrt{4\alpha t}}$$</p>
+<p>For constant \(T_s\) we obtain</p>
+<p>$$\frac{T(x,t)-T_i}{T_s-T_i} = erfc(\eta)$$</p>
+<p>and</p>
+<p>$$\dot{q}_s(t) = \frac{k(T_s-T_i)}{\sqrt{\pi\alpha t}}$$</p>
+<p>where</p>
+<p>$$erfc(\eta) = 1- \frac{2}{\sqrt{\pi}}\int^\eta_0 e^{-u^2}du$$</p>
+<p>Generally we will be looking up \(\eta, erfc(\eta)\) in a table.</p>
+<h3 id="forced-convection-heat-transfer">Forced Convection Heat Transfer</h3>
+<p>TLDR: What if we forced fluids instead of letting the convection happen naturally?</p>
+<p>We know that</p>
+<p>$$Q_{conv} = hA(T_s - T_\infty)$$</p>
+<p>But how do we get \(h\) for forced convection? Either look it up from a table, get it experimentally, or do some math.</p>
+<p>$$h=\frac{-k_{fluid}(\frac{\delta T}{\delta y}\vert_{y=0})}{T_s-T_\infty}$$
+Note that the temperature distribution for a moving fluid isn&rsquo;t constant.
+We can usually use an average one
+$$h=\frac{1}{A_s}\int_{A_s}h_{local}dA_s$$</p>
+<p>Note: surface integral for the 2D case, and the over length \(L\) for the 1D.</p>
+<p>In cases where the laminar flow region cannot be entirely disregarded, we must integrate over the parts separately</p>
+<p>$$h = \frac{1}{L}(\int_0^{x_a} h_{x, laminar}dx + \int_{x_a}^L h_{x, turbulent}dx)$$</p>
+<p>Recall from AER210 the that fluid exerts a drag force \(\tau\) on the walls</p>
+<p>$$\tau = \mu \frac{\delta\mu}{\delta y} \vert_{y=0}$$</p>
+<p>Or,</p>
+<p>$$\tau = c_f \frac{\rho v_o^2}{2}$$</p>
+<p>where \(c_f\) is a friction coefficient which depends on geometry.</p>
+<p>Forced convection is described with help from a few numbers</p>
+<ol>
+<li>Reynold&rsquo;s number \(Re\)</li>
+</ol>
+<p>$$Re = \frac{\rho V_\infty D}{\mu} = \frac{V_\infty x}{\nu}$$
+Note: \(\nu\) is kinematic viscosity \(\nu = \frac{\mu}{\rho}\)</p>
+<p>Large \(Re\) tends towards turbulent flow, small tends towards laminar flow. Generally if \(Re&lt;5*10^5\) the flow is laminar and it is turbulent otherwise.</p>
+<ol start="2">
+<li>Prachett&rsquo;s number \(Pr\)</li>
+</ol>
+<p>The ratio of molecular diffusivity of momentum over the molecular diffusivity of heat</p>
+<p>$$Pr = \frac{v}{\alpha} = \frac{\mu c_p}{k}$$</p>
+<ol start="3">
+<li>Nusselt&rsquo;s Number \(Nu\)</li>
+</ol>
+<p>The dimensionless heat transfer coefficient which is the ratio of the <em>convective</em> heat transfer rate to the <em>conductive</em> heat transfer rate.</p>
+<p>$$Nu = \frac{hL_c}{k}$$</p>
+<p>We can then apply Buckingham \(\pi\) to represent \(Nu\) w.r.t. \(Re\) and \(Pr\).</p>
+<p>$$Nu_x = \frac{h_xx}{k} = cRe_x^nPr^m$$</p>
+<p>Note that here \(Nu\) is local to point \(x\)</p>
+<p>And the coefficients \(c, m, n\) can either be solved for with experimental data or will be given.
+For example, for laminar flow over a flat plate:</p>
+<p>$$Nu = \frac{hL}{k} = 0.664Re_L^{0.5}Pr^{(1/3)}, \\ Re_L &lt; 5*10^5, Pr &gt; 0.6$$</p>
+<p>&hellip; and for turbulent flow:
+$$Nu = \frac{hL}{k} = 0.037Re_L^{0.8}Pr^{(1/3)}, \\ 5*10^5 \leq Re_L \leq 10^7, 0.6 \leq Pr \leq 60 $$</p>
+<p>For isothermal surfaces with an unheated starting section of length \(\xi\) the local Nusselt&rsquo;s number is given by</p>
+<p>laminar :</p>
+<p>$$Nu_x = \frac{hL}{k} = \frac{0.332Re_x^{0.5}Pr^{1/3}}{[1-(\xi/x)^{3/4}]^{1/3}}$$</p>
+<p>turbulent :</p>
+<p>$$Nu_x = \frac{hL}{k} = \frac{0.0296Re_x^{0.8}Pr^{1/3}}{[1-(\xi/x)^{910}]^{1/9}}$$</p>
+<p>What is important to note here is that these equations are valid for an isothermal flat plate with an unheated starting section of length \(\xi=0\) as well. The equations would be the same as the two above except the denominator is 1.
+The previous equations (e.g. \(c=0.664\)) are valid for a flat plate heated at the leading edge.</p>
+<h4 id="other">Other:</h4>
+<ul>
+<li>No-slip condition applies at walls, so right by the wall heat transfer is conductive. \(\dot{q} = \dot{q_{cond}}\)</li>
+</ul>
+<h3 id="radiation-heat-transfer">Radiation Heat Transfer</h3>
+<p>For this section everything is just plug and chug and being careful with view factors.
+Most problems involve an energy balance \(\dot{q_{in}} = \dot{q_{out}} \)</p>
+<ol>
+<li>
+<p>Stefan-Boltzmann Law:
+$$E_b(T) = \sigma T^4$$</p>
+</li>
+<li>
+<p>Wein&rsquo;s displacement law: finding the wavelength that gives the maximum power for a specified surface temperature
+$$(\lambda T)_{max power} = 2897.8 \mu \cdot K$$</p>
+</li>
+<li>
+<p>Reciprocity rule:</p>
+</li>
+</ol>
+<p>$$A_iF_{i\rightarrow j} = A_jF_{j\rightarrow i}$$</p>
+<p>Where \(F_{i\rightarrow j} \) is the &lsquo;view factor&rsquo;, i.e. the percent of radiation leaving surface \(i \) that strikes surface \(j \) directly.</p>
+<ul>
+<li>\(\alpha = \frac{G_{absorbed}}{G} \): Absorptivity</li>
+<li>\(\rho = \frac{G_{reflected}}{G} \): Reflectivity</li>
+<li>\(\tau = \frac{G_{transmitted}}{G}\): Transmissivity</li>
+</ul>
+<p>These variables also have the property</p>
+<p>$$\alpha + \rho + \tau = 1$$</p>
+<p>Note: for opaque surfaces \(\tau = 0 \)</p>
+<ol start="4">
+<li>Summation property: the set of view factors that describe radiation beginning at surface \(i \) and ending at all surfaces \(j \) that it touches has a sum of \(1 \).</li>
+</ol>
+<p>$$\sum^N_{j=1}F_{ij} = 1$$</p>
+<ol start="5">
+<li>Putting all together
+When are looking at black body radiation only:
+$$\dot{Q_{1\rightarrow 2}} = A_1 F_{1\rightarrow 2} \sigma (T_1^4 - T_2^4)$$</li>
+</ol>
+<p>Note:
+$$\dot{Q_{1\rightarrow 2}} = A_1\dot{q_{1\rightarrow 2}}$$</p>
+<ol start="6">
+<li>Heat transfer between surfaces</li>
+</ol>
+<p>$$\dot{q_{12}} = \frac{\sigma(T_1^4-T_2^4)}{ \frac{1-\varepsilon_1}{A_1\varepsilon_1} + \frac{1}{A_1F_{12}} + \frac{1-\varepsilon_2}{A_2\varepsilon_2}}$$
+Where the middle term in the denominator denotes the &ldquo;resistivity&rdquo; due to space and the other terms due to radiation.</p>
+<p>So we can build resistance networks by adding up the resistances of each element here as well!</p>
+<ol start="7">
+<li>Kirchhoff&rsquo;s law: Total emissivity of a surface is equal to the absorptivity for radiation coming from a black body at the same temperature</li>
+</ol>
+<p>$$\varepsilon_\lambda(T) = \alpha_\lambda(T)$$</p>
+<ol start="8">
+<li>Radiosity: The radiation emitted + the radiation reflected by surface \(i \)</li>
+</ol>
+<p>$$J_i = \varepsilon_i E_{bi} + (1-\varepsilon)G_i$$</p>
+<p>Note that we know that for an opaque surface (\(\tau=0\)), \(\varepsilon + \rho = 1 \)</p>
+<h4 id="other-1">Other</h4>
+<ul>
+<li>Radiation heat transfer coefficient \(h_{rad} \) provides radiative heat transfer as \(\dot{q} = h_{rad}(T_1-T_2)\)</li>
+</ul>
+<h2 id="ece253">ECE253</h2>
+<h2 id="mat292">MAT292</h2>
+<h2 id="aer210">AER210</h2>
+<h2 id="phy293">PHY293</h2>
+<h2 id="esc203">ESC203</h2>
+<p>n/a</p>
+
+</article>
+
+
+    </div>
+<div class="footer">
+    
+    
+    <div class="footer-links">
+        <a href="https://github.com/ihasdapie">GitHub</a>
+    </div>
+    
+
+    
+    
+    <div class="copyright">© 2021 — Brian Chen — All rights reserved.</div>
+    
+</div>
+</body>
+
+</html>
