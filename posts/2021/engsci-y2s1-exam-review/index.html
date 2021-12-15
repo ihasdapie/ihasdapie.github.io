@@ -518,10 +518,10 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE</code>, -E denotes &ldquo;or equal to&r
 <p>Pushing to the stack pointer puts the value on top of the stack and decreases the stack pointer</p>
 </li>
 <li>
-<p><code>PUSH {Rs}</code>: Pushs registers onto stack. Registers must be in ascending order and the largest one gets pushed in first</p>
+<p><code>PUSH {Rs}</code>: Pushs registers onto stack. Registers must be in ascending order and the largest one gets pushed in first. Has effect of decreasing the stack pointer.</p>
 </li>
 <li>
-<p><code>POP {Rs}</code>: Pops data off the stack. Does not care what register the stack data comes from; i.e. <code>PUSH R5 POP R6</code> would put R6 into R5. Can be used in recursion to put <code>LR</code> into <code>PC</code></p>
+<p><code>POP {Rs}</code>: Pops data off the stack. Does not care what register the stack data comes from; i.e. <code>PUSH {R5} POP {R6}</code> would put R6 into R5. Can be used in recursion to put <code>LR</code> into <code>PC</code>. Has effect of increasing the stack pointer.</p>
 </li>
 </ul>
 <p>For example, taking the initial stack pointer value of <code>0x2000</code> we applying <code>PUSH {R0, R3, LR}</code> we get:</p>
