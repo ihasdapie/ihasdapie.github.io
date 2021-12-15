@@ -90,7 +90,14 @@ These were made as part of my own studying for the exams.</p>
         <li><a href="#radiation-heat-transfer">Radiation Heat Transfer</a></li>
       </ul>
     </li>
-    <li><a href="#ece253">ECE253</a></li>
+    <li><a href="#ece253-digital-and-computer-systems">ECE253: Digital and Computer Systems</a>
+      <ul>
+        <li><a href="#logic">Logic</a></li>
+        <li><a href="#circuits">Circuits</a></li>
+        <li><a href="#verilog">Verilog</a></li>
+        <li><a href="#arm-assembly">ARM Assembly</a></li>
+      </ul>
+    </li>
     <li><a href="#mat292">MAT292</a></li>
     <li><a href="#aer210">AER210</a></li>
     <li><a href="#phy293">PHY293</a></li>
@@ -337,7 +344,277 @@ Where the middle term in the denominator denotes the &ldquo;resistivity&rdquo; d
 <ul>
 <li>Radiation heat transfer coefficient \(h_{rad} \) provides radiative heat transfer as \(\dot{q} = h_{rad}(T_1-T_2)\)</li>
 </ul>
-<h2 id="ece253">ECE253</h2>
+<h2 id="ece253-digital-and-computer-systems">ECE253: Digital and Computer Systems</h2>
+<p>Note: <a href="https://gohugo.io/content-management/syntax-highlighting/">Hugo Chroma</a> for armasm seems to be a little different from ARMv7 used. So the following code blocks will be highlighted with nasm syntax. Comments will be denoted with &lsquo;;&rsquo; but should be &lsquo;//&rsquo; in ARMv7.</p>
+<h3 id="logic">Logic</h3>
+<ul>
+<li>Karnaugh Maps</li>
+<li>Finite State Machines</li>
+</ul>
+<ol>
+<li>Draw state table</li>
+</ol>
+<h4 id="binary-numbers">Binary numbers</h4>
+<ol>
+<li>Two&rsquo;s complement: Flip bits and add 1. Leading 1 denotes negative number, leading 0 denotes positive number.</li>
+</ol>
+<h3 id="circuits">Circuits</h3>
+<h5 id="d-flip-flop">D Flip-Flop</h5>
+<p><img src="./dflipflop.png" alt="">
+<img src="./gateddlatch.png" alt=""></p>
+<p>Commonly used to storage a single bit of data. Can be chained together to store multiple bits of data, commonly as a shift register.</p>
+<p>% Difference between negedge, posedge, active high, active low</p>
+<h3 id="verilog">Verilog</h3>
+<p><img src="./verilog_operators.png" alt="Verilog Operators"></p>
+<p><a href="https://class.ece.uw.edu/cadta/verilog/operators.html">Source: Operators</a></p>
+<ol>
+<li>Blocking vs Non-blocking</li>
+</ol>
+<p><code>=</code> is non-blocking, <code>&lt;=</code> is blocking
+For non-blocking <code>=</code> we treat the logic as combinatorial, and for blocking <code>&lt;=</code> we treat the logic as sequential.
+So all the <code>=</code> steps can take one cycle (completed in parallel) while the <code>&lt;=</code> steps can take multiple cycles (completed in sequence).</p>
+<p>With sequential logic, &ldquo;step through&rdquo; the behaviour of the circuit first and then it should be pretty clear how to build it.</p>
+<h3 id="arm-assembly">ARM Assembly</h3>
+<p>For <a href="https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&amp;No=836">De1-SOC</a></p>
+<h4 id="misc">Misc:</h4>
+<ul>
+<li>Registers are 32 bit/4 bytes</li>
+<li>Each instruction is 32 bits/4bytes long</li>
+</ul>
+<h4 id="instructions">Instructions</h4>
+<p>Note that in the following I use <code>O\d</code> to denote an [O]perand which can be a register, a constant, or whatever else also works.</p>
+<ul>
+<li><code>MOV</code></li>
+<li><code>LDR TARGET, [SOURCE]</code></li>
+<li><code>STR DEST, [TARGET]</code></li>
+<li><code>CMP O1, O2</code>: Compare <code>O1</code> and <code>O2</code> by computing <code>O2 - O1</code> and then updating NZCV flags in the CPSR</li>
+<li><code>ADD O1, O2, O3</code>: Add <code>O2</code> to <code>O3</code> and store the result in <code>O1</code></li>
+<li><code>SUB O1, O2, O3</code>: Subtracts <code>O3</code> from <code>O2</code> and store the result in <code>O1</code></li>
+<li><code>ASR</code> (Arithmetic Shift Right): Shift to the right, shifted in bits depend on leading sign bit</li>
+<li><code>LSL</code> (Logical Shift Left): Shift to the left, shifted in bits are 0</li>
+<li><code>LSR</code> (Logical Shift Right): Shift to the right, shifted in bits are 0</li>
+</ul>
+<p>Note: <code>MOV</code> directly puts it into the destination register, <code>LDR</code> loads the value from the memory location into the destination register, <code>STR</code> stores the value from the source register into the memory location.
+When <code>LDR</code> is used with a literal it first loads the literal into memory and then loads the value from the memory location into the destination register.</p>
+<h4 id="interrupts">Interrupts</h4>
+<p>General Interrupt procedure:</p>
+<ul>
+<li>Enabling interrupts</li>
+</ul>
+<ol>
+<li>Provide exception vector table</li>
+<li>Init banked Stack Pointer (SP) for IRQ mode</li>
+<li>Set SP for Supervisor (SVC) and IRQ mode</li>
+<li>Configure GIC</li>
+<li>Enable IRQ generation in I/O devices</li>
+<li>Enable processor to see interrupts from GIC</li>
+<li>Provide <code>IRQ_HANDLER</code> which queries GIC to determine intterupt source</li>
+</ol>
+<p>For example, <code>SERVICE_IRQ</code></p>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#f5a40d">SERVICE_IRQ:</span> 
+  <span style="color:#00b1f7">PUSH</span> {<span style="color:#dcaeea">R0</span><span style="color:#c7bf54">-</span><span style="color:#dcaeea">R5</span>, <span style="color:#dcaeea">LR</span>} <span style="color:#8a93a5;font-style:italic">; save registers</span>
+  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R4</span>, =<span style="color:#dcaeea">MPCORE_GIC</span> <span style="color:#dcaeea">CPUIF</span> <span style="color:#c7bf54">//</span> <span style="color:#dcaeea">memory</span> <span style="color:#dcaeea">offset</span> <span style="color:#dcaeea">to</span> <span style="color:#dcaeea">get</span> <span style="color:#dcaeea">to</span> <span style="color:#dcaeea">GIC</span>
+  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R5</span>, [<span style="color:#dcaeea">R4</span>, #<span style="color:#dcaeea">ICCIAR</span>] <span style="color:#c7bf54">//</span> <span style="color:#dcaeea">read</span> <span style="color:#dcaeea">interrupt</span> <span style="color:#dcaeea">ID</span>
+  // <span style="color:#00b1f7">then</span>, <span style="color:#dcaeea">compare</span> <span style="color:#dcaeea">contents</span> <span style="color:#dcaeea">of</span> <span style="color:#dcaeea">R5</span> <span style="color:#dcaeea">with</span> <span style="color:#dcaeea">number</span> <span style="color:#dcaeea">literals</span> <span style="color:#dcaeea">to</span> <span style="color:#dcaeea">determine</span> <span style="color:#dcaeea">interrupt</span> <span style="color:#dcaeea">source</span>
+  // <span style="color:#00b1f7">then</span> <span style="color:#dcaeea">call</span> <span style="color:#dcaeea">appropriate</span> <span style="color:#dcaeea">handler</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="8">
+<li>Handle IRQ (subroutine e.g. <code>KEY_ISR</code>)</li>
+<li>Clear IRQ on source device</li>
+</ol>
+<h6 id="using-keys">Using <code>KEYS</code></h6>
+<ul>
+<li>Enabling interrupts</li>
+</ul>
+<p><img src="./keys_loc.png" alt="">
+Apply a intmask onto the relevant memory location.
+E.g. to enables <code>KEY3</code> and <code>KEY0</code>, we would:</p>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-s" data-lang="s"><span style="color:#c1abea">LDR</span> <span style="color:#c1abea">R1</span>, <span style="color:#c7bf54">=</span><span style="color:#d19a66">0xFF20058</span> <span style="color:#c7bf54">//</span> <span style="color:#c1abea">int</span> <span style="color:#c1abea">mask</span> <span style="color:#c1abea">addr</span>
+<span style="color:#c1abea">MOV</span> <span style="color:#c1abea">R2</span>, <span style="color:#8a93a5;font-style:italic">#0b1001 // we want to enable KEY3 and KEY0</span>
+<span style="color:#c1abea">STR</span> <span style="color:#c1abea">R2</span>, <span style="color:#c1abea">[R1]</span> <span style="color:#c7bf54">//</span> <span style="color:#c1abea">write</span> <span style="color:#c1abea">to</span> <span style="color:#c1abea">int</span> <span style="color:#c1abea">mask</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Then, we can query the <code>edge capture</code> bits which stores which keys are pressed.</p>
+<h5 id="stacks">Stacks</h5>
+<ul>
+<li>must first initialize stack pointer</li>
+<li>Pushing to the stack pointer puts the value on top of the stack and decreases the stack pointer</li>
+</ul>
+<p>For example, taking the initial stack pointer value of <code>0x2000</code> we applying <code>PUSH {R0, R1, R2, R3, LR}</code> we get:</p>
+<table>
+<thead>
+<tr>
+<th>memory</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x2000</td>
+<td>R0</td>
+</tr>
+<tr>
+<td>0x1FFC</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>0x1FF8</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>0x1FF4</td>
+<td>R3</td>
+</tr>
+<tr>
+<td>0x1FF0</td>
+<td>LR</td>
+</tr>
+</tbody>
+</table>
+<p>Noting that the stack grows downwards and the stack pointer is decremented by the size of the pushed value (4 bytes).</p>
+<h5 id="using-lr">Using <code>LR</code></h5>
+<p>At instruction <code>i</code>, <code>LR</code> stores the address of the next instruction at <code>i+1</code>.
+So, assuming that the first instruction of the following code chunk is stored at <code>0x0</code>,</p>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">LDR R0, =0x2000 ; 0x00000000, LR: 0x00000004
+MOV R2, #4    ; 0x00000004, LR: 0x00000008
+BL ROUTINE ; 0x00000008, LR: 0x0000000C
+MOV R2, #5 ; 0x0000000C, LR: 0x00000010
+
+ROUTINE:
+  PUSH {LR} ; 0x00000010, LR=0x0000000C
+  ; .. do something
+</code></pre></td></tr></table>
+</div>
+</div><h6 id="subroutines">Subroutines</h6>
+<p>Convention:</p>
+<ul>
+<li>Parameters are passed via <code>R0-R3</code>, which subroutines are free to modify and return with</li>
+<li>Subroutine should not modify the remaining registers; if so they should <code>PUSH/POP</code> to the stack before and after use</li>
+<li>Exit subroutine with <code>MOV PC, LR</code></li>
+<li><code>BL</code> is a branch and link instruction, which sets <code>LR</code> to the next instruction and sets <code>PC</code> to the label address</li>
+</ul>
+<h5 id="using-ledr">Using LEDR</h5>
+<p>To display using LEDR we just need to write the value we want to the appropriate memory location.
+Here, assuming that what we want to display is stored in <code>R1</code>:</p>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">LDR R2, =0xFF2000000 // LEDR addr
+STR [R1], R2 // write to LEDR
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>Setting up stack pointer</p>
+</li>
+<li>
+<p><code>CPSR</code>: Current Program Status Register</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>31</th>
+<th>30</th>
+<th>29</th>
+<th>28</th>
+<th>..</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4 .. 0</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N</td>
+<td>Z</td>
+<td>C</td>
+<td>V</td>
+<td>..</td>
+<td>[I]nterrupt</td>
+<td>F</td>
+<td>T</td>
+<td>mode</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>There are a few modes and each one of them have a different stack pointer</p>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">FIQ: 0b10001
+IRQ: 0b10010
+SVC: 0b10011
+Monitor: 0b10110
+Abort: 0b10111
+Undefined: 0b11011
+</code></pre></td></tr></table>
+</div>
+</div><p>We only care about the IRQ and Supervisor modes. These can be set by loading the appropriate value into the CPSR.</p>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-s" data-lang="s"><span style="color:#c1abea">MOV</span> <span style="color:#c1abea">R0</span>, <span style="color:#8a93a5;font-style:italic">#0b10010 // irq mode</span>
+<span style="color:#c1abea">MSR</span> <span style="color:#c1abea">CPSR</span>, <span style="color:#c1abea">R0</span> <span style="color:#c7bf54">//</span> <span style="color:#c1abea">change</span> <span style="color:#c1abea">to</span> <span style="color:#c1abea">irq</span> <span style="color:#c1abea">mode</span>
+<span style="color:#c1abea">LDR</span> <span style="color:#c1abea">SP</span> ,<span style="color:#c7bf54">=</span> <span style="color:#d19a66">0x10000</span> <span style="color:#c7bf54">//</span> <span style="color:#c1abea">set</span> <span style="color:#c1abea">stack</span> <span style="color:#c1abea">pointer</span>
+<span style="color:#c1abea">MOV</span> <span style="color:#c1abea">R0</span>, <span style="color:#8a93a5;font-style:italic">#0b10011 // supervisor mode</span>
+<span style="color:#c1abea">MSR</span> <span style="color:#c1abea">CPSR</span>, <span style="color:#c1abea">R0</span> <span style="color:#c7bf54">//</span> <span style="color:#c1abea">change</span> <span style="color:#c1abea">to</span> <span style="color:#c1abea">supervisor</span> <span style="color:#c1abea">mode</span>
+<span style="color:#c1abea">LDR</span> <span style="color:#c1abea">SP</span> ,<span style="color:#c7bf54">=</span> <span style="color:#d19a66">0x20000</span> <span style="color:#c7bf54">//</span> <span style="color:#c1abea">set</span> <span style="color:#c1abea">stack</span> <span style="color:#c1abea">pointer</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Note that the two stack pointers on line 3 and 6 are different.</p>
+<p>In order to enable interrupts the <code>I</code>, must be set to <code>0</code>. <code>1</code> disables it, which is the default.</p>
+<h4 id="io">IO</h4>
 <h2 id="mat292">MAT292</h2>
 <h2 id="aer210">AER210</h2>
 <h2 id="phy293">PHY293</h2>
