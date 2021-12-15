@@ -84,18 +84,48 @@ These were made as part of my own studying for the exams.</p>
       <ul>
         <li><a href="#variables">Variables</a></li>
         <li><a href="#heat-transfer-mechanisms">Heat Transfer Mechanisms</a></li>
-        <li><a href="#steady-heat-transfer">Steady Heat Transfer</a></li>
-        <li><a href="#transient-heat-transfer">Transient Heat Transfer</a></li>
-        <li><a href="#forced-convection-heat-transfer">Forced Convection Heat Transfer</a></li>
-        <li><a href="#radiation-heat-transfer">Radiation Heat Transfer</a></li>
+        <li><a href="#steady-heat-transfer">Steady Heat Transfer</a>
+          <ul>
+            <li><a href="#fins">Fins</a></li>
+          </ul>
+        </li>
+        <li><a href="#transient-heat-transfer">Transient Heat Transfer</a>
+          <ul>
+            <li><a href="#semi-infinite-solids">Semi-Infinite Solids</a></li>
+          </ul>
+        </li>
+        <li><a href="#forced-convection-heat-transfer">Forced Convection Heat Transfer</a>
+          <ul>
+            <li><a href="#other">Other:</a></li>
+          </ul>
+        </li>
+        <li><a href="#radiation-heat-transfer">Radiation Heat Transfer</a>
+          <ul>
+            <li><a href="#other-1">Other</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#ece253-digital-and-computer-systems">ECE253: Digital and Computer Systems</a>
       <ul>
-        <li><a href="#logic">Logic</a></li>
-        <li><a href="#circuits">Circuits</a></li>
+        <li><a href="#logic-and-circuits">Logic and Circuits</a>
+          <ul>
+            <li><a href="#karnaugh-maps">Karnaugh Maps</a></li>
+            <li><a href="#other-2">Other:</a></li>
+            <li><a href="#circuits-to-know">Circuits to know</a></li>
+          </ul>
+        </li>
         <li><a href="#verilog">Verilog</a></li>
-        <li><a href="#arm-assembly">ARM Assembly</a></li>
+        <li><a href="#arm-assembly">ARM Assembly</a>
+          <ul>
+            <li><a href="#instructions">Instructions</a></li>
+            <li><a href="#subroutines">Subroutines</a></li>
+            <li><a href="#stacks">Stacks</a></li>
+            <li><a href="#interrupts">Interrupts</a></li>
+            <li><a href="#timers">Timers</a></li>
+            <li><a href="#io">IO</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#mat292">MAT292</a></li>
@@ -345,47 +375,108 @@ Where the middle term in the denominator denotes the &ldquo;resistivity&rdquo; d
 <li>Radiation heat transfer coefficient \(h_{rad} \) provides radiative heat transfer as \(\dot{q} = h_{rad}(T_1-T_2)\)</li>
 </ul>
 <h2 id="ece253-digital-and-computer-systems">ECE253: Digital and Computer Systems</h2>
-<p>Note: <a href="https://gohugo.io/content-management/syntax-highlighting/">Hugo Chroma</a> for armasm seems to be a little different from ARMv7 used. So the following code blocks will be highlighted with nasm syntax. Comments will be denoted with &lsquo;;&rsquo; but should be &lsquo;//&rsquo; in ARMv7.</p>
-<h3 id="logic">Logic</h3>
+<p>Note: <a href="https://gohugo.io/content-management/syntax-highlighting/">Hugo Chroma</a> for <code>armasm</code> seems to be a little different from ARMv7 used. So the following code blocks will be highlighted with <code>nasm</code> syntax. Comments will be denoted with &lsquo;;&rsquo; but should be &lsquo;//&rsquo; in ARMv7.</p>
+<h3 id="logic-and-circuits">Logic and Circuits</h3>
+<h4 id="karnaugh-maps">Karnaugh Maps</h4>
 <ul>
-<li>Karnaugh Maps</li>
-<li>Finite State Machines</li>
+<li>Group w.r.t powers of 2.</li>
+<li>For 7-seg-display draw a K-map for each segment</li>
+<li>Minterm: Product term that evals to 1</li>
+<li>Maxterm: Sum term that evals to 0
+Note that for minterms you don&rsquo;t need to NOT it but for maxterms you do.</li>
+<li>Canonical POS: Maxterms that cover all 0s</li>
+<li>Canonical SOP: Minterms that cover all 1s</li>
+<li>Prime implicant: The largest group that can be covered by a single implicant</li>
+<li>Essential Prime Implicants: An implicant that covers a term that is not covered by any other implicant</li>
+<li>Find set comprised of most essential prime implicants &ndash; lowest cost cover</li>
 </ul>
-<ol>
-<li>Draw state table</li>
-</ol>
-<h4 id="binary-numbers">Binary numbers</h4>
-<ol>
-<li>Two&rsquo;s complement: Flip bits and add 1. Leading 1 denotes negative number, leading 0 denotes positive number.</li>
-</ol>
-<h3 id="circuits">Circuits</h3>
-<h5 id="d-flip-flop">D Flip-Flop</h5>
+<h4 id="other-2">Other:</h4>
+<ul>
+<li>Two&rsquo;s complement: Flip bits and add 1. Leading 1 denotes negative number, leading 0 denotes positive number. E.x. 6 = 000100, -6 = 111001 + 1 = 111010.</li>
+<li>Finite State Machines
+<ul>
+<li>Draw out state table: |state|next w=0, w=1|output</li>
+<li>Assign encodings to states e.g. A=1, B=2 .. or use one-hot</li>
+<li>Reduce with K-maps; take columns on tables for K-map entries</li>
+<li>Use a case statement or series of flip-flops to implement the FSM</li>
+</ul>
+</li>
+</ul>
+<h4 id="circuits-to-know">Circuits to know</h4>
 <p><img src="./dflipflop.png" alt="">
-<img src="./gateddlatch.png" alt=""></p>
+D flip flop
+<img src="./gateddlatch.png" alt="">
+Gated latch</p>
 <p>Commonly used to storage a single bit of data. Can be chained together to store multiple bits of data, commonly as a shift register.</p>
-<p>% Difference between negedge, posedge, active high, active low</p>
 <h3 id="verilog">Verilog</h3>
 <p><img src="./verilog_operators.png" alt="Verilog Operators"></p>
 <p><a href="https://class.ece.uw.edu/cadta/verilog/operators.html">Source: Operators</a></p>
-<ol>
+<ul>
 <li>Blocking vs Non-blocking</li>
-</ol>
+</ul>
 <p><code>=</code> is non-blocking, <code>&lt;=</code> is blocking
 For non-blocking <code>=</code> we treat the logic as combinatorial, and for blocking <code>&lt;=</code> we treat the logic as sequential.
 So all the <code>=</code> steps can take one cycle (completed in parallel) while the <code>&lt;=</code> steps can take multiple cycles (completed in sequence).</p>
 <p>With sequential logic, &ldquo;step through&rdquo; the behaviour of the circuit first and then it should be pretty clear how to build it.</p>
+<ul>
+<li>
+<p>Latches: checks the value as long as clock is high</p>
+</li>
+<li>
+<p>Flip flops: check only on clock edge</p>
+</li>
+<li>
+<p>Active high: reset when 1</p>
+</li>
+<li>
+<p>Active low: reset when 0</p>
+</li>
+<li>
+<p>Synchronous: reset on the next clock edge that the flip flop is supposed to resond to</p>
+</li>
+<li>
+<p>Asynchronous: reset on the next clock edge at anytime</p>
+</li>
+<li>
+<p>Cost heuristic: # gates + # inputs where inputs is the # of inputs to gate. i.e. cost of a AND gate is 1 + 2 = 3 since it is 1 gate and 2 inputs</p>
+</li>
+</ul>
 <h3 id="arm-assembly">ARM Assembly</h3>
 <p>For <a href="https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&amp;No=836">De1-SOC</a></p>
-<h4 id="misc">Misc:</h4>
 <ul>
 <li>Registers are 32 bit/4 bytes</li>
 <li>Each instruction is 32 bits/4bytes long</li>
+<li>Tricks:</li>
+<li>Can extract the lowest bits out of a register by ANDing it with a ones mask</li>
+<li>Left shift by n bits is equivalent to multiply by 2^n</li>
+<li>Right shift by n bits is equivalent to divide by 2^n</li>
+<li>Registers: R0-R12: General Purpose R13: Stack Pointer R14: Link Register R15: Program Counter R16: Status Register</li>
 </ul>
-<h4 id="instructions">Instructions</h4>
+<p>Opcode format:</p>
+<p><img src="./opcode_format.png" alt="Source: https://www.allaboutcircuits.com/uploads/articles/Introduction_to_ARM_Assembly3.png"></p>
+<p>We can load the top and bottom halves of registers into another like this:</p>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#8a93a5;font-style:italic">; load the top half of R1 into R0</span>
+<span style="color:#8a93a5;font-style:italic">; and the bottom half of R3 into R0</span>
+<span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R0</span>, <span style="color:#dcaeea">R1</span>
+<span style="color:#00b1f7">LSL</span> <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">16</span>
+<span style="color:#00b1f7">ORR</span> <span style="color:#dcaeea">R0</span>, <span style="color:#dcaeea">R3</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="instructions">Instructions</h4>
 <p>Note that in the following I use <code>O\d</code> to denote an [O]perand which can be a register, a constant, or whatever else also works.</p>
 <ul>
-<li><code>MOV</code></li>
-<li><code>LDR TARGET, [SOURCE]</code></li>
+<li><code>MOV DEST, SRC</code></li>
+<li><code>LDR TARGET, [SOURCE, #offsetpos1], #offsetpos2</code>. If using offsetpos1, SOURCE is pre-indexed, offsetpos2 post-index. When using with memory location or numeric literal, prepend <code>=</code>, i.e. <code>LDR R0, =LIST</code> or <code>LDR R1, =0x0000000b</code></li>
+<li><code>LDR{OPT}</code>, <code>STR{OPT}</code>, opt can be B: byte, H: halfword &ndash; if we only want to use part of it.</li>
 <li><code>STR DEST, [TARGET]</code></li>
 <li><code>CMP O1, O2</code>: Compare <code>O1</code> and <code>O2</code> by computing <code>O2 - O1</code> and then updating NZCV flags in the CPSR</li>
 <li><code>ADD O1, O2, O3</code>: Add <code>O2</code> to <code>O3</code> and store the result in <code>O1</code></li>
@@ -396,6 +487,66 @@ So all the <code>=</code> steps can take one cycle (completed in parallel) while
 </ul>
 <p>Note: <code>MOV</code> directly puts it into the destination register, <code>LDR</code> loads the value from the memory location into the destination register, <code>STR</code> stores the value from the source register into the memory location.
 When <code>LDR</code> is used with a literal it first loads the literal into memory and then loads the value from the memory location into the destination register.</p>
+<ul>
+<li>Conditional Execution
+Do CMP, then apply <code>INSTR{COND}</code> or do a branch
+Conditions: <code>EQ, NE, GT, LT, GE, LE</code>, -E denotes &ldquo;or equal to&rdquo;</li>
+</ul>
+<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#00b1f7">CMP</span> <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">3</span>
+<span style="color:#00b1f7">ADDLT</span> <span style="color:#dcaeea">R0</span>, <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">1</span> <span style="color:#8a93a5;font-style:italic">; adds 1 to R0 if R0 &lt; 3</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="subroutines">Subroutines</h4>
+<ul>
+<li>Parameters are passed via <code>R0-R3</code>, which subroutines are free to modify and return with</li>
+<li>Subroutine should not modify the remaining registers; if so they should <code>PUSH/POP</code> to the stack before and after use</li>
+<li>Exit subroutine with <code>MOV PC, LR</code></li>
+<li><code>BL</code> is a branch and link instruction, which sets <code>LR</code> to the next instruction and sets <code>PC</code> to the label address</li>
+</ul>
+<h4 id="stacks">Stacks</h4>
+<ul>
+<li>
+<p>Must first initialize stack pointer, <code>LDR SP, 0x20000</code></p>
+</li>
+<li>
+<p>Pushing to the stack pointer puts the value on top of the stack and decreases the stack pointer</p>
+</li>
+<li>
+<p><code>PUSH {Rs}</code>: Pushs registers onto stack. Registers must be in ascending order and the largest one gets pushed in first</p>
+</li>
+<li>
+<p><code>POP {Rs}</code>: Pops data off the stack. Does not care what register the stack data comes from; i.e. <code>PUSH R5 POP R6</code> would put R6 into R5. Can be used in recursion to put <code>LR</code> into <code>PC</code></p>
+</li>
+</ul>
+<p>For example, taking the initial stack pointer value of <code>0x2000</code> we applying <code>PUSH {R0, R3, LR}</code> we get:</p>
+<table>
+<thead>
+<tr>
+<th>memory</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x2000</td>
+<td>LR</td>
+</tr>
+<tr>
+<td>0x1FFC</td>
+<td>R3</td>
+</tr>
+<tr>
+<td>0x1FF8</td>
+<td>R0</td>
+</tr>
+</tbody>
+</table>
 <h4 id="interrupts">Interrupts</h4>
 <p>General Interrupt procedure:</p>
 <ul>
@@ -433,6 +584,7 @@ When <code>LDR</code> is used with a literal it first loads the literal into mem
 <li>Handle IRQ (subroutine e.g. <code>KEY_ISR</code>)</li>
 <li>Clear IRQ on source device</li>
 </ol>
+<h4 id="timers">Timers</h4>
 <h6 id="using-keys">Using <code>KEYS</code></h6>
 <ul>
 <li>Enabling interrupts</li>
@@ -453,43 +605,6 @@ E.g. to enables <code>KEY3</code> and <code>KEY0</code>, we would:</p>
 </code></pre></td></tr></table>
 </div>
 </div><p>Then, we can query the <code>edge capture</code> bits which stores which keys are pressed.</p>
-<h5 id="stacks">Stacks</h5>
-<ul>
-<li>must first initialize stack pointer</li>
-<li>Pushing to the stack pointer puts the value on top of the stack and decreases the stack pointer</li>
-</ul>
-<p>For example, taking the initial stack pointer value of <code>0x2000</code> we applying <code>PUSH {R0, R1, R2, R3, LR}</code> we get:</p>
-<table>
-<thead>
-<tr>
-<th>memory</th>
-<th>value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0x2000</td>
-<td>R0</td>
-</tr>
-<tr>
-<td>0x1FFC</td>
-<td>R1</td>
-</tr>
-<tr>
-<td>0x1FF8</td>
-<td>R2</td>
-</tr>
-<tr>
-<td>0x1FF4</td>
-<td>R3</td>
-</tr>
-<tr>
-<td>0x1FF0</td>
-<td>LR</td>
-</tr>
-</tbody>
-</table>
-<p>Noting that the stack grows downwards and the stack pointer is decremented by the size of the pushed value (4 bytes).</p>
 <h5 id="using-lr">Using <code>LR</code></h5>
 <p>At instruction <code>i</code>, <code>LR</code> stores the address of the next instruction at <code>i+1</code>.
 So, assuming that the first instruction of the following code chunk is stored at <code>0x0</code>,</p>
@@ -505,25 +620,17 @@ So, assuming that the first instruction of the following code chunk is stored at
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">LDR R0, =0x2000 ; 0x00000000, LR: 0x00000004
-MOV R2, #4    ; 0x00000004, LR: 0x00000008
-BL ROUTINE ; 0x00000008, LR: 0x0000000C
-MOV R2, #5 ; 0x0000000C, LR: 0x00000010
+<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-s" data-lang="s"><span style="color:#c1abea">LDR</span> <span style="color:#c1abea">R0</span>, <span style="color:#c7bf54">=</span><span style="color:#d19a66">0x2000</span> ; <span style="color:#d19a66">0x00000000</span>, <span style="color:#c1abea">LR</span><span style="color:#c7bf54">:</span> <span style="color:#d19a66">0x00000004</span>
+<span style="color:#c1abea">MOV</span> <span style="color:#c1abea">R2</span>, <span style="color:#8a93a5;font-style:italic">#4    ; 0x00000004, LR: 0x00000008</span>
+<span style="color:#c1abea">BL</span> <span style="color:#c1abea">ROUTINE</span> ; <span style="color:#d19a66">0x00000008</span>, <span style="color:#c1abea">LR</span><span style="color:#c7bf54">:</span> <span style="color:#d19a66">0x0000000C</span>
+<span style="color:#c1abea">MOV</span> <span style="color:#c1abea">R2</span>, <span style="color:#8a93a5;font-style:italic">#5 ; 0x0000000C, LR: 0x00000010</span>
 
-ROUTINE:
-  PUSH {LR} ; 0x00000010, LR=0x0000000C
-  ; .. do something
+<span style="color:#c1abea">ROUTINE</span><span style="color:#c7bf54">:</span>
+  <span style="color:#c1abea">PUSH</span> {<span style="color:#c1abea">LR</span>} ; <span style="color:#d19a66">0x00000010</span>, <span style="color:#c1abea">LR</span><span style="color:#c7bf54">=</span><span style="color:#d19a66">0x0000000C</span>
+  ; <span style="color:#c1abea">..</span> <span style="color:#c1abea">do</span> <span style="color:#c1abea">something</span>
 </code></pre></td></tr></table>
 </div>
-</div><h6 id="subroutines">Subroutines</h6>
-<p>Convention:</p>
-<ul>
-<li>Parameters are passed via <code>R0-R3</code>, which subroutines are free to modify and return with</li>
-<li>Subroutine should not modify the remaining registers; if so they should <code>PUSH/POP</code> to the stack before and after use</li>
-<li>Exit subroutine with <code>MOV PC, LR</code></li>
-<li><code>BL</code> is a branch and link instruction, which sets <code>LR</code> to the next instruction and sets <code>PC</code> to the label address</li>
-</ul>
-<h5 id="using-ledr">Using LEDR</h5>
+</div><h5 id="using-ledr">Using LEDR</h5>
 <p>To display using LEDR we just need to write the value we want to the appropriate memory location.
 Here, assuming that what we want to display is stored in <code>R1</code>:</p>
 <div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -574,6 +681,13 @@ STR [R1], R2 // write to LEDR
 </tr>
 </tbody>
 </table>
+<p>CPSR is saved when an interrupt occurs so that flags and mode it can be restored when the interrupt is handled.</p>
+<ul>
+<li>N: Negative (2&rsquo;s complement bit of result)</li>
+<li>Z: Zero</li>
+<li>C: Unsigned overflow (carry)</li>
+<li>V: Signed overflow</li>
+</ul>
 <p>There are a few modes and each one of them have a different stack pointer</p>
 <div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
