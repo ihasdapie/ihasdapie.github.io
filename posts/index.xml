@@ -47,7 +47,7 @@ For all else (currently WIP), see: github.com/ihasdapie/teaching/</description>
       <guid>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</guid>
       <description>Exam &amp;lsquo;cheat sheets&amp;rsquo; for EngSci 2nd year semester fall semester. These were made as part of my own studying for the exams.
 I do not guarantee content correctness &amp;ndash; but if you find a mistake, please let me know!
- Table of Contents ▼    CHE260  Variables Heat Transfer Mechanisms Steady Heat Transfer  Fins   Transient Heat Transfer  Semi-Infinite Solids   Forced Convection Heat Transfer  Other:   Radiation Heat Transfer  Other     ECE253: Digital and Computer Systems  Logic and Circuits  Karnaugh Maps Other: Circuits to know   Verilog ARM Assembly  Instructions Subroutines Stacks Interrupts Timers IO     MAT292 AER210 PHY293 ESC203     function toggleTOC() { var x = document.</description>
+ Table of Contents ▼    CHE260  Variables Heat Transfer Mechanisms Steady Heat Transfer  Fins   Transient Heat Transfer  Semi-Infinite Solids   Forced Convection Heat Transfer  Other:   Radiation Heat Transfer  Other     ECE253: Digital and Computer Systems  Logic and Circuits  Karnaugh Maps Other: Circuits to know   Verilog ARM Assembly  Instructions Using PC, LR Subroutines Stacks Recursion Interrupts IO     MAT292 AER210 PHY293 ESC203     function toggleTOC() { var x = document.</description>
     </item>
     
     <item>
