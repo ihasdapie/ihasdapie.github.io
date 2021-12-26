@@ -48,14 +48,11 @@ if (!doNotTrack) {
         <div class="header-menu">
             <a href="/posts/">blog</a>
             <a href="/about/">about</a>
+            <a href="/tags/">tags</a>
         </div>
     </h1>
 </div>
 <div id="content">
-        
-            <aside id="back_to_top">
-            <a href="#top">Back to Top</a>
-            </aside>
         
         <section>
         <header>
@@ -65,6 +62,10 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date &#x5b;
     <time datetime="2021-12-11">Dec 11, 2021</time>
+    &#x5d;
+    Tags &#x5b;
+    <a href="//chenbrian.ca/tags/notes/">notes</a>
+    <a href="//chenbrian.ca/tags/engsci/">engsci</a>
     &#x5d;
 </div>
 </header>
@@ -277,7 +278,7 @@ We can usually use an average one
 $$h=\frac{1}{A_s}\int_{A_s}h_{local}dA_s$$</p>
 <p>Note: surface integral for the 2D case, and the over length \(L\) for the 1D.</p>
 <p>In cases where the laminar flow region cannot be entirely disregarded, we must integrate over the parts separately</p>
-<p>$$h = \frac{1}{L}(\int_0^{x_a} h_{x, laminar}dx + \int_{x_a}^L h_{x, turbulent}dx)$$</p>
+<p>$$h =  \\ \frac{1}{L}(\int_0^{x_a} h_{x, laminar}dx + \int_{x_a}^L h_{x, turbulent}dx)$$</p>
 <p>Recall from AER210 the that fluid exerts a drag force \(\tau\) on the walls</p>
 <p>$$\tau = \mu \frac{\delta\mu}{\delta y} \vert_{y=0}$$</p>
 <p>Or,</p>
@@ -439,20 +440,20 @@ Gated latch</p>
 <p>Opcode format:</p>
 <p><img src="./opcode_format.png" alt="Source: https://www.allaboutcircuits.com/uploads/articles/Introduction_to_ARM_Assembly3.png"></p>
 <p>We can load the top and bottom halves of registers into another like this:</p>
-<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#8a93a5;font-style:italic">; load the top half of R1 into R0</span>
-<span style="color:#8a93a5;font-style:italic">; and the bottom half of R3 into R0</span>
-<span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R0</span>, <span style="color:#dcaeea">R1</span>
-<span style="color:#00b1f7">LSL</span> <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">16</span>
-<span style="color:#00b1f7">ORR</span> <span style="color:#dcaeea">R0</span>, <span style="color:#dcaeea">R3</span>
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#228b22">; load the top half of R1 into R0</span>
+<span style="color:#228b22">; and the bottom half of R3 into R0</span>
+<span style="color:#008b45">MOV</span> <span style="color:#00688b">R0</span>, <span style="color:#00688b">R1</span>
+<span style="color:#008b45">LSL</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">16</span>
+<span style="color:#008b45">ORR</span> <span style="color:#00688b">R0</span>, <span style="color:#00688b">R3</span>
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="instructions">Instructions</h4>
@@ -478,36 +479,36 @@ When <code>LDR</code> is used with a literal it first loads the literal into mem
 Do CMP, then apply <code>INSTR{COND}</code> or do a branch
 Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal to&rdquo;. <code>S</code> for add, subs updates N, Z, C, V flags</li>
 </ul>
-<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#00b1f7">CMP</span> <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">3</span>
-<span style="color:#00b1f7">ADDLT</span> <span style="color:#dcaeea">R0</span>, <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">1</span> <span style="color:#8a93a5;font-style:italic">; adds 1 to R0 if R0 &lt; 3</span>
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#008b45">CMP</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">3</span>
+<span style="color:#008b45">ADDLT</span> <span style="color:#00688b">R0</span>, <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">1</span> <span style="color:#228b22">; adds 1 to R0 if R0 &lt; 3</span>
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="using-pc-lr">Using <code>PC</code>, <code>LR</code></h4>
 <p>At instruction <code>i</code>, <code>PC</code> stores the address of the next instruction at <code>i+1</code>. The current instruction can be obtained via a negative offset <code>,#-4</code>
 <code>LR</code> by convention stores what we want to return to after a subroutine.</p>
 <p>So, assuming that the first instruction of the following code chunk is stored at <code>0x0</code>,</p>
-<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R0</span>, =<span style="color:#d19a66">0x2000</span> <span style="color:#8a93a5;font-style:italic">; 0x00000000, PC: 0x00000004</span>
-<span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R2</span>, #<span style="color:#d19a66">4</span>    <span style="color:#8a93a5;font-style:italic">; 0x00000004, PC: 0x00000008</span>
-<span style="color:#00b1f7">BL</span> <span style="color:#dcaeea">ROUTINE</span> <span style="color:#8a93a5;font-style:italic">; 0x00000008, PC: 0x0000000C, LR 0x0000000C</span>
-<span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R2</span>, #<span style="color:#d19a66">5</span> <span style="color:#8a93a5;font-style:italic">; 0x0000000C, PC: 0x00000010</span>
-<span style="color:#f5a40d">ROUTINE:</span>
-  <span style="color:#00b1f7">PUSH</span> {<span style="color:#dcaeea">LR</span>} <span style="color:#8a93a5;font-style:italic">; 0x00000010, LR=0x0000000C</span>
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#008b45">LDR</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#b452cd">0x2000</span> <span style="color:#228b22">; 0x00000000, PC: 0x00000004</span>
+<span style="color:#008b45">MOV</span> <span style="color:#00688b">R2</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">4</span>    <span style="color:#228b22">; 0x00000004, PC: 0x00000008</span>
+<span style="color:#008b45">BL</span> <span style="color:#00688b">ROUTINE</span> <span style="color:#228b22">; 0x00000008, PC: 0x0000000C, LR 0x0000000C</span>
+<span style="color:#008b45">MOV</span> <span style="color:#00688b">R2</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">5</span> <span style="color:#228b22">; 0x0000000C, PC: 0x00000010</span>
+ROUTINE:
+  <span style="color:#008b45">PUSH</span> <span style="color:#a61717;background-color:#e3d2d2">{</span><span style="color:#00688b">LR</span><span style="color:#a61717;background-color:#e3d2d2">}</span> <span style="color:#228b22">; 0x00000010, LR=0x0000000C</span>
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="subroutines">Subroutines</h4>
@@ -560,58 +561,58 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </table>
 <h4 id="recursion">Recursion</h4>
 <p>The following are assuming SP, etc has been init&rsquo;d</p>
-<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">9
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#f5a40d">FINDSUM:</span> <span style="color:#8a93a5;font-style:italic">;; calc 1+2+...N</span>
-  <span style="color:#00b1f7">PUSH</span> {<span style="color:#dcaeea">R0</span>, <span style="color:#dcaeea">LR</span>}
-  <span style="color:#00b1f7">CMP</span> <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">2</span>
-  <span style="color:#00b1f7">BLT</span> <span style="color:#dcaeea">RETURN</span>
-  <span style="color:#00b1f7">SUB</span> <span style="color:#dcaeea">R0</span>, <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">1</span><span style="color:#8a93a5;font-style:italic">;</span>
-  <span style="color:#00b1f7">BL</span> <span style="color:#dcaeea">FINDSUM</span>
-  <span style="color:#00b1f7">ADD</span> <span style="color:#dcaeea">R1</span>, <span style="color:#dcaeea">R1</span>, <span style="color:#dcaeea">R0</span>
-  <span style="color:#f5a40d">RETURN:</span>
-  <span style="color:#00b1f7">POP</span> {<span style="color:#dcaeea">R0</span>, <span style="color:#dcaeea">PC</span>} <span style="color:#8a93a5;font-style:italic">;; puts LR into PC</span>
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm">FINDSUM: <span style="color:#228b22">;; calc 1+2+...N</span>
+  <span style="color:#008b45">PUSH</span> <span style="color:#a61717;background-color:#e3d2d2">{</span><span style="color:#00688b">R0</span>, <span style="color:#00688b">LR</span><span style="color:#a61717;background-color:#e3d2d2">}</span>
+  <span style="color:#008b45">CMP</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">2</span>
+  <span style="color:#008b45">BLT</span> <span style="color:#00688b">RETURN</span>
+  <span style="color:#008b45">SUB</span> <span style="color:#00688b">R0</span>, <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">1</span><span style="color:#228b22">;</span>
+  <span style="color:#008b45">BL</span> <span style="color:#00688b">FINDSUM</span>
+  <span style="color:#008b45">ADD</span> <span style="color:#00688b">R1</span>, <span style="color:#00688b">R1</span>, <span style="color:#00688b">R0</span>
+  RETURN:
+  <span style="color:#008b45">POP</span> <span style="color:#a61717;background-color:#e3d2d2">{</span><span style="color:#00688b">R0</span>, <span style="color:#00688b">PC</span><span style="color:#a61717;background-color:#e3d2d2">}</span> <span style="color:#228b22">;; puts LR into PC</span>
 </code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+</div><div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">12
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#f5a40d">FIB:</span> <span style="color:#8a93a5;font-style:italic">;; returns in R1</span>
-  <span style="color:#00b1f7">PUSH</span> {<span style="color:#dcaeea">R0</span>, <span style="color:#dcaeea">LR</span>}
-  <span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R2</span>, <span style="color:#dcaeea">R0</span>
-  <span style="color:#00b1f7">CMP</span> <span style="color:#dcaeea">R2</span>, #<span style="color:#d19a66">2</span> 
-  <span style="color:#00b1f7">BLT</span> <span style="color:#dcaeea">RET</span>
-  <span style="color:#00b1f7">SUB</span> <span style="color:#dcaeea">R0</span>, <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">1</span>
-  <span style="color:#00b1f7">BL</span> <span style="color:#dcaeea">FIB</span>
-  <span style="color:#00b1f7">ADD</span> <span style="color:#dcaeea">R1</span>, <span style="color:#dcaeea">R2</span>
-  <span style="color:#00b1f7">SUB</span> <span style="color:#dcaeea">R0</span>, <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">1</span>
-  <span style="color:#00b1f7">BL</span> <span style="color:#dcaeea">FIB</span>
-  <span style="color:#00b1f7">ADD</span> <span style="color:#dcaeea">R1</span>, <span style="color:#dcaeea">R2</span>
-  <span style="color:#f5a40d">RET:</span> <span style="color:#00b1f7">POP</span> {<span style="color:#dcaeea">R0</span>, <span style="color:#dcaeea">PC</span>}
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm">FIB: <span style="color:#228b22">;; returns in R1</span>
+  <span style="color:#008b45">PUSH</span> <span style="color:#a61717;background-color:#e3d2d2">{</span><span style="color:#00688b">R0</span>, <span style="color:#00688b">LR</span><span style="color:#a61717;background-color:#e3d2d2">}</span>
+  <span style="color:#008b45">MOV</span> <span style="color:#00688b">R2</span>, <span style="color:#00688b">R0</span>
+  <span style="color:#008b45">CMP</span> <span style="color:#00688b">R2</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">2</span> 
+  <span style="color:#008b45">BLT</span> <span style="color:#00688b">RET</span>
+  <span style="color:#008b45">SUB</span> <span style="color:#00688b">R0</span>, <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">1</span>
+  <span style="color:#008b45">BL</span> <span style="color:#00688b">FIB</span>
+  <span style="color:#008b45">ADD</span> <span style="color:#00688b">R1</span>, <span style="color:#00688b">R2</span>
+  <span style="color:#008b45">SUB</span> <span style="color:#00688b">R0</span>, <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">1</span>
+  <span style="color:#008b45">BL</span> <span style="color:#00688b">FIB</span>
+  <span style="color:#008b45">ADD</span> <span style="color:#00688b">R1</span>, <span style="color:#00688b">R2</span>
+  RET: <span style="color:#008b45">POP</span> <span style="color:#a61717;background-color:#e3d2d2">{</span><span style="color:#00688b">R0</span>, <span style="color:#00688b">PC</span><span style="color:#a61717;background-color:#e3d2d2">}</span>
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="interrupts">Interrupts</h4>
@@ -640,174 +641,174 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 <li>Clear interrupt in GIC</li>
 </ol>
 <p>Steps 1-5:</p>
-<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">18
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm">	<span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">0b</span><span style="color:#d19a66">11010010</span>
-	<span style="color:#00b1f7">MSR</span> <span style="color:#dcaeea">CPSR</span>, <span style="color:#dcaeea">R0</span> <span style="color:#8a93a5;font-style:italic">;; now in irq mode</span>
-	<span style="color:#00b1f7">LDR</span> <span style="color:#ef8383">SP</span>, =<span style="color:#d19a66">0x20000</span> <span style="color:#8a93a5;font-style:italic">;; irq sp</span>
-	<span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">0b</span><span style="color:#d19a66">11010011</span>
-	<span style="color:#00b1f7">MSR</span> <span style="color:#dcaeea">CPSR</span>, <span style="color:#dcaeea">R0</span> <span style="color:#8a93a5;font-style:italic">;; svc mode</span>
-	<span style="color:#00b1f7">LDR</span> <span style="color:#ef8383">SP</span>, =<span style="color:#d19a66">0x3FFFFFFC</span> <span style="color:#8a93a5;font-style:italic">;; another stack ptr</span>
-	<span style="color:#8a93a5;font-style:italic">;; Add subroutines to config devices, e.x. CONFIG_KEYS below</span>
-  <span style="color:#00b1f7">BL</span>     <span style="color:#dcaeea">CONFIG_KEYS</span>
-	<span style="color:#00b1f7">BL</span>			<span style="color:#dcaeea">CONFIG_GIC</span>	<span style="color:#8a93a5;font-style:italic">;; configure the ARM generic interrupt controller</span>
-	<span style="color:#00b1f7">BL</span>			<span style="color:#dcaeea">CONFIG_TIMER</span>	
-	<span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">0b</span><span style="color:#d19a66">01010011</span>
-	<span style="color:#00b1f7">MSR</span> <span style="color:#dcaeea">CPSR</span>, <span style="color:#dcaeea">R0</span>
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm">	<span style="color:#008b45">MOV</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0b</span><span style="color:#b452cd">11010010</span>
+	<span style="color:#008b45">MSR</span> <span style="color:#00688b">CPSR</span>, <span style="color:#00688b">R0</span> <span style="color:#228b22">;; now in irq mode</span>
+	<span style="color:#008b45">LDR</span> <span style="color:#658b00">SP</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#b452cd">0x20000</span> <span style="color:#228b22">;; irq sp</span>
+	<span style="color:#008b45">MOV</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0b</span><span style="color:#b452cd">11010011</span>
+	<span style="color:#008b45">MSR</span> <span style="color:#00688b">CPSR</span>, <span style="color:#00688b">R0</span> <span style="color:#228b22">;; svc mode</span>
+	<span style="color:#008b45">LDR</span> <span style="color:#658b00">SP</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#b452cd">0x3FFFFFFC</span> <span style="color:#228b22">;; another stack ptr</span>
+	<span style="color:#228b22">;; Add subroutines to config devices, e.x. CONFIG_KEYS below</span>
+  <span style="color:#008b45">BL</span>     <span style="color:#00688b">CONFIG_KEYS</span>
+	<span style="color:#008b45">BL</span>			<span style="color:#00688b">CONFIG_GIC</span>	<span style="color:#228b22">;; configure the ARM generic interrupt controller</span>
+	<span style="color:#008b45">BL</span>			<span style="color:#00688b">CONFIG_TIMER</span>	
+	<span style="color:#008b45">MOV</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0b</span><span style="color:#b452cd">01010011</span>
+	<span style="color:#008b45">MSR</span> <span style="color:#00688b">CPSR</span>, <span style="color:#00688b">R0</span>
 
-<span style="color:#f5a40d">CONFIG_KEYS:</span>
-  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R0</span>, =<span style="color:#dcaeea">KEY_BASE</span><span style="color:#8a93a5;font-style:italic">;</span>
-  <span style="color:#00b1f7">MOV</span>		<span style="color:#dcaeea">R1</span>, #<span style="color:#d19a66">0b</span><span style="color:#d19a66">1111</span> <span style="color:#c7bf54">//</span> <span style="color:#dcaeea">mask</span> <span style="color:#dcaeea">enable</span> <span style="color:#dcaeea">bits</span>
-  <span style="color:#00b1f7">STR</span>		<span style="color:#dcaeea">R1</span>, [<span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">8</span>]		<span style="color:#c7bf54">//</span> <span style="color:#dcaeea">enable</span> <span style="color:#dcaeea">interrupts</span>
-  <span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">PC</span>, <span style="color:#dcaeea">LR</span>
+CONFIG_KEYS:
+  <span style="color:#008b45">LDR</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#00688b">KEY_BASE</span><span style="color:#228b22">;</span>
+  <span style="color:#008b45">MOV</span>		<span style="color:#00688b">R1</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0b</span><span style="color:#b452cd">1111</span> // <span style="color:#00688b">mask</span> <span style="color:#00688b">enable</span> <span style="color:#00688b">bits</span>
+  <span style="color:#008b45">STR</span>		<span style="color:#00688b">R1</span>, [<span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">8</span>]		// <span style="color:#00688b">enable</span> <span style="color:#00688b">interrupts</span>
+  <span style="color:#008b45">MOV</span> <span style="color:#00688b">PC</span>, <span style="color:#00688b">LR</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Steps 6, 8:</p>
-<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">14
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#f5a40d">IRQ_HANDLER:</span> 
-  <span style="color:#00b1f7">PUSH</span> {<span style="color:#dcaeea">R0</span><span style="color:#c7bf54">-</span><span style="color:#dcaeea">R5</span>, <span style="color:#dcaeea">LR</span>} <span style="color:#8a93a5;font-style:italic">; save registers</span>
-  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R4</span>, =<span style="color:#dcaeea">MPCORE_GIC</span> <span style="color:#dcaeea">CPUIF</span> <span style="color:#8a93a5;font-style:italic">;; memory offset to get to GIC</span>
-  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R5</span>, [<span style="color:#dcaeea">R4</span>, #<span style="color:#dcaeea">ICCIAR</span>] <span style="color:#8a93a5;font-style:italic">;; read interrupt ID</span>
-  <span style="color:#8a93a5;font-style:italic">;; then, CMP R5 to call appropriate handler</span>
-  <span style="color:#00b1f7">e.x.</span> 
-  <span style="color:#00b1f7">CMP</span> <span style="color:#dcaeea">R5</span>, #<span style="color:#dcaeea">TIMER_IRQ</span>
-  <span style="color:#00b1f7">BNE</span> <span style="color:#dcaeea">EXIT_IRQ</span>
-  <span style="color:#00b1f7">BL</span> <span style="color:#dcaeea">KEY_ISR</span>
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm">IRQ_HANDLER: 
+  <span style="color:#008b45">PUSH</span> <span style="color:#a61717;background-color:#e3d2d2">{</span><span style="color:#00688b">R0</span>-<span style="color:#00688b">R5</span>, <span style="color:#00688b">LR</span><span style="color:#a61717;background-color:#e3d2d2">}</span> <span style="color:#228b22">; save registers</span>
+  <span style="color:#008b45">LDR</span> <span style="color:#00688b">R4</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#00688b">MPCORE_GIC</span> <span style="color:#00688b">CPUIF</span> <span style="color:#228b22">;; memory offset to get to GIC</span>
+  <span style="color:#008b45">LDR</span> <span style="color:#00688b">R5</span>, [<span style="color:#00688b">R4</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#00688b">ICCIAR</span>] <span style="color:#228b22">;; read interrupt ID</span>
+  <span style="color:#228b22">;; then, CMP R5 to call appropriate handler</span>
+  <span style="color:#008b45">e.x.</span> 
+  <span style="color:#008b45">CMP</span> <span style="color:#00688b">R5</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#00688b">TIMER_IRQ</span>
+  <span style="color:#008b45">BNE</span> <span style="color:#00688b">EXIT_IRQ</span>
+  <span style="color:#008b45">BL</span> <span style="color:#00688b">KEY_ISR</span>
 
-<span style="color:#f5a40d">EXIT_IRQ:</span> <span style="color:#8a93a5;font-style:italic">;; clean up</span>
-  <span style="color:#00b1f7">STR</span> <span style="color:#dcaeea">R5</span>, [<span style="color:#dcaeea">R4</span>, #<span style="color:#d19a66">0x10</span>]
-  <span style="color:#00b1f7">POP</span> {<span style="color:#dcaeea">R0</span><span style="color:#c7bf54">-</span><span style="color:#dcaeea">R5</span>, <span style="color:#dcaeea">LR</span>} 
-  <span style="color:#00b1f7">SUBS</span> <span style="color:#dcaeea">PC</span>, <span style="color:#dcaeea">LR</span>, #<span style="color:#d19a66">4</span> <span style="color:#8a93a5;font-style:italic">;; return to previous instruction</span>
+EXIT_IRQ: <span style="color:#228b22">;; clean up</span>
+  <span style="color:#008b45">STR</span> <span style="color:#00688b">R5</span>, [<span style="color:#00688b">R4</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0x10</span>]
+  <span style="color:#008b45">POP</span> <span style="color:#a61717;background-color:#e3d2d2">{</span><span style="color:#00688b">R0</span>-<span style="color:#00688b">R5</span>, <span style="color:#00688b">LR</span><span style="color:#a61717;background-color:#e3d2d2">}</span> 
+  <span style="color:#008b45">SUBS</span> <span style="color:#00688b">PC</span>, <span style="color:#00688b">LR</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">4</span> <span style="color:#228b22">;; return to previous instruction</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Step 7:</p>
-<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#f5a40d">KEY_ISR:</span>
-  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R0</span>, =<span style="color:#dcaeea">KEY_ADDR</span> <span style="color:#8a93a5;font-style:italic">;; base key addr</span>
-  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R1</span>, [<span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">0xC</span>] <span style="color:#8a93a5;font-style:italic">;; edge capture register</span>
-  <span style="color:#00b1f7">STR</span> <span style="color:#dcaeea">R1</span>, [<span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">0xC</span>] <span style="color:#8a93a5;font-style:italic">;; clear interrupt</span>
-  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R0</span>, =<span style="color:#dcaeea">KEY_PRESSED</span> <span style="color:#8a93a5;font-style:italic">;; global variable to return result</span>
-  <span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R3</span>, #<span style="color:#d19a66">0b</span><span style="color:#d19a66">0001</span> <span style="color:#8a93a5;font-style:italic">;; check key0</span>
-  <span style="color:#00b1f7">ANDS</span> <span style="color:#dcaeea">R3</span>, <span style="color:#dcaeea">R1</span> 
-  <span style="color:#00b1f7">BEQ</span> <span style="color:#ef8383">CH</span><span style="color:#dcaeea">ECK_KEY1</span> <span style="color:#8a93a5;font-style:italic">;; if AND produces 0, skip to next instruction</span>
-  <span style="color:#8a93a5;font-style:italic">;; and so forth \ldots </span>
-  <span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">PC</span>, <span style="color:#dcaeea">LR</span>
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm">KEY_ISR:
+  <span style="color:#008b45">LDR</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#00688b">KEY_ADDR</span> <span style="color:#228b22">;; base key addr</span>
+  <span style="color:#008b45">LDR</span> <span style="color:#00688b">R1</span>, [<span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0xC</span>] <span style="color:#228b22">;; edge capture register</span>
+  <span style="color:#008b45">STR</span> <span style="color:#00688b">R1</span>, [<span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0xC</span>] <span style="color:#228b22">;; clear interrupt</span>
+  <span style="color:#008b45">LDR</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#00688b">KEY_PRESSED</span> <span style="color:#228b22">;; global variable to return result</span>
+  <span style="color:#008b45">MOV</span> <span style="color:#00688b">R3</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0b</span><span style="color:#b452cd">0001</span> <span style="color:#228b22">;; check key0</span>
+  <span style="color:#008b45">ANDS</span> <span style="color:#00688b">R3</span>, <span style="color:#00688b">R1</span> 
+  <span style="color:#008b45">BEQ</span> <span style="color:#658b00">CH</span><span style="color:#00688b">ECK_KEY1</span> <span style="color:#228b22">;; if AND produces 0, skip to next instruction</span>
+  <span style="color:#228b22">;; and so forth \ldots </span>
+  <span style="color:#008b45">MOV</span> <span style="color:#00688b">PC</span>, <span style="color:#00688b">LR</span>
 </code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+</div><div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">26
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">27
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">28
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">30
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#f5a40d">TIMER_ISR:</span> <span style="color:#8a93a5;font-style:italic">;; ISR to increment ones, tens in memory</span>
-  <span style="color:#00b1f7">PUSH</span> {<span style="color:#dcaeea">R6</span><span style="color:#c7bf54">-</span><span style="color:#dcaeea">R10</span>, <span style="color:#dcaeea">LR</span>}
-  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R6</span>, =<span style="color:#dcaeea">COUNT_ONES</span>
-  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R7</span>, [<span style="color:#dcaeea">R6</span>]
-  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R8</span>, =<span style="color:#dcaeea">COUNT_TENS</span>
-  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R3</span>, [<span style="color:#dcaeea">R8</span>]
-  <span style="color:#00b1f7">add</span> <span style="color:#dcaeea">r7</span>, #<span style="color:#d19a66">1</span> <span style="color:#8a93a5;font-style:italic">;; increment ones digit value to display</span>
-  <span style="color:#00b1f7">cmp</span> <span style="color:#dcaeea">r7</span>, #<span style="color:#d19a66">10</span> <span style="color:#8a93a5;font-style:italic">;; if 10, need to update tens digit and roll over to zero</span>
-  <span style="color:#00b1f7">BNE</span> <span style="color:#dcaeea">RET_ISR</span>
-  <span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">r7</span>, #<span style="color:#d19a66">0</span>
-  <span style="color:#00b1f7">add</span> <span style="color:#dcaeea">r3</span>, #<span style="color:#d19a66">1</span> <span style="color:#8a93a5;font-style:italic">;; increment tens digit</span>
-  <span style="color:#00b1f7">cmp</span> <span style="color:#dcaeea">r3</span>, #<span style="color:#d19a66">10</span> <span style="color:#8a93a5;font-style:italic">;; if 10 (value is 100), need to roll over to zero</span>
-  <span style="color:#00b1f7">BNE</span> <span style="color:#dcaeea">RET_ISR</span>
-  <span style="color:#00b1f7">mov</span> <span style="color:#dcaeea">r3</span>, #<span style="color:#d19a66">0</span>
-<span style="color:#f5a40d">RET_ISR:</span>
-	<span style="color:#00b1f7">STR</span> <span style="color:#dcaeea">R3</span>, [<span style="color:#dcaeea">R8</span>]
-	<span style="color:#00b1f7">STR</span> <span style="color:#dcaeea">r7</span>, [<span style="color:#dcaeea">R6</span>]
-	<span style="color:#00b1f7">mov</span> <span style="color:#dcaeea">r0</span>, <span style="color:#dcaeea">r3</span>
-	<span style="color:#00b1f7">BL</span> <span style="color:#dcaeea">hex_display</span>
-	<span style="color:#00b1f7">LSL</span> <span style="color:#dcaeea">R3</span>, <span style="color:#dcaeea">r1</span>, #<span style="color:#d19a66">8</span>
-	<span style="color:#00b1f7">mov</span> <span style="color:#dcaeea">r0</span>, <span style="color:#dcaeea">r7</span>
-	<span style="color:#00b1f7">BL</span> <span style="color:#dcaeea">hex_display</span>
-	<span style="color:#00b1f7">ORR</span> <span style="color:#dcaeea">R3</span>, <span style="color:#dcaeea">r3</span>, <span style="color:#dcaeea">r1</span>
-	<span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R8</span>, =<span style="color:#d19a66">0xFF200020</span>
-	<span style="color:#00b1f7">STR</span> <span style="color:#dcaeea">R3</span>, [<span style="color:#dcaeea">r8</span>]
-	<span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R9</span>, =<span style="color:#d19a66">0xFFFEC600</span>
-	<span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R10</span>, #<span style="color:#d19a66">1</span>
-	<span style="color:#00b1f7">STR</span> <span style="color:#dcaeea">R10</span>, [<span style="color:#dcaeea">R9</span>, #<span style="color:#d19a66">0xC</span>]
-	<span style="color:#00b1f7">POP</span> {<span style="color:#dcaeea">R6</span><span style="color:#c7bf54">-</span><span style="color:#dcaeea">R10</span>, <span style="color:#dcaeea">LR</span>}
-	<span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">PC</span>, <span style="color:#dcaeea">LR</span>
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm">TIMER_ISR: <span style="color:#228b22">;; ISR to increment ones, tens in memory</span>
+  <span style="color:#008b45">PUSH</span> <span style="color:#a61717;background-color:#e3d2d2">{</span><span style="color:#00688b">R6</span>-<span style="color:#00688b">R10</span>, <span style="color:#00688b">LR</span><span style="color:#a61717;background-color:#e3d2d2">}</span>
+  <span style="color:#008b45">LDR</span> <span style="color:#00688b">R6</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#00688b">COUNT_ONES</span>
+  <span style="color:#008b45">LDR</span> <span style="color:#00688b">R7</span>, [<span style="color:#00688b">R6</span>]
+  <span style="color:#008b45">LDR</span> <span style="color:#00688b">R8</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#00688b">COUNT_TENS</span>
+  <span style="color:#008b45">LDR</span> <span style="color:#00688b">R3</span>, [<span style="color:#00688b">R8</span>]
+  <span style="color:#008b45">add</span> <span style="color:#00688b">r7</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">1</span> <span style="color:#228b22">;; increment ones digit value to display</span>
+  <span style="color:#008b45">cmp</span> <span style="color:#00688b">r7</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">10</span> <span style="color:#228b22">;; if 10, need to update tens digit and roll over to zero</span>
+  <span style="color:#008b45">BNE</span> <span style="color:#00688b">RET_ISR</span>
+  <span style="color:#008b45">MOV</span> <span style="color:#00688b">r7</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0</span>
+  <span style="color:#008b45">add</span> <span style="color:#00688b">r3</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">1</span> <span style="color:#228b22">;; increment tens digit</span>
+  <span style="color:#008b45">cmp</span> <span style="color:#00688b">r3</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">10</span> <span style="color:#228b22">;; if 10 (value is 100), need to roll over to zero</span>
+  <span style="color:#008b45">BNE</span> <span style="color:#00688b">RET_ISR</span>
+  <span style="color:#008b45">mov</span> <span style="color:#00688b">r3</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0</span>
+RET_ISR:
+	<span style="color:#008b45">STR</span> <span style="color:#00688b">R3</span>, [<span style="color:#00688b">R8</span>]
+	<span style="color:#008b45">STR</span> <span style="color:#00688b">r7</span>, [<span style="color:#00688b">R6</span>]
+	<span style="color:#008b45">mov</span> <span style="color:#00688b">r0</span>, <span style="color:#00688b">r3</span>
+	<span style="color:#008b45">BL</span> <span style="color:#00688b">hex_display</span>
+	<span style="color:#008b45">LSL</span> <span style="color:#00688b">R3</span>, <span style="color:#00688b">r1</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">8</span>
+	<span style="color:#008b45">mov</span> <span style="color:#00688b">r0</span>, <span style="color:#00688b">r7</span>
+	<span style="color:#008b45">BL</span> <span style="color:#00688b">hex_display</span>
+	<span style="color:#008b45">ORR</span> <span style="color:#00688b">R3</span>, <span style="color:#00688b">r3</span>, <span style="color:#00688b">r1</span>
+	<span style="color:#008b45">LDR</span> <span style="color:#00688b">R8</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#b452cd">0xFF200020</span>
+	<span style="color:#008b45">STR</span> <span style="color:#00688b">R3</span>, [<span style="color:#00688b">r8</span>]
+	<span style="color:#008b45">LDR</span> <span style="color:#00688b">R9</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#b452cd">0xFFFEC600</span>
+	<span style="color:#008b45">MOV</span> <span style="color:#00688b">R10</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">1</span>
+	<span style="color:#008b45">STR</span> <span style="color:#00688b">R10</span>, [<span style="color:#00688b">R9</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0xC</span>]
+	<span style="color:#008b45">POP</span> <span style="color:#a61717;background-color:#e3d2d2">{</span><span style="color:#00688b">R6</span>-<span style="color:#00688b">R10</span>, <span style="color:#00688b">LR</span><span style="color:#a61717;background-color:#e3d2d2">}</span>
+	<span style="color:#008b45">MOV</span> <span style="color:#00688b">PC</span>, <span style="color:#00688b">LR</span>
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -856,17 +857,17 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 <li>V: Signed overflow</li>
 </ul>
 <p>There are a few modes and each one of them have a different stack pointer</p>
-<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">FIQ: 0b10001
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">FIQ: 0b10001
 IRQ: 0b10010
 SVC: 0b10011
 Monitor: 0b10110
@@ -875,22 +876,22 @@ Undefined: 0b11011
 </code></pre></td></tr></table>
 </div>
 </div><p>We only care about the IRQ and Supervisor modes. These can be set by loading the appropriate value into the CPSR.</p>
-<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">6
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">0b</span><span style="color:#d19a66">10010</span> <span style="color:#8a93a5;font-style:italic">;; irq mode</span>
-<span style="color:#00b1f7">MSR</span> <span style="color:#dcaeea">CPSR</span>, <span style="color:#dcaeea">R0</span> <span style="color:#8a93a5;font-style:italic">;; change to irq mode</span>
-<span style="color:#00b1f7">LDR</span> <span style="color:#ef8383">SP</span> ,= <span style="color:#d19a66">0x10000</span> <span style="color:#8a93a5;font-style:italic">;; set stack pointer</span>
-<span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">0b</span><span style="color:#d19a66">10011</span> <span style="color:#8a93a5;font-style:italic">;; supervisor mode</span>
-<span style="color:#00b1f7">MSR</span> <span style="color:#dcaeea">CPSR</span>, <span style="color:#dcaeea">R0</span> <span style="color:#8a93a5;font-style:italic">;; change to supervisor mode</span>
-<span style="color:#00b1f7">LDR</span> <span style="color:#ef8383">SP</span> ,= <span style="color:#d19a66">0x20000</span> <span style="color:#8a93a5;font-style:italic">;; set stack pointer</span>
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#008b45">MOV</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0b</span><span style="color:#b452cd">10010</span> <span style="color:#228b22">;; irq mode</span>
+<span style="color:#008b45">MSR</span> <span style="color:#00688b">CPSR</span>, <span style="color:#00688b">R0</span> <span style="color:#228b22">;; change to irq mode</span>
+<span style="color:#008b45">LDR</span> <span style="color:#658b00">SP</span> ,<span style="color:#a61717;background-color:#e3d2d2">=</span> <span style="color:#b452cd">0x10000</span> <span style="color:#228b22">;; set stack pointer</span>
+<span style="color:#008b45">MOV</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0b</span><span style="color:#b452cd">10011</span> <span style="color:#228b22">;; supervisor mode</span>
+<span style="color:#008b45">MSR</span> <span style="color:#00688b">CPSR</span>, <span style="color:#00688b">R0</span> <span style="color:#228b22">;; change to supervisor mode</span>
+<span style="color:#008b45">LDR</span> <span style="color:#658b00">SP</span> ,<span style="color:#a61717;background-color:#e3d2d2">=</span> <span style="color:#b452cd">0x20000</span> <span style="color:#228b22">;; set stack pointer</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Note that the two stack pointers on line 3 and 6 are different.</p>
@@ -905,34 +906,34 @@ Takes a load value which is the starting counter value. Current value at an offs
 <li><code>I</code>: Interrupt enable</li>
 <li><code>E</code>: Starts timer</li>
 </ul>
-<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">12
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#f5a40d">CONFIG_TIMER:</span>
-  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R8</span>, =<span style="color:#dcaeea">TIMER_BASE</span>
-  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R0</span>, =<span style="color:#d19a66">20000000</span> <span style="color:#8a93a5;font-style:italic">;; (1/200MHz*20000000)=0.1s</span>
-  <span style="color:#00b1f7">STR</span> <span style="color:#dcaeea">R0</span>, [<span style="color:#dcaeea">R8</span>] <span style="color:#8a93a5;font-style:italic">;; set timer counter</span>
-  <span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R1</span>, #<span style="color:#d19a66">0b</span><span style="color:#d19a66">011</span> <span style="color:#8a93a5;font-style:italic">;; A = E = 1</span>
-  <span style="color:#00b1f7">STR</span> <span style="color:#dcaeea">R1</span>, [<span style="color:#dcaeea">R8</span>, #<span style="color:#d19a66">8</span>] <span style="color:#8a93a5;font-style:italic">;; write to control register</span>
-  <span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">PC</span>, <span style="color:#dcaeea">LR</span>
-<span style="color:#f5a40d">DELAY:</span> <span style="color:#8a93a5;font-style:italic">;; hangs for known time</span>
-  <span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R0</span>, [<span style="color:#dcaeea">R8</span>, #<span style="color:#d19a66">0xC</span>] <span style="color:#8a93a5;font-style:italic">;; R8 contains status reg</span>
-  <span style="color:#00b1f7">CMP</span> <span style="color:#dcaeea">R0</span>, #<span style="color:#d19a66">0</span>
-  <span style="color:#00b1f7">BEQ</span> <span style="color:#dcaeea">DELAY</span>
-  <span style="color:#00b1f7">STR</span> <span style="color:#dcaeea">R0</span>, [<span style="color:#dcaeea">R8</span>, #<span style="color:#d19a66">0xC</span>] <span style="color:#8a93a5;font-style:italic">;; write 1 to status to reset interrupt to 0</span>
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm">CONFIG_TIMER:
+  <span style="color:#008b45">LDR</span> <span style="color:#00688b">R8</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#00688b">TIMER_BASE</span>
+  <span style="color:#008b45">LDR</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#b452cd">20000000</span> <span style="color:#228b22">;; (1/200MHz*20000000)=0.1s</span>
+  <span style="color:#008b45">STR</span> <span style="color:#00688b">R0</span>, [<span style="color:#00688b">R8</span>] <span style="color:#228b22">;; set timer counter</span>
+  <span style="color:#008b45">MOV</span> <span style="color:#00688b">R1</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0b</span><span style="color:#b452cd">011</span> <span style="color:#228b22">;; A = E = 1</span>
+  <span style="color:#008b45">STR</span> <span style="color:#00688b">R1</span>, [<span style="color:#00688b">R8</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">8</span>] <span style="color:#228b22">;; write to control register</span>
+  <span style="color:#008b45">MOV</span> <span style="color:#00688b">PC</span>, <span style="color:#00688b">LR</span>
+DELAY: <span style="color:#228b22">;; hangs for known time</span>
+  <span style="color:#008b45">LDR</span> <span style="color:#00688b">R0</span>, [<span style="color:#00688b">R8</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0xC</span>] <span style="color:#228b22">;; R8 contains status reg</span>
+  <span style="color:#008b45">CMP</span> <span style="color:#00688b">R0</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0</span>
+  <span style="color:#008b45">BEQ</span> <span style="color:#00688b">DELAY</span>
+  <span style="color:#008b45">STR</span> <span style="color:#00688b">R0</span>, [<span style="color:#00688b">R8</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0xC</span>] <span style="color:#228b22">;; write 1 to status to reset interrupt to 0</span>
 </code></pre></td></tr></table>
 </div>
 </div><h5 id="using-keys">Using <code>KEYS</code></h5>
@@ -942,16 +943,16 @@ Takes a load value which is the starting counter value. Current value at an offs
 <p><img src="./keys_loc.png" alt="">
 Apply a mask onto the relevant memory location.
 E.g. to enables <code>KEY3</code> and <code>KEY0</code>, we would:</p>
-<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">3
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#00b1f7">LDR</span> <span style="color:#dcaeea">R1</span>, =<span style="color:#d19a66">0xFF20058</span> <span style="color:#8a93a5;font-style:italic">;; int mask addr</span>
-<span style="color:#00b1f7">MOV</span> <span style="color:#dcaeea">R2</span>, #<span style="color:#d19a66">0b</span><span style="color:#d19a66">1001</span> <span style="color:#8a93a5;font-style:italic">;; we want to enable KEY3 and KEY0</span>
-<span style="color:#00b1f7">STR</span> <span style="color:#dcaeea">R2</span>, [<span style="color:#dcaeea">R1</span>] <span style="color:#8a93a5;font-style:italic">;; write mask onto enable bits</span>
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nasm" data-lang="nasm"><span style="color:#008b45">LDR</span> <span style="color:#00688b">R1</span>, <span style="color:#a61717;background-color:#e3d2d2">=</span><span style="color:#b452cd">0xFF20058</span> <span style="color:#228b22">;; int mask addr</span>
+<span style="color:#008b45">MOV</span> <span style="color:#00688b">R2</span>, <span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#b452cd">0b</span><span style="color:#b452cd">1001</span> <span style="color:#228b22">;; we want to enable KEY3 and KEY0</span>
+<span style="color:#008b45">STR</span> <span style="color:#00688b">R2</span>, [<span style="color:#00688b">R1</span>] <span style="color:#228b22">;; write mask onto enable bits</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>When polling just grab the items at the base address.
@@ -959,13 +960,13 @@ When using interrupts <code>LDR</code> the <code>edge capture</code> register to
 <h5 id="using-ledr">Using LEDR</h5>
 <p>To display using LEDR we just need to write the value we want to the appropriate memory location.
 Here, assuming that what we want to display is stored in <code>R1</code>:</p>
-<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">2
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">LDR R2, =0xFF2000000 ;; LEDR addr
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">LDR R2, =0xFF2000000 ;; LEDR addr
 STR [R1], R2 ;; write to LEDR
 </code></pre></td></tr></table>
 </div>
@@ -985,6 +986,7 @@ STR [R1], R2 ;; write to LEDR
     
     <div class="footer-links">
         <a href="https://github.com/ihasdapie">GitHub</a>
+        <a href="https://github.com/ihasdapie/bettermotherfuckinghugowebsite/">hugo theme</a>
     </div>
     
 

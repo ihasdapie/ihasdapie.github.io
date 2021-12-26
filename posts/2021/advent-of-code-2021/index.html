@@ -48,6 +48,7 @@ if (!doNotTrack) {
         <div class="header-menu">
             <a href="/posts/">blog</a>
             <a href="/about/">about</a>
+            <a href="/tags/">tags</a>
         </div>
     </h1>
 </div>
@@ -62,6 +63,9 @@ if (!doNotTrack) {
     Date &#x5b;
     <time datetime="2021-12-09">Dec 9, 2021</time>
     &#x5d;
+    Tags &#x5b;
+    <a href="//chenbrian.ca/tags/programming/">programming</a>
+    &#x5d;
 </div>
 </header>
 <article>
@@ -73,25 +77,25 @@ if (!doNotTrack) {
     <div id="toc">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#day-6httpsadventofcodecom2021day6"><a href="https://adventofcode.com/2021/day/6">Day 6</a></a></li>
-    <li><a href="#day-7httpsadventofcodecom2021day7"><a href="https://adventofcode.com/2021/day/7">Day 7</a></a></li>
-    <li><a href="#day-8httpsadventofcodecom2021day8"><a href="https://adventofcode.com/2021/day/8">Day 8</a></a></li>
-    <li><a href="#day-9httpsadventofcodecom2021day9"><a href="https://adventofcode.com/2021/day/9">Day 9</a></a></li>
-    <li><a href="#day-10httpsadventofcodecom2021day10"><a href="https://adventofcode.com/2021/day/10">Day 10</a></a></li>
-    <li><a href="#day-12httpsadventofcodecom2021day12"><a href="https://adventofcode.com/2021/day/12">Day 12</a></a></li>
-    <li><a href="#day-13httpsadventofcodecom2021day13"><a href="https://adventofcode.com/2021/day/13">Day 13</a></a></li>
-    <li><a href="#day-14httpsadventofcodecom2021day14"><a href="https://adventofcode.com/2021/day/14">Day 14</a></a></li>
-    <li><a href="#day-15httpsadventofcodecom2021day15"><a href="https://adventofcode.com/2021/day/15">Day 15</a></a></li>
-    <li><a href="#day-16httpsadventofcodecom2021day16"><a href="https://adventofcode.com/2021/day/16">Day 16</a></a></li>
-    <li><a href="#day-17httpsadventofcodecom2021day17"><a href="https://adventofcode.com/2021/day/17">Day 17</a></a></li>
-    <li><a href="#day-18httpsadventofcodecom2021day18"><a href="https://adventofcode.com/2021/day/18">Day 18</a></a></li>
-    <li><a href="#day-19httpsadventofcodecom2021day19"><a href="https://adventofcode.com/2021/day/19">Day 19</a></a></li>
-    <li><a href="#day-20httpsadventofcodecom2021day20"><a href="https://adventofcode.com/2021/day/20">Day 20</a></a></li>
-    <li><a href="#day-21httpsadventofcodecom2021day21"><a href="https://adventofcode.com/2021/day/21">Day 21</a></a></li>
-    <li><a href="#day-22httpsadventofcodecom2021day22"><a href="https://adventofcode.com/2021/day/22">Day 22</a></a></li>
-    <li><a href="#day-23httpsadventofcodecom2021day23"><a href="https://adventofcode.com/2021/day/23">Day 23</a></a></li>
-    <li><a href="#day-24httpsadventofcodecom2021day24"><a href="https://adventofcode.com/2021/day/24">Day 24</a></a></li>
-    <li><a href="#day-25httpsadventofcodecom2021day25"><a href="https://adventofcode.com/2021/day/25">Day 25</a></a></li>
+    <li><a href="#day-6">Day 6</a></li>
+    <li><a href="#day-7">Day 7</a></li>
+    <li><a href="#day-8">Day 8</a></li>
+    <li><a href="#day-9">Day 9</a></li>
+    <li><a href="#day-10">Day 10</a></li>
+    <li><a href="#day-12">Day 12</a></li>
+    <li><a href="#day-13">Day 13</a></li>
+    <li><a href="#day-14">Day 14</a></li>
+    <li><a href="#day-15">Day 15</a></li>
+    <li><a href="#day-16">Day 16</a></li>
+    <li><a href="#day-17">Day 17</a></li>
+    <li><a href="#day-18">Day 18</a></li>
+    <li><a href="#day-19">Day 19</a></li>
+    <li><a href="#day-20">Day 20</a></li>
+    <li><a href="#day-21">Day 21</a></li>
+    <li><a href="#day-22">Day 22</a></li>
+    <li><a href="#day-23">Day 23</a></li>
+    <li><a href="#day-24">Day 24</a></li>
+    <li><a href="#day-25">Day 25</a></li>
   </ul>
 </nav>
     </div>
@@ -116,11 +120,13 @@ if (!doNotTrack) {
 <p>This page will track some notes and TILs for <a href="https://adventofcode.com/2021">AoC2021</a>, which I will be completing in <code>rust</code> &ndash; a language I am still learning.</p>
 <p>Solutions are hosted <a href="https://github.com/ihasdapie/aoc2021">here</a>.
 If a day isn&rsquo;t very interesting, I won&rsquo;t post a writeup for it.</p>
-<h2 id="day-6httpsadventofcodecom2021day6"><a href="https://adventofcode.com/2021/day/6">Day 6</a></h2>
-<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d6">Solution</a></p>
+<h2 id="day-6">Day 6</h2>
+<p><a href="https://adventofcode.com/2021/day/6">Problem</a>
+<a href="https://github.com/ihasdapie/aoc2021/tree/main/d6">Solution</a></p>
 <p>So many lanternfish! The key to this puzzle is to represent the lanternfish as a histogram rather than creating a list of all the lanternfish. See <a href="https://github.com/ihasdapie/aoc2021/tree/main/d6">solution</a>.</p>
-<h2 id="day-7httpsadventofcodecom2021day7"><a href="https://adventofcode.com/2021/day/7">Day 7</a></h2>
-<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d7">Solution</a>
+<h2 id="day-7">Day 7</h2>
+<p><a href="https://adventofcode.com/2021/day/7">Problem</a>
+<a href="https://github.com/ihasdapie/aoc2021/tree/main/d7">Solution</a>
 This was an interesting one. Find the problem <a href="https://adventofcode.com/2021/day/7">here</a>.</p>
 <p>For part a) we can note that given a set of numbers \(x_1, x_2, x_3 \dots x_n \) the point \(p\) that minimizes the cost \(C_a\), \( \sum^n_{i=1} |x_i - p| \), is the median of the set.</p>
 <p>For part b), however, the distance cost, \(C_b\) is the sum of the sequence of numbers up to the point \(p\), i.e. for a distance of \(5\) we have \(C_{a,i}=1+2+3+4+5\).
@@ -133,8 +139,9 @@ Where the <a href="https://en.wikipedia.org/wiki/Sign_function">sign function</a
 <p>$$ p = \frac{\sum^n_{i=1}x_i}{n} - \frac{\sum^n_{i=1}sgn(x_i-p)}{2n} $$</p>
 <p>which is simply the mean of of the set, \(\pm\frac{1}{2}\).</p>
 <p>Day 7 was pretty neat.</p>
-<h2 id="day-8httpsadventofcodecom2021day8"><a href="https://adventofcode.com/2021/day/8">Day 8</a></h2>
-<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d8">Solution</a></p>
+<h2 id="day-8">Day 8</h2>
+<p><a href="https://adventofcode.com/2021/day/8">Problem</a>
+<a href="https://github.com/ihasdapie/aoc2021/tree/main/d8">Solution</a></p>
 <p>Day 8 can be solved by inspection and treating it as a logic puzzle.</p>
 <p><img src="seven_segment_display.png" alt=""></p>
 <p>Inspecting each digit we observe that 1, 4, 7, 8 have an unique number of lit-up segments.
@@ -147,28 +154,229 @@ We can then use this to decode which patterns correspond to which numbers.</p>
 <li>2 is the 5-segment which contains 2 segments of 4</li>
 <li>5 is the 5-segment which contains 3 segments of 4</li>
 </ul>
-<h2 id="day-9httpsadventofcodecom2021day9"><a href="https://adventofcode.com/2021/day/9">Day 9</a></h2>
-<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d9">Solution</a></p>
+<h2 id="day-9">Day 9</h2>
+<p><a href="https://adventofcode.com/2021/day/9">Problem</a>
+<a href="https://github.com/ihasdapie/aoc2021/tree/main/d9">Solution</a></p>
 <p>Just a recursive <a href="https://en.wikipedia.org/wiki/Flood_fill">flood fill</a> problem</p>
-<h2 id="day-10httpsadventofcodecom2021day10"><a href="https://adventofcode.com/2021/day/10">Day 10</a></h2>
-<p><a href="https://github.com/ihasdapie/aoc2021/tree/main/d10">Solution</a></p>
+<h2 id="day-10">Day 10</h2>
+<p><a href="https://adventofcode.com/2021/day/10">Problem</a>
+<a href="https://github.com/ihasdapie/aoc2021/tree/main/d10">Solution</a></p>
 <p>Braces matching problem. This is a fairly common problem that can be solved recursively or with stacks, so I&rsquo;ll just link to a stackoverflow <a href="https://stackoverflow.com/questions/16874176/parenthesis-brackets-matching-using-stack-algorithm">solution</a> that uses the same stack method that I used.</p>
 <p>The key observation to make is that for part b the remaining open brackets in the stack for an unbalanced string are the ones that must be matched up for it to become balanced.
 So to create the string we can just reverse the stack, substitute closing brackets for opening ones, and <code>collect</code> it into a string.</p>
-<h2 id="day-12httpsadventofcodecom2021day12"><a href="https://adventofcode.com/2021/day/12">Day 12</a></h2>
-<h2 id="day-13httpsadventofcodecom2021day13"><a href="https://adventofcode.com/2021/day/13">Day 13</a></h2>
-<h2 id="day-14httpsadventofcodecom2021day14"><a href="https://adventofcode.com/2021/day/14">Day 14</a></h2>
-<h2 id="day-15httpsadventofcodecom2021day15"><a href="https://adventofcode.com/2021/day/15">Day 15</a></h2>
-<h2 id="day-16httpsadventofcodecom2021day16"><a href="https://adventofcode.com/2021/day/16">Day 16</a></h2>
-<h2 id="day-17httpsadventofcodecom2021day17"><a href="https://adventofcode.com/2021/day/17">Day 17</a></h2>
-<h2 id="day-18httpsadventofcodecom2021day18"><a href="https://adventofcode.com/2021/day/18">Day 18</a></h2>
-<h2 id="day-19httpsadventofcodecom2021day19"><a href="https://adventofcode.com/2021/day/19">Day 19</a></h2>
-<h2 id="day-20httpsadventofcodecom2021day20"><a href="https://adventofcode.com/2021/day/20">Day 20</a></h2>
-<h2 id="day-21httpsadventofcodecom2021day21"><a href="https://adventofcode.com/2021/day/21">Day 21</a></h2>
-<h2 id="day-22httpsadventofcodecom2021day22"><a href="https://adventofcode.com/2021/day/22">Day 22</a></h2>
-<h2 id="day-23httpsadventofcodecom2021day23"><a href="https://adventofcode.com/2021/day/23">Day 23</a></h2>
-<h2 id="day-24httpsadventofcodecom2021day24"><a href="https://adventofcode.com/2021/day/24">Day 24</a></h2>
-<h2 id="day-25httpsadventofcodecom2021day25"><a href="https://adventofcode.com/2021/day/25">Day 25</a></h2>
+<h2 id="day-12">Day 12</h2>
+<p><a href="https://adventofcode.com/2021/day/12">Problem</a>
+<a href="https://github.com/ihasdapie/aoc2021/tree/main/d12">Solution</a></p>
+<p>Can be solved by a BFS and keeping track of the nodes we&rsquo;ve visited.</p>
+<p>This was pretty interesting as I am used to <code>c</code>-style graphs and those <a href="https://stackoverflow.com/questions/34747464/implement-graph-like-data-structure-in-rust">don&rsquo;t really exist in <code>rust</code></a> because of <code>rust</code>&rsquo;s stringent memory safety.
+There is a way around this using <a href="https://github.com/nrc/r4cppp/blob/master/graphs/README.md">arenas</a> but I&rsquo;m far too lazy to actually do it &ndash; so <code>HashMap</code> it is!
+Anyhow this lead me down a small rabbit hole regarding how things work in <code>rust</code> which brought me to these two <em>excellent</em> articles:</p>
+<ul>
+<li><a href="https://deterministic.space/secret-life-of-cows.html">The Secret Life of Cows</a></li>
+<li><a href="https://fasterthanli.me/articles/working-with-strings-in-rust">Working with strings in rust</a></li>
+</ul>
+<h2 id="day-13">Day 13</h2>
+<p><a href="https://adventofcode.com/2021/day/13">Problem</a>
+<a href="https://github.com/ihasdapie/aoc2021/tree/main/d13">Solution</a></p>
+<p>Not much of note here for day 13 except for a really cute end solution:</p>
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">###   ##  ###  #     ##  #  # #  # #    
+#  # #  # #  # #    #  # # #  #  # #    
+#  # #    #  # #    #  # ##   #### #    
+###  #    ###  #    #### # #  #  # #    
+# #  #  # #    #    #  # # #  #  # #    
+#  #  ##  #    #### #  # #  # #  # #### 
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="day-14">Day 14</h2>
+<p><a href="https://adventofcode.com/2021/day/14">Problem</a>
+<a href="https://github.com/ihasdapie/aoc2021/tree/main/d14">Solution</a></p>
+<p>Look for patterns (recall, lanternfish!).
+As we only care about the most and least frequent elements in the polymer we can note that each pair after a polymerization step gives rise to two new pairs &ndash; which can use a <code>HashMap</code> to keep track of the pairs of elements and their counts.
+So:</p>
+<ol>
+<li>We can start with a <code>HashMap</code> of the counts of each element in the polymer.</li>
+</ol>
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#228b22">// initial state
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">for</span><span style="color:#bbb"> </span>c<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">in</span><span style="color:#bbb"> </span><span style="color:#b452cd">0</span>..(sequence.len()<span style="color:#bbb"> </span>-<span style="color:#bbb"> </span><span style="color:#b452cd">1</span>)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">let</span><span style="color:#bbb"> </span>s<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span><span style="color:#658b00">String</span>::from_iter(sequence.chars().skip(c).take(<span style="color:#b452cd">2</span>));<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>*state.entry(s).or_insert(<span style="color:#b452cd">0</span>)<span style="color:#bbb"> </span>+=<span style="color:#bbb"> </span><span style="color:#b452cd">1</span>;<span style="color:#bbb">
+</span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>Iterate through polymerization steps</li>
+</ol>
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#8b008b;font-weight:bold">for</span><span style="color:#bbb"> </span>_<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">in</span><span style="color:#bbb"> </span><span style="color:#b452cd">0</span>..steps<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#8b008b;font-weight:bold">for</span><span style="color:#bbb"> </span>pair<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">in</span><span style="color:#bbb"> </span>state.keys()<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#228b22">// assume all pairs are in the rules 
+</span><span style="color:#228b22"></span><span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#228b22">// build the new state
+</span><span style="color:#228b22"></span><span style="color:#bbb">      </span><span style="color:#8b008b;font-weight:bold">let</span><span style="color:#bbb"> </span>insertable<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>rules.get(pair).unwrap();<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#8b008b;font-weight:bold">let</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">mut</span><span style="color:#bbb"> </span>new_pair<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>pair.chars().next().unwrap().to_string()<span style="color:#bbb"> </span>+<span style="color:#bbb"> </span>&amp;insertable.to_string();<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>*update.entry(new_pair.clone()).or_insert(<span style="color:#b452cd">0</span>)<span style="color:#bbb"> </span>+=<span style="color:#bbb"> </span>state.get(pair).unwrap();<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>new_pair<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>format!(<span style="color:#cd5555">&#34;{}{}&#34;</span>,<span style="color:#bbb"> </span>*insertable,<span style="color:#bbb"> </span>pair.chars().nth(<span style="color:#b452cd">1</span>).unwrap());<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>*update.entry(new_pair).or_insert(<span style="color:#b452cd">0</span>)<span style="color:#bbb"> </span>+=<span style="color:#bbb"> </span>state.get(pair).unwrap();<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>}<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#228b22">// and update the state
+</span><span style="color:#228b22"></span><span style="color:#bbb">  </span>state<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>update.clone();<span style="color:#bbb"> 
+</span><span style="color:#bbb">  </span>update.clear();<span style="color:#bbb">
+</span><span style="color:#bbb"></span>}<span style="color:#bbb"> 
+</span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>Count up the elements</li>
+</ol>
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#8b008b;font-weight:bold">for</span><span style="color:#bbb"> </span>(k,<span style="color:#bbb"> </span>v)<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">in</span><span style="color:#bbb"> </span>state.iter()<span style="color:#bbb"> </span>{<span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span>*counts.entry(k.chars().nth(<span style="color:#b452cd">1</span>).unwrap()).or_insert(<span style="color:#b452cd">0</span>)<span style="color:#bbb"> </span>+=<span style="color:#bbb"> </span>*v;<span style="color:#bbb">
+</span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">let</span><span style="color:#bbb"> </span>max<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>counts.values().max().unwrap();<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">let</span><span style="color:#bbb"> </span>min<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>counts.values().min().unwrap();<span style="color:#bbb">
+</span><span style="color:#bbb"></span>max-min<span style="color:#bbb">
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="day-15">Day 15</h2>
+<p><a href="https://adventofcode.com/2021/day/15">Problem</a>
+<a href="https://github.com/ihasdapie/aoc2021/tree/main/d15">Solution</a></p>
+<p>Just use Dijkstra™!
+In order to complete part 2 speedily we will have to implement dijkstra using a priority queue, a data structure which has
+the nice property of being able to extract the minimum element in \(\mathcal{O}(1)\) time.
+Fortunately <code>rust</code> has this built in in the form of <code>std::collections::BinaryHeap</code> alongside an example implementation.</p>
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#cd5555">/// Dijkstra&#39;s algorithm on a grid where neighbours are the top, right, bottom and left
+</span><span style="color:#cd5555">/// if no path is found, return -1
+</span><span style="color:#cd5555"></span><span style="color:#8b008b;font-weight:bold">pub</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">fn</span> <span style="color:#008b45">dijkstra</span>(grid: <span style="color:#8b008b;font-weight:bold">&amp;</span>[<span style="color:#658b00">Vec</span>&lt;<span style="color:#00688b;font-weight:bold">i32</span>&gt;],<span style="color:#bbb"> </span>start: (<span style="color:#00688b;font-weight:bold">usize</span>,<span style="color:#bbb"> </span><span style="color:#00688b;font-weight:bold">usize</span>),<span style="color:#bbb"> </span>end: (<span style="color:#00688b;font-weight:bold">usize</span>,<span style="color:#bbb"> </span><span style="color:#00688b;font-weight:bold">usize</span>))<span style="color:#bbb"> </span>-&gt; <span style="color:#00688b;font-weight:bold">i32</span> {<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">let</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">mut</span><span style="color:#bbb"> </span>heap<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>BinaryHeap::new();<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">let</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">mut</span><span style="color:#bbb"> </span>distance<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>HashMap::new();<span style="color:#bbb">
+</span><span style="color:#bbb">    
+</span><span style="color:#bbb">    </span><span style="color:#228b22">// starting position
+</span><span style="color:#228b22"></span><span style="color:#bbb">    </span>heap.push(Node{cost: <span style="color:#b452cd">0</span>,<span style="color:#bbb"> </span>pos: <span style="color:#008b45;font-weight:bold">start</span><span style="color:#bbb"> </span>});<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>distance.insert(start<span style="color:#bbb"> </span>,<span style="color:#bbb"> </span><span style="color:#b452cd">0</span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">while</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">let</span><span style="color:#bbb"> </span><span style="color:#658b00">Some</span>(Node{cost,<span style="color:#bbb"> </span>pos})<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>heap.pop()<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">        </span><span style="color:#8b008b;font-weight:bold">if</span><span style="color:#bbb"> </span>pos<span style="color:#bbb"> </span>==<span style="color:#bbb"> </span>end<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#8b008b;font-weight:bold">return</span><span style="color:#bbb"> </span>distance[&amp;pos];<span style="color:#bbb">
+</span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">        </span><span style="color:#8b008b;font-weight:bold">if</span><span style="color:#bbb"> </span>cost<span style="color:#bbb"> </span>&gt;<span style="color:#bbb"> </span>distance[&amp;pos]<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#8b008b;font-weight:bold">continue</span>;<span style="color:#bbb">
+</span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span><span style="color:#bbb">        </span><span style="color:#8b008b;font-weight:bold">for</span><span style="color:#bbb"> </span>neighbour<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">in</span><span style="color:#bbb"> </span>direct_neighbours(pos.<span style="color:#b452cd">0</span>,<span style="color:#bbb"> </span>pos.<span style="color:#b452cd">1</span>,<span style="color:#bbb"> </span>grid.len(),<span style="color:#bbb"> </span>grid[<span style="color:#b452cd">0</span>].len())<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#228b22">// see if there&#39;s a lower cost going thru the neighbour node
+</span><span style="color:#228b22"></span><span style="color:#bbb">            </span><span style="color:#8b008b;font-weight:bold">let</span><span style="color:#bbb"> </span>next<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>Node{<span style="color:#bbb"> </span>cost: <span style="color:#008b45;font-weight:bold">cost</span><span style="color:#bbb"> </span>+<span style="color:#bbb"> </span>grid[neighbour.<span style="color:#b452cd">1</span>][neighbour.<span style="color:#b452cd">0</span>],<span style="color:#bbb"> </span>pos: <span style="color:#008b45;font-weight:bold">neighbour</span><span style="color:#bbb"> </span>};<span style="color:#bbb">
+</span><span style="color:#bbb">            
+</span><span style="color:#bbb">            </span>distance.entry(next.pos).or_insert(<span style="color:#00688b;font-weight:bold">i32</span>::MAX);<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#8b008b;font-weight:bold">if</span><span style="color:#bbb"> </span>next.cost<span style="color:#bbb"> </span>&lt;<span style="color:#bbb"> </span>distance[&amp;next.pos]<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">                </span>distance.insert(next.pos,<span style="color:#bbb"> </span>next.cost);<span style="color:#bbb">
+</span><span style="color:#bbb">                </span>heap.push(next);<span style="color:#bbb">
+</span><span style="color:#bbb">            </span>}<span style="color:#bbb">
+</span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>-<span style="color:#b452cd">1</span><span style="color:#bbb"> </span><span style="color:#228b22">// since we&#39;re on an open grid, there should never not be a path
+</span><span style="color:#228b22"></span>}<span style="color:#bbb">
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="day-16">Day 16</h2>
+<p><a href="https://adventofcode.com/2021/day/16">Problem</a></p>
+<h2 id="day-17">Day 17</h2>
+<p><a href="https://adventofcode.com/2021/day/17">Problem</a></p>
+<h2 id="day-18">Day 18</h2>
+<p><a href="https://adventofcode.com/2021/day/18">Problem</a></p>
+<h2 id="day-19">Day 19</h2>
+<p><a href="https://adventofcode.com/2021/day/19">Problem</a></p>
+<h2 id="day-20">Day 20</h2>
+<p><a href="https://adventofcode.com/2021/day/20">Problem</a></p>
+<h2 id="day-21">Day 21</h2>
+<p><a href="https://adventofcode.com/2021/day/21">Problem</a></p>
+<h2 id="day-22">Day 22</h2>
+<p><a href="https://adventofcode.com/2021/day/22">Problem</a></p>
+<h2 id="day-23">Day 23</h2>
+<p><a href="https://adventofcode.com/2021/day/23">Problem</a></p>
+<h2 id="day-24">Day 24</h2>
+<p><a href="https://adventofcode.com/2021/day/24">Problem</a></p>
+<h2 id="day-25">Day 25</h2>
+<p><a href="https://adventofcode.com/2021/day/25">Problem</a></p>
 
 </article>
 
@@ -180,6 +388,7 @@ So to create the string we can just reverse the stack, substitute closing bracke
     
     <div class="footer-links">
         <a href="https://github.com/ihasdapie">GitHub</a>
+        <a href="https://github.com/ihasdapie/bettermotherfuckinghugowebsite/">hugo theme</a>
     </div>
     
 

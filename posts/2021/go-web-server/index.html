@@ -37,6 +37,7 @@ if (!doNotTrack) {
         <div class="header-menu">
             <a href="/posts/">blog</a>
             <a href="/about/">about</a>
+            <a href="/tags/">tags</a>
         </div>
     </h1>
 </div>
@@ -51,6 +52,9 @@ if (!doNotTrack) {
     Date &#x5b;
     <time datetime="2021-12-09">Dec 9, 2021</time>
     &#x5d;
+    Tags &#x5b;
+    <a href="//chenbrian.ca/tags/projects/">projects</a>
+    &#x5d;
 </div>
 </header>
 <article>
@@ -61,30 +65,30 @@ Why not just use something tried and tested by the community?</p>
 <p>So here&rsquo;s a simple 111-line golang webserver that you can use to deploy your personal website.</p>
 <p>There&rsquo;s also some cute <code>figlet</code> art</p>
 <p><a href="https://github.com/ihasdapie/gws">https://github.com/ihasdapie/gws</a>.</p>
-<div class="highlight"><div style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#58626f">19
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#b0c4de;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">  ,----..              .---.  .--.--.    
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">  ,----..              .---.  .--.--.    
  /   /   \            /. ./| /  /    &#39;.  
 |   :     :       .--&#39;.  &#39; ;|  :  /`. /  
 .   |  ;. /      /__./ \ : |;  |  |--`   
@@ -121,6 +125,7 @@ This is licensed under the &#39;unlicense&#39; license. See LICENSE for details.
     
     <div class="footer-links">
         <a href="https://github.com/ihasdapie">GitHub</a>
+        <a href="https://github.com/ihasdapie/bettermotherfuckinghugowebsite/">hugo theme</a>
     </div>
     
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>projects on chenbrian</title>
+    <link>//chenbrian.ca/tags/projects/</link>
+    <description>Recent content in projects on chenbrian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2021 — Brian Chen — All rights reserved.</copyright>
+    <lastBuildDate>Mon, 13 Dec 2021 21:03:35 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projects</title>
+      <link>//chenbrian.ca/posts/2021/projects/</link>
+      <pubDate>Mon, 13 Dec 2021 21:03:35 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/projects/</guid>
+      <description>// Page under construction //
+  GrocerCheck: Github, Pitch Deck A website to help people reduce contact at grocery stores and essential services. Got some press coverage too!
+ CBC Piece CBC Piece, but in French CBC TV piece can be found below Daily Hive: Toronto, Vancouver, Seattle Seattle Pi CBM Press (Korean News) Salam Vancouver (Iranian News) Fairchild TV: Interview broadcast on national Chinese TV    aUToronto: Simulation &amp;amp; Testing co-lead, working on automated integration testing &amp;amp; associated ROS/ROS2 tooling Demo below.</description>
+    </item>
+    
+    <item>
+      <title>(g)o (w)eb (s)erver</title>
+      <link>//chenbrian.ca/posts/2021/go-web-server/</link>
+      <pubDate>Thu, 09 Dec 2021 20:48:45 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/go-web-server/</guid>
+      <description>Deploying your personal website onto github pages is so 2013. Why avoid the hassle of self-hosting with a static site generator and server? Why not just use something tried and tested by the community?
+It&amp;rsquo;s just not as fun &amp;hellip; and I didn&amp;rsquo;t feel like studying for a final one afternoon.
+So here&amp;rsquo;s a simple 111-line golang webserver that you can use to deploy your personal website.
+There&amp;rsquo;s also some cute figlet art</description>
+    </item>
+    
+  </channel>
+</rss>
