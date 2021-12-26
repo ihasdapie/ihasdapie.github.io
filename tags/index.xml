@@ -27,20 +27,20 @@
     </item>
     
     <item>
-      <title>notes</title>
-      <link>//chenbrian.ca/tags/notes/</link>
-      <pubDate>Mon, 13 Dec 2021 19:16:20 -0500</pubDate>
-      
-      <guid>//chenbrian.ca/tags/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>engsci</title>
       <link>//chenbrian.ca/tags/engsci/</link>
       <pubDate>Sat, 11 Dec 2021 22:16:12 -0500</pubDate>
       
       <guid>//chenbrian.ca/tags/engsci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>//chenbrian.ca/tags/notes/</link>
+      <pubDate>Sat, 11 Dec 2021 22:16:12 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/tags/notes/</guid>
       <description></description>
     </item>
     
