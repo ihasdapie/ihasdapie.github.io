@@ -16,7 +16,7 @@
       <guid>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</guid>
       <description>Exam &amp;lsquo;cheat sheets&amp;rsquo; for EngSci 2nd year semester fall semester. These were made as part of my own studying for the exams. As 3/6 of my exams were cancelled due to the omicron covid variant, AER210, MAT292, and PHY293 are missing.
 I do not guarantee content correctness &amp;ndash; but if you find a mistake, please let me know!
- Table of Contents ▼    CHE260  Variables Heat Transfer Mechanisms Steady Heat Transfer  Fins   Transient Heat Transfer  Semi-Infinite Solids   Forced Convection Heat Transfer  Other:   Radiation Heat Transfer  Other     ECE253: Digital and Computer Systems  Logic and Circuits  Karnaugh Maps Other: Circuits to know   Verilog ARM Assembly  Instructions Using PC, LR Subroutines Stacks Recursion Interrupts IO     MAT292 AER210 PHY293 ESC203     function toggleTOC() { var x = document.</description>
+ Table of Contents   CHE260  Variables Heat Transfer Mechanisms Steady Heat Transfer  Fins   Transient Heat Transfer  Semi-Infinite Solids   Forced Convection Heat Transfer  Other:   Radiation Heat Transfer  Other     ECE253: Digital and Computer Systems  Logic and Circuits  Karnaugh Maps Other: Circuits to know   Verilog ARM Assembly  Instructions Using PC, LR Subroutines Stacks Recursion Interrupts IO     MAT292 AER210 PHY293 ESC203      CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>
     </item>
     
   </channel>
