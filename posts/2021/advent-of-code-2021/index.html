@@ -25,6 +25,17 @@
 
 
     
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-B0ZFV4LTG2', { 'anonymize_ip': false });
+}
+</script>
+
 
     
 </head>
@@ -156,13 +167,25 @@ Anyhow this lead me down a small rabbit hole regarding how things work in <code>
 <p><a href="https://adventofcode.com/2021/day/13">Problem</a>
 <a href="https://github.com/ihasdapie/aoc2021/tree/main/d13">Solution</a></p>
 <p>Not much of note here for day 13 except for a really cute end solution:</p>
-<pre tabindex="0"><code>###   ##  ###  #     ##  #  # #  # #    
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">###   ##  ###  #     ##  #  # #  # #    
 #  # #  # #  # #    #  # # #  #  # #    
 #  # #    #  # #    #  # ##   #### #    
 ###  #    ###  #    #### # #  #  # #    
 # #  #  # #    #    #  # # #  #  # #    
 #  #  ##  #    #### #  # #  # #  # #### 
-</code></pre><h2 id="day-14">Day 14</h2>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="day-14">Day 14</h2>
 <p><a href="https://adventofcode.com/2021/day/14">Problem</a>
 <a href="https://github.com/ihasdapie/aoc2021/tree/main/d14">Solution</a></p>
 <p>Look for patterns (recall, lanternfish!).
@@ -171,77 +194,158 @@ So:</p>
 <ol>
 <li>We can start with a <code>HashMap</code> of the counts of each element in the polymer.</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#75715e">// initial state
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> c <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">..</span>(sequence.len() <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) {
-    <span style="color:#66d9ef">let</span> s <span style="color:#f92672">=</span> String::from_iter(sequence.chars().skip(c).take(<span style="color:#ae81ff">2</span>));
-    <span style="color:#f92672">*</span>state.entry(s).or_insert(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
-}
-</code></pre></div><ol start="2">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#080;font-style:italic">// initial state
+</span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">for</span><span style="color:#bbb"> </span>c<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">in</span><span style="color:#bbb"> </span><span style="color:#666">0</span><span style="color:#666">..</span>(sequence.len()<span style="color:#bbb"> </span><span style="color:#666">-</span><span style="color:#bbb"> </span><span style="color:#666">1</span>)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">let</span><span style="color:#bbb"> </span>s<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#a2f">String</span>::from_iter(sequence.chars().skip(c).take(<span style="color:#666">2</span>));<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#666">*</span>state.entry(s).or_insert(<span style="color:#666">0</span>)<span style="color:#bbb"> </span><span style="color:#666">+=</span><span style="color:#bbb"> </span><span style="color:#666">1</span>;<span style="color:#bbb">
+</span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
 <li>Iterate through polymerization steps</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">for</span> _ <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">..</span>steps {
-  <span style="color:#66d9ef">for</span> pair <span style="color:#66d9ef">in</span> state.keys() {
-      <span style="color:#75715e">// assume all pairs are in the rules 
-</span><span style="color:#75715e"></span>
-      <span style="color:#75715e">// build the new state
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">let</span> insertable <span style="color:#f92672">=</span> rules.get(pair).unwrap();
-      <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> new_pair <span style="color:#f92672">=</span> pair.chars().next().unwrap().to_string() <span style="color:#f92672">+</span> <span style="color:#f92672">&amp;</span>insertable.to_string();
-      <span style="color:#f92672">*</span>update.entry(new_pair.clone()).or_insert(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">+=</span> state.get(pair).unwrap();
-      new_pair <span style="color:#f92672">=</span> format!(<span style="color:#e6db74">&#34;{}{}&#34;</span>, <span style="color:#f92672">*</span>insertable, pair.chars().nth(<span style="color:#ae81ff">1</span>).unwrap());
-      <span style="color:#f92672">*</span>update.entry(new_pair).or_insert(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">+=</span> state.get(pair).unwrap();
-  }
-  <span style="color:#75715e">// and update the state
-</span><span style="color:#75715e"></span>  state <span style="color:#f92672">=</span> update.clone(); 
-  update.clear();
-} 
-</code></pre></div><ol start="3">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#a2f;font-weight:bold">for</span><span style="color:#bbb"> </span>_<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">in</span><span style="color:#bbb"> </span><span style="color:#666">0</span><span style="color:#666">..</span>steps<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#a2f;font-weight:bold">for</span><span style="color:#bbb"> </span>pair<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">in</span><span style="color:#bbb"> </span>state.keys()<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#080;font-style:italic">// assume all pairs are in the rules 
+</span><span style="color:#080;font-style:italic"></span><span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#080;font-style:italic">// build the new state
+</span><span style="color:#080;font-style:italic"></span><span style="color:#bbb">      </span><span style="color:#a2f;font-weight:bold">let</span><span style="color:#bbb"> </span>insertable<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>rules.get(pair).unwrap();<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#a2f;font-weight:bold">let</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">mut</span><span style="color:#bbb"> </span>new_pair<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>pair.chars().next().unwrap().to_string()<span style="color:#bbb"> </span><span style="color:#666">+</span><span style="color:#bbb"> </span><span style="color:#666">&amp;</span>insertable.to_string();<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#666">*</span>update.entry(new_pair.clone()).or_insert(<span style="color:#666">0</span>)<span style="color:#bbb"> </span><span style="color:#666">+=</span><span style="color:#bbb"> </span>state.get(pair).unwrap();<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>new_pair<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>format!(<span style="color:#b44">&#34;{}{}&#34;</span>,<span style="color:#bbb"> </span><span style="color:#666">*</span>insertable,<span style="color:#bbb"> </span>pair.chars().nth(<span style="color:#666">1</span>).unwrap());<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#666">*</span>update.entry(new_pair).or_insert(<span style="color:#666">0</span>)<span style="color:#bbb"> </span><span style="color:#666">+=</span><span style="color:#bbb"> </span>state.get(pair).unwrap();<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>}<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#080;font-style:italic">// and update the state
+</span><span style="color:#080;font-style:italic"></span><span style="color:#bbb">  </span>state<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>update.clone();<span style="color:#bbb"> 
+</span><span style="color:#bbb">  </span>update.clear();<span style="color:#bbb">
+</span><span style="color:#bbb"></span>}<span style="color:#bbb"> 
+</span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
 <li>Count up the elements</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">for</span> (k, v) <span style="color:#66d9ef">in</span> state.iter() { 
-    <span style="color:#f92672">*</span>counts.entry(k.chars().nth(<span style="color:#ae81ff">1</span>).unwrap()).or_insert(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">+=</span> <span style="color:#f92672">*</span>v;
-}
-<span style="color:#66d9ef">let</span> max <span style="color:#f92672">=</span> counts.values().max().unwrap();
-<span style="color:#66d9ef">let</span> min <span style="color:#f92672">=</span> counts.values().min().unwrap();
-max<span style="color:#f92672">-</span>min
-</code></pre></div><h2 id="day-15">Day 15</h2>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#a2f;font-weight:bold">for</span><span style="color:#bbb"> </span>(k,<span style="color:#bbb"> </span>v)<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">in</span><span style="color:#bbb"> </span>state.iter()<span style="color:#bbb"> </span>{<span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span><span style="color:#666">*</span>counts.entry(k.chars().nth(<span style="color:#666">1</span>).unwrap()).or_insert(<span style="color:#666">0</span>)<span style="color:#bbb"> </span><span style="color:#666">+=</span><span style="color:#bbb"> </span><span style="color:#666">*</span>v;<span style="color:#bbb">
+</span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">let</span><span style="color:#bbb"> </span>max<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>counts.values().max().unwrap();<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">let</span><span style="color:#bbb"> </span>min<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>counts.values().min().unwrap();<span style="color:#bbb">
+</span><span style="color:#bbb"></span>max<span style="color:#666">-</span>min<span style="color:#bbb">
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="day-15">Day 15</h2>
 <p><a href="https://adventofcode.com/2021/day/15">Problem</a>
 <a href="https://github.com/ihasdapie/aoc2021/tree/main/d15">Solution</a></p>
 <p>Just use Dijkstra™!
 In order to complete part 2 speedily we will have to implement dijkstra using a priority queue, a data structure which has
 the nice property of being able to extract the minimum element in \(\mathcal{O}(1)\) time.
 Fortunately <code>rust</code> has this built in in the form of <code>std::collections::BinaryHeap</code> alongside an example implementation.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#e6db74">/// Dijkstra&#39;s algorithm on a grid where neighbours are the top, right, bottom and left
-</span><span style="color:#e6db74">/// if no path is found, return -1
-</span><span style="color:#e6db74"></span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">dijkstra</span>(grid: <span style="color:#66d9ef">&amp;</span>[Vec<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">i32</span><span style="color:#f92672">&gt;</span>], start: (<span style="color:#66d9ef">usize</span>, <span style="color:#66d9ef">usize</span>), end: (<span style="color:#66d9ef">usize</span>, <span style="color:#66d9ef">usize</span>)) -&gt; <span style="color:#66d9ef">i32</span> {
-    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> heap <span style="color:#f92672">=</span> BinaryHeap::new();
-    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> distance <span style="color:#f92672">=</span> HashMap::new();
-    
-    <span style="color:#75715e">// starting position
-</span><span style="color:#75715e"></span>    heap.push(Node{cost: <span style="color:#ae81ff">0</span>, pos: <span style="color:#a6e22e">start</span> });
-    distance.insert(start , <span style="color:#ae81ff">0</span>);
-
-    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">let</span> Some(Node{cost, pos}) <span style="color:#f92672">=</span> heap.pop() {
-        <span style="color:#66d9ef">if</span> pos <span style="color:#f92672">==</span> end {
-            <span style="color:#66d9ef">return</span> distance[<span style="color:#f92672">&amp;</span>pos];
-        }
-
-        <span style="color:#66d9ef">if</span> cost <span style="color:#f92672">&gt;</span> distance[<span style="color:#f92672">&amp;</span>pos] {
-            <span style="color:#66d9ef">continue</span>;
-        }
-        <span style="color:#66d9ef">for</span> neighbour <span style="color:#66d9ef">in</span> direct_neighbours(pos.<span style="color:#ae81ff">0</span>, pos.<span style="color:#ae81ff">1</span>, grid.len(), grid[<span style="color:#ae81ff">0</span>].len()) {
-            <span style="color:#75715e">// see if there&#39;s a lower cost going thru the neighbour node
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">let</span> next <span style="color:#f92672">=</span> Node{ cost: <span style="color:#a6e22e">cost</span> <span style="color:#f92672">+</span> grid[neighbour.<span style="color:#ae81ff">1</span>][neighbour.<span style="color:#ae81ff">0</span>], pos: <span style="color:#a6e22e">neighbour</span> };
-            
-            distance.entry(next.pos).or_insert(<span style="color:#66d9ef">i32</span>::MAX);
-            <span style="color:#66d9ef">if</span> next.cost <span style="color:#f92672">&lt;</span> distance[<span style="color:#f92672">&amp;</span>next.pos] {
-                distance.insert(next.pos, next.cost);
-                heap.push(next);
-            }
-        }
-    }
-    <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#75715e">// since we&#39;re on an open grid, there should never not be a path
-</span><span style="color:#75715e"></span>}
-</code></pre></div><h2 id="day-16">Day 16</h2>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#b44;font-style:italic">/// Dijkstra&#39;s algorithm on a grid where neighbours are the top, right, bottom and left
+</span><span style="color:#b44;font-style:italic">/// if no path is found, return -1
+</span><span style="color:#b44;font-style:italic"></span><span style="color:#a2f;font-weight:bold">pub</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">fn</span> <span style="color:#00a000">dijkstra</span>(grid: <span style="color:#a2f">&amp;</span>[<span style="color:#a2f">Vec</span><span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">i32</span><span style="color:#666">&gt;</span>],<span style="color:#bbb"> </span>start: (<span style="color:#0b0;font-weight:bold">usize</span>,<span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">usize</span>),<span style="color:#bbb"> </span>end: (<span style="color:#0b0;font-weight:bold">usize</span>,<span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">usize</span>))<span style="color:#bbb"> </span>-&gt; <span style="color:#0b0;font-weight:bold">i32</span> {<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">let</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">mut</span><span style="color:#bbb"> </span>heap<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>BinaryHeap::new();<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">let</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">mut</span><span style="color:#bbb"> </span>distance<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>HashMap::new();<span style="color:#bbb">
+</span><span style="color:#bbb">    
+</span><span style="color:#bbb">    </span><span style="color:#080;font-style:italic">// starting position
+</span><span style="color:#080;font-style:italic"></span><span style="color:#bbb">    </span>heap.push(Node{cost: <span style="color:#666">0</span>,<span style="color:#bbb"> </span>pos: <span style="color:#00f">start</span><span style="color:#bbb"> </span>});<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>distance.insert(start<span style="color:#bbb"> </span>,<span style="color:#bbb"> </span><span style="color:#666">0</span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">while</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">let</span><span style="color:#bbb"> </span><span style="color:#a2f">Some</span>(Node{cost,<span style="color:#bbb"> </span>pos})<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>heap.pop()<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>pos<span style="color:#bbb"> </span><span style="color:#666">==</span><span style="color:#bbb"> </span>end<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span>distance[<span style="color:#666">&amp;</span>pos];<span style="color:#bbb">
+</span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>cost<span style="color:#bbb"> </span><span style="color:#666">&gt;</span><span style="color:#bbb"> </span>distance[<span style="color:#666">&amp;</span>pos]<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">continue</span>;<span style="color:#bbb">
+</span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span><span style="color:#bbb">        </span><span style="color:#a2f;font-weight:bold">for</span><span style="color:#bbb"> </span>neighbour<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">in</span><span style="color:#bbb"> </span>direct_neighbours(pos.<span style="color:#666">0</span>,<span style="color:#bbb"> </span>pos.<span style="color:#666">1</span>,<span style="color:#bbb"> </span>grid.len(),<span style="color:#bbb"> </span>grid[<span style="color:#666">0</span>].len())<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#080;font-style:italic">// see if there&#39;s a lower cost going thru the neighbour node
+</span><span style="color:#080;font-style:italic"></span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">let</span><span style="color:#bbb"> </span>next<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>Node{<span style="color:#bbb"> </span>cost: <span style="color:#00f">cost</span><span style="color:#bbb"> </span><span style="color:#666">+</span><span style="color:#bbb"> </span>grid[neighbour.<span style="color:#666">1</span>][neighbour.<span style="color:#666">0</span>],<span style="color:#bbb"> </span>pos: <span style="color:#00f">neighbour</span><span style="color:#bbb"> </span>};<span style="color:#bbb">
+</span><span style="color:#bbb">            
+</span><span style="color:#bbb">            </span>distance.entry(next.pos).or_insert(<span style="color:#0b0;font-weight:bold">i32</span>::MAX);<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#a2f;font-weight:bold">if</span><span style="color:#bbb"> </span>next.cost<span style="color:#bbb"> </span><span style="color:#666">&lt;</span><span style="color:#bbb"> </span>distance[<span style="color:#666">&amp;</span>next.pos]<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span><span style="color:#bbb">                </span>distance.insert(next.pos,<span style="color:#bbb"> </span>next.cost);<span style="color:#bbb">
+</span><span style="color:#bbb">                </span>heap.push(next);<span style="color:#bbb">
+</span><span style="color:#bbb">            </span>}<span style="color:#bbb">
+</span><span style="color:#bbb">        </span>}<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#666">-</span><span style="color:#666">1</span><span style="color:#bbb"> </span><span style="color:#080;font-style:italic">// since we&#39;re on an open grid, there should never not be a path
+</span><span style="color:#080;font-style:italic"></span>}<span style="color:#bbb">
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="day-16">Day 16</h2>
 <p><a href="https://adventofcode.com/2021/day/16">Problem</a></p>
 <h2 id="day-17">Day 17</h2>
 <p><a href="https://adventofcode.com/2021/day/17">Problem</a></p>
@@ -277,6 +381,8 @@ Fortunately <code>rust</code> has this built in in the form of <code>std::collec
     
 
     
+    
+    <div class="copyright">© 2021 — Brian Chen — All rights reserved.</div>
     
 </div>
 </body>

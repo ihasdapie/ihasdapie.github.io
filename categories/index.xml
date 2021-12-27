@@ -5,6 +5,7 @@
     <link>//chenbrian.ca/categories/</link>
     <description>Recent content in Categories on chenbrian</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="//chenbrian.ca/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>© 2021 — Brian Chen — All rights reserved.</copyright><atom:link href="//chenbrian.ca/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
