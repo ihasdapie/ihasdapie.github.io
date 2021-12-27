@@ -6,7 +6,6 @@
     <description>Recent content in programming on chenbrian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2021 — Brian Chen — All rights reserved.</copyright>
     <lastBuildDate>Mon, 13 Dec 2021 21:03:35 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Projects</title>
@@ -25,7 +24,7 @@
       <pubDate>Thu, 09 Dec 2021 21:20:53 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/2021/advent-of-code-2021/</guid>
-      <description>Table of Contents   Day 6 Day 7 Day 8 Day 9 Day 10 Day 12 Day 13 Day 14 Day 15 Day 16 Day 17 Day 18 Day 19 Day 20 Day 21 Day 22 Day 23 Day 24 Day 25      This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.</description>
+      <description>Table of Contents   Day 6 Day 7 Day 8 Day 9 Day 10 Day 12 Day 13 Day 14 Day 15 Day 16 Day 17 Day 18 Day 19 Day 20 Day 21 Day 22 Day 23 Day 24 Day 25     This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.</description>
     </item>
     
   </channel>

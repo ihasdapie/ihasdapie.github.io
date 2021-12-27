@@ -6,8 +6,17 @@
     <description>Recent content in notes on chenbrian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2021 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Sat, 11 Dec 2021 22:16:12 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Dec 2021 16:49:34 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Teaching</title>
+      <link>//chenbrian.ca/posts/2021/teaching/</link>
+      <pubDate>Sun, 12 Dec 2021 16:49:34 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/teaching/</guid>
+      <description>ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.
+For all else (currently WIP), see: github.com/ihasdapie/teaching/</description>
+    </item>
+    
     <item>
       <title>Engsci Y2S1 Exam Review</title>
       <link>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</link>
@@ -16,7 +25,7 @@
       <guid>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</guid>
       <description>Exam &amp;lsquo;cheat sheets&amp;rsquo; for EngSci 2nd year semester fall semester. These were made as part of my own studying for the exams. As 3/6 of my exams were cancelled due to the omicron covid variant, AER210, MAT292, and PHY293 are missing.
 I do not guarantee content correctness &amp;ndash; but if you find a mistake, please let me know!
- Table of Contents   CHE260  Variables Heat Transfer Mechanisms Steady Heat Transfer  Fins   Transient Heat Transfer  Semi-Infinite Solids   Forced Convection Heat Transfer  Other:   Radiation Heat Transfer  Other     ECE253: Digital and Computer Systems  Logic and Circuits  Karnaugh Maps Other: Circuits to know   Verilog ARM Assembly  Instructions Using PC, LR Subroutines Stacks Recursion Interrupts IO     MAT292 AER210 PHY293 ESC203      CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>
+Table of Contents   CHE260  Variables Heat Transfer Mechanisms Steady Heat Transfer Transient Heat Transfer Forced Convection Heat Transfer Radiation Heat Transfer   ECE253: Digital and Computer Systems  Logic and Circuits Verilog ARM Assembly   MAT292 AER210 PHY293 ESC203     CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>
     </item>
     
   </channel>

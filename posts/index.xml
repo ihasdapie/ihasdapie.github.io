@@ -6,7 +6,6 @@
     <description>Recent content in Posts on chenbrian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2021 — Brian Chen — All rights reserved.</copyright>
     <lastBuildDate>Mon, 13 Dec 2021 21:03:35 -0500</lastBuildDate><atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Projects</title>
@@ -37,7 +36,7 @@ For all else (currently WIP), see: github.com/ihasdapie/teaching/</description>
       <guid>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</guid>
       <description>Exam &amp;lsquo;cheat sheets&amp;rsquo; for EngSci 2nd year semester fall semester. These were made as part of my own studying for the exams. As 3/6 of my exams were cancelled due to the omicron covid variant, AER210, MAT292, and PHY293 are missing.
 I do not guarantee content correctness &amp;ndash; but if you find a mistake, please let me know!
- Table of Contents   CHE260  Variables Heat Transfer Mechanisms Steady Heat Transfer  Fins   Transient Heat Transfer  Semi-Infinite Solids   Forced Convection Heat Transfer  Other:   Radiation Heat Transfer  Other     ECE253: Digital and Computer Systems  Logic and Circuits  Karnaugh Maps Other: Circuits to know   Verilog ARM Assembly  Instructions Using PC, LR Subroutines Stacks Recursion Interrupts IO     MAT292 AER210 PHY293 ESC203      CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>
+Table of Contents   CHE260  Variables Heat Transfer Mechanisms Steady Heat Transfer Transient Heat Transfer Forced Convection Heat Transfer Radiation Heat Transfer   ECE253: Digital and Computer Systems  Logic and Circuits Verilog ARM Assembly   MAT292 AER210 PHY293 ESC203     CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>
     </item>
     
     <item>
@@ -46,7 +45,7 @@ I do not guarantee content correctness &amp;ndash; but if you find a mistake, pl
       <pubDate>Thu, 09 Dec 2021 21:20:53 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/2021/advent-of-code-2021/</guid>
-      <description>Table of Contents   Day 6 Day 7 Day 8 Day 9 Day 10 Day 12 Day 13 Day 14 Day 15 Day 16 Day 17 Day 18 Day 19 Day 20 Day 21 Day 22 Day 23 Day 24 Day 25      This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.</description>
+      <description>Table of Contents   Day 6 Day 7 Day 8 Day 9 Day 10 Day 12 Day 13 Day 14 Day 15 Day 16 Day 17 Day 18 Day 19 Day 20 Day 21 Day 22 Day 23 Day 24 Day 25     This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.</description>
     </item>
     
     <item>
