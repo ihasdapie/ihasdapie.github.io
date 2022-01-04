@@ -7,7 +7,7 @@
 
     <title>Advent of Code 2021 | chenbrian</title>
 
-    <style>*{box-sizing:border-box}body{margin:40px auto;max-width:800px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1{line-height:1.2;font-family:Arial,sans-serif}h2,h3{font-family:Arial,sans-serif;line-height:1.1;color:#444}body{font-family:Arial,sans-serif}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:18px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%}td,th{border:1px solid #444;padding:.5rem;text-align:left}@media only screen and (max-width:1400px){#back_to_top{visibility:visible!important}#toc{display:none}}#toc{position:fixed;top:50px;right:0;padding:20px;line-height:1.1em;max-width:325px;margin:auto}#back_to_top{position:fixed;top:10px;right:10px;width:100px;visibility:hidden}blockquote{background:#f1f1f1;border-left:4px solid #ccc;padding-left:8px}code:not([class*=language-]){border-radius:.25rem;padding:.1rem;background-color:#f2f2f2;color:#399ee6}</style>
+    <style>*{box-sizing:border-box}body{margin:40px auto;max-width:800px;line-height:1.6;font-size:16px;color:#444;padding:0 10px}h1{line-height:1.2;font-family:Arial,sans-serif}h2,h3{font-family:Arial,sans-serif;line-height:1.1;color:#444}body{font-family:Arial,sans-serif}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:16px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%}td,th{border:1px solid #444;padding:.5rem;text-align:left}@media only screen and (max-width:1400px){#back_to_top{visibility:visible!important}#toc{display:none}}ul,ol,li{padding-left:.5 em}#toc{position:fixed;top:50px;right:0;padding:20px;line-height:1.1em;max-width:325px;margin:auto}#back_to_top{position:fixed;top:10px;right:10px;width:100px;visibility:hidden}blockquote{background:#f1f1f1;border-left:4px solid #ccc;padding-left:8px}code:not([class*=language-]){border-radius:.25rem;padding:.1rem;background-color:#f1f1f1}</style>
 
 
 
@@ -54,6 +54,10 @@ if (!doNotTrack) {
 </div>
 <div id="content">
         
+            <aside id="back_to_top">
+            <a href="#top">Back to top</a>
+            </aside>
+        
         <section>
         <header>
     <h1>Advent of Code 2021</h1>
@@ -66,7 +70,7 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2021-12-09">Dec 9, 2021</time>,&nbsp;Last Modified:
-    <time datetime="2021-12-26">Dec 26, 2021</time>
+    <time datetime="2022-01-04">Jan 4, 2022</time>
     <br>
     
     Tags &#x5b;
@@ -123,7 +127,7 @@ This was an interesting one. Find the problem <a href="https://adventofcode.com/
 <p>For part a) we can note that given a set of numbers \(x_1, x_2, x_3 \dots x_n \) the point \(p\) that minimizes the cost \(C_a\), \( \sum^n_{i=1} |x_i - p| \), is the median of the set.</p>
 <p>For part b), however, the distance cost, \(C_b\) is the sum of the sequence of numbers up to the point \(p\), i.e. for a distance of \(5\) we have \(C_{a,i}=1+2+3+4+5\).
 We can then note that we can apply Carl Gauss&rsquo;s <a href="https://en.wikipedia.org/wiki/Arithmetic_progression">trick</a> for finding the sum of of an arithmetic progression.</p>
-<p>$$C_b = \sum^n_{i=1} \frac{(d_i)(d_i+1)}{2} = \sum^n_{i=1}\frac{(p-x_i)^2-|p-x_i|}{2} $$
+<p>$$C_b = \sum^n_{i=1} \frac{(d_i)(d_i+1)}{2} = \\ \sum^n_{i=1}\frac{(p-x_i)^2-|p-x_i|}{2} $$
 Then, we may take the derivitive of the above equation, doing a classic Calculus 1/2 optimization problem, and find that we may minimize cost when \(C_b' = 0\).</p>
 <p>$$ C_b' = \sum^n_{i=1} \frac{2(p-x_i) + sgn(x_i-p)}{2} = 0 $$
 Where the <a href="https://en.wikipedia.org/wiki/Sign_function">sign function</a> is a function which extracts the sign of a number.</p>
