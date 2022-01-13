@@ -2,17 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//chenbrian.ca/tags/other/</loc>
-    <lastmod>2022-01-08T00:33:29-05:00</lastmod>
+    <loc>//chenbrian.ca/tags/engsci/</loc>
+    <lastmod>2022-01-13T15:11:43-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/posts/2022/engsci-year-2-winter/</loc>
+    <lastmod>2022-01-13T15:11:43-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/tags/notes/</loc>
+    <lastmod>2022-01-13T15:11:43-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/</loc>
+    <lastmod>2022-01-13T15:11:43-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/tags/</loc>
+    <lastmod>2022-01-13T15:11:43-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/tags/other/</loc>
     <lastmod>2022-01-08T00:33:29-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/2022/some-poems/</loc>
     <lastmod>2022-01-08T00:33:29-05:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/tags/</loc>
-    <lastmod>2022-01-09T21:37:58-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/programming/</loc>
     <lastmod>2022-01-04T05:03:37-05:00</lastmod>
@@ -32,14 +41,8 @@
     <loc>//chenbrian.ca/tags/projects/</loc>
     <lastmod>2021-12-26T16:31:06-05:00</lastmod>
   </url><url>
-    <loc>//chenbrian.ca/tags/notes/</loc>
-    <lastmod>2022-01-06T16:11:40-05:00</lastmod>
-  </url><url>
     <loc>//chenbrian.ca/posts/2021/teaching/</loc>
     <lastmod>2022-01-06T16:11:40-05:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/tags/engsci/</loc>
-    <lastmod>2022-01-04T04:45:14-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</loc>
     <lastmod>2022-01-04T04:45:14-05:00</lastmod>
