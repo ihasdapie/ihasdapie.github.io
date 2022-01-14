@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on chenbrian</title>
+    <link>//chenbrian.ca/tags/</link>
+    <description>Recent content in Tags on chenbrian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2021 — Brian Chen — All rights reserved.</copyright>
+    <lastBuildDate>Mon, 10 Jan 2022 19:53:48 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>engsci</title>
+      <link>//chenbrian.ca/tags/engsci/</link>
+      <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/tags/engsci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>//chenbrian.ca/tags/notes/</link>
+      <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>other</title>
+      <link>//chenbrian.ca/tags/other/</link>
+      <pubDate>Sat, 08 Jan 2022 00:26:05 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/tags/other/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>//chenbrian.ca/tags/programming/</link>
+      <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>robots</title>
+      <link>//chenbrian.ca/tags/robots/</link>
+      <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/tags/robots/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>//chenbrian.ca/tags/vim/</link>
+      <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>projects</title>
+      <link>//chenbrian.ca/tags/projects/</link>
+      <pubDate>Mon, 13 Dec 2021 21:03:35 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/tags/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>about_me</title>
+      <link>//chenbrian.ca/tags/about_me/</link>
+      <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>//chenbrian.ca/tags/about_me/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

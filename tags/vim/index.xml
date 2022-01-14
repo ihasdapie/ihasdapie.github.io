@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vim on chenbrian</title>
+    <link>//chenbrian.ca/tags/vim/</link>
+    <description>Recent content in vim on chenbrian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2021 — Brian Chen — All rights reserved.</copyright>
+    <lastBuildDate>Tue, 04 Jan 2022 04:23:20 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using NeoVim for ROS2 c&#43;&#43; development</title>
+      <link>//chenbrian.ca/posts/2022/using-neovim-for-ros2-c-development/</link>
+      <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2022/using-neovim-for-ros2-c-development/</guid>
+      <description>Using clangd ROS2 puts its headers into a rather non-standard location, /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. Obviously this doesn&amp;rsquo;t play well with standard clangd setups, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.
+ For vscode setup, see this or this
+ With vim this is as little uglier.</description>
+    </item>
+    
+  </channel>
+</rss>

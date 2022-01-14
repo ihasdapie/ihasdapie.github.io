@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on chenbrian</title>
+    <link>//chenbrian.ca/tags/programming/</link>
+    <description>Recent content in programming on chenbrian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2021 — Brian Chen — All rights reserved.</copyright>
+    <lastBuildDate>Tue, 04 Jan 2022 04:23:20 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using NeoVim for ROS2 c&#43;&#43; development</title>
+      <link>//chenbrian.ca/posts/2022/using-neovim-for-ros2-c-development/</link>
+      <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2022/using-neovim-for-ros2-c-development/</guid>
+      <description>Using clangd ROS2 puts its headers into a rather non-standard location, /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. Obviously this doesn&amp;rsquo;t play well with standard clangd setups, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.
+ For vscode setup, see this or this
+ With vim this is as little uglier.</description>
+    </item>
+    
+    <item>
+      <title>Notes on &#39;Clean Architecture: A Craftsman&#39;s Guide to Software Structure and Design&#39;</title>
+      <link>//chenbrian.ca/posts/2021/notes-on-clean-architecture-a-craftsmans-guide-to-software-structure-and-design/</link>
+      <pubDate>Sun, 26 Dec 2021 16:39:21 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/notes-on-clean-architecture-a-craftsmans-guide-to-software-structure-and-design/</guid>
+      <description>Table of Contents   Paradigms SOLID principles  SRP OCP LSP ISP DIP   Components  Component Coupling        &amp;ldquo;Fight for the architecture&amp;rdquo;
+ The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]
+[1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>//chenbrian.ca/posts/2021/projects/</link>
+      <pubDate>Mon, 13 Dec 2021 21:03:35 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/projects/</guid>
+      <description>// Page under construction //
+  GrocerCheck: Github, Pitch Deck A website to help people reduce contact at grocery stores and essential services. Got some press coverage too!
+ CBC Piece CBC Piece, but in French CBC TV piece can be found below Daily Hive: Toronto, Vancouver, Seattle Seattle Pi CBM Press (Korean News) Salam Vancouver (Iranian News) Fairchild TV: Interview broadcast on national Chinese TV    aUToronto: Simulation &amp;amp; Testing co-lead, working on automated integration testing &amp;amp; associated ROS/ROS2 tooling Demo below.</description>
+    </item>
+    
+    <item>
+      <title>Advent of Code 2021</title>
+      <link>//chenbrian.ca/posts/2021/advent-of-code-2021/</link>
+      <pubDate>Thu, 09 Dec 2021 21:20:53 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/advent-of-code-2021/</guid>
+      <description>Table of Contents   Day 6 Day 7 Day 8 Day 9 Day 10 Day 12 Day 13 Day 14 Day 15 Day 16 Day 17 Day 18 Day 19 Day 20 Day 21 Day 22 Day 23 Day 24 Day 25     This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.</description>
+    </item>
+    
+  </channel>
+</rss>

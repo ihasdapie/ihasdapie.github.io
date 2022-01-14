@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on chenbrian</title>
+    <link>//chenbrian.ca/posts/</link>
+    <description>Recent content in Posts on chenbrian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2021 — Brian Chen — All rights reserved.</copyright>
+    <lastBuildDate>Mon, 10 Jan 2022 19:53:48 -0500</lastBuildDate><atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Engsci Year 2 Winter</title>
+      <link>//chenbrian.ca/posts/2022/engsci-year-2-winter/</link>
+      <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2022/engsci-year-2-winter/</guid>
+      <description>Table of Contents   TEP 327: Engineering and Law  Resources   ECE286: Probability and Statistics  Lecture 1   ECE259: Electromagnetism BME205: Introduction to Biomedical Engineering  Cells   PHY294: Quantum and Thermal Physics ESC204: Praxis III     TEP 327: Engineering and Law Why do engineers need to know about law?
+ Engineering ends up stepping across a lot of jurisdictions, so we kinda need to know about it.</description>
+    </item>
+    
+    <item>
+      <title>some poems</title>
+      <link>//chenbrian.ca/posts/2022/some-poems/</link>
+      <pubDate>Sat, 08 Jan 2022 00:26:05 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2022/some-poems/</guid>
+      <description>Table of Contents   The Jackdaw Echolalia     Making it a commitment for 2022 to read some poems.
+The Jackdaw William Cowper
+source
+There is a bird who, by his coat
+And by the hoarseness of his note,
+Might be supposed a crow;
+A great frequenter of the church,
+Where, bishop-like, he finds a perch,
+And dormitory too.
+Above the steeple shines a plate,
+That turns and turns, to indicate</description>
+    </item>
+    
+    <item>
+      <title>Using NeoVim for ROS2 c&#43;&#43; development</title>
+      <link>//chenbrian.ca/posts/2022/using-neovim-for-ros2-c-development/</link>
+      <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2022/using-neovim-for-ros2-c-development/</guid>
+      <description>Using clangd ROS2 puts its headers into a rather non-standard location, /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. Obviously this doesn&amp;rsquo;t play well with standard clangd setups, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.
+ For vscode setup, see this or this
+ With vim this is as little uglier.</description>
+    </item>
+    
+    <item>
+      <title>Notes on &#39;Clean Architecture: A Craftsman&#39;s Guide to Software Structure and Design&#39;</title>
+      <link>//chenbrian.ca/posts/2021/notes-on-clean-architecture-a-craftsmans-guide-to-software-structure-and-design/</link>
+      <pubDate>Sun, 26 Dec 2021 16:39:21 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/notes-on-clean-architecture-a-craftsmans-guide-to-software-structure-and-design/</guid>
+      <description>Table of Contents   Paradigms SOLID principles  SRP OCP LSP ISP DIP   Components  Component Coupling        &amp;ldquo;Fight for the architecture&amp;rdquo;
+ The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]
+[1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>//chenbrian.ca/posts/2021/projects/</link>
+      <pubDate>Mon, 13 Dec 2021 21:03:35 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/projects/</guid>
+      <description>// Page under construction //
+  GrocerCheck: Github, Pitch Deck A website to help people reduce contact at grocery stores and essential services. Got some press coverage too!
+ CBC Piece CBC Piece, but in French CBC TV piece can be found below Daily Hive: Toronto, Vancouver, Seattle Seattle Pi CBM Press (Korean News) Salam Vancouver (Iranian News) Fairchild TV: Interview broadcast on national Chinese TV    aUToronto: Simulation &amp;amp; Testing co-lead, working on automated integration testing &amp;amp; associated ROS/ROS2 tooling Demo below.</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>//chenbrian.ca/posts/2021/teaching/</link>
+      <pubDate>Sun, 12 Dec 2021 16:49:34 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/teaching/</guid>
+      <description>ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.
+ESC190 // Under construction //
+For all else (currently WIP), see: github.com/ihasdapie/teaching/</description>
+    </item>
+    
+    <item>
+      <title>Engsci Y2S1 Exam Review</title>
+      <link>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</link>
+      <pubDate>Sat, 11 Dec 2021 22:16:12 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</guid>
+      <description>Exam &amp;lsquo;cheat sheets&amp;rsquo; for EngSci 2nd year semester fall semester. These were made as part of my own studying for the exams. As 3/6 of my exams were cancelled due to the omicron covid variant, AER210, MAT292, and PHY293 are missing.
+I do not guarantee content correctness &amp;ndash; but if you find a mistake, please let me know!
+Table of Contents   CHE260  Variables Heat Transfer Mechanisms Steady Heat Transfer Transient Heat Transfer Forced Convection Heat Transfer Radiation Heat Transfer   ECE253: Digital and Computer Systems  Logic and Circuits Verilog ARM Assembly   MAT292 AER210 PHY293 ESC203     CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>
+    </item>
+    
+    <item>
+      <title>Advent of Code 2021</title>
+      <link>//chenbrian.ca/posts/2021/advent-of-code-2021/</link>
+      <pubDate>Thu, 09 Dec 2021 21:20:53 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/advent-of-code-2021/</guid>
+      <description>Table of Contents   Day 6 Day 7 Day 8 Day 9 Day 10 Day 12 Day 13 Day 14 Day 15 Day 16 Day 17 Day 18 Day 19 Day 20 Day 21 Day 22 Day 23 Day 24 Day 25     This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.</description>
+    </item>
+    
+    <item>
+      <title>(g)o (w)eb (s)erver</title>
+      <link>//chenbrian.ca/posts/2021/go-web-server/</link>
+      <pubDate>Thu, 09 Dec 2021 20:48:45 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2021/go-web-server/</guid>
+      <description>Deploying your personal website onto github pages is so 2013. Why avoid the hassle of self-hosting with a static site generator and server? Why not just use something tried and tested by the community?
+It&amp;rsquo;s just not as fun &amp;hellip; and I didn&amp;rsquo;t feel like studying for a final one afternoon.
+So here&amp;rsquo;s a simple 111-line golang webserver that you can use to deploy your personal website.
+There&amp;rsquo;s also some cute figlet art</description>
+    </item>
+    
+  </channel>
+</rss>
