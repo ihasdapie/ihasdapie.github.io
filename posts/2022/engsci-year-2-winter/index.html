@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<a id="top"></a>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,7 +41,6 @@ if (!doNotTrack) {
     
 </head>
 
-<a id="top"></a>
 <body>
 <div class="header">
     <h1>
@@ -70,7 +70,7 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2022-01-10">Jan 10, 2022</time>,&nbsp;Last Modified:
-    <time datetime="2022-01-13">Jan 13, 2022</time>
+    <time datetime="2022-01-14">Jan 14, 2022</time>
     <br>
     
     Tags &#x5b;
@@ -97,6 +97,13 @@ if (!doNotTrack) {
       </ul>
     </li>
     <li><a href="#ece259-electromagnetism">ECE259: Electromagnetism</a></li>
+    <li><a href="#bme205-introduction-to-biomedical-engineering">BME205: Introduction to Biomedical Engineering</a>
+      <ul>
+        <li><a href="#cells">Cells</a></li>
+      </ul>
+    </li>
+    <li><a href="#phy294-quantum-and-thermal-physics">PHY294: Quantum and Thermal Physics</a></li>
+    <li><a href="#esc204-praxis-iii">ESC204: Praxis III</a></li>
   </ul>
 </nav>
     </aside>
@@ -163,7 +170,7 @@ E.x.</p>
 Example: for a die, \( {1, 2} \) is the complement of \( {3,4,5,6} \)</p>
 <p><strong>Intersection of two events</strong>: everything in \( A \) <em>and</em> \( B \), denoted \( A \cap B \)</p>
 <p><strong>Union of two events</strong>: everything in \( A \) <em>or</em> \( B \), denoted \( A \cup B \)</p>
-<p>**** Counting</p>
+<h4 id="counting">Counting</h4>
 <p><strong>Multiplication Rule</strong>:
 The total amount of outcomes is the product of the amount of outcomes in each event.
 I.e. if for a sequence if \( k \) events \( E_1, E_2, &hellip;, E_k \) with outcomes \( S_1, S_2, &hellip;, S_k \)
@@ -182,8 +189,67 @@ then the total amount of outcomes is \( \prod_{i=1}^k S_i \)</p>
 <p>$$ \vec{E}= E\hat{a}_E = \frac{\hat{F}}{q} = q\vec{E}$$</p>
 <p>We can expand on this to find the force exerted by a point charge at varying distances \( r \) from the charge, noting that \( k = \frac{1}{4\pi E_o}\), where \( E_o \) is the permittivity of free space.</p>
 <p>$$ \vec{E} = \frac{1}{k} \frac{q_{source}}{r^2} \hat{a}_e $$</p>
-<p>and further generalize for a system of charges that are not necessarily at the origin</p>
-<p>$$ E_{sys} = \frac{1}{k}\sum_k \frac{q_k}{|\vec{R}-\vec{R'_k}|^3}(\vec{R} - \vec{R'_k}) $$</p>
+<p>and this can be further generalized for a system of charges that are not necessarily at the origin</p>
+<p>$$ \vec{}{E_{sys}} = \frac{1}{k}\sum_k \frac{q_k}{|\vec{R}-\vec{R'_k}|^3}(\vec{R} - \vec{R'_k}) $$</p>
+<h2 id="bme205-introduction-to-biomedical-engineering">BME205: Introduction to Biomedical Engineering</h2>
+<h3 id="cells">Cells</h3>
+<h4 id="componennts">Componennts</h4>
+<ul>
+<li>
+<p><strong>Lysosome</strong>:</p>
+</li>
+<li>
+<p><strong>Mitochondria</strong>:</p>
+</li>
+<li>
+<p><strong>Smooth Endoplasmic Reticulum</strong>:</p>
+</li>
+<li>
+<p><strong>Nucleus</strong>:</p>
+<ul>
+<li><strong>Chromatin</strong>:</li>
+<li><strong>Nucleolus</strong>:</li>
+<li><strong>Nuclear pores</strong>:</li>
+<li><strong>Cisternae</strong>:</li>
+</ul>
+</li>
+<li>
+<p><strong>Ribosome</strong>:</p>
+</li>
+<li>
+<p><strong>Endoplasmic Reticulum</strong>:</p>
+</li>
+<li>
+<p><strong>Golgi Apparatus</strong>:</p>
+</li>
+<li>
+<p><strong>Vesicle</strong>:</p>
+</li>
+<li>
+<p><strong>Rough Endoplasmic Reticulum</strong>:</p>
+</li>
+<li>
+<p><strong>Plasma Membrane</strong>:</p>
+</li>
+<li>
+<p><strong>Vacuole</strong>:</p>
+</li>
+</ul>
+<h4 id="dna--chromosomes">DNA &amp; Chromosomes</h4>
+<p>DNA is built up of nucleotides, each of which has three components: a nitrogenous base, a five-carbon sugar <em>deoxyribose</em>, and a phosphate group.
+These are linked together by hydrogen bonds between bases, which is highly specific: <em>adenine (A)</em>: <em>thymine (T)</em>: <em>guanine (G)</em>: <em>cytosine (C)</em>.</p>
+<p><img src="img/base_pairing.jpg" alt="base_pairing"></p>
+<blockquote>
+<p>The above is direct imaging of DNA fibers; see how they can fit together!</p>
+</blockquote>
+<p>Chromosomes are made of DNA that has been &ldquo;super coiled&rdquo; (think: telephone cord).</p>
+<p><img src="img/dna_chromosome.jpg" alt="dna_chromosome">.</p>
+<p>There are multiple ways that this can be packed, e.g. zigzag or solenoid patterns:</p>
+<p><img src="img/nucleosome_packing.jpg" alt="nucleosome_packing">
+<img src="img/coiling_patterns.jpg" alt="coiling_patterns"></p>
+<p>One can imagine that in a complicated system like this there can be knots and kinks and errors &ndash; which is what can happen and lead to various complications e.g. cancer.</p>
+<h2 id="phy294-quantum-and-thermal-physics">PHY294: Quantum and Thermal Physics</h2>
+<h2 id="esc204-praxis-iii">ESC204: Praxis III</h2>
 
 </article>
 
