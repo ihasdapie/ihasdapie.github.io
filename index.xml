@@ -49,10 +49,10 @@ That turns and turns, to indicate</description>
     
     <item>
       <title>Notes on &#39;Clean Architecture: A Craftsman&#39;s Guide to Software Structure and Design&#39;</title>
-      <link>//chenbrian.ca/posts/2021/notes-on-clean-architecture-a-craftsmans-guide-to-software-structure-and-design/</link>
+      <link>//chenbrian.ca/posts/2021/clean-architecture-notes/</link>
       <pubDate>Sun, 26 Dec 2021 16:39:21 -0500</pubDate>
       
-      <guid>//chenbrian.ca/posts/2021/notes-on-clean-architecture-a-craftsmans-guide-to-software-structure-and-design/</guid>
+      <guid>//chenbrian.ca/posts/2021/clean-architecture-notes/</guid>
       <description>Table of Contents   Paradigms SOLID principles  SRP OCP LSP ISP DIP   Components  Component Coupling        &amp;ldquo;Fight for the architecture&amp;rdquo;
  The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]
 [1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed.</description>
