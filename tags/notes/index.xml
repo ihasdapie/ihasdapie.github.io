@@ -14,7 +14,7 @@
       <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/2022/engsci-year-2-winter/</guid>
-      <description>Table of Contents   TEP 327: Engineering and Law  Resources   ECE286: Probability and Statistics  Lecture 1   ECE259: Electromagnetism BME205: Introduction to Biomedical Engineering  Cells   PHY294: Quantum and Thermal Physics ESC204: Praxis III     TEP 327: Engineering and Law Why do engineers need to know about law?
+      <description>Table of Contents   TEP 327: Engineering and Law  Resources   ECE286: Probability and Statistics  Probability   ECE259: Electromagnetism  Vector Calculus Review   BME205: Introduction to Biomedical Engineering  Cells   PHY294: Quantum and Thermal Physics ESC204: Praxis III     TEP 327: Engineering and Law Why do engineers need to know about law?
  Engineering ends up stepping across a lot of jurisdictions, so we kinda need to know about it.</description>
     </item>
     
@@ -35,9 +35,8 @@
       <pubDate>Sun, 12 Dec 2021 16:49:34 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/2021/teaching/</guid>
-      <description>ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.
-ESC190 // Under construction //
-For all else (currently WIP), see: github.com/ihasdapie/teaching/</description>
+      <description>Table of Contents   ESC180  Exam review   ESC190  Getting started with c Complexity analysis &amp;amp; sorting algorithms strings in c Memory management: pointers and structs Data structure: linked lists       ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.
+ESC190 For all else (currently WIP), see: github.</description>
     </item>
     
     <item>

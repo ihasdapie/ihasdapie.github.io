@@ -7,7 +7,7 @@
 
     <title>Engsci Year 2 Winter | chenbrian</title>
 
-    <style>*{box-sizing:border-box}body{margin:40px auto;max-width:800px;line-height:1.6;font-size:16px;color:#444;padding:0 10px}h1{line-height:1.2;font-family:Arial,sans-serif}h2,h3{font-family:Arial,sans-serif;line-height:1.1;color:#444}body{font-family:Arial,sans-serif}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:16px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%}td,th{border:1px solid #444;padding:.5rem;text-align:left}@media only screen and (max-width:1400px){#back_to_top{visibility:visible!important}#toc{display:none}}#toc{position:fixed;top:50px;right:0;padding:20px;line-height:1.4em;max-width:325px;margin:auto}#back_to_top{position:fixed;top:10px;right:10px;width:100px;visibility:hidden}blockquote{background:#f1f1f1;border-left:4px solid #ccc;padding-left:8px}code:not([class*=language-]){border-radius:.25rem;padding:.1rem;background-color:#f1f1f1}p+ul,p+ol{margin-top:-15px}ul,ol,li{padding-left:.5 em}</style>
+    <style>*{box-sizing:border-box}body{margin:40px auto;max-width:800px;line-height:1.6;font-size:16px;color:#444;padding:0 10px}h1{line-height:1.2;font-family:Arial,sans-serif}h2,h3{font-family:Arial,sans-serif;line-height:1.1;color:#444}body{font-family:Arial,sans-serif}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:16px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%}td,th{border:1px solid #444;padding:.5rem;text-align:left}@media only screen and (max-width:1500px){#back_to_top{visibility:visible!important}#toc{display:none}}#toc{position:fixed;top:40px;right:0;padding-right:50px;line-height:1.4em;max-width:400px;margin:auto}#back_to_top{position:fixed;top:10px;right:10px;width:100px;visibility:hidden}blockquote{background:#f1f1f1;border-left:4px solid #ccc;padding-left:8px}code:not([class*=language-]){border-radius:.25rem;padding:.1rem;background-color:#f1f1f1}p+ul,p+ol{margin-top:-15px}ul,ol,li{padding-left:.5 em}</style>
 
 
 
@@ -45,12 +45,13 @@ if (!doNotTrack) {
     <h1>
         <a href="//chenbrian.ca">chenbrian</a>
         <div class="header-menu">
-            <a href="/posts/">blog</a>
-            <a href="/about/">about</a>
-            <a href="/tags/">tags</a>
+            <a href="/posts/">blog</a> &nbsp;
+            <a href="/about/">about</a> &nbsp;
+            <a href="/tags/">tags</a> &nbsp;
         </div>
     </h1>
 </div>
+
 <div id="content">
         
             <aside id="back_to_top">
@@ -69,7 +70,7 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2022-01-10">Jan 10, 2022</time>,&nbsp;Last Modified:
-    <time datetime="2022-01-14">Jan 14, 2022</time>
+    <time datetime="2022-01-17">Jan 17, 2022</time>
     <br>
     
     Tags &#x5b;
@@ -92,10 +93,14 @@ if (!doNotTrack) {
     </li>
     <li><a href="#ece286-probability-and-statistics">ECE286: Probability and Statistics</a>
       <ul>
-        <li><a href="#lecture-1">Lecture 1</a></li>
+        <li><a href="#probability">Probability</a></li>
       </ul>
     </li>
-    <li><a href="#ece259-electromagnetism">ECE259: Electromagnetism</a></li>
+    <li><a href="#ece259-electromagnetism">ECE259: Electromagnetism</a>
+      <ul>
+        <li><a href="#vector-calculus-review">Vector Calculus Review</a></li>
+      </ul>
+    </li>
     <li><a href="#bme205-introduction-to-biomedical-engineering">BME205: Introduction to Biomedical Engineering</a>
       <ul>
         <li><a href="#cells">Cells</a></li>
@@ -148,7 +153,7 @@ if (!doNotTrack) {
 <li><a href="https://laws-lois.justice.gc.ca/eng/const/page-3.html">Canadian Distribution of Legislative Powers</a></li>
 </ul>
 <h2 id="ece286-probability-and-statistics">ECE286: Probability and Statistics</h2>
-<h3 id="lecture-1">Lecture 1</h3>
+<h3 id="probability">Probability</h3>
 <h4 id="coin-flip-example--combining-probabilities">Coin flip example &amp; combining probabilities</h4>
 <p>Outcomes denoted by variables, i.e. for coin clip \( H \), \( T \). Probability of outcome is denoted by \( P(X) \), where \( X \) is the outcome. We must have \( \sum(P) = 1 \) since \( 100% \).</p>
 <p>Suppose \( P(H) = 0.3 \) , \( P(T) = 0.7 \).</p>
@@ -183,13 +188,37 @@ then the total amount of outcomes is \( \prod_{i=1}^k S_i \)</p>
 <p><strong>Combinations</strong>: Permutations, but order doesn&rsquo;t matter.</p>
 <p>$$ nCr = \binom{n}{r} = \frac{n!}{r!(n-r)!} $$</p>
 <p>Note similarity to the partition formula; combinations can be thought as the set of partitions of size \( 1 \).</p>
+<h4 id="additive-rules">Additive Rules</h4>
+<p>For events A, B:
+$$ P(A\cup B) = P(A) + P(B) - P(A\cap B)$$</p>
+<p>For \(  n \) mutually exclusive events \( A_1, A_2 &hellip; A_n \)
+$$ P(A_1 \cup A_2 \cup &hellip; A_n) = P(A_1) + P(A_2) + &hellip; + P(A_n)$$</p>
+<p>And if \( A_1, A_2 &hellip; A_n \) is a partition of sample space S,</p>
+<p>$$ P(A_1 \cup A_2 \cup &hellip; A_n) = P(A_1) + P(A_2) + &hellip; + P(A_n)$$</p>
+<p>And:
+$$ P(A \cup B) + P(A) + P(B) $$</p>
 <h2 id="ece259-electromagnetism">ECE259: Electromagnetism</h2>
 <p>Electromagnetic field is a vector quantity given by a magnitude \( E \) and unit vector \( \hat{a} \), and is commonly found as the force exerted on a positive test charge \( q \).</p>
 <p>$$ \vec{E}= E\hat{a}_E = \frac{\hat{F}}{q} = q\vec{E}$$</p>
 <p>We can expand on this to find the force exerted by a point charge at varying distances \( r \) from the charge, noting that \( k = \frac{1}{4\pi E_o}\), where \( E_o \) is the permittivity of free space.</p>
 <p>$$ \vec{E} = \frac{1}{k} \frac{q_{source}}{r^2} \hat{a}_e $$</p>
 <p>and this can be further generalized for a system of charges that are not necessarily at the origin</p>
-<p>$$ \vec{}{E_{sys}} = \frac{1}{k}\sum_k \frac{q_k}{|\vec{R}-\vec{R'_k}|^3}(\vec{R} - \vec{R'_k}) $$</p>
+<p>$$ \vec{E_{sys}} = \frac{1}{k}\sum_k \frac{q_k}{|\vec{R}-\vec{R'_k}|^3}(\vec{R} - \vec{R'_k}) $$</p>
+<h3 id="vector-calculus-review">Vector Calculus Review</h3>
+<p>Converting between coordinate systems:</p>
+<p><strong>Cylindrical \(( r_p, \phi_p, z_p)\)</strong>:</p>
+<p><strong>Note</strong>: When adding vectors in non-Cartesian coordinate systems we cannot just add the components because the <em>direction</em> of the unit vectors can change.</p>
+<blockquote>
+<p>When adding vectors in non-Cartesian coordinate systems we must first convert the vectors to Cartesian coordinates</p>
+</blockquote>
+<p><strong>Cylindrical -&gt; Cartesian</strong>:
+$$ r_p = \sqrt{x_p^2 + y_p^2}  $$
+$$ \phi_p = \arctan(y_p/x_p) $$
+$$ z_p = z_p $$</p>
+<p><strong>Cartesian -&gt; Cylindrical</strong>:
+$$ x_p = r_p \cos(\phi_p) $$
+$$ y_p = r_p \sin(\phi_p) $$
+$$ z_p = z_p $$</p>
 <h2 id="bme205-introduction-to-biomedical-engineering">BME205: Introduction to Biomedical Engineering</h2>
 <h3 id="cells">Cells</h3>
 <h4 id="componennts">Componennts</h4>
@@ -256,8 +285,23 @@ These are linked together by hydrogen bonds between bases, which is highly speci
 <ul>
 <li>\( H \) is the Hamiltonian, \( \psi \) is the wave function, and \( E \) is the energy.</li>
 <li>\( |\psi|^2 \) gives the probability density function.</li>
-<li></li>
 </ul>
+<p>Recall: for a 1D particle in a box we use \( \psi = Asin(kx) + Bcos(kx)\) and then we can apply the boundary conditions at the bounds of the box.
+We may then find \( \psi \)) to be \( \sqrt{\frac{2}{L}}sin()\frac{n\pi}{L})x\) and \( E_n = \frac{n^2h^2}{8mL^2} \)) where \( n \)) is a integer &gt; 0.</p>
+<p>In 2D and 3D this is more complicated but the same idea follows.</p>
+<p>When applying to a hydrogen atom it is useful to use spherical coordinates.
+The solution is a bit of work to write out, so <a href="https://chem.libretexts.org/Courses/University_of_California_Davis/UCD_Chem_107B%3A_Physical_Chemistry_for_Life_Scientists/Chapters/4%3A_Quantum_Theory/4.10%3A_The_Schr%C3%B6dinger_Wave_Equation_for_the_Hydrogen_Atom">see this</a>.</p>
+<p><img src="img/hydrogen_wavefns.png" alt="hydrogen_wavefns"></p>
+<blockquote>
+<p>Solutions from textbook. I think these would be provided if applicable.</p>
+</blockquote>
+<p>Hydrogen orbitals can be written as \( \psi(r, \theta, \phi) = R(r)\Theta(\theta)\Phi(\phi) \).</p>
+<ol>
+<li>We apply \(  n = 1,2,3&hellip; \) (quanta) to the hydrogen atom.</li>
+<li>\(  E = -\frac{E_r}{n^2} \) <strong>NOTE</strong>: 1) Only applies to hydrogen 2) This is exactly the Rydberg/Bohr relation.</li>
+<li>\(  l = 0,1,2&hellip;(n-1)\)</li>
+</ol>
+<p>We can apply separation of variables to simplify the problem.</p>
 <h2 id="esc204-praxis-iii">ESC204: Praxis III</h2>
 
 </article>
@@ -269,8 +313,8 @@ These are linked together by hydrogen bonds between bases, which is highly speci
     
     
     <div class="footer-links">
-        <a href="https://github.com/ihasdapie">GitHub</a>
-        <a href="https://github.com/ihasdapie/bettermotherfuckinghugowebsite/">hugo theme</a>
+        <a href="https://github.com/ihasdapie">GitHub</a> &nbsp;
+        <a href="https://github.com/ihasdapie/bettermotherfuckinghugowebsite/">Theme</a> &nbsp;
     </div>
     
 
@@ -279,6 +323,7 @@ These are linked together by hydrogen bonds between bases, which is highly speci
     <div class="copyright">© 2021 — Brian Chen — All rights reserved.</div>
     
 </div>
+
 </body>
 
 </html>
