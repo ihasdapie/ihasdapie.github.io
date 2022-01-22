@@ -17,7 +17,7 @@
 So you tried altacv, but it always got absolutely chewed up by ATS systems.
 And so you yearned for a 🌠cool🥶 single-column layout, but you couldn&amp;rsquo;t find one.
 I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
- Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Various changes to \makecvevent, etc.</description>
+ Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Disabling word wrapping and hyphenation Various changes to \makecvevent, etc.</description>
     </item>
     
     <item>
