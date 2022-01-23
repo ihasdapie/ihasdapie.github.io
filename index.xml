@@ -31,6 +31,16 @@ I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
     </item>
     
     <item>
+      <title>Setting up JupyterHub with `c` kernel on raspberry pi and/or binder</title>
+      <link>//chenbrian.ca/posts/2022/jupyterhub-rpi-binder/</link>
+      <pubDate>Sun, 16 Jan 2022 00:44:40 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2022/jupyterhub-rpi-binder/</guid>
+      <description>TLDR; I wanted to do something with this Raspberry Pi 4 I had lying around.
+Figured I would try to get JupyterHub going on it, maybe with a c kernel for my students to use. Turns out there are a few issues getting jupyterhub built for ARMv7. Anyhow the primary thing is that the rust toolchain must be installed in order to build the cryptography python module, and that when installing in a docker container the --sys-prefix must be passed to install_c_kernel.</description>
+    </item>
+    
+    <item>
       <title>Engsci Year 2 Winter</title>
       <link>//chenbrian.ca/posts/2022/engsci-year-2-winter/</link>
       <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
@@ -141,7 +151,7 @@ There&amp;rsquo;s also some cute figlet art</description>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>//chenbrian.ca/about/</guid>
-      <description>What am I up to right now?  aUToronto Systems &amp;amp; Simulations team: Automated testing &amp;amp; evaluation of autonomous vehicles Research @ ISML: I work with accelerating machine learning tasks on memristor crossbars &amp;ndash; first author paper pending submission Web dev &amp;amp; data collection for BC Parks Foundation: currently in public alpha Side Projects TA-ing programming Trying to make it through university!  Connect with me: Check out my cooking instagram</description>
+      <description>What am I up to right now?  Systems &amp;amp; Simulations team co-lead @ aUToronto: Automated testing &amp;amp; evaluation of autonomous vehicles, deep learning acceleration with TensorRT, CI/CD, and more! Research @ ISML: I work with accelerating machine learning tasks on memristor crossbars &amp;ndash; first author paper pending submission Web dev &amp;amp; data collection for BC Parks Foundation: currently in private beta Side Projects TA-ing intro programming (ESC180) and data structures &amp;amp; algorithms (ESC190) Trying to make it through university!</description>
     </item>
     
   </channel>

@@ -32,6 +32,16 @@ I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
     </item>
     
     <item>
+      <title>Setting up JupyterHub with `c` kernel on raspberry pi and/or binder</title>
+      <link>//chenbrian.ca/posts/2022/jupyterhub-rpi-binder/</link>
+      <pubDate>Sun, 16 Jan 2022 00:44:40 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2022/jupyterhub-rpi-binder/</guid>
+      <description>TLDR; I wanted to do something with this Raspberry Pi 4 I had lying around.
+Figured I would try to get JupyterHub going on it, maybe with a c kernel for my students to use. Turns out there are a few issues getting jupyterhub built for ARMv7. Anyhow the primary thing is that the rust toolchain must be installed in order to build the cryptography python module, and that when installing in a docker container the --sys-prefix must be passed to install_c_kernel.</description>
+    </item>
+    
+    <item>
       <title>Engsci Year 2 Winter</title>
       <link>//chenbrian.ca/posts/2022/engsci-year-2-winter/</link>
       <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
