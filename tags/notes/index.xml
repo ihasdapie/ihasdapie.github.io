@@ -6,7 +6,7 @@
     <description>Recent content in notes on chenbrian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2021 — Brian Chen — All rights reserved.</copyright>
+    <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
     <lastBuildDate>Mon, 10 Jan 2022 19:53:48 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Engsci Year 2 Winter</title>
@@ -35,8 +35,9 @@ TEP 327: Engineering and Law Why do engineers need to know about law?</descripti
       <pubDate>Sun, 12 Dec 2021 16:49:34 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/2021/teaching/</guid>
-      <description>Table of Contents   ESC180  Exam review   ESC190  Getting started with c Complexity analysis &amp;amp; sorting algorithms strings in c Memory management: pointers and structs Data structure: linked lists       ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.
-ESC190 For all else (currently WIP), see: github.</description>
+      <description>(Currently) all content is in jupyter notebook format and is hosted on my on GitHub at github.com/ihasdapie/teaching. I&amp;rsquo;ve also set up a binder enviroment so that you can work with them interactively by using clicking on this badge:  or following this link mybinder.org/v2/gh/ihasdapie/teaching/HEAD
+ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.
+ESC190  Tutorial 1  (All else currently WIP), see: github.</description>
     </item>
     
     <item>

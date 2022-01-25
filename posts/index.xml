@@ -6,7 +6,7 @@
     <description>Recent content in Posts on chenbrian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2021 — Brian Chen — All rights reserved.</copyright>
+    <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
     <lastBuildDate>Fri, 21 Jan 2022 18:31:20 -0500</lastBuildDate><atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Writing a resume with LaTeX</title>
@@ -57,17 +57,16 @@ TEP 327: Engineering and Law Why do engineers need to know about law?</descripti
       <pubDate>Sat, 08 Jan 2022 00:26:05 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/2022/some-poems/</guid>
-      <description>Table of Contents   The Jackdaw Echolalia Ozymandias     Making it a commitment for 2022 to read some poems.
-The Jackdaw William Cowper
-source
+      <description>Table of Contents   The Jackdaw Echolalia Ozymandias Love     Making it a commitment for 2022 to read some poems.
+The Jackdaw source
+William Cowper
 There is a bird who, by his coat
 And by the hoarseness of his note,
 Might be supposed a crow;
 A great frequenter of the church,
 Where, bishop-like, he finds a perch,
 And dormitory too.
-Above the steeple shines a plate,
-That turns and turns, to indicate</description>
+Above the steeple shines a plate,</description>
     </item>
     
     <item>
@@ -99,7 +98,8 @@ That turns and turns, to indicate</description>
       
       <guid>//chenbrian.ca/posts/2021/projects/</guid>
       <description>// Page under construction //
-Browse projects by tag
+ &amp;ldquo;If you built a project and did not write about it, did you really build a project?&amp;rdquo;
+ Browse projects by tag
 Overview   GrocerCheck: Github, Pitch Deck A website to help people reduce contact at grocery stores and essential services. Got some press coverage too!
  CBC Piece CBC Piece, but in French CBC TV piece can be found below Daily Hive: Toronto, Vancouver, Seattle Seattle Pi CBM Press (Korean News) Salam Vancouver (Iranian News) Fairchild TV: Interview broadcast on national Chinese TV    aUToronto: Simulation &amp;amp; Testing co-lead, working on automated integration testing &amp;amp; associated ROS/ROS2 tooling Demo below.</description>
     </item>
@@ -110,8 +110,9 @@ Overview   GrocerCheck: Github, Pitch Deck A website to help people reduce conta
       <pubDate>Sun, 12 Dec 2021 16:49:34 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/2021/teaching/</guid>
-      <description>Table of Contents   ESC180  Exam review   ESC190  Getting started with c Complexity analysis &amp;amp; sorting algorithms strings in c Memory management: pointers and structs Data structure: linked lists       ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.
-ESC190 For all else (currently WIP), see: github.</description>
+      <description>(Currently) all content is in jupyter notebook format and is hosted on my on GitHub at github.com/ihasdapie/teaching. I&amp;rsquo;ve also set up a binder enviroment so that you can work with them interactively by using clicking on this badge:  or following this link mybinder.org/v2/gh/ihasdapie/teaching/HEAD
+ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.
+ESC190  Tutorial 1  (All else currently WIP), see: github.</description>
     </item>
     
     <item>

@@ -70,7 +70,7 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2021-12-12">Dec 12, 2021</time>,&nbsp;Last Modified:
-    <time datetime="2022-01-17">Jan 17, 2022</time>
+    <time datetime="2022-01-24">Jan 24, 2022</time>
     <br>
     
     Tags &#x5b;
@@ -80,241 +80,19 @@ if (!doNotTrack) {
 
 </header>
 <article>
-    <div id="toc">
-    <h4>Table of Contents</h4>
-    <aside>
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#esc180">ESC180</a>
-      <ul>
-        <li><a href="#exam-reviewhttpsgithubcomihasdapieteachingblobmainesc180esc180_unofficial_reviewipynb"><a href="https://github.com/ihasdapie/teaching/blob/main/ESC180/ESC180_Unofficial_Review.ipynb">Exam review</a></a></li>
-      </ul>
-    </li>
-    <li><a href="#esc190">ESC190</a>
-      <ul>
-        <li><a href="#getting-started-with-c">Getting started with <code>c</code></a></li>
-        <li><a href="#complexity-analysis--sorting-algorithms">Complexity analysis &amp; sorting algorithms</a></li>
-        <li><a href="#strings-in-c">strings in <code>c</code></a></li>
-        <li><a href="#memory-management-pointers-and-structs">Memory management: pointers and structs</a></li>
-        <li><a href="#data-structure-linked-lists">Data structure: linked lists</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-    </aside>
-</div>
-
-
-
-
-
+    <p>(Currently) all content is in jupyter notebook format and is hosted on my on GitHub at <a href="https://github.com/ihasdapie/teaching">github.com/ihasdapie/teaching</a>.
+I&rsquo;ve also <a href="//chenbrian.ca/posts/2022/jupyterhub-rpi-binder/">set up a binder enviroment</a> so that you can work with them interactively by using clicking on this badge:
+<a href="https://mybinder.org/v2/gh/ihasdapie/teaching/HEAD"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a>
+or following this link <a href="https://mybinder.org/v2/gh/ihasdapie/teaching/HEAD">mybinder.org/v2/gh/ihasdapie/teaching/HEAD</a></p>
 <h2 id="esc180">ESC180</h2>
 <h3 id="exam-reviewhttpsgithubcomihasdapieteachingblobmainesc180esc180_unofficial_reviewipynb"><a href="https://github.com/ihasdapie/teaching/blob/main/ESC180/ESC180_Unofficial_Review.ipynb">Exam review</a></h3>
 <p>Jupyter notebook for exam review based on student-requested content.
 Either download it and run locally, use <a href="https://colab.research.google.com/">Google Colab</a>, or this <a href="https://mybinder.org/v2/gh/ihasdapie/teaching/HEAD">Binder</a> link.</p>
 <h2 id="esc190">ESC190</h2>
-<p>For all else (currently WIP), see: <a href="https://github.com/ihasdapie/teaching/">github.com/ihasdapie/teaching/</a></p>
-<h3 id="getting-started-with-c">Getting started with <code>c</code></h3>
-<p>Intro to <code>c</code> syntax and program flow should be already covered in lecture and there are <em>a lot</em> of resources online.</p>
-<p>Things to note:</p>
 <ul>
-<li><code>c</code> is a <em><a href="https://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages">statically typed</a></em> language</li>
-<li><code>c</code> is a <em><a href="https://en.wikipedia.org/wiki/Compiled_language">compiled</a></em> language</li>
-<li><a href="https://cheatography.com/ashlyn-black/cheat-sheets/c-reference/">Here</a> is a great cheat sheet for <code>c</code> &amp; is very &ldquo;<code>CTRL-F</code>-able&rdquo;, so to speak.</li>
+<li><a href="https://github.com/ihasdapie/teaching/blob/main/ESC190/esc190_tutorial-1.ipynb">Tutorial 1</a></li>
 </ul>
-<p>Some frequently asked questions:</p>
-<p>Q: What is the <code>main</code> function?<br>
-A: <code>main</code> is the entry point to your program. It is the first function that gets called when your program starts and every <code>c</code> executable must have a <code>main</code> function.</p>
-<p>Q: How do I run my <code>c</code> program?<br>
-A: This will depend on your operating system and environment. I recommend using <a href="https://gcc.gnu.org/">GCC</a> or <a href="https://clang.llvm.org/">Clang</a> alongside <a href="https://www.gnu.org/software/gdb/">GDB</a> for debugging.
-As for text editors, I recommend using <a href="https://code.visualstudio.com/">vscode</a> and following <a href="https://code.visualstudio.com/docs/languages/cpp">these steps</a> to get started.
-Personally I use <a href="https://neovim.io">neovim</a> and a terminal-centric development workflow, however, the learning curve is rather steep.</p>
-<p>Q: How do <code>#include</code>s work? Does order matter?<br>
-A: <code>#include</code>s are used to import libraries and other files into your program.
-Ideally, order <em>should</em> not matter and header files should be self-contained (for convention-abiding code), but it <em>can</em> matter in edge cases where one tries to squeeze some extra performance out of a program, or if one is working with a finicky library.
-To make sure you don&rsquo;t encounter errors while working with multi-file projects, <strong>always</strong> use <a href="https://en.wikipedia.org/wiki/Include_guard"><code>#include</code> guards</a>!
-See <a href="https://stackoverflow.com/questions/691079/is-there-a-standard-include-convention-for-c">here</a> for general best practices.</p>
-<h3 id="complexity-analysis--sorting-algorithms">Complexity analysis &amp; sorting algorithms</h3>
-<p>See <a href="https://github.com/ihasdapie/teaching/blob/main/ESC180/ESC180_Unofficial_Review.ipynb">my writeup from ESC180</a> regarding complexity analysis.
-The following will walk through finding the time and space complexity of various sorting algorithms as well as some general comments.
-<a href="https://en.wikipedia.org/wiki/Sorting_algorithm#Comparison_of_algorithms">Here</a> is a good table of common sorting algorithms and their best/worst/average case time and space complexity.</p>
-<p>Complexity analysis of some common sorting algorithms.</p>
-<p>Given an unsorted array of integers, e.g.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#0b0;font-weight:bold">int</span> arr[] <span style="color:#666">=</span> {<span style="color:#666">1</span>, <span style="color:#666">2</span>, <span style="color:#666">3</span>, <span style="color:#666">4</span>, <span style="color:#666">5</span>, <span style="color:#666">6</span>, <span style="color:#666">7</span>, <span style="color:#666">8</span>, <span style="color:#666">9</span>, <span style="color:#666">10</span>};
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="bubble-sort">Bubble sort</h4>
-<p>Bubble sort is a simple sorting algorithm that works by repeatedly swapping adjacent elements if they are in the wrong order.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">bubble_sort</span>(<span style="color:#0b0;font-weight:bold">int</span>[] arr, <span style="color:#0b0;font-weight:bold">int</span> n) {
-    <span style="color:#0b0;font-weight:bold">int</span> i, j, tmp;
-    <span style="color:#a2f;font-weight:bold">for</span> (i <span style="color:#666">=</span> <span style="color:#666">0</span>; i <span style="color:#666">&lt;</span> n; i<span style="color:#666">++</span>) {
-        <span style="color:#a2f;font-weight:bold">for</span> (j <span style="color:#666">=</span> <span style="color:#666">0</span>; j <span style="color:#666">&lt;</span> n <span style="color:#666">-</span> i <span style="color:#666">-</span> <span style="color:#666">1</span>; j<span style="color:#666">++</span>) {
-            <span style="color:#a2f;font-weight:bold">if</span> (arr[j] <span style="color:#666">&gt;</span> arr[j <span style="color:#666">+</span> <span style="color:#666">1</span>]) {
-                tmp <span style="color:#666">=</span> arr[j];
-                arr[j] <span style="color:#666">=</span> arr[j <span style="color:#666">+</span> <span style="color:#666">1</span>];
-                arr[j <span style="color:#666">+</span> <span style="color:#666">1</span>] <span style="color:#666">=</span> tmp;
-            }
-        }
-    }
-}
-</code></pre></td></tr></table>
-</div>
-</div><ol>
-<li>Identify &ldquo;elementary operation&rdquo;
-<ul>
-<li>Swapping two adjacent elements if they are in the wrong order</li>
-</ul>
-</li>
-<li>Pick <code>n</code>
-<ul>
-<li>Take <code>n</code> to be the size of the input array.</li>
-</ul>
-</li>
-<li>Inspect how much the &ldquo;elementary operation&rdquo; is performed relative to <code>n</code>
-<ul>
-<li>The elementary operation is performed <code>n</code> times in a loop that runs <code>n</code> times, so the time complexity is <code>O(n^2)</code></li>
-</ul>
-</li>
-<li>Inspect how much additional space is used relative to <code>n</code>
-<ul>
-<li>We perform the swaps in-place and only allocate three additional variables, <code>i</code>, <code>j</code>, and <code>tmp</code>, so the space complexity is <code>O(1)</code></li>
-</ul>
-</li>
-</ol>
-<h4 id="insertion-sort">Insertion sort</h4>
-<p>Inserting sort works by maintaining a sorted sublist and inserting each element into the correct position in the sublist.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">insertion_sort</span>(<span style="color:#0b0;font-weight:bold">int</span>[] arr, <span style="color:#0b0;font-weight:bold">int</span> n) {
-    <span style="color:#0b0;font-weight:bold">int</span> i, j;
-    <span style="color:#a2f;font-weight:bold">for</span> (i <span style="color:#666">=</span> <span style="color:#666">1</span>; i <span style="color:#666">&lt;</span> n; i<span style="color:#666">++</span>) {
-        j <span style="color:#666">=</span> i <span style="color:#666">-</span> <span style="color:#666">1</span>;
-        <span style="color:#a2f;font-weight:bold">while</span> (j <span style="color:#666">&gt;=</span> <span style="color:#666">0</span> <span style="color:#666">&amp;&amp;</span> arr[j] <span style="color:#666">&gt;</span> arr[i]) {
-            arr[j <span style="color:#666">+</span> <span style="color:#666">1</span>] <span style="color:#666">=</span> arr[j];
-            j <span style="color:#666">=</span> j <span style="color:#666">-</span> <span style="color:#666">1</span>;
-        }
-        arr[j <span style="color:#666">+</span> <span style="color:#666">1</span>] <span style="color:#666">=</span> arr[i];
-    }
-</code></pre></td></tr></table>
-</div>
-</div><ol>
-<li>Identify &ldquo;elementary operation&rdquo;
-<ul>
-<li>Inserting an element into the correct position in the sorted sublist</li>
-</ul>
-</li>
-<li>Pick <code>n</code>
-<ul>
-<li>Take <code>n</code> to be the size of the input array.</li>
-</ul>
-</li>
-<li>Inspect how much the &ldquo;elementary operation&rdquo; is performed relative to <code>n</code>
-<ul>
-<li>The elementary operation is performed in a <code>while</code> loop that runs (in the worst case), <code>n</code> times, which is in turn in a <code>for</code> loop that runs <code>n</code> times, so the time complexity is <code>O(n^2)</code></li>
-</ul>
-</li>
-<li>Inspect how much additional space is used relative to <code>n</code>
-<ul>
-<li>We perform the insertions in-place and only allocate two additional variables, <code>i</code> and <code>j</code>, so the space complexity is <code>O(1)</code></li>
-</ul>
-</li>
-</ol>
-<p>Follow-up questions:</p>
-<ul>
-<li>If insertion sort and bubble sort have the same time and space complexity, why is insertion sort faster?
-<ul>
-<li>Hint: consider non-worst case scenarios. How many times would the inner <code>while</code> loop iterate during an average case? Or the best case?</li>
-</ul>
-</li>
-<li>Is the sort <a href="https://en.wikipedia.org/wiki/Sorting_algorithm#Stability">stable</a>? Why?</li>
-<li>What if we weren&rsquo;t allowed to modify the input array? What would the space complexities be?</li>
-</ul>
-<h4 id="selection-sort">Selection sort</h4>
-<p>Selection sort works by repeatedly finding the minimum element in the unsorted array and swapping it with the first element.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">selection_sort</span>(<span style="color:#0b0;font-weight:bold">int</span>[] arr, <span style="color:#0b0;font-weight:bold">int</span> n) {
-    <span style="color:#0b0;font-weight:bold">int</span> i, j, min_idx, tmp;
-    <span style="color:#a2f;font-weight:bold">for</span> (i <span style="color:#666">=</span> <span style="color:#666">0</span>; i <span style="color:#666">&lt;</span> n <span style="color:#666">-</span> <span style="color:#666">1</span>; i<span style="color:#666">++</span>) {
-        min_idx <span style="color:#666">=</span> i;
-        <span style="color:#a2f;font-weight:bold">for</span> (j <span style="color:#666">=</span> i <span style="color:#666">+</span> <span style="color:#666">1</span>; j <span style="color:#666">&lt;</span> n; j<span style="color:#666">++</span>) {
-            <span style="color:#a2f;font-weight:bold">if</span> (arr[j] <span style="color:#666">&lt;</span> arr[min_idx]) {
-                min_idx <span style="color:#666">=</span> j;
-            }
-        }
-        tmp <span style="color:#666">=</span> arr[i];
-        arr[i] <span style="color:#666">=</span> arr[min_idx];
-        arr[min_idx] <span style="color:#666">=</span> tmp;
-    }
-}
-</code></pre></td></tr></table>
-</div>
-</div><p>Follow-up questions:</p>
-<ul>
-<li>Can you think of any optimizations to make?</li>
-<li></li>
-</ul>
-<h4 id="merge-sort">Merge sort</h4>
-<h4 id="quick-sort">Quick sort</h4>
-<h4 id="heap-sort">Heap sort</h4>
-<h4 id="radix-sort">Radix sort</h4>
-<h4 id="counting-sort">Counting sort</h4>
-<h4 id="bucket-sort">Bucket sort</h4>
-<h4 id="shell-sort">Shell sort</h4>
-<h4 id="tim-sort">Tim sort</h4>
-<h3 id="strings-in-c">strings in <code>c</code></h3>
-<p><code>c</code> strings are character arrays terminated by <code>'\0'</code>, the <code>null</code> character.</p>
-<h3 id="memory-management-pointers-and-structs">Memory management: pointers and structs</h3>
-<h3 id="data-structure-linked-lists">Data structure: linked lists</h3>
+<p>(All else currently WIP), see: <a href="https://github.com/ihasdapie/teaching/">github.com/ihasdapie/teaching/</a></p>
 
 </article>
 
@@ -332,7 +110,7 @@ The following will walk through finding the time and space complexity of various
 
     
     
-    <div class="copyright">© 2021 — Brian Chen — All rights reserved.</div>
+    <div class="copyright">© 2022 — Brian Chen — All rights reserved.</div>
     
 </div>
 
