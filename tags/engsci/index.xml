@@ -14,8 +14,9 @@
       <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/2022/engsci-year-2-winter/</guid>
-      <description>Table of Contents   ECE286: Probability and Statistics  Probability   ECE259: Electromagnetism  Vector Calculus Review Electric Fields     BME205: Introduction to Biomedical Engineering  Cells   PHY294: Quantum and Thermal Physics ESC204: Praxis III TEP 327: Engineering and Law  Resources       // Work in progress //
-ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combining probabilities Outcomes denoted by variables, i.</description>
+      <description>// Work in progress //
+ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combining probabilities Outcomes denoted by variables, i.e. for coin clip \( H \), \( T \). Probability of outcome is denoted by \( P(X) \), where \( X \) is the outcome. We must have \( \sum(P) = 1 \) since \( 100% \).
+Suppose \( P(H) = 0.3 \) , \( P(T) = 0.7 \).</description>
     </item>
     
     <item>
@@ -26,7 +27,7 @@ ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combi
       <guid>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</guid>
       <description>Exam &amp;lsquo;cheat sheets&amp;rsquo; for EngSci 2nd year semester fall semester. These were made as part of my own studying for the exams. As 3/6 of my exams were cancelled due to the omicron covid variant, AER210, MAT292, and PHY293 are missing.
 I do not guarantee content correctness &amp;ndash; but if you find a mistake, please let me know!
-Table of Contents   CHE260  Variables Heat Transfer Mechanisms Steady Heat Transfer Transient Heat Transfer Forced Convection Heat Transfer Radiation Heat Transfer   ECE253: Digital and Computer Systems  Logic and Circuits Verilog ARM Assembly   MAT292 AER210 PHY293 ESC203     CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>
+CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>
     </item>
     
   </channel>

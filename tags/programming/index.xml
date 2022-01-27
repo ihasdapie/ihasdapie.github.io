@@ -38,9 +38,12 @@ I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
       <pubDate>Sun, 26 Dec 2021 16:39:21 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/2021/clean-architecture-notes/</guid>
-      <description>Table of Contents   Paradigms SOLID principles  SRP OCP LSP ISP DIP   Components  Component Coupling        &amp;ldquo;Fight for the architecture&amp;rdquo;
+      <description>&amp;ldquo;Fight for the architecture&amp;rdquo;
  The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]
-[1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed.</description>
+[1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed. USA: Prentice Hall Press, 2017.
+Paradigms Main paradigms:
+  Structured: Discipline on direct transfer of control
+ Dijkstra: banishing the goto statement; enforcing control flow; if, else, while, for &amp;hellip; Enabling functional decomposition; applying mathematical divide-and-conquer approach to algorithms Testing can only prove a program false but not correct  Structured programming breaks down to provable chunks      Object-oriented: Discipline on indirect transfer of control</description>
     </item>
     
     <item>
@@ -62,7 +65,10 @@ I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
       <pubDate>Thu, 09 Dec 2021 21:20:53 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/2021/advent-of-code-2021/</guid>
-      <description>Table of Contents   Day 6 Day 7 Day 8 Day 9 Day 10 Day 12 Day 13 Day 14 Day 15 Day 16 Day 17 Day 18 Day 19 Day 20 Day 21 Day 22 Day 23 Day 24 Day 25     This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.</description>
+      <description>This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.
+Solutions are hosted here. If a day isn&amp;rsquo;t very interesting, I won&amp;rsquo;t post a writeup for it.
+Day 6 Problem Solution
+So many lanternfish! The key to this puzzle is to represent the lanternfish as a histogram rather than creating a list of all the lanternfish. See solution.</description>
     </item>
     
   </channel>
