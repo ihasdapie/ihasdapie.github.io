@@ -94,9 +94,6 @@ if (!doNotTrack) {
         <li><a href="#electric-fields">Electric Fields</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
     <li><a href="#bme205-introduction-to-biomedical-engineering">BME205: Introduction to Biomedical Engineering</a>
       <ul>
         <li><a href="#cells">Cells</a></li>
@@ -104,7 +101,7 @@ if (!doNotTrack) {
     </li>
     <li><a href="#phy294-quantum-and-thermal-physics">PHY294: Quantum and Thermal Physics</a></li>
     <li><a href="#esc204-praxis-iii">ESC204: Praxis III</a></li>
-    <li><a href="#tep-327-engineering-and-law">TEP 327: Engineering and Law</a>
+    <li><a href="#tep327-engineering-and-law">TEP327: Engineering and Law</a>
       <ul>
         <li><a href="#resources">Resources</a></li>
       </ul>
@@ -130,7 +127,7 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2022-01-10">Jan 10, 2022</time>,&nbsp;Last Modified:
-    <time datetime="2022-01-26">Jan 26, 2022</time>
+    <time datetime="2022-01-28">Jan 28, 2022</time>
     <br>
     
     Tags &#x5b;
@@ -490,7 +487,7 @@ This can be done with the following theorems:
 <h5 id="volume-charge">Volume Charge</h5>
 <p>$$ dQ = P_v dv' $$</p>
 <blockquote>
-<p>Contribution to \( \vec{E} \). \( P \)) denotes volume charge density [C/m^3]</p>
+<p>Contribution to \( \vec{E} \). \( P \) denotes volume charge density [C/m^3]</p>
 </blockquote>
 <p>$$ \vec{E} = \frac{1}{4\pi\varepsilon_o}  \int_{V'} \frac{P_v}{|\vec{R}-\vec{R'}|^2} \hat{a}_{\vec{R} - \vec{R'}} dV' $$</p>
 <p>Noting that</p>
@@ -498,7 +495,7 @@ This can be done with the following theorems:
 <p>we obtain that
 $$ \vec{E} = \frac{1}{4\pi\varepsilon_o}  \int_{V'} \frac{P_v}{|\vec{R}-\vec{R'}|^3} (\vec{R} - \vec{R'}) dV' $$</p>
 <p>Much the same approach can be taken for surface and line charges; they all end up having the same form but with \( ds' \) or \( dl' \)), respectively.</p>
-<h1 id="flux--gausss-law">Flux &amp; Gauss&rsquo;s Law</h1>
+<h4 id="flux--gausss-law">Flux &amp; Gauss&rsquo;s Law</h4>
 <ul>
 <li>Electric fields extend (with decreasing density) from point charges (away from charge for +&rsquo;ve, towards charge for -&rsquo;ve).
 <ul>
@@ -532,6 +529,18 @@ $$ \vec{E} = \frac{1}{4\pi\varepsilon_o}  \int_{V'} \frac{P_v}{|\vec{R}-\vec{R'}
 <p>Total flux <em>out</em> of a surface is equal to the (total charge enclosed by surface)/(permittivity of free space)<br>
 if \( \oint \vec{E} \cdot d\vec{s} \) &gt; 0; net flux out (+&rsquo;ve charge enclosed), &lt; 0; net flux in (-&rsquo;ve charge enclosed)</p>
 </blockquote>
+<p>It can also be written in differential form using the divergence theorem:</p>
+<blockquote>
+<p>Recall: \( \int_v \vec{\nabla} \cdot \vec{A} dv = \oint_s \vec{A} \cdot d\vec{s} \))</p>
+</blockquote>
+<p>$$ \vec{\nabla} \cdot A = \lim_{\Delta V \to 0} \frac{\oint_S \vec{A} \cdot d \vec{s}}{\Delta V} $$</p>
+<p>where the value in the limit denotes the net outward flux of A per unit volume</p>
+<blockquote>
+<p>Recall: \( \vec{\nabla} = \frac{d}{dx}\vec{a_x} +  \frac{d}{dy}\vec{a_y} + \frac{d}{dz}\vec{a_z} + \)</p>
+</blockquote>
+<p>we may then apply the divergence theorem to gauss&rsquo;s law to obtain</p>
+<p>$$ \oint_s \vec{E}\cdot d\vec{s} = \frac{\int_v Pv dv}{\varepsilon_o}
+, \therefore \vec{\nabla \cdot E} = \frac{P_v}{\varepsilon_o} $$ $$</p>
 <hr>
 <p>
 
@@ -658,6 +667,37 @@ if \( \oint \vec{E} \cdot d\vec{s} \) &gt; 0; net flux out (+&rsquo;ve charge en
 <blockquote>
 <p>Illustration of \( Na^+/K^+ \) pump</p>
 </blockquote>
+<h6 id="ion-leak-channels">Ion Leak Channels</h6>
+<p>&ldquo;Ion leak channels&rdquo; are passive highly selective channels that allow for passage of ions in and out of the cell.
+Some can be gated and some are not.</p>
+<p>
+
+
+ <img loading="lazy" src="img/image_2022-01-27-16-20-27.png" alt="image_2022-01-27-16-20-27"  />
+
+</p>
+<blockquote>
+<p>Key concentrations and relative permeability of ion leak channels</p>
+</blockquote>
+<hr>
+<p><em>Define</em>: Nernst Equation</p>
+<p>$$ E_x = \frac{61}{Z_x}\log_10\frac{[C]_o}{[C]_i}$$</p>
+<ul>
+<li>E = equliibrium potential (mV)</li>
+<li>z = valence of permeant ion (e.g. Na+ = +1, Ca+ = +2, Cl- = -1)</li>
+<li>[C]o = concentration of ion outside cell (mol/L)</li>
+<li>[C]i = concentration of ion inside cell (mol/L)</li>
+</ul>
+<p>There is also a full form of the equation:</p>
+<blockquote>
+<p>Idea: there is an osmosis concentration gradient across the membrane as well as a charge gradient</p>
+</blockquote>
+<p><em>Example</em>: Sodium ions across a cell membrane, outside concentration of 150, inside concentration of 15</p>
+<p>$$ E_{Na^+} = \frac{61}{+1}\log \frac{150}{15} = +61mV$$</p>
+<ul>
+<li>Note: \( E_{ion} \neq  V_m \)</li>
+</ul>
+<hr>
 <h4 id="atp">ATP</h4>
 <p>ATP (<strong>A</strong>denosine <strong>T</strong>ri<strong>P</strong>hosphate) enables cellular activity through the energy released from breaking the high-energy phosphate bonds it contains.</p>
 <p>$$\text{ATP} \rightarrow \text{ADP} + \text{P} + \text{energy}$$</p>
@@ -765,7 +805,7 @@ The solution is a bit of work to write out, so <a href="https://chem.libretexts.
 <p>We can apply separation of variables to simplify the problem.</p>
 <h2 id="esc204-praxis-iii">ESC204: Praxis III</h2>
 <p><code>// coming ... maybe? //</code></p>
-<h2 id="tep-327-engineering-and-law">TEP 327: Engineering and Law</h2>
+<h2 id="tep327-engineering-and-law">TEP327: Engineering and Law</h2>
 <p>Why do engineers need to know about law?</p>
 <ul>
 <li>Engineering ends up stepping across a lot of jurisdictions, so we kinda need to know about it.</li>
