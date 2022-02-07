@@ -161,7 +161,30 @@ B: PROP=2
 <li><strong>Disabling the device</strong>:  <code>sudo sh -c &quot;echo '0018:06CB:19AC.0001' &gt; /sys/bus/hid/drivers/hid-multitouch/unbind&quot;</code></li>
 <li><strong>Enabling the device</strong>: <code>sudo sh -c &quot;echo '0018:06CB:19AC.0001' &gt; /sys/bus/hid/drivers/hid-multitouch/bind&quot;</code></li>
 </ul>
-<blockquote>
+<p>Alternatively, make a script to toggle it</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#080">#!/usr/bin/bash
+</span><span style="color:#080"></span><span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">[</span> -d <span style="color:#b44">&#34;/sys/bus/hid/drivers/hid-multitouch/0018:06CB:19AC.0001&#34;</span> <span style="color:#666">]</span>; <span style="color:#a2f;font-weight:bold">then</span>
+  sudo sh -c <span style="color:#b44">&#34;echo &#39;0018:06CB:19AC.0001&#39; &gt; /sys/bus/hid/drivers/hid-multitouch/unbind&#34;</span>
+  <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Turning touchscreen off!&#34;</span>
+<span style="color:#a2f;font-weight:bold">else</span>
+  sudo sh -c <span style="color:#b44">&#34;echo &#39;0018:06CB:19AC.0001&#39; &gt; /sys/bus/hid/drivers/hid-multitouch/bind&#34;</span>
+  <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Turning Touchscreen on!&#34;</span>
+<span style="color:#a2f;font-weight:bold">fi</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>This script should work for toggling other input devices as well! I have these commands <code>alias</code>&lsquo;ed in <code>~/.zshrc</code><br>
 <a href="https://askubuntu.com/questions/927022/how-can-i-disable-touchscreen-while-using-wayland">source</a> for how to unbind devices</p>
 </blockquote>
