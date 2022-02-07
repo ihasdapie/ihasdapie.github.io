@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta lang="en">
 
-    <title>Writing a resume with LaTeX | chenbrian</title>
+    <title>Pi Pico on Linux | chenbrian</title>
 
     <style>*{box-sizing:border-box}body{margin:40px auto;max-width:800px;line-height:1.6;font-size:16px;color:#444;font-family:sans-serif;padding:0 10px}h1,h2,h3{line-height:1.2;font-family:sans-serif;color:#444}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:16px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%}td,th{border:1px solid #444;padding:.5rem;text-align:left}@media only screen and (max-width:1450px){#back_to_top{visibility:visible!important}#toc{display:none}}.katex-display>.katex{overflow:auto hidden}.katex .katex-html>.newline{display:block;padding-bottom:.5em}#toc{position:fixed;top:40px;right:0;padding-right:80px;line-height:1.4em;max-width:400px;margin:auto}#back_to_top{position:fixed;top:10px;right:10px;width:100px;visibility:hidden}blockquote{background:#f1f1f1;border-left:4px solid #ccc;padding-left:8px}code:not([class*=language-]){border-radius:.25rem;padding:.1rem;background-color:#f1f1f1}p+ul,p+ol,ul+ol,ol+ul{margin-top:-15px}ul,ol,li{padding-left:.5 em}a.footnote-ref::before{content:'['}a.footnote-ref::after{content:']'}
 
@@ -17,15 +17,7 @@
 
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-
+    
 
     
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
@@ -68,10 +60,14 @@ if (!doNotTrack) {
 
 <div id="content">
         
+            <aside id="back_to_top">
+            <a href="#">Back to top</a>
+            </aside>
+        
         <section>
             
         <header>
-    <h1>Writing a resume with LaTeX</h1>
+    <h1>Pi Pico on Linux</h1>
     
 
 
@@ -80,42 +76,34 @@ if (!doNotTrack) {
 
 <div class="post-meta">
     Date:
-    <time datetime="2022-01-21">Jan 21, 2022</time>,&nbsp;Last Modified:
-    <time datetime="2022-01-22">Jan 22, 2022</time>
+    <time datetime="2022-01-27">Jan 27, 2022</time>,&nbsp;Last Modified:
+    <time datetime="2022-02-06">Feb 6, 2022</time>
     <br>
     
     Tags &#x5b;
+    <a href="//chenbrian.ca/tags/engsci/">engsci</a>
+    <a href="//chenbrian.ca/tags/other/">other</a>
     <a href="//chenbrian.ca/tags/programming/">programming</a>
-    <a href="//chenbrian.ca/tags/about_me/">about_me</a>
-    <a href="//chenbrian.ca/tags/projects/">projects</a>
     &#x5d;
 </div>
 
 </header>
 <article>
-    <p>Let&rsquo;s face it &ndash; \( \LaTeX \)) is <em>unequivocally cooler</em> than Word.
-And you want an <em>unequivocally cool</em> resume as well.<br>
-So you tried <a href="https://github.com/liantze/AltaCV">altacv</a>, but it always got absolutely chewed up by ATS systems.</p>
-<p>And so you <em>yearned</em> for a 🌠cool🥶 single-column layout, but you couldn&rsquo;t find one.</p>
-<p>I present: my <a href="https://github.com/ihasdapie/resume/">fork of altacv</a> with a few 🌟 <strong>revolutionary</strong> 🌟 features.</p>
+    <p>Needed to use a Pi Pico for one of my courses (which mandated circuitpython &hellip; for reasons unknown) and noticed that Adafruit&rsquo;s documentation for using CircuitPython with something that wasn&rsquo;t Mu Editor was not really up to par.</p>
 <ol>
-<li>Cut down on icons to improve pdf-to-text conversion</li>
-<li>Change to a single-column layout</li>
-<li><code>\itag{asdf}</code> command to draw an inline &ldquo;tag&rdquo;</li>
-<li><code>\chref</code> command for hyperlinks</li>
-<li>Disabling word wrapping and hyphenation</li>
-<li>Various changes to <code>\makecvevent</code>, etc. to improve pdf-to-text conversion</li>
+<li>Install CircuitPython by copying <code>.uf2</code> file into the Pi Pico, which can be done by just plugging it into your computer</li>
+<li><code>python3 -m pip install circuitpython-stubs</code> to get completions with your LSP of choice</li>
+<li>Connect to serial port to view <code>print</code>s and logging info</li>
 </ol>
-<p>For an example of the output, see my <a href="//chenbrian.ca/about/">about me</a> page, or the picture below.</p>
-<blockquote>
-<p>Disclaimer: using this template is not a guarantee that it will help you get a job. Trust me &ndash; I wish it did.</p>
-</blockquote>
-<p>
-
-
- <img loading="lazy" src="https://raw.githubusercontent.com/ihasdapie/resume/main/resume.png" alt="example"  />
-
-</p>
+<ul>
+<li>find the appropriate port with <code>ls /dev/ttyACM*</code></li>
+<li>connect using GNU <code>screen</code> or whatever you like to use
+<ul>
+<li>e.x. <code>screen /dev/ttyACM0 115200</code></li>
+<li>If you get a permissions error, add <code>sudo</code> or add yourself to the appropriate group</li>
+</ul>
+</li>
+</ul>
 
 </article>
 
