@@ -116,7 +116,7 @@ if (!doNotTrack) {
     <li><a href="#esc204-praxis-iii">ESC204: Praxis III</a></li>
     <li><a href="#tep327-engineering-and-law">TEP327: Engineering and Law</a>
       <ul>
-        <li></li>
+        <li><a href="#case-briefing">Case Briefing</a></li>
         <li><a href="#resources">Resources</a></li>
       </ul>
     </li>
@@ -141,7 +141,7 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2022-01-10">Jan 10, 2022</time>,&nbsp;Last Modified:
-    <time datetime="2022-02-07">Feb 7, 2022</time>
+    <time datetime="2022-02-11">Feb 11, 2022</time>
     <br>
     
     Tags &#x5b;
@@ -152,7 +152,7 @@ if (!doNotTrack) {
 
 </header>
 <article>
-    <p>// Work in progress //</p>
+    <p>// work in progress //</p>
 <h2 id="ece286-probability-and-statistics">ECE286: Probability and Statistics</h2>
 <h3 id="probability">Probability</h3>
 <h4 id="coin-flip-example--combining-probabilities">Coin flip example &amp; combining probabilities</h4>
@@ -162,7 +162,7 @@ if (!doNotTrack) {
 $$ P(HT) = P(H)P(T) = 0.3 \times 0.7 = 0.21 $$
 $$ P(HT \text{ or  } TH) = P(H)P(T) + P(T)P(H) = \\ 0.3 \times 0.7 + 0.7 \times 0.3 = 0.42 $$</p>
 <h4 id="sets-and-events">Sets and events</h4>
-<p><strong>Sample space</strong>: set of a\ell possible outcomes.
+<p><strong>Sample space</strong>: set of all possible outcomes.
 E.x.</p>
 <ul>
 <li>coin flip: \( S = {H, T} \)</li>
@@ -213,7 +213,7 @@ $$ P(A \cup B) + P(A) + P(B) $$</p>
 <p>And that they produce 2%, 3%, 2% defective products, we can find the probability of there being a defect as</p>
 <p>$$ P(D) = P(B_1)P(D|B_1) + P(B_2)P(D|B_2) +P(B_3)P(D|B_3) \\
 = (0.3 * 0.02) + (0.45 * 0.03) + (0.25 * 0.02) = 0.0245 $$</p>
-<p>And we can get the chance it came from machine 2 by applying bayes' rule.</p>
+<p>And we can get the chance it came from machine 2 by applying Bayes' rule.</p>
 <h3 id="bayes-rule--random-variables">Bayes' Rule &amp; Random Variables</h3>
 <hr>
 <p><em>Define</em>: Bayes' Rule
@@ -229,7 +229,7 @@ For example if we&rsquo;re trying to check if we have a disease:
 Given:</p>
 <ol>
 <li>Chance of having disease \( P(D) \) = \( 1/1000 \)</li>
-<li>A test kit that has a true positive rate \( P(T = 1|D) = 0.7 \), false pos \(P(T=1| not D) = 0.05\)</li>
+<li>A test kit that has a true positive rate \( P(T = 1|D) = 0.7 \), false positive \(P(T=1| not D) = 0.05\)</li>
 </ol>
 <blockquote>
 <p>What is \(  P(D|T = 1) \)? (Chance of having disease given test kit is true positive?)</p>
@@ -500,9 +500,9 @@ $$ \binom{n}{x} $$</p>
 $$ E[X] = \sum_{x=0}^n x \binom{n}{x} p^x(1-p)^{n-x} = np $$</p>
 <p>Variance:</p>
 <blockquote>
-<p>Note: each trial is independent \( \sigma_{Y_j Y_k} = 0 \qquad, k \neq j \)
-$$ \sigma_X^2 = np(1-p) $$</p>
+<p>Note: each trial is independent \( \sigma_{Y_j Y_k} = 0 \qquad, k \neq j \)</p>
 </blockquote>
+<p>$$ \sigma_X^2 = np(1-p) $$</p>
 <hr>
 <hr>
 <p><em>Define</em>: Multinomial Distribution</p>
@@ -583,6 +583,118 @@ $$ \sigma^2 = \frac{N-n}{N-1} \cdot n \cdot \frac{k}{N} ( 1 - \frac{k}{N} ) $$</
 = \lim_{n \to \infty, p \to 0} \frac{n^x}{x!} (\lambda/n)^x (1-\lambda/x)^{n-x} \\
 = \frac{\lambda^x}{x!} \lim_{n \to \infty, p \to 0} e^{-\lambda}  = \frac{\lambda^x}{x!}e ^ {-\lambda}  \\
 = p(x; \lambda)  \\ $$</p>
+<h4 id="uniform-distribution">Uniform Distribution</h4>
+<hr>
+<p><em>Define</em>: Uniform Distribution</p>
+<p>\( X \) has PDf</p>
+<p>$$ f(x; A, B) = \begin{cases}
+\frac{1}{B-A} &amp; \text{if } x \in [A, B] \\
+0 &amp; \text{if } x \notin [A, B]
+\end{cases} $$</p>
+<p>Mean:</p>
+<p>$$ \mu = E[X] = \int_{-\infty}^{\infty} x f(x; A, B) dx = \int_A^B \frac{x}{B-A} dx = \dots = \frac{B+A}{2} $$</p>
+<p>Varience:
+$$ \sigma^2 = E[(x-a)^2] = \frac{(B-A)^2}{12} $$</p>
+<hr>
+<p>Often used in describing nature. Rolling dies (discrete uniform distribution). Is also really easy to do calculations with.</p>
+<h4 id="normal-gaussian-distribution">Normal (Gaussian) Distribution</h4>
+<blockquote>
+<p>It&rsquo;s somewhat special so we denote it by \( u \)</p>
+</blockquote>
+<p>$$ u(x; \mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi} } \exp(-\frac{(x-\mu)^2}{2\sigma^2}) \qquad x \in \mathbb{R} $$</p>
+<p>
+
+
+ <img loading="lazy" src="img/normal_dist.png" alt="normal_dist"  />
+
+</p>
+<blockquote>
+<p>\( \sigma \) will tell us how &ldquo;flat&rdquo; or &ldquo;peaked&rdquo; it is; the spread, whereas \( \mu \) tells us its shift to the left/right</p>
+</blockquote>
+<p>This seems like an awfully unintuitive distribution. Let&rsquo;s break it down and build intuition.</p>
+<h5 id="is-it-a-pdf">Is it a PDF?</h5>
+<p>If we integrate it over the whole domain, do we get
+$$ \int_{-\infty}^{\infty} n(x; \mi, \sigma) dx = 1 \qquad ?$$</p>
+<p>This isn&rsquo;t really a straightforwards integral to solve &ndash; there&rsquo;s a trick to it: apply polar coordnates.</p>
+<ol>
+<li>Try multiplying them together.</li>
+</ol>
+<blockquote>
+<p>1 x 1 = 1</p>
+</blockquote>
+<p>$$ \int_{-\infty}^{\infty} n(x; \mu, \sigma) dx \cdot \int_{-\infty}^{\infty} n(y; \mu, \sigma) dy \\
+=\int_{-\infty}^{\infty}  \int_{-\infty}^{\infty}  n(x, \mu, \sigma)n(y; \mu, \sigma) dx dy$$</p>
+<blockquote>
+<p>Recall: \( r^2 = x^2 + y^2\) and \( dxdy = r dr d\theta \)</p>
+</blockquote>
+<p>$$ = \frac{1}{2\pi\sigma^2} \int_0^{2\pi} \int_0^\infty \exp{\frac{-r^2}{2\sigma^2}} r dr d\theta \\
+= \frac{2\pi}{2\pi\sigma^2} \int_0^\infty \exp{\frac{-r^2}{2\theta^2}} r dr$$</p>
+<p>Apply u-substitution to the integral, \( s = r^2, ds = 2rdr\)</p>
+<p>$$ = - \frac{2\sigma^2}{2\sigma^2} \exp{1\frac{s}{2\sigma^2}} |^\infty_0 \\
+= -(0-1) = 1$$</p>
+<p>And therefore it is a PDF.</p>
+<h5 id="what-is-the-mean">What is the mean?</h5>
+<p>Apply the definition of expectation
+$$ E[X] = \int_{-\infty}^{\infty} x  \frac{1}{\sigma \sqrt{2\pi} } \exp(-\frac{(x-\mu)^2}{2\sigma^2}) \qquad x \in \mathbb{R}  dx $$</p>
+<p>Apply a u-sub to integral, \( z = \frac{x-\mu}{\sigma} \)</p>
+<p>$$ \frac{\sigma}{\sqrt{2\pi}} \int_{-\infty}^{\infty}   z \exp{(-z^2/2)} dz + \frac{\mu}{\sqrt{2\pi}} \int_{-\infty}^{\infty} \exp{(-z^2/2)} dz  = \mu$$</p>
+<p>The first term is an odd function so it will cancel out to \( 0 \).
+The 2nd term is a normal PDF, i.e. \( n(x; 0, 1) \) which will integrate to \( 1 \), and as such this whole thing evaluates to \( \mu \)</p>
+<h5 id="variance">Variance?</h5>
+<p>$$ E[(X-\mu)^2] = \sigma^2 $$</p>
+<p>
+
+
+ <img loading="lazy" src="img/normal_dist.png" alt=""  />
+
+</p>
+<blockquote>
+<p>Notice the relation between \( \sigma \) and the spread of the PDF.</p>
+</blockquote>
+<blockquote>
+<p>Recall, <em>PDF</em> is the probability density function which when integrated over the whole domain, gives 1. The <em>CDF</em> is the <em>running integral</em> of the PDF, i.e. is increasing, of range \( (0, 1)\), and approaches 1 as \( X \rightarrow \infty \). From this result it is fairly intuitive that \( P(A \leq X \leq B) \) = \( P(B) - P(A) \)</p>
+</blockquote>
+<h5 id="standard-normal-distribution">Standard normal distribution</h5>
+<p>A special form of the normal distribution is the standard normal distribution</p>
+<p>$$ n(x; 0, 1) = \frac{1}{\sqrt{2\pi}} \exp{x^2/2} $$</p>
+<p>The CDF of the standard normal distribution is denoted as \( \Phi(X) \)</p>
+<p>$$ \Phi(X) = \int_{-\infty}^{x} n(t; 0, 1) dt $$</p>
+<p>And it follows that for a standard normal RV \( X \),</p>
+<p>$$ P(A \leq X \leq B) = \Phi(B) - \Phi(A) $$</p>
+<p><strong>But why do we need a standard normal distribution?</strong></p>
+<p>Consider any \( n(x; \mu, \sigma) \) distribution &ndash; there is no analytical solution to the integral \( \int_{-\infty}^x n(t; 0, 1) dt \) <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.</p>
+<p>So we can only computationally get the CDF of the normal distribution, which is not ideal.</p>
+<blockquote>
+<p>But can we compute \( n(x; \mu, \sigma) \) using \( \Phi(X) \)?</p>
+</blockquote>
+<p>As it turns out &ndash; yes we can. Let</p>
+<p>$$ Z = \frac{x-\mu}{\sigma} \qquad \text{where} X \text{has} n(x; \mu, \sigma) $$</p>
+<p>Consider</p>
+<p>$$ \begin{aligned}
+P(X \leq x) &amp;= \int_{-\infty}^{x} n(t; \mu, \sigma) dt \cr
+&amp;= \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}\sigma} \exp{-\frac{(t-\mu)^2}{2\sigma^2}} dt \cr
+(\quad s &amp;= \frac{t-\mu}{\sigma}, dt = \sigma ds \qquad \dots 	\text{apply u-substitution: }) \cr
+&amp;=  \int_{-\infty}^{\frac{x-\mu}{\sigma}} \frac{1}{\sqrt{2\pi} \sigma } \exp{-s^2/2} \quad \text{note how this looks like standard normal dist.}\cr
+&amp;= \Phi(\frac{x-\mu}{\sigma}) \cr
+&amp;= P(Z = (x-\mu)/\sigma) \cr
+\end{aligned} $$</p>
+<hr>
+<p><strong>Example</strong>: Let \( X \) be a normal RV with PDF \( n(x; 5, 2) \). Find \( P(-1 \leq X \leq 4 ) \) w.r.t. the CDF of the standard normal distribution</p>
+<p>By inspection,
+$$ 	\text{Let} Z = \frac{X-5}{2} $$</p>
+<p>then,</p>
+<p>$$ P(-1 \leq X \leq 4) = P( \frac{-1-5}{2} \leq \frac{x-5}{2} \leq \frac{4-5}{2} ) \\ = P(-3 \leq Z \leq 0.5) = \Phi(-0.5) - \Phi(-3) \approx 0.3072$$</p>
+<hr>
+<p>The normal distribution can be used to approximate the binomial distribution.</p>
+<ul>
+<li>\( n trials \</li>
+<li>i.e. for a coin flip &amp; modelling # of heads: \( b(x; n, p) = \binom{n}{x} p^x (1-p)^{n-x} \)</li>
+<li>mean: \( np \), variance: \( np(1-p) \)</li>
+</ul>
+<p>$$ Z = \frac{x-np}{\sqrt{np(1-p)} }$$</p>
+<ul>
+<li>note that for many things as \( n \rightarrow \infty \) the distribution of \( Z \) appears to be a standard normal distribution.</li>
+</ul>
 <h2 id="ece259-electromagnetism">ECE259: Electromagnetism</h2>
 <p>Electromagnetic field is a vector quantity given by a magnitude \( E \) and unit vector \( \hat{a} \), and is commonly found as the force exerted on a positive test charge \( q \).</p>
 <p>$$ \vec{E}= E\hat{a}_E = \frac{\hat{F}}{q} = q\vec{E}$$</p>
@@ -911,8 +1023,71 @@ This is made easy via \( \vec{E} = -\vec{\nabla} V \)</p>
 <li>Semiconductors have somewhat tightly bound electrons, \( \sigma \approx 1.5 \times 10^{-3 }\) (silicon)</li>
 <li>Insulators have very confined electrons, conductivity near zero e.g. \( \sigma \approx 10^{-14}\) (rubber)</li>
 <li>A perfect conductor has \( \sigma \longrightarrow \infty \), a perfect insulator has \( \sigma \longrightarrow 0 \)</li>
-<li>Electric fields are zero in an perfect conductor <a href="https://physics.stackexchange.com/questions/147739/rigorously-prove-that-electric-field-is-zero-in-a-perfect-conductor">proof</a>.</li>
+<li>Electric fields are zero in an perfect conductor [<a href="https://physics.stackexchange.com/questions/147739/rigorously-prove-that-electric-field-is-zero-in-a-perfect-conductor">proof</a>]</li>
 </ul>
+<ol>
+<li>uncharged conductor in \( \vec{E} \) field</li>
+</ol>
+<p>
+
+
+ <img loading="lazy" src="img/e_field_conductor.png" alt="e_field_conductor"  />
+
+
+Intuition: electric field induces charges to move around in the conductor. This induces an &ldquo;internal electric field&rdquo; (denoted in green) and it turns out that in equilibrium this will perfectly cancel out the external field. For proof consider if this did not cancel out &ndash; this would imply violation of conservation laws</p>
+<ol start="2">
+<li>charged conductor in \( \vec{E} \) field</li>
+</ol>
+<p>
+
+
+ <img loading="lazy" src="img/e_field_conductor_w_charge.png" alt="e_field_conductor_w_charge"  />
+
+</p>
+<blockquote>
+<p>If the conductor has a charge, i.e. some electrons scattered about</p>
+</blockquote>
+<p>In an \( \vec{E} \) field they will redistribute in order for the internal field to fully cancel out the external one.</p>
+<h5 id="perfect-conductors-in--vece--field-summary">Perfect conductors in \( \vec{E} \) field: summary</h5>
+<ol>
+<li>\( \vec{E} \) = 0</li>
+<li>\( P_v \) = 0</li>
+<li>\( V = \text{constant} \); there is uniform potential everywhere</li>
+</ol>
+<p>$$ \oint_{cycle} = \int_{\text{in conductor}} + \int_{\text{at surface}} = 0 $$
+
+
+
+ <img loading="lazy" src="img/e_field_int_cond.png" alt="e_field_int_cond"  />
+
+</p>
+<p>Since electric fields are conservative the cycle integral is zero.
+The internal field \( \vec{E} = 0\), therefore \( \int_{\text{in conductor}} = 0 \).
+So how can we have \( \int_{\text{at surface}} = 0 \) when there is a non-zero electric field?
+This is because we are looking at \( \int_{\text{at surface}} \), which is <em>tangential</em> to the surface (whereas the field lines radiate normal to the surface and so are perpendicular to what we&rsquo;re integrating over), which explains why it evaluates to \( 0 \).</p>
+<ul>
+<li>But what about the normal component?</li>
+</ul>
+<p>
+
+
+ <img loading="lazy" src="img/e_field_int_normal.png" alt="e_field_int_normal"  />
+
+</p>
+<p>We can identify a Gaussian surface and apply gauss&rsquo;s law</p>
+<p>$$ \oint_s \vec{E} \cdot d \vec{s} = \frac{Q}{\varepsilon} = \int_{\text{top}} \vec{E} \cdot d \vec{s} + \int_{\text{bottom}} \vec{E} \cdot d \vec{s} + \int_{\text{sides}} \vec{E} \cdot d \vec{s} $$</p>
+<p>Applying symmetry we get \( \int_{\text{sides}}  = 0 \), and \( \int_{\text{bottom}} = 0 \) since \( \vec{E} = 0 \) in the conductor&hellip;we can evaluate this using Gauss&rsquo;s law:</p>
+<p>$$ \therefore \qquad \vec{E_n} = \frac{Q}{\Delta S \varepsilon_o} = \frac{P_s}{\varepsilon_o} $$</p>
+<p>So the potential in a conductor is constant and equal to the potential in its outer surface.</p>
+<p>
+
+
+ <img loading="lazy" src="img/image_2022-02-08-13-59-02.png" alt="image_2022-02-08-13-59-02"  />
+
+</p>
+<blockquote>
+<p>There is an error here somewhere since potential should go higher and higher as \( R \) increases&hellip; &ldquo;Exercise left for the reader&rdquo;</p>
+</blockquote>
 <h2 id="bme205-introduction-to-biomedical-engineering">BME205: Introduction to Biomedical Engineering</h2>
 <blockquote>
 <p>Textbook: Human Physiology From Cells to Systems, 5th Canadian Edition by Sherwood and Ward (ISBN-13 978-0-17-691235-2).</p>
@@ -1010,7 +1185,7 @@ This is made easy via \( \vec{E} = -\vec{\nabla} V \)</p>
  <img loading="lazy" src="img/junctions2.png" alt="junctions2"  />
 
 </p>
-<h6 id="osmosis">Osmosis</h6>
+<h5 id="osmosis">Osmosis</h5>
 <ul>
 <li>
 <p><strong>Osmosis</strong>: movement of solvent from areas of high solvent concentration -&gt; areas of low solvent concentration</p>
@@ -1032,7 +1207,7 @@ This is made easy via \( \vec{E} = -\vec{\nabla} V \)</p>
 <blockquote>
 <p>Illustration of \( Na^+/K^+ \) pump</p>
 </blockquote>
-<h6 id="ion-leak-channels">Ion Leak Channels</h6>
+<h5 id="ion-leak-channels">Ion Leak Channels</h5>
 <p>&ldquo;Ion leak channels&rdquo; are passive highly selective channels that allow for passage of ions in and out of the cell.
 Some can be gated and some are not.</p>
 <p>
@@ -1069,6 +1244,29 @@ Some can be gated and some are not.</p>
 <blockquote>
 <p><em>Anabolic</em> activities forms complex molecules from simple ones; <em>Catabolic</em> activities decompose complex molecules into simple ones.</p>
 </blockquote>
+<p>ATP involves three different pathways:</p>
+<ul>
+<li>substrate-level phosphorylation</li>
+<li>anaerobic glycolysis</li>
+<li>aerobic metabolism
+Most cells generate ATP through the 4-step process glycolysis process:</li>
+</ul>
+<ol>
+<li>glycolysis (aerobic + anaerobic)</li>
+</ol>
+<ul>
+<li>10 sequential steps that break glucose down into pyruvic acod molecules</li>
+<li>not very efficient; yields only 2x ATP and 2x NADH per molecule of glucose</li>
+</ul>
+<ol start="2">
+<li>decarboxylation of pyruvate</li>
+<li>tricarboxylic acid cycle (TCA cycle, aerobic)</li>
+<li>electron transport chain (aerobic)</li>
+</ol>
+<p>However substrate-level phosphorylation is often used to immediately generate ATP, i.e. by muscle cells during intense exercise.
+This is done by using <strong>creatine phosphate</strong> (CP) as a substrate and catalyzing the ATP synthesis process with <strong>creatine kinase</strong>.
+This reaction is reversible, i.e. ATP can be produced via CP and vice-versa.</p>
+<p>$$ CP + ADP \xrightarrow{\text{creatine kinase}} \text{creatine} + ATP$$</p>
 <h4 id="dna--chromosomes">DNA &amp; Chromosomes</h4>
 <p>DNA is built up of nucleotides, each of which has three components: a nitrogenous base, a five-carbon sugar <em>deoxyribose</em>, and a phosphate group.
 These are linked together by hydrogen bonds between bases, which is highly specific: <em>adenine (A)</em>: <em>thymine (T)</em>,  <em>guanine (G)</em>: <em>cytosine (C)</em>.
@@ -1136,7 +1334,11 @@ Usually the default setting for gene expression is to be off.</p>
 <p>A key property of RNA is its additional oxygenation, which makes it a lot more reactive.
 This, combined with the fact that U can bond with all the other bases gives the ability for RNA to form complex non-linear shapes.</p>
 <p>Another property of RNA is that it is is single-use; each piece of mRNA ceases functioning after it&rsquo;s task has been completed.</p>
-<h6 id="transcription">Transcription</h6>
+<h5 id="transcription">Transcription</h5>
+<h4 id="nerve-cells">Nerve Cells</h4>
+<blockquote>
+<p>Recall: there are ion channels in the cell membrane. T</p>
+</blockquote>
 <h2 id="phy294-quantum-and-thermal-physics">PHY294: Quantum and Thermal Physics</h2>
 <h3 id="schrodinger--the-hydrogen-atom">Schrodinger &amp; the Hydrogen Atom</h3>
 <hr>
@@ -1159,11 +1361,74 @@ This, combined with the fact that U can bond with all the other bases gives the 
 <p>Recall: for a 1D particle in a box we use \( \psi = Asin(kx) + Bcos(kx)\) and then we can apply the boundary conditions at the bounds of the box.
 We may then find \( \psi \) to be \( \sqrt{\frac{2}{L}}sin()\frac{n\pi}{L})x\) and \( E_n = \frac{n^2h^2}{8mL^2} \)) where \( n \)) is a integer &gt; 0.</p>
 </blockquote>
-<p>In 2D and 3D potential wells this is more complicated but the same idea follows; we apply separation of variables and the boundary conditions.
-When applying to a hydrogen a few changes have to be made since it is not linear/square/cubic/etc and is spherical instead.
+<p>In 2D and 3D potential wells this is more complicated but the same idea follows; we apply separation of variables and the boundary conditions.</p>
+<h4 id="2d-potential-well">2D Potential Well</h4>
+<ol>
+<li>Write out 2D Schrodinger&rsquo;s equation</li>
+</ol>
+<p>$$ \frac{\delta^2\psi}{\delta x^2} + \frac{\delta^2\psi}{\delta y^2} = \frac{2M}{\hbar^2}[U-E]\psi  $$</p>
+<p>For an infinite potential well,</p>
+<p>$$ U(x,y) = \begin{cases}
+0 &amp; 0 \leq x \leq a \text{ and } 0 \leq y \leq a \cr
+\infty &amp; \text{otherwise} \cr
+\end{cases} $$</p>
+<ol start="2">
+<li>Identify boundary conditions</li>
+</ol>
+<ul>
+<li>Since \( U = 0 \) in the box, \( E \) can take on all non-zero values.</li>
+<li>The particle cannot escape from the box; \( \psi (x, y) = 0 \) @ the boundaries
+Therefore we can reduce the Schrodinger equation to</li>
+</ul>
+<p>$$ \frac{\delta^2\psi}{\delta x^2} + \frac{\delta^2\psi}{\delta y^2} = \frac{2ME}{\hbar^2}\psi  $$</p>
+<ol start="3">
+<li>Use separation of variables</li>
+</ol>
+<p>$$ \psi(x, y) = X(x) Y(y) $$</p>
+<p>$$ \frac{\delta^2\psi}{\delta x^2} + \frac{\delta^2\psi}{\delta y^2} = \frac{2ME}{\hbar^2}(X(x) Y(y))$$</p>
+<blockquote>
+<p>Equations like the above reduced Schrodinger equation guarantee that <em>any</em> solution can be expressed as a sum of separated solutions \( \rightarrow \) once we find all solutions of form \( X(x) Y(y) \) we will have found all possible solutions.</p>
+</blockquote>
+<p>&hellip; and then do a bunch of math.</p>
+<p>$$ \begin{aligned}
+\frac{\partial^2 \psi}{\partial x^2} &amp;= Y(y) \frac{\partial^2  }{\partial x^2} X(x)   \cr
+\frac{\partial^2 }{\partial x^2} X(x)  &amp;= \frac{d^2}{dx^2}X(x) = X''(x) \cr
+\vdots \cr
+&amp; \therefore \frac{\partial^2 \psi}{\partial x^2} = Y(y)X''(x) \cr
+&amp; \therefore \frac{\partial^2 \psi}{\partial y^2} = X(x)Y''(y) \cr
+\end{aligned} $$</p>
+<blockquote>
+<p>Can be simplified by taking \( y \) to be fixed while looking for \( \frac{\partial^2 \psi}{\partial x^2} \) and vice-versa</p>
+</blockquote>
+<p>Next substitute them into the Schrodinger equation</p>
+<p>$$ Y(y) X''(x) + X(x) Y''(y) = -\frac{2ME}{\hbar^2} X(x) Y(y) $$</p>
+<p>divide through with \( Y(y) X(x) \) to get something of form \( f(x) + g(y) = C \)</p>
+<p>$$ \frac{X''(x)}{X(x)} + \frac{Y''(y)}{Y(y)} = -\frac{2ME}{\hbar^2} $$</p>
+<p>This tells us that \( X(x) \), which can only depend on \( x \), does not depend on \( x \) and therefore implies that \( X''(x)/X(x) \) is a constant.
+Taking this constant to be \( -k_x^2 \) we obtain</p>
+<p>$$ X''(x) = -k_x^2X(x) $$</p>
+<p>which is of the same form as the Schrodinger&rsquo;s equation for a 1D potential well.</p>
+<p>The same argument can be made for \( Y \).</p>
+<ol start="4">
+<li>
+<p>Apply boundary conditions</p>
+</li>
+<li>
+<p>\( X(x) = 0 \qquad x = 0 , a \)</p>
+</li>
+<li>
+<p>\( Y(y) = 0 \qquad y = 0 , a \)</p>
+</li>
+</ol>
+<p>We know the solution for a 1D potential well (\( X(x) = B\sin{k_x x}\)); \( k_x = \frac{n_x\pi}{a}, \qquad n &gt; 1 \in \mathbb{Z} \)</p>
+<p>Therefore we obtain</p>
+<p>$$ X(x) = B \sin{\frac{n_x \pi x}{a}} \\
+Y(y) = C \sin{\frac{n_y \pi y}{a}} $$</p>
+<p>And since \( \psi(x,y) = X(x) Y(y) \)</p>
+<p>$$ \psi(x,y) = BC\sin(k_x x) \sin{(k_y y)} = A \sin{\frac{n_x \pi x}{a}} \sin{\frac{n_y \pi y}{a}} $$</p>
+<p>When applying to a hydrogen a few changes have to be made since it is not linear/square/cubic/etc and is spherical instead.
 This problem is called the &ldquo;<a href="https://en.wikipedia.org/wiki/Hydrogen-like_atom">central force problem</a>&rdquo; and is solved in much the same way as the square/rectangular potential wells, except using spherical coordinates.</p>
-<p>it is useful to use spherical coordinates.
-The solution is a bit of work to write out, so <a href="https://chem.libretexts.org/Courses/University_of_California_Davis/UCD_Chem_107B%3A_Physical_Chemistry_for_Life_Scientists/Chapters/4%3A_Quantum_Theory/4.10%3A_The_Schr%C3%B6dinger_Wave_Equation_for_the_Hydrogen_Atom">see this</a>.</p>
+<p>The solution is a bit of work to write out, so <a href="https://chem.libretexts.org/Courses/University_of_California_Davis/UCD_Chem_107B%3A_Physical_Chemistry_for_Life_Scientists/Chapters/4%3A_Quantum_Theory/4.10%3A_The_Schr%C3%B6dinger_Wave_Equation_for_the_Hydrogen_Atom">see this</a>.</p>
 <p>The key takeaway is that by solving the Schrodinger equation we see quantization come out of the cracks naturally.</p>
 <ol>
 <li>Quantization of energy</li>
@@ -1185,7 +1450,17 @@ The solution is a bit of work to write out, so <a href="https://chem.libretexts.
 <li>\(  l = 0,1,2&hellip;(n-1)\)</li>
 </ol>
 <h3 id="electron-spin">Electron Spin</h3>
-<p>We can apply separation of variables to simplify the problem.</p>
+<ul>
+<li>
+<p>Spin is denoted via the spin quantum number, \( \pm \frac{1}{2} \)</p>
+</li>
+<li>
+<p>Magnitude \( S = \sqrt{s(s+1) \hbar } \)</p>
+</li>
+<li>
+<p>degeneracy of <em>n</em> th level in hydrogen: \( 2n^2 \)</p>
+</li>
+</ul>
 <h2 id="esc204-praxis-iii">ESC204: Praxis III</h2>
 <p><code>// coming ... maybe? //</code></p>
 <h2 id="tep327-engineering-and-law">TEP327: Engineering and Law</h2>
@@ -1237,7 +1512,7 @@ The solution is a bit of work to write out, so <a href="https://chem.libretexts.
 </ul>
 </li>
 </ul>
-<h4 id="case-briefing">Case Briefing</h4>
+<h3 id="case-briefing">Case Briefing</h3>
 <ol>
 <li>Facts:</li>
 </ol>
@@ -1264,6 +1539,9 @@ The solution is a bit of work to write out, so <a href="https://chem.libretexts.
 </li>
 <li id="fn:2" role="doc-endnote">
 <p><a href="https://en.wikipedia.org/wiki/Linear_time-invariant_system">https://en.wikipedia.org/wiki/Linear_time-invariant_system</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>at least, not yet?&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
