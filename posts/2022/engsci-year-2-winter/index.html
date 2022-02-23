@@ -111,6 +111,8 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#schrodinger--the-hydrogen-atom">Schrodinger &amp; the Hydrogen Atom</a></li>
         <li><a href="#electron-spin">Electron Spin</a></li>
+        <li><a href="#multi-electron-atoms-pauli-principle-and-periodic-table">Multi-Electron Atoms, Pauli Principle, and Periodic Table</a></li>
+        <li><a href="#molecules-and-bonding">Molecules and Bonding</a></li>
       </ul>
     </li>
     <li><a href="#esc204-praxis-iii">ESC204: Praxis III</a></li>
@@ -141,7 +143,7 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2022-01-10">Jan 10, 2022</time>,&nbsp;Last Modified:
-    <time datetime="2022-02-17">Feb 17, 2022</time>
+    <time datetime="2022-02-23">Feb 23, 2022</time>
     <br>
     
     Tags &#x5b;
@@ -1734,6 +1736,7 @@ Notice maximum probability  at \( r = a_B \), which is the Bohr radius</p>
 <li>\( m_s \in \{ +1/2, -1/2 \}\): electron spin of the orbital</li>
 <li>The \( n \)th level has degeneracy \( 2n^2 \). The 2 is caused by electron spin</li>
 </ul>
+<p><code>// following notes will be rather rough ... //</code></p>
 <h3 id="electron-spin">Electron Spin</h3>
 <blockquote>
 <p>Electrons have a spin. But they don&rsquo;t really spin. Don&rsquo;t question it.</p>
@@ -1748,15 +1751,114 @@ Notice maximum probability  at \( r = a_B \), which is the Bohr radius</p>
 <p>Think of the earth orbiting the sun; earth&rsquo;s spin is \( S \) and it&rsquo;s orbit is \( L \)</p>
 </blockquote>
 <ul>
+<li>Spin is denoted via the spin quantum number, \( \pm \frac{1}{2} \)</li>
+<li>We saw prior that \( L \) is quantized by \( L = \sqrt{l(l+1)} \hbar \)</li>
+<li>Magnitude \( S = \sqrt{s(s+1) \hbar } = \frac{\sqrt{3}}{2} \hbar \): &ldquo;intrinsic angular momentum&rdquo;</li>
+<li>degeneracy of <em>n</em> th level in hydrogen: \( 2n^2 \)</li>
+</ul>
+<p>The electron acts like a rotating electric charge.
+A current \( i \) in a loop of area \( A \) in a magnetic field \( B \) experiences torque \( \Gamma \)</p>
+<p>$$ \Gamma = iA \times B $$</p>
+<p>or</p>
+<p>$$ \Gamma = \mu \times B \qquad \mu = iA $$</p>
+<p>The potential is is the negative of the work</p>
+<p>$$ U = -\mu B cost cos \theta = -\vec{\mu} \cdot \vec{B}$$</p>
+<p>We can define a ratio of \( \mu \) to \( L \) for the electron to to be</p>
+<p>$$ \frac{\mu}{L} = \frac{e}{2m_e} \Rightarrow \vec{\mu} = -\frac{e}{2m_e}\vec{L} $$</p>
+<p>Spin was demonstrated experimentally through the Zeeman experiment/Zeeman effect.
+The basic intuition is that applying a magnetic field to an atom will induce a change in energy by \( -\vec{\mu} \cdot \vec{B} \) which depends on the orientation of \( \mu \).
+This means that the energy will change for each of the \( 2l + 1 \) possible orientations; by applying a magnetic field we the degeneracy of the original energy level.</p>
+<p>$$ \Delta E = (\frac{e}{2m_2}) L_z B $$</p>
+<p>And if we extract out the <em>bohr magneton</em> constant \(  \mu_B = \frac{e\hbar}{2m_e} = 9.27 \times 10^-{24} A \cdot m^2 = 5.79 \times 10^{-5} eV/T \) this reduces to \( \Delta E = m\mu_B B \).
+Since \( m \) can have \( 2l+1 \) values \( \longrightarrow \) separation of the energy levels is \( \mu_B B \).</p>
+<p>Now, considering the spin up/down case, we expect the <em>total</em> spin to be proportional to the spin angular momentum, i.e.</p>
+<p>$$ \vec{\mu}_{\text{spin}}= -\gamma \vec{S} = -\frac{e}{m_e}\vec{S} $$</p>
+<blockquote>
+<p>\( \gamma \) is the spin gyromagnetic ratio</p>
+</blockquote>
+<p>and the total moment of an electron is</p>
+<p>$$ \vec{\mu_{\text{tot}}} = \vec{\mu_{\text{orb}}} + \vec{\mu_{\text{spin}}} = -\frac{e}{2m_e}(\vec{L} + 2\vec{S}) $$</p>
+<p>armed with the above we can calculate the <em>anomalous</em> Zeeman effect (where the spin does contribute) to find that the separation of levels is</p>
+<p>$$\Delta E 2\mu_B B $$</p>
+<p>which is twice the value predicted for the normal effect (which makes sense since the \( \gamma \)) is twice the orbital ratio.</p>
+<h3 id="multi-electron-atoms-pauli-principle-and-periodic-table">Multi-Electron Atoms, Pauli Principle, and Periodic Table</h3>
+<ul>
+<li>can usually use IPA (independent particle assumption) when working with more than one electron</li>
+<li>need to find the IPA potential energy for electrons</li>
+</ul>
+<p>$$ U(r) = -Z_{eff}(r) \frac{ke^2}{r} $$</p>
+<p>$$ \begin{cases}
+Z_{eff}(r) \approx Z &amp; r \text{inside all other electrons} \\
+Z_eff \approx 1 &amp; r \text{outside all other electrons} \\
+\end{cases} $$</p>
+<blockquote>
+<p>Can model it as a superposition of two cases depending on distance from other electrons/nucleus</p>
+</blockquote>
+<p>\( U(r) \) is pretty similar to the hydrogen potential function we know and love so we can use that as a starting off point.</p>
+<ul>
+<li>Each level has degeneracy of at least \( 2(2l+1) \)</li>
+</ul>
+<hr>
+<p><em>Define</em>: Pauli Exclusion Principle</p>
+<p>&ldquo;No two electrons in a quantum system can occupy the same quantum state&rdquo;</p>
+<hr>
+<blockquote>
+<p>anything with full subshells (i.e. all paired electrons) will have spin 0; non-full subshells e.g. alkali metals and halogens will have spin \( \frac{\sqrt{3}}{2} \).
+For getting the angular momentum just take the \( l \) of the valence electron and plug it into \( L = \sqrt{l(l+1)} \hbar \)</p>
+</blockquote>
+<h3 id="molecules-and-bonding">Molecules and Bonding</h3>
+<ul>
 <li>
-<p>Spin is denoted via the spin quantum number, \( \pm \frac{1}{2} \)</p>
+<p>\( R_o \) gives the bond length; distance between nuclei</p>
 </li>
 <li>
-<p>Magnitude \( S = \sqrt{s(s+1) \hbar } = \frac{\sqrt{3}}{2} \hbar \): &ldquo;intrinsic angular momentum&rdquo;</p>
+<p>\( B (eV) \) gives the bond energy; energy needed to seperate the bond</p>
 </li>
 <li>
-<p>degeneracy of <em>n</em> th level in hydrogen: \( 2n^2 \)</p>
+<p>diatomic molecules are bonded together really really hard</p>
 </li>
+<li>
+<p>noble gases interact very weakly with other atoms (recall gauss&rsquo;s law) and have really high energies for their excited states</p>
+</li>
+<li>
+<p>ionic bonding; electron transfer causing a strong electrostatic attraction; creates electric dipole \( p = qd \)</p>
+</li>
+<li>
+<p>covalent bonding;  sharing of electron</p>
+</li>
+<li>
+<p>mixed bonds; a little of both &ndash; most bonds are a little bit of both. None are completely ionic and a few are completely covalent (i.e. \( H_2, O_2 \))</p>
+</li>
+<li>
+<p>bond strengths can be estimated using the expression for electrostatic potential \( U = \frac{-ke^2}{R_o} \)</p>
+</li>
+<li>
+<p>energy released in a chem. reaction depends on the bond energies; i.e. \( \Delta E = \sum_{i=1}^{n} \Delta E_i \) each \( E_i \) denotes the bond energy to make/break a bond</p>
+</li>
+</ul>
+<p>ionic bonds</p>
+<ul>
+<li>two step processes; 1) transfer of electron (costs energy) 2) electron capture (energy gain); electron affinity; i.e. for forming \( NaCl \) the energy cost \( \Delta E \) is 5.1eV - 3.6eV = 1.5eV where 5.1 is the ionization energy and -3.6 is the electron affinity
+<ul>
+<li>so why do bonds form even though it costs energy? Note energy changes depending on the distance between them
+<ul>
+<li>bonding will happen at a critical distance \( R_c = \frac{ke^2}{\Delta E} \)</li>
+<li>can estimate the binding energy \( B \approx \frac{ke^2}{R_o} - \Delta E \)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>define <strong>valence</strong>: no. of electrons an atom gains/loses in forming a molecule.</li>
+<li>a lot of atom behaviour depends on the valence of the atom</li>
+</ul>
+<p>covalent bonds</p>
+<ul>
+<li>must solve Schrodinger equation for the covalent bond
+<ul>
+<li>i am not going to be doing that now&hellip;</li>
+</ul>
+</li>
+<li></li>
 </ul>
 <h2 id="esc204-praxis-iii">ESC204: Praxis III</h2>
 <p><code>// coming ... maybe? //</code></p>

@@ -2,17 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//chenbrian.ca/posts/2022/individual.utoronto/</loc>
+    <lastmod>2022-02-23T14:56:08-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/tags/engsci/</loc>
+    <lastmod>2022-02-23T14:56:08-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/tags/other/</loc>
+    <lastmod>2022-02-23T14:56:08-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/posts/</loc>
+    <lastmod>2022-02-23T14:56:08-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/tags/</loc>
+    <lastmod>2022-02-23T14:56:08-05:00</lastmod>
+  </url><url>
     <loc>//chenbrian.ca/tags/linux/</loc>
     <lastmod>2022-02-07T15:55:44-05:00</lastmod>
   </url><url>
-    <loc>//chenbrian.ca/posts/</loc>
-    <lastmod>2022-02-17T12:50:19-05:00</lastmod>
-  </url><url>
     <loc>//chenbrian.ca/tags/programming/</loc>
     <lastmod>2022-02-07T15:55:44-05:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/tags/</loc>
-    <lastmod>2022-02-17T12:50:19-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/2022/wayland_toggle_touchscreen/</loc>
     <lastmod>2022-02-07T15:55:44-05:00</lastmod>
@@ -21,16 +30,10 @@
     <lastmod>2022-02-06T20:46:46-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/fun/</loc>
-    <lastmod>2022-02-11T01:45:14-05:00</lastmod>
+    <lastmod>2022-02-23T14:56:08-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/projects/</loc>
     <lastmod>2022-02-06T20:46:46-05:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/tags/engsci/</loc>
-    <lastmod>2022-02-17T12:50:19-05:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/tags/other/</loc>
-    <lastmod>2022-02-11T01:45:14-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/2022/pi-pico-on-linux/</loc>
     <lastmod>2022-02-06T20:46:46-05:00</lastmod>
@@ -48,13 +51,13 @@
     <lastmod>2022-01-23T02:55:00-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/2022/engsci-year-2-winter/</loc>
-    <lastmod>2022-02-17T12:50:19-05:00</lastmod>
+    <lastmod>2022-02-23T14:56:08-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/notes/</loc>
-    <lastmod>2022-02-17T12:50:19-05:00</lastmod>
+    <lastmod>2022-02-23T14:56:08-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/2022/some-poems/</loc>
-    <lastmod>2022-02-11T01:45:14-05:00</lastmod>
+    <lastmod>2022-02-23T14:56:08-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/robots/</loc>
     <lastmod>2022-01-04T05:03:37-05:00</lastmod>

@@ -8,6 +8,16 @@
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright><atom:link href="//chenbrian.ca/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>`http://individual.utoronto.ca/chenbrian/`</title>
+      <link>//chenbrian.ca/posts/2022/individual.utoronto/</link>
+      <pubDate>Tue, 22 Feb 2022 02:52:00 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2022/individual.utoronto/</guid>
+      <description>Turns out UofT students/faculty/etc can host a free personal site (50mb max) in individual.utoronto.ca. This process is also entirely undocumented.
+ Claim it through UTORid management here Connect to it through a ftp client. If you go back into the UTORid info page it will tell you what address to use for ftp which looks something like ftp://yourutorid@individual.utoronto.ca I just used dolphin&amp;rsquo;s built in support for network drives to upload the files Upload files through ftp and enjoy!</description>
+    </item>
+    
+    <item>
       <title>Toggling laptop touchsreen on Wayland</title>
       <link>//chenbrian.ca/posts/2022/wayland_toggle_touchscreen/</link>
       <pubDate>Mon, 07 Feb 2022 15:23:04 -0500</pubDate>
