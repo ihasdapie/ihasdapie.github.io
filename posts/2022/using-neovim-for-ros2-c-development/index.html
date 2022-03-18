@@ -106,50 +106,50 @@ Nothing that <code>clang</code> supports using either a <code>compile_commands.j
 <li>Generate a <code>compile_commands</code> file using <code>colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON</code>
 It&rsquo;s also probably prudent to add this to your <code>CMakeLists.txt</code> file anyways,</li>
 </ol>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmake" data-lang="cmake"><span style="color:#080;font-style:italic"># CMakeLists.txt
-</span><span style="color:#080;font-style:italic"></span><span style="">
-</span><span style=""></span><span style="color:#080;font-style:italic"># This should work
-</span><span style="color:#080;font-style:italic"></span><span style="color:#a2f">set</span>(<span style="color:#b44">CMAKE_EXPORT_COMPILE_COMMANDS</span> <span style="color:#b44">ON</span>)<span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#080;font-style:italic"># ... but if it doesn&#39;t, try this workaround
-</span><span style="color:#080;font-style:italic"></span><span style="color:#a2f">set</span>(<span style="color:#b44">CMAKE_EXPORT_COMPILE_COMMANDS</span> <span style="color:#b44">ON</span> <span style="color:#b44">CACHE</span> <span style="color:#b44">INTERNAL</span> <span style="color:#b44">&#34;&#34;</span>)<span style="">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span><span style="color:#080;font-style:italic"># CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#080;font-style:italic"># This should work
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f">set</span>(<span style="color:#b44">CMAKE_EXPORT_COMPILE_COMMANDS</span> <span style="color:#b44">ON</span>)<span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#080;font-style:italic"># ... but if it doesn&#39;t, try this workaround
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f">set</span>(<span style="color:#b44">CMAKE_EXPORT_COMPILE_COMMANDS</span> <span style="color:#b44">ON</span> <span style="color:#b44">CACHE</span> <span style="color:#b44">INTERNAL</span> <span style="color:#b44">&#34;&#34;</span>)<span style="">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Note that this requires there to be a buildable <code>ros2</code> package in your workspace, so if one is just getting started maybe try cloning the <code>ros2_tutorials</code> package or copy-pasting a simple pub-sub just to get a <code>compile_commands.json</code> file.</p>
 <p><strong>OR</strong>, try using <a href="https://github.com/rizsotto/Bear">bear</a> which works great in my experience.</p>
 <p>If all else fails, try dropping in a minimal <code>compile_commands.json</code> file with the following contents, making sure to edit the filepaths accordingly:</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#080;font-style:italic">// compile_commands.json
-</span><span style="color:#080;font-style:italic"></span>[
-{
-  <span style="color:#008000;font-weight:bold">&#34;directory&#34;</span>: <span style="color:#b44">&#34;&lt;YOUR_ROS2_WORKSPACE&gt;/src/build/&lt;YOUR_ROS2_PACKAGE&#34;</span>,
-  <span style="color:#008000;font-weight:bold">&#34;command&#34;</span>: <span style="color:#b44">&#34;/usr/bin/c++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB -isystem /opt/ros2/foxy/include -Wall -Wextra -Wpedantic -std=gnu++14 -o CMakeFiles/&lt;YOUR_PACKAGE_NAME&gt;.dir/src/&lt;YOUR_FILE_NAME&gt;.o -c &lt;YOUR_ROS2_WORKSPACE&gt;/src/&lt;YOUR_ROS2_PACKAGE&gt;/src/&lt;YOUR_FILE_NAME&gt;.cpp&#34;</span>,
-  <span style="color:#008000;font-weight:bold">&#34;file&#34;</span>: <span style="color:#b44">&#34;&lt;YOUR_ROS2_WORKSPACE&gt;/src/&lt;YOUR_ROS2_PACKAGE&gt;/src/&lt;YOUR_FILE_NAME&gt;.cpp&#34;</span>
-}
-]
-</code></pre></td></tr></table>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// compile_commands.json
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>[
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&#34;directory&#34;</span>: <span style="color:#b44">&#34;&lt;YOUR_ROS2_WORKSPACE&gt;/src/build/&lt;YOUR_ROS2_PACKAGE&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&#34;command&#34;</span>: <span style="color:#b44">&#34;/usr/bin/c++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB -isystem /opt/ros2/foxy/include -Wall -Wextra -Wpedantic -std=gnu++14 -o CMakeFiles/&lt;YOUR_PACKAGE_NAME&gt;.dir/src/&lt;YOUR_FILE_NAME&gt;.o -c &lt;YOUR_ROS2_WORKSPACE&gt;/src/&lt;YOUR_ROS2_PACKAGE&gt;/src/&lt;YOUR_FILE_NAME&gt;.cpp&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&#34;file&#34;</span>: <span style="color:#b44">&#34;&lt;YOUR_ROS2_WORKSPACE&gt;/src/&lt;YOUR_ROS2_PACKAGE&gt;/src/&lt;YOUR_FILE_NAME&gt;.cpp&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="2">
 <li>Place a <code>compile_flags.txt</code> file with <code>-I /opt/ros2/&lt;ROS_DISTRO&gt;/include</code> in your project root</li>

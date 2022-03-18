@@ -92,7 +92,7 @@ if (!doNotTrack) {
     <li><a href="#ece286-probability-and-statistics">ECE286: Probability and Statistics</a>
       <ul>
         <li><a href="#probability">Probability</a></li>
-        <li><a href="#bayes-rule--random-variables">Bayes' Rule &amp; Random Variables</a></li>
+        <li><a href="#bayes-rule--random-variables">Bayes&rsquo; Rule &amp; Random Variables</a></li>
         <li><a href="#distributions">Distributions</a></li>
       </ul>
     </li>
@@ -188,7 +188,7 @@ E.x.</p>
 </ul>
 <p><strong>Event</strong>: a subset of sample space</p>
 <p>For example, each element, \(e \in S = {1,2,3,4,5,6} \) are the elements of S for a die.</p>
-<p><strong>Complement of an event A w.r.t. S</strong>: everything in \( S \) and not \( A \), denoted \( A' \).<br>
+<p><strong>Complement of an event A w.r.t. S</strong>: everything in \( S \) and not \( A \), denoted \( A&rsquo; \).<br>
 Example: for a die, \( {1, 2} \) is the complement of \( {3,4,5,6} \)</p>
 <p><strong>Intersection of two events</strong>: everything in \( A \) <em>and</em> \( B \), denoted \( A \cap B \)</p>
 <p><strong>Union of two events</strong>: everything in \( A \) <em>or</em> \( B \), denoted \( A \cup B \)</p>
@@ -226,10 +226,10 @@ $$ P(A\cup B) = P(A) + P(B) - P(A\cap B)$$</p>
 <p>And that they produce 2%, 3%, 2% defective products, we can find the probability of there being a defect as</p>
 <p>$$ P(D) = P(B_1)P(D|B_1) + P(B_2)P(D|B_2) +P(B_3)P(D|B_3) \\
 = (0.3 * 0.02) + (0.45 * 0.03) + (0.25 * 0.02) = 0.0245 $$</p>
-<p>And we can get the chance it came from machine 2 by applying Bayes' rule.</p>
-<h3 id="bayes-rule--random-variables">Bayes' Rule &amp; Random Variables</h3>
+<p>And we can get the chance it came from machine 2 by applying Bayes&rsquo; rule.</p>
+<h3 id="bayes-rule--random-variables">Bayes&rsquo; Rule &amp; Random Variables</h3>
 <hr>
-<p><em>Define</em>: Bayes' Rule
+<p><em>Define</em>: Bayes&rsquo; Rule
 $$ P(C_n|A) = \frac{P(C_n)P(A|C_n)}{\sum^k_{i=1}  P(C_i)P(A|C_i)} $$</p>
 <hr>
 <p>E.x. Probability that a defective product comes from machine 3 \( B_3 \)</p>
@@ -237,7 +237,7 @@ $$ P(C_n|A) = \frac{P(C_n)P(A|C_n)}{\sum^k_{i=1}  P(C_i)P(A|C_i)} $$</p>
 <blockquote>
 <p><em>Given</em> that the product is defective, what is the chance it came from machine 3?</p>
 </blockquote>
-<p>Bayes' rule is useful when we have limited information.
+<p>Bayes&rsquo; rule is useful when we have limited information.
 For example if we&rsquo;re trying to check if we have a disease:
 Given:</p>
 <ol>
@@ -804,7 +804,7 @@ e^{-\frac{s}{\beta}}
 <p>We can expand on this to find the force exerted by a point charge at varying distances \( r \) from the charge, noting that \( k = \frac{1}{4\pi E_o}\), where \( E_o \) is the permittivity of free space.</p>
 <p>$$ \vec{E} = \frac{1}{k} \frac{q_{source}}{r^2} \hat{a}_e $$</p>
 <p>and this can be further generalized for a system of charges that are not necessarily at the origin</p>
-<p>$$ \vec{E_{sys}} = \frac{1}{k}\sum_k \frac{q_k}{|\vec{R}-\vec{R'_k}|^3}(\vec{R} - \vec{R'_k}) $$</p>
+<p>$$ \vec{E_{sys}} = \frac{1}{k}\sum_k \frac{q_k}{|\vec{R}-\vec{R&rsquo;_k}|^3}(\vec{R} - \vec{R&rsquo;_k}) $$</p>
 <h3 id="vector-calculus-review">Vector Calculus Review</h3>
 <h4 id="coordinate-systems">Coordinate Systems</h4>
 <p><strong>Cylindrical \(( r_p, \phi_p, z_p)\)</strong>:</p>
@@ -906,14 +906,14 @@ This can be done with the following theorems:
 <h3 id="electric-fields">Electric Fields</h3>
 <h4 id="continuous-charge-distribution">Continuous charge distribution</h4>
 <blockquote>
-<p>Recall: \( \vec{E_{sys}} = \frac{1}{4\pi\varepsilon_o}\sum_k \frac{q_k}{|\vec{R}-\vec{R'_k}|^3}(\vec{R} - \vec{R'_k}) \)</p>
+<p>Recall: \( \vec{E_{sys}} = \frac{1}{4\pi\varepsilon_o}\sum_k \frac{q_k}{|\vec{R}-\vec{R&rsquo;_k}|^3}(\vec{R} - \vec{R&rsquo;_k}) \)</p>
 </blockquote>
 <p>In continuous form, \( \int{d\vec{E}} \)</p>
 <p>Steps for solving charge distribution problem:</p>
 <ol>
 <li>Choose coordinate system</li>
 <li>Write out  \( dQ \)</li>
-<li>Write out \( \vec{R} - \vec{R'} \)</li>
+<li>Write out \( \vec{R} - \vec{R&rsquo;} \)</li>
 <li>Write \( d\vec{E} \)</li>
 <li>Integrate!</li>
 </ol>
@@ -929,16 +929,16 @@ This can be done with the following theorems:
 <li>Equipotential lines are perpendicular to \( \vec{E} \) lines</li>
 </ul>
 <h5 id="volume-charge">Volume Charge</h5>
-<p>$$ dQ = P_v dv' $$</p>
+<p>$$ dQ = P_v dv&rsquo; $$</p>
 <blockquote>
 <p>Contribution to \( \vec{E} \). \( P \) denotes volume charge density [C/m^3]</p>
 </blockquote>
-<p>$$ \vec{E} = \frac{1}{4\pi\varepsilon_o}  \int_{V'} \frac{P_v}{|\vec{R}-\vec{R'}|^2} \hat{a}_{\vec{R} - \vec{R'}} dV' $$</p>
+<p>$$ \vec{E} = \frac{1}{4\pi\varepsilon_o}  \int_{V&rsquo;} \frac{P_v}{|\vec{R}-\vec{R&rsquo;}|^2} \hat{a}_{\vec{R} - \vec{R&rsquo;}} dV&rsquo; $$</p>
 <p>Noting that</p>
-<p>$$ \hat{a}_{\vec{R} - \vec{R}} = \frac{\vec{R} - \vec{R'}}{|\vec{R} - \vec{R'}|}$$</p>
+<p>$$ \hat{a}_{\vec{R} - \vec{R}} = \frac{\vec{R} - \vec{R&rsquo;}}{|\vec{R} - \vec{R&rsquo;}|}$$</p>
 <p>we obtain that
-$$ \vec{E} = \frac{1}{4\pi\varepsilon_o}  \int_{V'} \frac{P_v}{|\vec{R}-\vec{R'}|^3} (\vec{R} - \vec{R'}) dV' $$</p>
-<p>Much the same approach can be taken for surface and line charges; they all end up having the same form but with \( ds' \) or \( dl' \)), respectively.</p>
+$$ \vec{E} = \frac{1}{4\pi\varepsilon_o}  \int_{V&rsquo;} \frac{P_v}{|\vec{R}-\vec{R&rsquo;}|^3} (\vec{R} - \vec{R&rsquo;}) dV&rsquo; $$</p>
+<p>Much the same approach can be taken for surface and line charges; they all end up having the same form but with \( ds&rsquo; \) or \( dl&rsquo; \)), respectively.</p>
 <h4 id="flux--gausss-law">Flux &amp; Gauss&rsquo;s Law</h4>
 <ul>
 <li>Electric fields extend (with decreasing density) from point charges (away from charge for +&rsquo;ve, towards charge for -&rsquo;ve).
@@ -967,7 +967,7 @@ $$ \vec{E} = \frac{1}{4\pi\varepsilon_o}  \int_{V'} \frac{P_v}{|\vec{R}-\vec{R'}
 <p>$$ \Phi_E = \oint_s \vec{E}\cdot d\vec{s} = \frac{Q}{\varepsilon_o} $$</p>
 <ul>
 <li>Take integral over a closed surface (gaussian surface)</li>
-<li>\( Q \) denotes charge <em>inside</em> surface and is equal to \( \int P_v dv' \) or \( P_v \) multiplied by the volume in question</li>
+<li>\( Q \) denotes charge <em>inside</em> surface and is equal to \( \int P_v dv&rsquo; \) or \( P_v \) multiplied by the volume in question</li>
 </ul>
 <blockquote>
 <p>Total flux <em>out</em> of a surface is equal to the (total charge enclosed by surface)/(permittivity of free space)<br>
@@ -1079,9 +1079,9 @@ V(R) &amp;= \frac{q_1}{4\pi \varepsilon_0 R}
 <blockquote>
 <p>Electric field is conservative, so we can just sum up a modified version of the single point charge form found in 1.</p>
 </blockquote>
-<p>$$ V(R) = \sum_k \frac{q_k}{4\pi\varepsilon_o |\vec{R} - \vec{R'_k}| } $$</p>
+<p>$$ V(R) = \sum_k \frac{q_k}{4\pi\varepsilon_o |\vec{R} - \vec{R&rsquo;_k}| } $$</p>
 <blockquote>
-<p>Specify \( R \) as the distance from the point of interest and the charge source, \( | \vec{R} - \vec{R'_k} | \)</p>
+<p>Specify \( R \) as the distance from the point of interest and the charge source, \( | \vec{R} - \vec{R&rsquo;_k} | \)</p>
 </blockquote>
 <ol start="3">
 <li>Electric dipole: a pair of equal and opposite charges separated by a small distance \( d \  \)</li>
@@ -1222,11 +1222,11 @@ This is because we are looking at \( \int_{\text{at surface}} \), which is <em>t
 
 </p>
 <p>How does potential relate to polarization?</p>
-<p>$$ d\vec{p} = \vec{P} d\vec{v} \xrightarrow[\text{electric potential}]{\text{produces}} dV = \frac{\vec{p} \cdot\vec{a_r}}{4\pi \varepsilon_o R^2} dv' $$</p>
+<p>$$ d\vec{p} = \vec{P} d\vec{v} \xrightarrow[\text{electric potential}]{\text{produces}} dV = \frac{\vec{p} \cdot\vec{a_r}}{4\pi \varepsilon_o R^2} dv&rsquo; $$</p>
 <ul>
-<li>\( dV \) is the contribution to potential from dipole moment in \( dv' \)</li>
+<li>\( dV \) is the contribution to potential from dipole moment in \( dv&rsquo; \)</li>
 </ul>
-<p>$$ V(\vec{R}) = \int_{v'} dV = \int_{v'} \frac{\vec{P} \cdot \vec{a}_{\vec{R} - \vec{R'}}}{4 \pi \varepsilon_o |\vec{R} - \vec{R}' |^2} dv' $$</p>
+<p>$$ V(\vec{R}) = \int_{v&rsquo;} dV = \int_{v&rsquo;} \frac{\vec{P} \cdot \vec{a}_{\vec{R} - \vec{R&rsquo;}}}{4 \pi \varepsilon_o |\vec{R} - \vec{R}&rsquo; |^2} dv&rsquo; $$</p>
 <p>And then a bunch of messy math&hellip;</p>
 <p>$$ \begin{aligned}
 V(\vec{R}) &amp;=  \cr
@@ -1238,7 +1238,7 @@ V(\vec{R}) &amp;=  \cr
 <li>The second term is the potential produced by a volume charge distribution in \( v\prime \) with a density of \( \rho_{pv} = -\vec{\nabla} \cdot \vec{p} \)</li>
 </ul>
 <blockquote>
-<p>Katex isn&rsquo;t allowing me to do a \( \int_{v'} \) in the above so just pretend that the \( \int_v \) is \( \int_{v'} \)</p>
+<p>Katex isn&rsquo;t allowing me to do a \( \int_{v&rsquo;} \) in the above so just pretend that the \( \int_v \) is \( \int_{v&rsquo;} \)</p>
 </blockquote>
 <p>The physical interpretation is that a dielectric material may have its dipoles aligned after being in a \( \vec{E} \) field and thus be able to produce an \( \vec{E} \) field itself.</p>
 <p>$$  $$</p>
@@ -1495,7 +1495,7 @@ A and G have double ring structures while C and T have single ring structures.</
 </p>
 <h5 id="replication">Replication</h5>
 <blockquote>
-<p>Note: DNA is formed of two complimentary strands <a href="https://en.wikipedia.org/wiki/Directionality_(molecular_biology)">(5', 3' strands)</a>.</p>
+<p>Note: DNA is formed of two complimentary strands <a href="https://en.wikipedia.org/wiki/Directionality_(molecular_biology)">(5&rsquo;, 3&rsquo; strands)</a>.</p>
 </blockquote>
 <ol>
 <li>DNA is first split apart by proteins called <strong>initiators</strong> which look for <em>origin</em> base sequences
@@ -1594,21 +1594,21 @@ Therefore we can reduce the Schrodinger equation to</li>
 <p>&hellip; and then do a bunch of math.</p>
 <p>$$ \begin{aligned}
 \frac{\partial^2 \psi}{\partial x^2} &amp;= Y(y) \frac{\partial^2  }{\partial x^2} X(x)   \cr
-\frac{\partial^2 }{\partial x^2} X(x)  &amp;= \frac{d^2}{dx^2}X(x) = X''(x) \cr
+\frac{\partial^2 }{\partial x^2} X(x)  &amp;= \frac{d^2}{dx^2}X(x) = X&rsquo;&rsquo;(x) \cr
 \vdots \cr
-&amp; \therefore \frac{\partial^2 \psi}{\partial x^2} = Y(y)X''(x) \cr
-&amp; \therefore \frac{\partial^2 \psi}{\partial y^2} = X(x)Y''(y) \cr
+&amp; \therefore \frac{\partial^2 \psi}{\partial x^2} = Y(y)X&rsquo;&rsquo;(x) \cr
+&amp; \therefore \frac{\partial^2 \psi}{\partial y^2} = X(x)Y&rsquo;&rsquo;(y) \cr
 \end{aligned} $$</p>
 <blockquote>
 <p>Can be simplified by taking \( y \) to be fixed while looking for \( \frac{\partial^2 \psi}{\partial x^2} \) and vice-versa</p>
 </blockquote>
 <p>Next substitute them into the Schrodinger equation</p>
-<p>$$ Y(y) X''(x) + X(x) Y''(y) = -\frac{2ME}{\hbar^2} X(x) Y(y) $$</p>
+<p>$$ Y(y) X&rsquo;&rsquo;(x) + X(x) Y&rsquo;&rsquo;(y) = -\frac{2ME}{\hbar^2} X(x) Y(y) $$</p>
 <p>divide through with \( Y(y) X(x) \) to get something of form \( f(x) + g(y) = C \)</p>
-<p>$$ \frac{X''(x)}{X(x)} + \frac{Y''(y)}{Y(y)} = -\frac{2ME}{\hbar^2} $$</p>
-<p>This tells us that \( X(x) \), which can only depend on \( x \), does not depend on \( x \) and therefore implies that \( X''(x)/X(x) \) is a constant.
+<p>$$ \frac{X&rsquo;&rsquo;(x)}{X(x)} + \frac{Y&rsquo;&rsquo;(y)}{Y(y)} = -\frac{2ME}{\hbar^2} $$</p>
+<p>This tells us that \( X(x) \), which can only depend on \( x \), does not depend on \( x \) and therefore implies that \( X&rsquo;&rsquo;(x)/X(x) \) is a constant.
 Taking this constant to be \( -k_x^2 \) we obtain</p>
-<p>$$ X''(x) = -k_x^2X(x) $$</p>
+<p>$$ X&rsquo;&rsquo;(x) = -k_x^2X(x) $$</p>
 <p>which is of the same form as the Schrodinger&rsquo;s equation for a 1D potential well.</p>
 <p>The same argument can be made for \( Y \).</p>
 <ol start="4">
@@ -1632,8 +1632,8 @@ Y(y) = C \sin{\frac{n_y \pi y}{a}} $$</p>
 <li>Identify allowed energies</li>
 </ol>
 <p>Recall:
-$$ Y(y) X''(x) + X(x) Y''(y) = -\frac{2ME}{\hbar^2} X(x) Y(y) $$</p>
-<p>Substitute what we have derived since (i.e. \( X''/X = -k_x^2 \)) and we get
+$$ Y(y) X&rsquo;&rsquo;(x) + X(x) Y&rsquo;&rsquo;(y) = -\frac{2ME}{\hbar^2} X(x) Y(y) $$</p>
+<p>Substitute what we have derived since (i.e. \( X&rsquo;&rsquo;/X = -k_x^2 \)) and we get
 $$ E = \frac{\hbar^2 \pi^2}{2Ma^2}n^2 \qquad [n = 1,2,3\dots] $$</p>
 <blockquote>
 <p>Note quantized energy</p>
@@ -1657,7 +1657,7 @@ The solution is a bit of work to write out, so <a href="https://chem.libretexts.
 <ol>
 <li>The \( \Phi \) equation</li>
 </ol>
-<p>$$ \Phi''(\phi) = 0m^2 \Phi(\phi) $$
+<p>$$ \Phi&rsquo;&rsquo;(\phi) = 0m^2 \Phi(\phi) $$
 Solving the \( \Phi \) equation gives us the solution \( \Phi(\phi) = e^{im\phi} \).
 Since \( \Phi(\phi) \) must me periodic with period \( 2\pi \) we can use the Euler identity to find that \( m = 0, \pm 1, \pm2, \dots \) and that angular momentum is quantized i.e. \( L_z = m \hbar \)</p>
 <ol start="2">

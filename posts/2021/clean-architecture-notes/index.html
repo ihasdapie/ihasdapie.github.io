@@ -271,77 +271,77 @@ We can get around this by segregating operations into interfaces.</p>
 So we introduce the <code>factory</code> design pattern; A <code>{class}Factory</code> removes the source-code dependency on the concrete definition and instead provides an abstract interface for module instantiation.</p>
 <p>Note that this isn&rsquo;t <code>java</code>-specific; this design pattern can be applied to dynamic languages like <code>python</code> <a href="https://realpython.com/factory-method-python/">as well</a></p>
 <p>For example for a serialization task (<a href="https://realpython.com/factory-method-python/">source</a>) instead of writing a serializer for each type and requiring a source-code dependency on the serializer class, we can instead do the following:</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#080;font-style:italic"># serializers.py</span>
-<span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">SerializerFactory</span>:
-    <span style="color:#a2f;font-weight:bold">def</span> __init__(self):
-        self<span style="color:#666">.</span>_creators <span style="color:#666">=</span> {}
-
-    <span style="color:#a2f;font-weight:bold">def</span> <span style="color:#00a000">register_format</span>(self, <span style="color:#a2f">format</span>, creator):
-        self<span style="color:#666">.</span>_creators[<span style="color:#a2f">format</span>] <span style="color:#666">=</span> creator
-
-    <span style="color:#a2f;font-weight:bold">def</span> <span style="color:#00a000">get_serializer</span>(self, <span style="color:#a2f">format</span>):
-        creator <span style="color:#666">=</span> self<span style="color:#666">.</span>_creators<span style="color:#666">.</span>get(<span style="color:#a2f">format</span>)
-        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#a2f;font-weight:bold">not</span> creator:
-            <span style="color:#a2f;font-weight:bold">raise</span> <span style="color:#d2413a;font-weight:bold">ValueError</span>(<span style="color:#a2f">format</span>)
-        <span style="color:#a2f;font-weight:bold">return</span> creator()
-
-factory <span style="color:#666">=</span> SerializerFactory()
-<span style="color:#080;font-style:italic"># assume that we already have these serializers implemented </span>
-factory<span style="color:#666">.</span>register_format(<span style="color:#b44">&#39;JSON&#39;</span>, JsonSerializer)
-factory<span style="color:#666">.</span>register_format(<span style="color:#b44">&#39;XML&#39;</span>, XmlSerializer)
-</code></pre></td></tr></table>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#080;font-style:italic"># serializers.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">SerializerFactory</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>_creators <span style="color:#666">=</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">def</span> <span style="color:#00a000">register_format</span>(self, <span style="color:#a2f">format</span>, creator):
+</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>_creators[<span style="color:#a2f">format</span>] <span style="color:#666">=</span> creator
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">def</span> <span style="color:#00a000">get_serializer</span>(self, <span style="color:#a2f">format</span>):
+</span></span><span style="display:flex;"><span>        creator <span style="color:#666">=</span> self<span style="color:#666">.</span>_creators<span style="color:#666">.</span>get(<span style="color:#a2f">format</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#a2f;font-weight:bold">not</span> creator:
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">raise</span> <span style="color:#d2413a;font-weight:bold">ValueError</span>(<span style="color:#a2f">format</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> creator()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>factory <span style="color:#666">=</span> SerializerFactory()
+</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"># assume that we already have these serializers implemented </span>
+</span></span><span style="display:flex;"><span>factory<span style="color:#666">.</span>register_format(<span style="color:#b44">&#39;JSON&#39;</span>, JsonSerializer)
+</span></span><span style="display:flex;"><span>factory<span style="color:#666">.</span>register_format(<span style="color:#b44">&#39;XML&#39;</span>, XmlSerializer)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>This is nice because we can then instantiate a <code>json</code> serializer or provide our own &ndash; while <em>depending only on the abstract</em>!</p>
 <p>Example:</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">serializers</span>
-
-json_serializer <span style="color:#666">=</span> serializers<span style="color:#666">.</span>SerializerFactory<span style="color:#666">.</span>get_serializer(<span style="color:#b44">&#34;JSON&#34;</span>)
-
-<span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">YamlSerializer</span>(serializers<span style="color:#666">.</span>JsonSerializer): 
-    <span style="color:#080;font-style:italic"># assuming that we have the json serializer already implemented</span>
-    <span style="color:#a2f;font-weight:bold">def</span> <span style="color:#00a000">to_str</span>(self):
-        <span style="color:#a2f;font-weight:bold">return</span> yaml<span style="color:#666">.</span>dump(self<span style="color:#666">.</span>_current_object)
-
-serializers<span style="color:#666">.</span>factory<span style="color:#666">.</span>register_format(<span style="color:#b44">&#39;YAML&#39;</span>, YamlSerializer)
-</code></pre></td></tr></table>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">serializers</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>json_serializer <span style="color:#666">=</span> serializers<span style="color:#666">.</span>SerializerFactory<span style="color:#666">.</span>get_serializer(<span style="color:#b44">&#34;JSON&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">YamlSerializer</span>(serializers<span style="color:#666">.</span>JsonSerializer): 
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic"># assuming that we have the json serializer already implemented</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">def</span> <span style="color:#00a000">to_str</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> yaml<span style="color:#666">.</span>dump(self<span style="color:#666">.</span>_current_object)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>serializers<span style="color:#666">.</span>factory<span style="color:#666">.</span>register_format(<span style="color:#b44">&#39;YAML&#39;</span>, YamlSerializer)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="components">Components</h2>
 <blockquote>

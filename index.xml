@@ -24,7 +24,7 @@
       
       <guid>//chenbrian.ca/posts/2022/wayland_toggle_touchscreen/</guid>
       <description>Back when I was still on X11 1 , I had this little bash script to toggle my touchscreen on/off since I didn&amp;rsquo;t use it all that often except to sign the occasional PDF, and it sucked up power2.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  #!/usr/bin/bash  # toggles touchscreen on x11-based systems isOn=&amp;#34;$(xinput --list-props &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; | grep &amp;#39;Device Enabled&amp;#39;)&amp;#34; isOn=&amp;#34;${isOn: -1}&amp;#34; if [ $isOn -eq 0 ]; then xinput set-prop &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; &amp;#39;Device Enabled&amp;#39; 1 echo &amp;#34;Turning touchscreen on!</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  #!/usr/bin/bash  # toggles touchscreen on x11-based systems  isOn=&amp;#34;$(xinput --list-props &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; | grep &amp;#39;Device Enabled&amp;#39;)&amp;#34; isOn=&amp;#34;${isOn: -1}&amp;#34;  if [ $isOn -eq 0 ]; then  xinput set-prop &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; &amp;#39;Device Enabled&amp;#39; 1  echo &amp;#34;Turning touchscreen on!</description>
     </item>
     
     <item>

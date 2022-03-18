@@ -85,39 +85,39 @@ if (!doNotTrack) {
 </header>
 <article>
     <p>Back when I was still on X11 <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> , I had this little <code>bash</code> script to toggle my touchscreen on/off since I didn&rsquo;t use it all that often except to sign the occasional PDF, and it sucked up power<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#080">#!/usr/bin/bash
-</span><span style="color:#080"></span>
-<span style="color:#080;font-style:italic"># toggles touchscreen on x11-based systems</span>
-
-<span style="color:#b8860b">isOn</span><span style="color:#666">=</span><span style="color:#b44">&#34;</span><span style="color:#a2f;font-weight:bold">$(</span>xinput --list-props <span style="color:#b44">&#39;SYNA2393:00 06CB:19AC&#39;</span> | grep <span style="color:#b44">&#39;Device Enabled&#39;</span><span style="color:#a2f;font-weight:bold">)</span><span style="color:#b44">&#34;</span>
-<span style="color:#b8860b">isOn</span><span style="color:#666">=</span><span style="color:#b44">&#34;</span><span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">isOn</span>: -1<span style="color:#b68;font-weight:bold">}</span><span style="color:#b44">&#34;</span>
-
-<span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">[</span> <span style="color:#b8860b">$isOn</span> -eq <span style="color:#666">0</span> <span style="color:#666">]</span>; <span style="color:#a2f;font-weight:bold">then</span>
-    xinput set-prop <span style="color:#b44">&#39;SYNA2393:00 06CB:19AC&#39;</span> <span style="color:#b44">&#39;Device Enabled&#39;</span> <span style="color:#666">1</span>
-    <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Turning touchscreen on!&#34;</span>
-<span style="color:#a2f;font-weight:bold">else</span>
-    xinput set-prop <span style="color:#b44">&#39;SYNA2393:00 06CB:19AC&#39;</span> <span style="color:#b44">&#39;Device Enabled&#39;</span> <span style="color:#666">0</span>
-    <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Turning Touchscreen off!&#34;</span>
-<span style="color:#a2f;font-weight:bold">fi</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#080">#!/usr/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#080"></span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"># toggles touchscreen on x11-based systems</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">isOn</span><span style="color:#666">=</span><span style="color:#b44">&#34;</span><span style="color:#a2f;font-weight:bold">$(</span>xinput --list-props <span style="color:#b44">&#39;SYNA2393:00 06CB:19AC&#39;</span> | grep <span style="color:#b44">&#39;Device Enabled&#39;</span><span style="color:#a2f;font-weight:bold">)</span><span style="color:#b44">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">isOn</span><span style="color:#666">=</span><span style="color:#b44">&#34;</span><span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">isOn</span>: -1<span style="color:#b68;font-weight:bold">}</span><span style="color:#b44">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">[</span> <span style="color:#b8860b">$isOn</span> -eq <span style="color:#666">0</span> <span style="color:#666">]</span>; <span style="color:#a2f;font-weight:bold">then</span>
+</span></span><span style="display:flex;"><span>    xinput set-prop <span style="color:#b44">&#39;SYNA2393:00 06CB:19AC&#39;</span> <span style="color:#b44">&#39;Device Enabled&#39;</span> <span style="color:#666">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Turning touchscreen on!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">else</span>
+</span></span><span style="display:flex;"><span>    xinput set-prop <span style="color:#b44">&#39;SYNA2393:00 06CB:19AC&#39;</span> <span style="color:#b44">&#39;Device Enabled&#39;</span> <span style="color:#666">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Turning Touchscreen off!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">fi</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Unfortunately it doesn&rsquo;t work on Wayland and there isn&rsquo;t a great drop-in replacement for <code>xinput</code> on Wayland; you would either have to mess with <code>udev</code> or use this little script I cooked up:</p>
 <ol>
@@ -126,33 +126,33 @@ if (!doNotTrack) {
 <blockquote>
 <p>Example output from <code>cat /proc/bus/input/devices</code></p>
 </blockquote>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">...
-B: MSC=10
-
-I: Bus=0018 Vendor=06cb Product=19ac Version=0100
-N: Name=&#34;SYNA2393:00 06CB:19AC&#34;
-P: Phys=i2c-SYNA2393:00
-S: Sysfs=/devices/pci0000:00/0000:00:15.0/i2c_designware.0/i2c-6/i2c-SYNA2393:00/0018:06CB:19AC.0001/input/input14
-U: Uniq=
-H: Handlers=event8 mouse0
-B: PROP=2
-...
-</code></pre></td></tr></table>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>B: MSC=10
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>I: Bus=0018 Vendor=06cb Product=19ac Version=0100
+</span></span><span style="display:flex;"><span>N: Name=&#34;SYNA2393:00 06CB:19AC&#34;
+</span></span><span style="display:flex;"><span>P: Phys=i2c-SYNA2393:00
+</span></span><span style="display:flex;"><span>S: Sysfs=/devices/pci0000:00/0000:00:15.0/i2c_designware.0/i2c-6/i2c-SYNA2393:00/0018:06CB:19AC.0001/input/input14
+</span></span><span style="display:flex;"><span>U: Uniq=
+</span></span><span style="display:flex;"><span>H: Handlers=event8 mouse0
+</span></span><span style="display:flex;"><span>B: PROP=2
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="2">
 <li>Run these commands</li>
@@ -162,27 +162,27 @@ B: PROP=2
 <li><strong>Enabling the device</strong>: <code>sudo sh -c &quot;echo '0018:06CB:19AC.0001' &gt; /sys/bus/hid/drivers/hid-multitouch/bind&quot;</code></li>
 </ul>
 <p>Alternatively, make a script to toggle it</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#080">#!/usr/bin/bash
-</span><span style="color:#080"></span><span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">[</span> -d <span style="color:#b44">&#34;/sys/bus/hid/drivers/hid-multitouch/0018:06CB:19AC.0001&#34;</span> <span style="color:#666">]</span>; <span style="color:#a2f;font-weight:bold">then</span>
-  sudo sh -c <span style="color:#b44">&#34;echo &#39;0018:06CB:19AC.0001&#39; &gt; /sys/bus/hid/drivers/hid-multitouch/unbind&#34;</span>
-  <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Turning touchscreen off!&#34;</span>
-<span style="color:#a2f;font-weight:bold">else</span>
-  sudo sh -c <span style="color:#b44">&#34;echo &#39;0018:06CB:19AC.0001&#39; &gt; /sys/bus/hid/drivers/hid-multitouch/bind&#34;</span>
-  <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Turning Touchscreen on!&#34;</span>
-<span style="color:#a2f;font-weight:bold">fi</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#080">#!/usr/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#080"></span><span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">[</span> -d <span style="color:#b44">&#34;/sys/bus/hid/drivers/hid-multitouch/0018:06CB:19AC.0001&#34;</span> <span style="color:#666">]</span>; <span style="color:#a2f;font-weight:bold">then</span>
+</span></span><span style="display:flex;"><span>  sudo sh -c <span style="color:#b44">&#34;echo &#39;0018:06CB:19AC.0001&#39; &gt; /sys/bus/hid/drivers/hid-multitouch/unbind&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Turning touchscreen off!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">else</span>
+</span></span><span style="display:flex;"><span>  sudo sh -c <span style="color:#b44">&#34;echo &#39;0018:06CB:19AC.0001&#39; &gt; /sys/bus/hid/drivers/hid-multitouch/bind&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Turning Touchscreen on!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">fi</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>This script should work for toggling other input devices as well! I have these commands <code>alias</code>&lsquo;ed in <code>~/.zshrc</code><br>

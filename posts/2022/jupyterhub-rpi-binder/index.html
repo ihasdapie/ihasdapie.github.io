@@ -85,173 +85,173 @@ if (!doNotTrack) {
 Turns out there are a few <a href="https://github.com/matrix-org/synapse/issues/9403">issues</a> getting jupyterhub built for ARMv7.
 Anyhow the primary thing is that the <code>rust</code> toolchain must be installed in order to build the <code>cryptography</code> python module, and that when installing in a <code>docker</code> container the <code>--sys-prefix</code> must be passed to <code>install_c_kernel</code>.</p>
 <p><a href="https://github.com/ihasdapie/jupyterhub-c-docker-ARM">Here</a>&rsquo;s a working <code>Dockerfile</code> that does just that.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#a2f;font-weight:bold">LABEL</span> <span style="color:#b8860b">maintainer</span><span style="color:#666">=</span><span style="color:#b44">&#34;Brian Chen&lt;brianchen.chen@mail.utoronto.ca&#34;</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">FROM</span><span style="color:#b44"> arm32v7/python:3.9-bullseye</span><span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#080;font-style:italic"># Set the variables</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">ENV</span> DEBIAN_FRONTEND noninteractive<span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">WORKDIR</span><span style="color:#b44"> /root</span><span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">USER</span><span style="color:#b44"> root</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;CHANGEME&#34;</span> | passwd --stdin root<span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#080;font-style:italic"># Install both Python 2 and 3</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> apt-get update <span style="color:#666">&amp;&amp;</span> apt-get upgrade <span style="color:#666">&amp;&amp;</span> apt-get install -y python-dev <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	python3-dev <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	python3-pip <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	build-essential<span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	libssl-dev <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	libffi-dev <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	python-dev <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	ca-certificates <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	libncurses5-dev <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	curl <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	bash <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	nodejs <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>	npm <span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#080;font-style:italic"># needed for python cryptography</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> apt-get install -y rustc  <span style="">
-</span><span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#080;font-style:italic"># jupyterhub dependencies</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> pip3 install --upgrade pip<span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> pip3 install cryptography<span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> pip3 install readline jupyter jupyterhub jupyterlab notebook <span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> npm install -g configurable-http-proxy<span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#080;font-style:italic"># Fix Python3 kernel since IPykernel 5.0.0 has dependency issues.</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> pip3 install <span style="color:#b44">&#34;ipykernel==4.10.0&#34;</span> --force-reinstall <span style="">
-</span><span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#080;font-style:italic"># jupyter c kernel</span><span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> pip3 install jupyter-c-kernel<span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> install_c_kernel --sys-prefix<span style="">
-</span><span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">COPY</span> jupyterhub_config.py jupyterhub_config.py<span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">EXPOSE</span><span style="color:#b44"> 8000</span><span style="">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">LABEL</span> <span style="color:#b8860b">maintainer</span><span style="color:#666">=</span><span style="color:#b44">&#34;Brian Chen&lt;brianchen.chen@mail.utoronto.ca&#34;</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">FROM</span><span style="color:#b44"> arm32v7/python:3.9-bullseye</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#080;font-style:italic"># Set the variables</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">ENV</span> DEBIAN_FRONTEND noninteractive<span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">WORKDIR</span><span style="color:#b44"> /root</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">USER</span><span style="color:#b44"> root</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;CHANGEME&#34;</span> | passwd --stdin root<span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#080;font-style:italic"># Install both Python 2 and 3</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> apt-get update <span style="color:#666">&amp;&amp;</span> apt-get upgrade <span style="color:#666">&amp;&amp;</span> apt-get install -y python-dev <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	python3-dev <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	python3-pip <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	build-essential<span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	libssl-dev <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	libffi-dev <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	python-dev <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	ca-certificates <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	libncurses5-dev <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	curl <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	bash <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	nodejs <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>	npm <span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#080;font-style:italic"># needed for python cryptography</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> apt-get install -y rustc  <span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#080;font-style:italic"># jupyterhub dependencies</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> pip3 install --upgrade pip<span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> pip3 install cryptography<span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> pip3 install readline jupyter jupyterhub jupyterlab notebook <span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> npm install -g configurable-http-proxy<span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#080;font-style:italic"># Fix Python3 kernel since IPykernel 5.0.0 has dependency issues.</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> pip3 install <span style="color:#b44">&#34;ipykernel==4.10.0&#34;</span> --force-reinstall <span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#080;font-style:italic"># jupyter c kernel</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> pip3 install jupyter-c-kernel<span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> install_c_kernel --sys-prefix<span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">COPY</span> jupyterhub_config.py jupyterhub_config.py<span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">EXPOSE</span><span style="color:#b44"> 8000</span><span style="">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>But turns out my ISP doesn&rsquo;t provide me with a static IP address &hellip; so <a href="https://mybinder.org/">binder</a> it is.</p>
 <p>The neat thing about binder is that it spins up an ephemeral Jupyter instance in a <code>docker</code> container, the requirements/environment for which you can specify with a <code>requirements.txt</code>, <a href="https://mybinder.readthedocs.io/en/latest/using/config_files.html">etc</a>.
 Or you can just provide a <code>Dockerfile</code> that meets <a href="https://mybinder.readthedocs.io/en/latest/tutorials/dockerfile.html">the requirements</a>.</p>
 <p><a href="https://github.com/ihasdapie/teaching/blob/main/Dockerfile">Here</a> as a working minimal <code>Dockerfile</code> for a binder instance with the <a href="https://github.com/brendan-rius/jupyter-c-kernel">jupyter-c-kernel</a> set up that will work on binder.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#a2f;font-weight:bold">FROM</span><span style="color:#b44"> python:3.9-slim</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">MAINTAINER</span><span style="color:#b44"> Brian Chen &lt;brianchen.chen@mail.utoronto.ca</span><span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> apt-get update <span style="color:#666">&amp;&amp;</span> apt-get install -y build-essential<span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> pip install --no-cache --upgrade pip <span style="color:#666">&amp;&amp;</span> <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>    pip install --no-cache notebook jupyterlab jupyter-c-kernel jupyterhub<span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">ARG</span> <span style="color:#b8860b">NB_USER</span><span style="color:#666">=</span>jovyan
-<span style="color:#a2f;font-weight:bold">ARG</span> <span style="color:#b8860b">NB_UID</span><span style="color:#666">=</span><span style="color:#666">1000</span>
-<span style="color:#a2f;font-weight:bold">ENV</span> USER <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">NB_USER</span><span style="color:#b68;font-weight:bold">}</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">ENV</span> NB_UID <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">NB_UID</span><span style="color:#b68;font-weight:bold">}</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">ENV</span> HOME /home/<span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">NB_USER</span><span style="color:#b68;font-weight:bold">}</span><span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> adduser --disabled-password <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>    --gecos <span style="color:#b44">&#34;Default user&#34;</span> <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>    --uid <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">NB_UID</span><span style="color:#b68;font-weight:bold">}</span> <span style="color:#b62;font-weight:bold">\
-</span><span style="color:#b62;font-weight:bold"></span>    <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">NB_USER</span><span style="color:#b68;font-weight:bold">}</span><span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> install_c_kernel<span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">COPY</span> . <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">HOME</span><span style="color:#b68;font-weight:bold">}</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">USER</span><span style="color:#b44"> root</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> chown -R <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">NB_UID</span><span style="color:#b68;font-weight:bold">}</span> <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">HOME</span><span style="color:#b68;font-weight:bold">}</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">USER</span><span style="color:#b44"> ${NB_USER}</span><span style="">
-</span><span style="">
-</span><span style=""></span><span style="color:#a2f;font-weight:bold">WORKDIR</span><span style="color:#b44"> ${HOME}</span><span style="">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">FROM</span><span style="color:#b44"> python:3.9-slim</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">MAINTAINER</span><span style="color:#b44"> Brian Chen &lt;brianchen.chen@mail.utoronto.ca</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> apt-get update <span style="color:#666">&amp;&amp;</span> apt-get install -y build-essential<span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> pip install --no-cache --upgrade pip <span style="color:#666">&amp;&amp;</span> <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>    pip install --no-cache notebook jupyterlab jupyter-c-kernel jupyterhub<span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">ARG</span> <span style="color:#b8860b">NB_USER</span><span style="color:#666">=</span>jovyan
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">ARG</span> <span style="color:#b8860b">NB_UID</span><span style="color:#666">=</span><span style="color:#666">1000</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">ENV</span> USER <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">NB_USER</span><span style="color:#b68;font-weight:bold">}</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">ENV</span> NB_UID <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">NB_UID</span><span style="color:#b68;font-weight:bold">}</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">ENV</span> HOME /home/<span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">NB_USER</span><span style="color:#b68;font-weight:bold">}</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> adduser --disabled-password <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>    --gecos <span style="color:#b44">&#34;Default user&#34;</span> <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>    --uid <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">NB_UID</span><span style="color:#b68;font-weight:bold">}</span> <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>    <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">NB_USER</span><span style="color:#b68;font-weight:bold">}</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> install_c_kernel<span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">COPY</span> . <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">HOME</span><span style="color:#b68;font-weight:bold">}</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">USER</span><span style="color:#b44"> root</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> chown -R <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">NB_UID</span><span style="color:#b68;font-weight:bold">}</span> <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">HOME</span><span style="color:#b68;font-weight:bold">}</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">USER</span><span style="color:#b44"> ${NB_USER}</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">WORKDIR</span><span style="color:#b44"> ${HOME}</span><span style="">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
 </article>
