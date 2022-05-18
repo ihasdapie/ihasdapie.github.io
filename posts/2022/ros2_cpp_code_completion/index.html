@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta lang="en">
+
+    <title>Setting up code completion for ROS2 `c&#43;&#43;` development </title>
+
+    <style>*{box-sizing:border-box}body{margin:40px auto;max-width:800px;line-height:1.6;font-size:16px;color:#444;font-family:sans-serif;padding:0 10px}h1,h2,h3{line-height:1.2;font-family:sans-serif;color:#444}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:16px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}td,th{border:1px solid #444;padding:.5rem;text-align:left}@media only screen and (max-width:1450px){#back_to_top{visibility:visible!important}#toc{display:none}}.katex-display>.katex{overflow:auto hidden}.katex .katex-html>.newline{display:block;padding-bottom:.25em;padding-top:.25em}#toc{position:fixed;top:40px;right:0;padding-right:80px;line-height:1.4em;max-width:400px;margin:auto}#back_to_top{position:fixed;top:10px;right:10px;width:100px;visibility:hidden}blockquote{background:#f1f1f1;border-left:4px solid #ccc;padding-left:8px}code:not([class*=language-]){border-radius:.25rem;padding:.1rem;background-color:#f8f8f8;color:#863109}code{width:100px;overflow:auto;word-wrap:normal;white-space:pre}p+ul,p+ol,ul+ol,ol+ul{margin-top:-10px}ul,ol,li{padding-left:.5 em}a.footnote-ref::before{content:'['}a.footnote-ref::after{content:']'} 
+            body {
+                margin-left: 250px;   
+            }
+            @media only screen and (max-width: 1450px) {
+                body {
+                    margin: 40px auto;
+                }
+            }
+
+        
+
+
+
+
+
+    </style>
+
+    
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-B0ZFV4LTG2', { 'anonymize_ip': false });
+}
+</script>
+
+
+    
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#33b884">
+<meta name="msapplication-TileColor" content="#33b884">
+<meta name="theme-color" content="#33b884">
+
+
+
+</head>
+
+<body>
+<div class="header">
+    <h1>
+        <a href="//chenbrian.ca">chenbrian</a>
+        <div class="header-menu">
+            <a href="/about/">about</a> &nbsp;
+            <a href="/posts/">blog</a> &nbsp;
+            <a href="/tags/">tags</a> &nbsp;
+        </div>
+    </h1>
+</div>
+
+<div id="content">
+        
+        <section>
+            
+                <div id="toc">
+    <h4>Table of Contents</h4>
+    <aside>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#using-clangd">Using <code>clangd</code></a>
+      <ul>
+        <li><a href="#method-0">Method 0</a></li>
+        <li><a href="#method-1">Method 1</a></li>
+        <li><a href="#method-2">Method 2</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </aside>
+</div>
+
+
+
+
+
+            
+        <header>
+    <h1>Setting up code completion for ROS2 <code>c++</code> development</h1>
+    
+
+
+
+
+
+<div class="post-meta">
+    Date:
+    <time datetime="2022-01-04">Jan 4, 2022</time>,&nbsp;Last Modified:
+    <time datetime="2022-05-17">May 17, 2022</time>
+    <br>
+    
+    Tags &#x5b;
+    <a href="//chenbrian.ca/tags/programming/">programming</a>
+    <a href="//chenbrian.ca/tags/vim/">vim</a>
+    <a href="//chenbrian.ca/tags/robots/">robots</a>
+    &#x5d;
+</div>
+
+</header>
+<article>
+    <h2 id="using-clangd">Using <code>clangd</code></h2>
+<p>ROS2 puts its headers into a rather non-standard location, <code>/opt/ros2/&lt;ROS_DISTRO&gt;/include</code>.
+Obviously this doesn&rsquo;t play well with standard <code>clangd</code> setups, and it would be <em>too</em> easy if it just worked out of the box with <code>vim</code>!
+Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a <code>c_cpp_properties.json</code> file.</p>
+<blockquote>
+<p>For vscode setup, see <a href="https://www.allisonthackston.com/articles/vscode-docker-ros2.html">this</a> or <a href="https://erdalpekel.de/?p=157">this</a></p>
+</blockquote>
+<p>With vim this is as little uglier.
+Nothing that <code>clang</code> supports using either a <code>compile_commands.json</code> file or a <code>compile_flags.txt</code> file <a href="https://clangd.llvm.org/installation.html#project-setup">source</a>, we can either:</p>
+<h3 id="method-0">Method 0</h3>
+<p>As it turns out there are <a href="https://colcon.readthedocs.io/en/released/reference/verb/mixin.html"><code>colcon mixins</code></a>, though the use of which is not exactly well documented.
+Steps for use are as follows:</p>
+<ol>
+<li>Install the <code>python3-colcon-mixin</code> package; <code>sudo apt install python3-colcon-mixin</code></li>
+<li>Fetch the &lsquo;default&rsquo; <code>colcon</code> mixins:</li>
+<li>Add the default mixins file:</li>
+</ol>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>Fetch them: <code>colcon mixin update default</code></li>
+<li>Use them: <code>colcon build --mixin compile_commands</code></li>
+</ol>
+<p>And this will work out of the box to generate the relevant <code>compile_commands.json</code> files.</p>
+<h3 id="method-1">Method 1</h3>
+<p>Generate a <code>compile_commands</code> file using <code>colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON</code>
+It&rsquo;s also probably prudent to add this to your <code>CMakeLists.txt</code> file anyways,</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span><span style="color:#080;font-style:italic"># CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#080;font-style:italic"># This should work
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f">set</span>(<span style="color:#b44">CMAKE_EXPORT_COMPILE_COMMANDS</span> <span style="color:#b44">ON</span>)<span style="">
+</span></span></span><span style="display:flex;"><span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#080;font-style:italic"># ... but if it doesn&#39;t, try this workaround
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f">set</span>(<span style="color:#b44">CMAKE_EXPORT_COMPILE_COMMANDS</span> <span style="color:#b44">ON</span> <span style="color:#b44">CACHE</span> <span style="color:#b44">INTERNAL</span> <span style="color:#b44">&#34;&#34;</span>)<span style="">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Note that this requires there to be a buildable <code>ros2</code> package in your workspace, so if one is just getting started maybe try cloning the <code>ros2_tutorials</code> package or copy-pasting a simple pub-sub just to get a <code>compile_commands.json</code> file.</p>
+<p><strong>OR</strong>, try using <a href="https://github.com/rizsotto/Bear">bear</a> which works great in my experience.</p>
+<p>If all else fails, try dropping in a minimal <code>compile_commands.json</code> file with the following contents, making sure to edit the filepaths accordingly:</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// compile_commands.json
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>[ {
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&#34;directory&#34;</span>: <span style="color:#b44">&#34;&lt;YOUR_ROS2_WORKSPACE&gt;/src/build/&lt;YOUR_ROS2_PACKAGE&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&#34;command&#34;</span>: <span style="color:#b44">&#34;/usr/bin/c++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB -isystem /opt/ros2/foxy/include -Wall -Wextra -Wpedantic -std=gnu++14 -o CMakeFiles/&lt;YOUR_PACKAGE_NAME&gt;.dir/src/&lt;YOUR_FILE_NAME&gt;.o -c &lt;YOUR_ROS2_WORKSPACE&gt;/src/&lt;YOUR_ROS2_PACKAGE&gt;/src/&lt;YOUR_FILE_NAME&gt;.cpp&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">&#34;file&#34;</span>: <span style="color:#b44">&#34;&lt;YOUR_ROS2_WORKSPACE&gt;/src/&lt;YOUR_ROS2_PACKAGE&gt;/src/&lt;YOUR_FILE_NAME&gt;.cpp&#34;</span>
+</span></span><span style="display:flex;"><span>} ]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="method-2">Method 2</h3>
+<p>Place a <code>compile_flags.txt</code> file with <code>-I /opt/ros2/&lt;ROS_DISTRO&gt;/include</code> in your project root</p>
+<p>For more, see <a href="https://github.com/clangd/coc-clangd/issues/28">this</a></p>
+
+</article>
+
+
+        </section>
+    </div>
+<div class="footer">
+    
+    
+    <div class="footer-links">
+        <a href="https://github.com/ihasdapie">GitHub</a> &nbsp;
+        <a href="https://github.com/ihasdapie/bettermotherfuckinghugowebsite/">Theme</a> &nbsp;
+    </div>
+    
+
+    
+    
+    <div class="copyright">© 2022 — Brian Chen — All rights reserved.</div>
+    
+
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+<div id="wcb" class="carbonbadge"></div>
+
+
+</div>
+
+</body>
+
+</html>

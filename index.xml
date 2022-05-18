@@ -115,11 +115,11 @@ Look up &amp;ndash; your brains begin to swim,</description>
     </item>
     
     <item>
-      <title>Using NeoVim for ROS2 c&#43;&#43; development</title>
-      <link>//chenbrian.ca/posts/2022/using-neovim-for-ros2-c-development/</link>
+      <title>Setting up code completion for ROS2 `c&#43;&#43;` development</title>
+      <link>//chenbrian.ca/posts/2022/ros2_cpp_code_completion/</link>
       <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
       
-      <guid>//chenbrian.ca/posts/2022/using-neovim-for-ros2-c-development/</guid>
+      <guid>//chenbrian.ca/posts/2022/ros2_cpp_code_completion/</guid>
       <description>Using clangd ROS2 puts its headers into a rather non-standard location, /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. Obviously this doesn&amp;rsquo;t play well with standard clangd setups, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.
  For vscode setup, see this or this
  With vim this is as little uglier.</description>
