@@ -9,6 +9,15 @@
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
     <lastBuildDate>Sun, 10 Apr 2022 02:55:49 -0400</lastBuildDate><atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>`LXD`, Arch Linux, ROS 2, and Wayland</title>
+      <link>//chenbrian.ca/posts/2022/lxd_arch_ros2_wayland/</link>
+      <pubDate>Wed, 18 May 2022 17:05:30 -0700</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2022/lxd_arch_ros2_wayland/</guid>
+      <description>Rationale: I started my internship at Open Robotics and I needed to get a development environment set up on my laptop and could not be arsed to set up an ubuntu partition (and I&amp;rsquo;m a little too bound to my current rat&amp;rsquo;s nest of config files). So, like any other rational being, I invested twice the time and effort than it would&amp;rsquo;ve taken to get an ubuntu partition running into using LXD to fire up something that would compile ROS 2 1.</description>
+    </item>
+    
+    <item>
       <title>`http://individual.utoronto.ca/chenbrian/`</title>
       <link>//chenbrian.ca/posts/2022/individual.utoronto/</link>
       <pubDate>Tue, 22 Feb 2022 02:52:00 -0500</pubDate>
@@ -116,14 +125,14 @@ Look up &amp;ndash; your brains begin to swim,</description>
     </item>
     
     <item>
-      <title>Setting up code completion for ROS2 `c&#43;&#43;` development</title>
-      <link>//chenbrian.ca/posts/2022/ros2_cpp_code_completion/</link>
+      <title>My terminal-centric workflow for ROS 2</title>
+      <link>//chenbrian.ca/posts/2022/ros2_terminal_workflow/</link>
       <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
       
-      <guid>//chenbrian.ca/posts/2022/ros2_cpp_code_completion/</guid>
-      <description>Using clangd ROS2 puts its headers into a rather non-standard location, /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. Obviously this doesn&amp;rsquo;t play well with standard clangd setups, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.
- For vscode setup, see this or this
- With vim this is as little uglier.</description>
+      <guid>//chenbrian.ca/posts/2022/ros2_terminal_workflow/</guid>
+      <description>This is a work in progress
+ LSP with clangd ROS2 puts its headers into /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. This doesn&amp;rsquo;t work out of the box with my fairly default clangd setup, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.
+ For vscode setup, see this or this</description>
     </item>
     
     <item>
