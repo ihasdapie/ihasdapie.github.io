@@ -111,7 +111,7 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2022-05-18">May 18, 2022</time>,&nbsp;Last Modified:
-    <time datetime="2022-05-18">May 18, 2022</time>
+    <time datetime="2022-05-19">May 19, 2022</time>
     <br>
     
 </div>
@@ -259,12 +259,13 @@ What this entailed was the sharing of a few <code>unix</code> sockets.</p>
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div></li>
-<li>Look for where your wayland and xwayland sockets are
+<li>Look for where your wayland and xwayland sockets are. You will also need your host&rsquo;s <code>Xauthority</code> file, which is usually located at <code>~/.Xauthority</code>.
+In my case I screwed with it a little much and the file is in <code>/run/user/1000/xauth_&lt;random_chars_here&gt;</code>.
 <ul>
 <li>For me they were in <code>/run/user/1000/wayland-0</code> and <code>/tmp/.X11-unix/X1</code></li>
 </ul>
 </li>
-<li>Add these to your container. Here I link them to the container and then symlink it to the desired location. In my case I also linked over my <code>Xauthority</code> configuration.</li>
+<li>Add these to your container. Here I link them to the container and then symlink it to the desired location.</li>
 </ol>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
