@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//chenbrian.ca/tags/linux/</loc>
+    <lastmod>2022-05-25T01:26:31-07:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/tags/programming/</loc>
+    <lastmod>2022-05-25T01:26:31-07:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/posts/2022/kwin_choppy_fix/</loc>
+    <lastmod>2022-05-25T01:26:31-07:00</lastmod>
+  </url><url>
     <loc>//chenbrian.ca/posts/2022/lxd_arch_ros2_wayland/</loc>
     <lastmod>2022-05-19T09:21:16-07:00</lastmod>
   </url><url>
@@ -19,12 +28,6 @@
   </url><url>
     <loc>//chenbrian.ca/tags/other/</loc>
     <lastmod>2022-05-13T12:12:22-07:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/tags/linux/</loc>
-    <lastmod>2022-04-28T20:50:08-04:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/tags/programming/</loc>
-    <lastmod>2022-05-18T21:20:41-07:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/2022/wayland_toggle_touchscreen/</loc>
     <lastmod>2022-04-28T20:50:08-04:00</lastmod>
