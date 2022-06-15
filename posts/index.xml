@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on chenbrian</title>
+    <title>chenbrian/posts on chenbrian</title>
     <link>//chenbrian.ca/posts/</link>
-    <description>Recent content in Posts on chenbrian</description>
+    <description>Recent content in chenbrian/posts on chenbrian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Sun, 10 Apr 2022 02:55:49 -0400</lastBuildDate><atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2022 — Brian Chen — All rights reserved.</copyright><atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>PSA: Delete `AnimationDurationFactor` if you have an old installation</title>
+      <title>PSA: Delete `AnimationDurationFactor` if you have an old KDE installation</title>
       <link>//chenbrian.ca/posts/2022/kwin_choppy_fix/</link>
       <pubDate>Wed, 25 May 2022 01:22:56 -0700</pubDate>
       

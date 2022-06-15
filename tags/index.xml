@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>chenbrian</title>
+    <title>chenbrian/tags on chenbrian</title>
     <link>//chenbrian.ca/tags/</link>
-    <description>Recent content on chenbrian</description>
+    <description>Recent content in chenbrian/tags on chenbrian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
