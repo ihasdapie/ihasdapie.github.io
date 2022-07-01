@@ -15,7 +15,7 @@
       
       <guid>//chenbrian.ca/posts/2022/individual.utoronto/</guid>
       <description>Turns out UofT students/faculty/etc can host a free personal site (50mb max) in individual.utoronto.ca. This process is also entirely undocumented.
- Claim it through UTORid management here Connect to it through a ftp client. If you go back into the UTORid info page it will tell you what address to use for ftp which looks something like ftp://yourutorid@individual.utoronto.ca I just used dolphin&amp;rsquo;s built in support for network drives to upload the files Upload files through ftp and enjoy!</description>
+Claim it through UTORid management here Connect to it through a ftp client. If you go back into the UTORid info page it will tell you what address to use for ftp which looks something like ftp://yourutorid@individual.utoronto.ca I just used dolphin&amp;rsquo;s built in support for network drives to upload the files Upload files through ftp and enjoy!</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@
       
       <guid>//chenbrian.ca/posts/2022/pi-pico-on-linux/</guid>
       <description>Needed to use a Pi Pico for one of my courses (which mandated circuitpython &amp;hellip; for reasons unknown) and noticed that Adafruit&amp;rsquo;s documentation for using CircuitPython with something that wasn&amp;rsquo;t Mu Editor was not really up to par.
- Install CircuitPython by copying .uf2 file into the Pi Pico, which can be done by just plugging it into your computer python3 -m pip install circuitpython-stubs to get completions with your LSP of choice Connect to serial port to view prints and logging info   find the appropriate port with ls /dev/ttyACM* connect using GNU screen or whatever you like to use  e.</description>
+Install CircuitPython by copying .uf2 file into the Pi Pico, which can be done by just plugging it into your computer python3 -m pip install circuitpython-stubs to get completions with your LSP of choice Connect to serial port to view prints and logging info find the appropriate port with ls /dev/ttyACM* connect using GNU screen or whatever you like to use e.</description>
     </item>
     
     <item>

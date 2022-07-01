@@ -18,7 +18,7 @@
 So you tried altacv, but it always got absolutely chewed up by ATS systems.
 And so you yearned for a 🌠cool🥶 single-column layout, but you couldn&amp;rsquo;t find one.
 I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
- Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Disabling word wrapping and hyphenation Various changes to \makecvevent, etc.</description>
+Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Disabling word wrapping and hyphenation Various changes to \makecvevent, etc.</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@ I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>//chenbrian.ca/about/</guid>
-      <description>What am I up to right now?  SWE Intern at Open Source Robotics Foundation Software system co-lead @ aUToronto: Automated testing &amp;amp; evaluation of autonomous vehicles, deep learning acceleration with TensorRT, CI/CD, and more! Research @ ISML: I work with accelerating machine learning tasks on memristor crossbars &amp;ndash; first author paper pending submission Web dev &amp;amp; data collection for BC Parks Foundation: currently in private beta Side Projects TA-ing intro programming (ESC180) and data structures &amp;amp; algorithms (ESC190) Trying to make it through university!</description>
+      <description>What am I up to right now? SWE Intern at Open Source Robotics Foundation Software system co-lead @ aUToronto: Automated testing &amp;amp; evaluation of autonomous vehicles, deep learning acceleration with TensorRT, CI/CD, and more! Research @ ISML: I work with accelerating machine learning tasks on memristor crossbars &amp;ndash; first author paper pending submission Web dev &amp;amp; data collection for BC Parks Foundation: currently in private beta Side Projects TA-ing intro programming (ESC180) and data structures &amp;amp; algorithms (ESC190) Trying to make it through university!</description>
     </item>
     
     <item>
@@ -36,8 +36,8 @@ I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//chenbrian.ca/</guid>
-      <description>Hi, I&amp;rsquo;m Brian and I&amp;rsquo;m a student, software developer, and pokemon go enthusiast   &amp;hellip; and let&amp;rsquo;s put a face to the name as well
- I&amp;rsquo;m an Engineering Science student at the University of Toronto majoring in Computer Engineering, who is passionate about making cool stuff and learning more about the world we live in. When I&amp;rsquo;m not cramming for school, I enjoy cooking and playing badminton.
+      <description>Hi, I&amp;rsquo;m Brian and I&amp;rsquo;m a student, software developer, and pokemon go enthusiast &amp;hellip; and let&amp;rsquo;s put a face to the name as well
+I&amp;rsquo;m an Engineering Science student at the University of Toronto majoring in Computer Engineering, who is passionate about making cool stuff and learning more about the world we live in. When I&amp;rsquo;m not cramming for school, I enjoy cooking and playing badminton.
 While you&amp;rsquo;re here, why don&amp;rsquo;t you check out my about me page?</description>
     </item>
     

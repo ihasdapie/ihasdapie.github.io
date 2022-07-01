@@ -16,7 +16,7 @@
       <guid>//chenbrian.ca/posts/2022/engsci-year-2-winter/</guid>
       <description>// work in progress //
 This browser does not support PDFs. Please download the PDF to view it: Download PDF.
-  Or, download here
+Or, download here
 Notes prior to reading week can be found below. Right before reading week my roommate introduced me to the NotesTeX template and I&amp;rsquo;m currently using that.
 ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combining probabilities Outcomes denoted by variables, i.e. for coin clip \( H \), \( T \).</description>
     </item>
@@ -28,11 +28,11 @@ ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combi
       
       <guid>//chenbrian.ca/posts/2021/clean-architecture-notes/</guid>
       <description>&amp;ldquo;Fight for the architecture&amp;rdquo;
- The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]
+The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]
 [1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed. USA: Prentice Hall Press, 2017.
 Paradigms Main paradigms:
-  Structured: Discipline on direct transfer of control
- Dijkstra: banishing the goto statement; enforcing control flow; if, else, while, for &amp;hellip; Enabling functional decomposition; applying mathematical divide-and-conquer approach to algorithms Testing can only prove a program false but not correct  Structured programming breaks down to provable chunks      Object-oriented: Discipline on indirect transfer of control</description>
+Structured: Discipline on direct transfer of control
+Dijkstra: banishing the goto statement; enforcing control flow; if, else, while, for &amp;hellip; Enabling functional decomposition; applying mathematical divide-and-conquer approach to algorithms Testing can only prove a program false but not correct Structured programming breaks down to provable chunks Object-oriented: Discipline on indirect transfer of control</description>
     </item>
     
     <item>
@@ -41,9 +41,9 @@ Paradigms Main paradigms:
       <pubDate>Sun, 12 Dec 2021 16:49:34 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/2021/teaching/</guid>
-      <description>(Currently) all content is in jupyter notebook format and is hosted on my on GitHub at github.com/ihasdapie/teaching. I&amp;rsquo;ve also set up a binder enviroment so that you can work with them interactively by using clicking on this badge:  or following this link mybinder.org/v2/gh/ihasdapie/teaching/HEAD
+      <description>(Currently) all content is in jupyter notebook format and is hosted on my on GitHub at github.com/ihasdapie/teaching. I&amp;rsquo;ve also set up a binder enviroment so that you can work with them interactively by using clicking on this badge: or following this link mybinder.org/v2/gh/ihasdapie/teaching/HEAD
 ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.
-ESC190  Tutorial 1 Tutorial 2 Notes Midterm review  (All else currently WIP), see: github.</description>
+ESC190 Tutorial 1 Tutorial 2 Notes Midterm review (All else currently WIP), see: github.</description>
     </item>
     
     <item>
