@@ -8,6 +8,17 @@
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright><atom:link href="//chenbrian.ca/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>aUToronto</title>
+      <link>//chenbrian.ca/posts/2022/autoronto_work/</link>
+      <pubDate>Mon, 25 Jul 2022 01:36:21 -0700</pubDate>
+      
+      <guid>//chenbrian.ca/posts/2022/autoronto_work/</guid>
+      <description>I&amp;rsquo;ve done a few things with aUToronto over the years and I figured that I&amp;rsquo;ll start a post detailing them.
+So, here they are:
+Deep learning acceleration: Real-time 2D YOLOv5 detection pipeline across multiple cameras using TensorRT. Last-minute 2-stage detection pipeline for traffic signs 1 &amp;ldquo;aUToTest&amp;rdquo;: automated simulation integration test framework for autonomous vehicles, with python, matlab, simulink, docker, ROS/ROS2 2 and unreal engine, enabling asynchronous testing which brought developer time spent on QA down to almost zero &amp;ldquo;aUToNoise&amp;rdquo;: Machine learning - augmented sensor noise modelling for improved Sim2Real transfer using CycleGAN Presented work at 2021 Vector Institute Mobility Symposium &amp;amp; 2021 UofT Robotics Institute AV workshop &amp;ldquo;ZeusBag&amp;rdquo;: ROS/ROS2 2 utility library and command line tool for extracting, filtering, and step-wise replaying ROSbags.</description>
+    </item>
+    
+    <item>
       <title>PSA: Delete `AnimationDurationFactor` if you have an old KDE installation</title>
       <link>//chenbrian.ca/posts/2022/kwin_choppy_fix/</link>
       <pubDate>Wed, 25 May 2022 01:22:56 -0700</pubDate>
