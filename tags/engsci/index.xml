@@ -10,40 +10,40 @@
     <lastBuildDate>Tue, 22 Feb 2022 02:52:00 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/engsci/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>http://individual.utoronto.ca/chenbrian/</title>
-      <link>//chenbrian.ca/posts/2022/individual.utoronto/</link>
+      <link>//chenbrian.ca/posts/individual.utoronto/</link>
       <pubDate>Tue, 22 Feb 2022 02:52:00 -0500</pubDate>
       
-      <guid>//chenbrian.ca/posts/2022/individual.utoronto/</guid>
+      <guid>//chenbrian.ca/posts/individual.utoronto/</guid>
       <description>Turns out UofT students/faculty/etc can host a free personal site (50mb max) in individual.utoronto.ca. This process is also entirely undocumented.
 Claim it through UTORid management here Connect to it through a ftp client. If you go back into the UTORid info page it will tell you what address to use for ftp which looks something like ftp://yourutorid@individual.utoronto.ca I just used dolphin&amp;rsquo;s built in support for network drives to upload the files Upload files through ftp and enjoy!</description>
     </item>
     
     <item>
       <title>Pi Pico on Linux</title>
-      <link>//chenbrian.ca/posts/2022/pi-pico-on-linux/</link>
+      <link>//chenbrian.ca/posts/pi-pico-on-linux/</link>
       <pubDate>Thu, 27 Jan 2022 23:08:10 -0500</pubDate>
       
-      <guid>//chenbrian.ca/posts/2022/pi-pico-on-linux/</guid>
+      <guid>//chenbrian.ca/posts/pi-pico-on-linux/</guid>
       <description>Needed to use a Pi Pico for one of my courses (which mandated circuitpython &amp;hellip; for reasons unknown) and noticed that Adafruit&amp;rsquo;s documentation for using CircuitPython with something that wasn&amp;rsquo;t Mu Editor was not really up to par.
 Install CircuitPython by copying .uf2 file into the Pi Pico, which can be done by just plugging it into your computer python3 -m pip install circuitpython-stubs to get completions with your LSP of choice Connect to serial port to view prints and logging info find the appropriate port with ls /dev/ttyACM* connect using GNU screen or whatever you like to use e.</description>
     </item>
     
     <item>
       <title>Prof. Collin&#39;s Three Laws of Engineering</title>
-      <link>//chenbrian.ca/posts/2022/three-laws-of-engineering/</link>
+      <link>//chenbrian.ca/posts/three-laws-of-engineering/</link>
       <pubDate>Thu, 20 Jan 2022 03:26:06 -0500</pubDate>
       
-      <guid>//chenbrian.ca/posts/2022/three-laws-of-engineering/</guid>
+      <guid>//chenbrian.ca/posts/three-laws-of-engineering/</guid>
       <description>&amp;ldquo;The only three rules an engineer needs to learn and remember&amp;rdquo; \( F = ma \) You can&amp;rsquo;t push on a rope. To get the answer, you must first know the answer Michael P. Collins
 This, and an appreciation for elegant design (and the various types concrete aggregates used in the pantheon) is what has stuck from when I took CIV102. We were fortunate enough to be the last cohort to take it under Prof.</description>
     </item>
     
     <item>
       <title>Engsci Year 2 Winter</title>
-      <link>//chenbrian.ca/posts/2022/engsci-year-2-winter/</link>
+      <link>//chenbrian.ca/posts/engsci-year-2-winter/</link>
       <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
       
-      <guid>//chenbrian.ca/posts/2022/engsci-year-2-winter/</guid>
+      <guid>//chenbrian.ca/posts/engsci-year-2-winter/</guid>
       <description>// work in progress //
 This browser does not support PDFs. Please download the PDF to view it: Download PDF.
 Or, download here
@@ -53,10 +53,10 @@ ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combi
     
     <item>
       <title>Engsci Y2S1 Exam Review</title>
-      <link>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</link>
+      <link>//chenbrian.ca/posts/engsci-y2s1-exam-review/</link>
       <pubDate>Sat, 11 Dec 2021 22:16:12 -0500</pubDate>
       
-      <guid>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</guid>
+      <guid>//chenbrian.ca/posts/engsci-y2s1-exam-review/</guid>
       <description>Exam &amp;lsquo;cheat sheets&amp;rsquo; for EngSci 2nd year semester fall semester. These were made as part of my own studying for the exams. As 3/6 of my exams were cancelled due to the omicron covid variant, AER210, MAT292, and PHY293 are missing.
 I do not guarantee content correctness &amp;ndash; but if you find a mistake, please let me know!
 CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>

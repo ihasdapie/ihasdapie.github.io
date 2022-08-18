@@ -10,10 +10,10 @@
     <lastBuildDate>Mon, 10 Jan 2022 19:53:48 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Engsci Year 2 Winter</title>
-      <link>//chenbrian.ca/posts/2022/engsci-year-2-winter/</link>
+      <link>//chenbrian.ca/posts/engsci-year-2-winter/</link>
       <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
       
-      <guid>//chenbrian.ca/posts/2022/engsci-year-2-winter/</guid>
+      <guid>//chenbrian.ca/posts/engsci-year-2-winter/</guid>
       <description>// work in progress //
 This browser does not support PDFs. Please download the PDF to view it: Download PDF.
 Or, download here
@@ -23,10 +23,10 @@ ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combi
     
     <item>
       <title>Notes on &#39;Clean Architecture: A Craftsman&#39;s Guide to Software Structure and Design&#39;</title>
-      <link>//chenbrian.ca/posts/2021/clean-architecture-notes/</link>
+      <link>//chenbrian.ca/posts/clean-architecture-notes/</link>
       <pubDate>Sun, 26 Dec 2021 16:39:21 -0500</pubDate>
       
-      <guid>//chenbrian.ca/posts/2021/clean-architecture-notes/</guid>
+      <guid>//chenbrian.ca/posts/clean-architecture-notes/</guid>
       <description>&amp;ldquo;Fight for the architecture&amp;rdquo;
 The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]
 [1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed. USA: Prentice Hall Press, 2017.
@@ -37,10 +37,10 @@ Dijkstra: banishing the goto statement; enforcing control flow; if, else, while,
     
     <item>
       <title>Teaching</title>
-      <link>//chenbrian.ca/posts/2021/teaching/</link>
+      <link>//chenbrian.ca/posts/teaching/</link>
       <pubDate>Sun, 12 Dec 2021 16:49:34 -0500</pubDate>
       
-      <guid>//chenbrian.ca/posts/2021/teaching/</guid>
+      <guid>//chenbrian.ca/posts/teaching/</guid>
       <description>(Currently) all content is in jupyter notebook format and is hosted on my on GitHub at github.com/ihasdapie/teaching. I&amp;rsquo;ve also set up a binder enviroment so that you can work with them interactively by using clicking on this badge: or following this link mybinder.org/v2/gh/ihasdapie/teaching/HEAD
 ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.
 ESC190 Tutorial 1 Tutorial 2 Notes Midterm review (All else currently WIP), see: github.</description>
@@ -48,10 +48,10 @@ ESC190 Tutorial 1 Tutorial 2 Notes Midterm review (All else currently WIP), see:
     
     <item>
       <title>Engsci Y2S1 Exam Review</title>
-      <link>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</link>
+      <link>//chenbrian.ca/posts/engsci-y2s1-exam-review/</link>
       <pubDate>Sat, 11 Dec 2021 22:16:12 -0500</pubDate>
       
-      <guid>//chenbrian.ca/posts/2021/engsci-y2s1-exam-review/</guid>
+      <guid>//chenbrian.ca/posts/engsci-y2s1-exam-review/</guid>
       <description>Exam &amp;lsquo;cheat sheets&amp;rsquo; for EngSci 2nd year semester fall semester. These were made as part of my own studying for the exams. As 3/6 of my exams were cancelled due to the omicron covid variant, AER210, MAT292, and PHY293 are missing.
 I do not guarantee content correctness &amp;ndash; but if you find a mistake, please let me know!
 CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>
