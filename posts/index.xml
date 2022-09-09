@@ -8,6 +8,17 @@
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright><atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Retrospective: Internship @ Open Robotics</title>
+      <link>//chenbrian.ca/posts/osrf-internship-retrospective/</link>
+      <pubDate>Thu, 18 Aug 2022 01:20:00 -0700</pubDate>
+      
+      <guid>//chenbrian.ca/posts/osrf-internship-retrospective/</guid>
+      <description>I spent the past summer at Open Robotics, a non-profit organization that spawned 1 and maintains ROS, ROS2 (Robot Operating System) and the Gazebo simulator. I worked as a software engineering intern working largely on the ROS2 ecosystem
+Figured you would want it in 3rd person.
+Brian Chen is a 3rd year undergrad student at the University of Toronto studying Engineering Science with a major in Electrical and Computer Engineering. At school he helps lead aUToronto, UofT&amp;rsquo;s self-driving car team where he tries his best to help a car figure out how to drive themselves in the scary real-life world of roads and intersections filled with pedestrians and inconsistent signage.</description>
+    </item>
+    
+    <item>
       <title>aUToronto</title>
       <link>//chenbrian.ca/posts/autoronto/</link>
       <pubDate>Mon, 25 Jul 2022 01:36:21 -0700</pubDate>
