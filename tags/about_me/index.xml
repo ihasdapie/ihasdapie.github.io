@@ -7,18 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Thu, 18 Aug 2022 01:20:00 -0700</lastBuildDate><atom:link href="//chenbrian.ca/tags/about_me/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Retrospective: Internship @ Open Robotics</title>
-      <link>//chenbrian.ca/posts/osrf-internship-retrospective/</link>
-      <pubDate>Thu, 18 Aug 2022 01:20:00 -0700</pubDate>
-      
-      <guid>//chenbrian.ca/posts/osrf-internship-retrospective/</guid>
-      <description>I spent the past summer at Open Robotics, a non-profit organization that spawned 1 and maintains ROS, ROS2 (Robot Operating System) and the Gazebo simulator. I worked as a software engineering intern working largely on the ROS2 ecosystem
-Figured you would want it in 3rd person.
-Brian Chen is a 3rd year undergrad student at the University of Toronto studying Engineering Science with a major in Electrical and Computer Engineering. At school he helps lead aUToronto, UofT&amp;rsquo;s self-driving car team where he tries his best to help a car figure out how to drive themselves in the scary real-life world of roads and intersections filled with pedestrians and inconsistent signage.</description>
-    </item>
-    
+    <lastBuildDate>Fri, 21 Jan 2022 18:31:20 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/about_me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Writing a resume with LaTeX</title>
       <link>//chenbrian.ca/posts/latex-resume/</link>
@@ -38,7 +27,7 @@ Cut down on icons to improve pdf-to-text conversion Change to a single-column la
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>//chenbrian.ca/about/</guid>
-      <description>What am I up to right now? SWE Intern at Open Source Robotics Foundation See: My blog post Software system co-lead @ aUToronto: Automated testing &amp;amp; evaluation of autonomous vehicles, deep learning acceleration with TensorRT, CI/CD, and more! Research @ ISML: I work with accelerating machine learning tasks on memristor crossbars &amp;ndash; first author paper pending submission Web dev &amp;amp; data collection for BC Parks Foundation: currently in private beta Side Projects TA-ing intro programming (ESC180) and data structures &amp;amp; algorithms (ESC190) Trying to make it through university!</description>
+      <description>What am I up to right now? SWE Intern at Open Source Robotics Foundation Software system co-lead @ aUToronto: Trajectory motion planning, automated testing &amp;amp; evaluation of autonomous vehicles, deep learning acceleration with TensorRT, CI/CD, and more! Research @ ISML: I work with accelerating machine learning tasks on memristor crossbars &amp;ndash; first author paper pending submission Web dev &amp;amp; data collection for BC Parks Foundation: currently in private beta Side Projects TA-ing intro programming (ESC180) and data structures &amp;amp; algorithms (ESC190) Trying to make it through university!</description>
     </item>
     
     <item>
@@ -47,9 +36,8 @@ Cut down on icons to improve pdf-to-text conversion Change to a single-column la
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//chenbrian.ca/</guid>
-      <description>Hi, I&amp;rsquo;m Brian and I&amp;rsquo;m a student, software developer, and pokemon go enthusiast &amp;hellip; and let&amp;rsquo;s put a face to the name as well
-I&amp;rsquo;m an Engineering Science student at the University of Toronto majoring in Computer Engineering, who is passionate about making cool stuff and learning more about the world we live in. When I&amp;rsquo;m not cramming for school, I enjoy cooking and playing badminton.
-While you&amp;rsquo;re here, why don&amp;rsquo;t you check out my about me page?</description>
+      <description>Hi, I&amp;rsquo;m Brian and I&amp;rsquo;m a student, software developer, and pokemon go enthusiast I&amp;rsquo;m an Engineering Science student at the University of Toronto majoring in Computer Engineering. Outside of school, I&amp;rsquo;m passionate about making cool stuff and learning more about the world we live in. When I&amp;rsquo;m not cramming for school, I enjoy cooking and playing badminton.
+While you&amp;rsquo;re here, why don&amp;rsquo;t you check out my about me page, or read more about some projects I&amp;rsquo;ve worked on?</description>
     </item>
     
   </channel>

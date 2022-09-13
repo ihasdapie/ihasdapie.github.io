@@ -2,23 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//chenbrian.ca/tags/about_me/</loc>
-    <lastmod>2022-09-09T01:29:19-04:00</lastmod>
+    <loc>//chenbrian.ca/tags/linux/</loc>
+    <lastmod>2022-08-18T01:18:42-07:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/programming/</loc>
     <lastmod>2022-09-12T22:03:29-04:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/posts/osrf-internship-retrospective/</loc>
-    <lastmod>2022-09-09T01:29:19-04:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/tags/robots/</loc>
-    <lastmod>2022-09-09T01:29:19-04:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/posts/autoronto/</loc>
-    <lastmod>2022-08-18T01:18:42-07:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/tags/linux/</loc>
-    <lastmod>2022-08-18T01:18:42-07:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/kwin_choppy_fix/</loc>
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
@@ -53,6 +41,9 @@
     <loc>//chenbrian.ca/posts/pi-pico-on-linux/</loc>
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
   </url><url>
+    <loc>//chenbrian.ca/tags/about_me/</loc>
+    <lastmod>2022-09-12T22:08:32-04:00</lastmod>
+  </url><url>
     <loc>//chenbrian.ca/posts/latex-resume/</loc>
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
   </url><url>
@@ -72,6 +63,9 @@
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/ros2_terminal_workflow/</loc>
+    <lastmod>2022-08-18T01:18:42-07:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/tags/robots/</loc>
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/vim/</loc>
@@ -96,12 +90,12 @@
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/about/</loc>
-    <lastmod>2022-09-09T01:29:19-04:00</lastmod>
+    <lastmod>2022-09-12T22:08:32-04:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/categories/</loc>
   </url><url>
     <loc>//chenbrian.ca/</loc>
-    <lastmod>2022-06-14T23:10:30-07:00</lastmod>
+    <lastmod>2022-09-12T22:08:32-04:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/</loc>
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
