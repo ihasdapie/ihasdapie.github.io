@@ -79,7 +79,7 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2021-12-13">Dec 13, 2021</time>,&nbsp;Last Modified:
-    <time datetime="2022-08-18">Aug 18, 2022</time>
+    <time datetime="2022-09-12">Sep 12, 2022</time>
     <br>
     
     Tags &#x5b;
@@ -97,8 +97,28 @@ if (!doNotTrack) {
 <h2 id="overview">Overview</h2>
 <p><strong><a href="//chenbrian.ca/tags/projects/">Browse projects by tag</a></strong></p>
 <ul>
-<li>
-<p><a href="https://grocercheck.ca/">GrocerCheck</a>: <a href="https://github.com/GrocerCheck/GrocerCheck"><code>Github</code></a>, <a href="#grocercheck-pitch-deck">Pitch Deck</a>  A website to help people reduce contact at grocery stores and essential services.  Got some press coverage too!</p>
+<li><a href="https://www.ros.org/">ROS</a>: Worked on the open-source Robot Operating System (ROS)[^ros] as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their <a href="https://www.nasa.gov/viper/">VIPER</a> lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.
+<ul>
+<li>ROS is essentially the <a href="http://www.cse.sc.edu/~jokane/agitr/">de-facto</a> standard for writing robot software and can be found in Roombas, <a href="http://wiki.ros.org/Robots/Spot">spot</a>, industrial robot arms, and even in <a href="https://www.openrobotics.org/blog/2022/2/2/rosinspace">space</a></li>
+<li><a href="#osrf-intern-presentation">Intern Presentation Slides</a></li>
+<li><a href="https://github.com/ros-infrastructure/rep/pull/360">REP2012: Service Introspection</a>: Enabling service introspection, i.e. allowing for <code>ros2 service echo</code> and <code>ros2 bag record --services</code>. This highly requested feature has been absent from ROS since the introduction of ROS services in ~2011 and I&rsquo;m excited to have been able to help make it a reality. See <a href="https://github.com/ros2/ros2/issues/1285">meta-ticket</a>
+<ul>
+<li>Lots of changes to <a href="https://github.com/ros2/rcl/pull/997"><code>rcl</code></a> core ROS library and <a href="https://github.com/ros2/rosidl/pull/700"><code>rosidl</code></a> (and <a href="https://github.com/ros2/rosidl_typesupport/pull/127">associated libs</a>) code generation pipeline plus implementing support in <a href="https://github.com/ros2/rclpy/pull/988"><code>rclpy</code></a> and <a href="https://github.com/ros2/rclcpp/pull/1985"><code>rclcpp</code></a> client libraries and adding <a href="https://github.com/ros2/ros2cli/pull/745">tooling</a></li>
+<li>Helped introduce mypy compliance in rclpy, <a href="https://github.com/ros2/rclpy/pull/959">ParameterClient</a>, fixing race conditions in certain edge cases when shutting down an <code>rclpy</code> node, lots of miscellaneous maintenance tickets, and improving test coverage</li>
+<li>Wrote a vim plugin for the <a href="http://www.alcyone.com/software/empy/">empy</a> templating engine: <a href="https://github.com/ihasdapie/empy.vim">ihasdapie/empy.vim</a></li>
+<li>I ♡ <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">FOSS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://www.autodrive.utoronto.ca/">aUToronto</a>, UofT&rsquo;s self-driving car team: I&rsquo;ve been a part of this team since 2020 and in doing so have worn many hats. Here are some of them:
+<ul>
+<li>Trajectory motion planning lead: designed, implemented, and deployed local trajectory motion planning algorithms to generate kinematically feasible trajectories using hybrid A*</li>
+<li>DLA lead, creating a inference engine to run YOLOv5 in real-time across 4 cameras with <a href="https://github.com/NVIDIA/TensorRT/">TensorRT</a></li>
+<li>Simulation &amp; Testing co-lead, working on automated integration testing &amp; associated ROS/ROS2 tooling Demo <a href="#autotest-autoronto">below</a></li>
+</ul>
+</li>
+<li><a href="https://grocercheck.ca/">GrocerCheck</a>: <a href="https://github.com/GrocerCheck/GrocerCheck"><code>Github</code></a>, <a href="#grocercheck-pitch-deck">Pitch Deck</a>  A website to help people reduce contact at grocery stores and essential services.  Got some press coverage too!
 <ul>
 <li><a href="https://www.cbc.ca/news/canada/british-columbia/bc-youth-entrepreneurs-covid19-1.5784637">CBC Piece</a></li>
 <li><a href="https://ici.radio-canada.ca/nouvelle/1746337/emploi-pandemie-entrepreneuriat-bakd-grocercheck">CBC Piece, but in French</a></li>
@@ -110,35 +130,29 @@ if (!doNotTrack) {
 <li><a href="https://www.fairchildtv.com/">Fairchild TV</a>: Interview broadcast on national Chinese TV</li>
 </ul>
 </li>
-<li>
-<p><a href="https://www.autodrive.utoronto.ca/">aUToronto</a>: Simulation &amp; Testing co-lead, working on automated integration testing &amp; associated ROS/ROS2 tooling Demo <a href="#autotest-autoronto">below</a>.</p>
-</li>
-<li>
-<p><a href="https://github.com/btrnt">btrnt</a>: <code>&quot;Bot or not&quot;</code>: A chrome extension that implements <a href="http://gltr.io/">GLTR</a> to use machine learning to detect and combat AI-generated text. Demo <a href="#btrnt">below</a>.</p>
-</li>
-<li>
-<p><a href="https://github.com/UTMIST/humerus">The Humerus Bot</a> A bot that leverages large NLP ML models to play <a href="https://www.cardsagainsthumanity.com/">Cards against Humanity</a>, a popular humor-based card game. Demo <a href="#humerus">below</a>.</p>
-</li>
-<li>
-<p><a href="https://chenbrian.ca/posts/2021/12/go-web-server/">gws</a>: A simple web server implemented in 111 lines of <code>go</code> used for serving my personal website. <a href="https://github.com/ihasdapie/gws"><code>Github</code></a></p>
-</li>
-<li>
-<p><a href="https://github.com/ihasdapie/dotfiles">dotfiles</a>: Config files I spend too much time on.</p>
-</li>
-<li>
-<p><a href="https://github.com/GrocerCheck/LivePopularTimes">LivePopularTimes</a> GrocerCheck backend data collection library</p>
-</li>
-<li>
-<p><a href="https://github.com/ihasdapie/bettermotherfuckinghugowebsite/">bettermotherfuckinghugowebsite</a> A minimal <a href="https://gohugo.io">hugo</a> template inspired by <a href="http://bettermotherfuckingwebsite.com/">http://bettermotherfuckingwebsite.com/</a> &ndash; now with modern conveniences.</p>
-</li>
-<li>
-<p>BC Parks Foundation: &lsquo;discoverparks&rsquo; platform currently in public alpha.</p>
-</li>
-<li>
-<p>And more!</p>
-</li>
+<li><a href="https://github.com/btrnt">btrnt</a>: <code>&quot;Bot or not&quot;</code>: A chrome extension that implements <a href="http://gltr.io/">GLTR</a> to use machine learning to detect and combat AI-generated text. Demo <a href="#btrnt">below</a>.</li>
+<li><a href="https://github.com/UTMIST/humerus">The Humerus Bot</a> A bot that leverages large NLP ML models to play <a href="https://www.cardsagainsthumanity.com/">Cards against Humanity</a>, a popular humor-based card game. Demo <a href="#humerus">below</a>.</li>
+<li><a href="https://chenbrian.ca/posts/2021/12/go-web-server/">gws</a>: A simple web server implemented in 111 lines of <code>go</code> used for serving my personal website. <a href="https://github.com/ihasdapie/gws"><code>Github</code></a></li>
+<li><a href="https://github.com/ihasdapie/dotfiles">dotfiles</a>: Config files I spend too much time on.</li>
+<li><a href="https://github.com/GrocerCheck/LivePopularTimes">LivePopularTimes</a> GrocerCheck backend data collection library</li>
+<li><a href="https://github.com/ihasdapie/bettermotherfuckinghugowebsite/">bettermotherfuckinghugowebsite</a> A minimal <a href="https://gohugo.io">hugo</a> template inspired by <a href="http://bettermotherfuckingwebsite.com/">http://bettermotherfuckingwebsite.com/</a> &ndash; now with modern conveniences.</li>
+<li>BC Parks Foundation: &lsquo;discoverparks&rsquo; platform currently in public alpha.</li>
+<li>And more!</li>
 </ul>
 <h2 id="demos">Demos:</h2>
+<h4 id="osrf-intern-presentation">OSRF Intern Presentation</h4>
+<object data="osrf_intern_pres.pdf#toolbar=0&navpanes=0" type="application/pdf" width=100% height="700px">
+    <embed src="osrf_intern_pres.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="osrf_intern_pres.pdf">Download PDF</a>.</p>
+    </object>
+</object>
+
+
+
+
+
+
+
 <h4 id="grocercheck-cbc-interview">GrocerCheck CBC Interview</h4>
 <p><div>
     <video src="cbc_piece.webm" width=100% controls loop preload="metadata">
