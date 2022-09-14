@@ -105,11 +105,10 @@ Figured I would try to get JupyterHub going on it, maybe with a c kernel for my 
       <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/engsci-year-2-winter/</guid>
-      <description>// work in progress //
-This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.
 Or, download here
 Notes prior to reading week can be found below. Right before reading week my roommate introduced me to the NotesTeX template and I&amp;rsquo;m currently using that.
-ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combining probabilities Outcomes denoted by variables, i.e. for coin clip \( H \), \( T \).</description>
+ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combining probabilities Outcomes denoted by variables, i.e. for coin clip \( H \), \( T \). Probability of outcome is denoted by \( P(X) \), where \( X \) is the outcome.</description>
     </item>
     
     <item>
