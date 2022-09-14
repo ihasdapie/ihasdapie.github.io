@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//chenbrian.ca/tags/engsci/</loc>
+    <lastmod>2022-09-14T19:06:36-04:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/posts/engsci-year-3-fall/</loc>
+    <lastmod>2022-09-14T19:06:36-04:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/tags/notes/</loc>
+    <lastmod>2022-09-14T19:06:36-04:00</lastmod>
+  </url><url>
     <loc>//chenbrian.ca/tags/linux/</loc>
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
   </url><url>
@@ -16,9 +25,6 @@
   </url><url>
     <loc>//chenbrian.ca/tags/</loc>
     <lastmod>2022-06-14T23:10:30-07:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/tags/engsci/</loc>
-    <lastmod>2022-09-14T19:05:14-04:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/individual.utoronto/</loc>
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
@@ -54,9 +60,6 @@
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/engsci-year-2-winter/</loc>
-    <lastmod>2022-09-14T19:05:14-04:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/tags/notes/</loc>
     <lastmod>2022-09-14T19:05:14-04:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/some-poems/</loc>
