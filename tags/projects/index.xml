@@ -32,6 +32,17 @@ Cut down on icons to improve pdf-to-text conversion Change to a single-column la
     </item>
     
     <item>
+      <title>&#34;The Endless River&#34;, or me, myself, and editing my `init.vim`</title>
+      <link>//chenbrian.ca/posts/endless-neovim/</link>
+      <pubDate>Thu, 13 Jan 2022 13:35:35 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/endless-neovim/</guid>
+      <description>/* work in progress */
+My first text editor was the one used in my highschool intro to cs class, geany &amp;ndash; which is a wonderful lightweight development environment &amp;ndash; and is, in my opinion, an excellent first editor because of its&amp;rsquo; simple yet powerful interface, cross-platform compatibility, and support for most relevant languages.
+The Beginning But, at the time, my laptop was a 11.6&amp;quot; chromebook with 16GB of eMMC storage and kitted out with a CPU less capable than most budget modern phones.</description>
+    </item>
+    
+    <item>
       <title>Projects</title>
       <link>//chenbrian.ca/posts/projects/</link>
       <pubDate>Mon, 13 Dec 2021 21:03:35 -0500</pubDate>
@@ -40,7 +51,7 @@ Cut down on icons to improve pdf-to-text conversion Change to a single-column la
       <description>// Page under construction //
 &amp;ldquo;If you built a project and did not write about it, did you really build a project?&amp;rdquo;
 Overview Browse projects by tag
-ROS: Worked on the open-source Robot Operating System (ROS)[^ros] as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their VIPER lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.</description>
+ROS: Worked on the open-source Robot Operating System (ROS) as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their VIPER lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.</description>
     </item>
     
     <item>

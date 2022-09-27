@@ -60,6 +60,7 @@ if (!doNotTrack) {
             <a href="/about/">about</a> &nbsp;
             <a href="/posts/">posts</a> &nbsp;
             <a href="/tags/">tags</a> &nbsp;
+            <a href="/posts/projects">projects</a> &nbsp;
             <a href="https://github.com/ihasdapie">github</a> &nbsp;
         </div>
     </h1>
@@ -92,7 +93,10 @@ if (!doNotTrack) {
 <article>
     <h2 id="what-am-i-up-to-right-now">What am I up to right now?</h2>
 <ul>
-<li>Just wrapped an SWE internship @ <a href="https://www.openrobotics.org/">Open Source Robotics Foundation</a></li>
+<li>Just wrapped an SWE internship @ <a href="https://www.openrobotics.org/">Open Source Robotics Foundation</a>, which was pretty cool because I got to work on ROS2 and Gazebo &ndash; robotics libraries I deal with everyday at aUToronto.
+My main project was working on <a href="https://github.com/ros-infrastructure/rep/pull/360">REP2012: Service Introspection</a>, which is a standards-track REP &amp; accompanying reference implementation which will &ndash; after ~11 years &ndash; finally let users run things like <code>ros2 service echo</code> or <code>ros2 bag record --services</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. I&rsquo;m looking forwards to this feature being available for everyone in <a href="https://docs.ros.org/en/humble/Releases/Release-Iron-Irwini.html">ROS2 Iron Irwini</a></li>
+</ul>
+<ul>
 <li>Trajectory motion planning sub-team lead @ <a href="https://www.autodrive.utoronto.ca/">aUToronto</a>: This year I&rsquo;m working on trajectory motion planning for our vehicles. In previous years I&rsquo;ve led sub-teams for automated testing &amp; evaluation of autonomous vehicles, deep learning acceleration with TensorRT, CI/CD, simulation, and more!</li>
 <li><a href="//chenbrian.ca/posts/teaching/">TA</a>-ing intro programming (ESC180) and data structures &amp; algorithms (ESC190)</li>
 <li><a href="//chenbrian.ca/tags/notes/">Obsessively making pretty notes in \( \LaTeX \)</a></li>
@@ -102,8 +106,12 @@ if (!doNotTrack) {
 <ul>
 <li>Research @ <a href="https://www.eecg.utoronto.ca/~roman/">ISML</a>: I work with accelerating machine learning tasks on memristor crossbars &ndash; first author paper under review</li>
 <li>Web dev &amp; data collection for <a href="https://bcparksfoundation.ca/">BC Parks Foundation</a>: currently in private beta</li>
+<li>Helping people shop for groceries more safely during COVID-19 with <a href="https://grocercheck.ca/">grocercheck.ca</a></li>
 <li><a href="//chenbrian.ca/posts/projects/">And more</a></li>
 </ul>
+<blockquote>
+<p>For more details, see my <a href="//chenbrian.ca/posts/projects/">projects page</a> or <a href="#connect-with-me">contact me</a></p>
+</blockquote>
 <h2 id="resume">Resume</h2>
 <object data="../resume.pdf#toolbar=0&navpanes=0" type="application/pdf" width=100% height="700px">
     <embed src="../resume.pdf">
@@ -134,16 +142,18 @@ if (!doNotTrack) {
 <p>My GitHub contributions graph</p>
 </blockquote>
 <h2 id="connect-with-me">Connect with me:</h2>
-<p><a href="https://instagram.com/brianschicken">Check out my cooking instagram</a></p>
-<p><a href="https://github.com/ihasdapie">Check out my projects on Github</a></p>
-<p><a href="https://linkedin.com/in/brianchen28914">Connect with me on LinkedIn</a></p>
-<p>Email at <code>brianchen.chen (at) mail.utoronto.ca</code></p>
+<ul>
+<li><a href="https://github.com/ihasdapie">Check out my projects on Github</a></li>
+<li><a href="https://linkedin.com/in/brianchen28914">Connect with me on LinkedIn</a></li>
+<li><a href="https://instagram.com/brianschicken">Check out my cooking instagram</a></li>
+<li>Email at <code>brianchen.chen (at) mail.utoronto.ca</code></li>
+</ul>
 <h2 id="misc">Misc</h2>
 <blockquote>
 <p>Q: How can you tell if someone uses Linux?<br>
 A: They&rsquo;ll tell you.</p>
 </blockquote>
-<p>I&rsquo;m currently on Manjaro! <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>I&rsquo;m currently on Manjaro! <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <blockquote>
 <p>Q: How can you tell if a programmer uses Vim?<br>
 A: You guessed it &ndash; they&rsquo;ll tell you.</p>
@@ -153,7 +163,10 @@ A: You guessed it &ndash; they&rsquo;ll tell you.</p>
 <hr>
 <ol>
 <li id="fn:1">
-<p>Been meaning to switch to vanilla Arch for <em>years</em> but my current setup 1) works and 2) isn&rsquo;t broken yet. Maybe when I get a new machine.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>For those who don&rsquo;t do robotics, here&rsquo;s a <a href="https://www.merriam-webster.com/dictionary/TL%3BDR">TLDR</a>. ROS is a way for different robots to talk to each other. One way they can talk over ROS is through a <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">publisher-subscriber</a> model. Another way that they can communicate in ROS is via a <a href="https://en.wikipedia.org/wiki/Client%E2%80%93server_model">service-client</a> model. There exists support for recording pub-sub interactions and <em>introspecting</em> them, but not for services &ndash; which is what REP2012 proposes and implements. I&rsquo;m excited about this because it&rsquo;s a huge quality of life improvement for anyone using ROS2 services and it&rsquo;s really a core piece of functionality that has somehow been overlooked prior.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Been meaning to switch to vanilla Arch for <em>years</em> but my current setup 1) works and 2) isn&rsquo;t broken yet. Maybe when I get a new machine.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>

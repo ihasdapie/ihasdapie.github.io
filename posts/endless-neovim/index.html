@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta lang="en">
 
-    <title>http://individual.utoronto.ca/chenbrian/ </title>
+    <title>&#34;The Endless River&#34;, or me, myself, and editing my `init.vim` </title>
 
     <style>*{box-sizing:border-box}body{margin:40px auto;max-width:800px;line-height:1.6;font-size:16px;color:#444;font-family:sans-serif;padding:0 10px}h1,h2,h3{line-height:1.2;font-family:sans-serif;color:#444}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:16px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}td,th{border:1px solid #444;padding:.5rem;text-align:left}@media only screen and (max-width:1450px){#back_to_top{visibility:visible!important}#toc{display:none}}.katex-display>.katex{overflow:auto hidden}.katex .katex-html>.newline{display:block;padding-bottom:.25em;padding-top:.25em}#toc{position:fixed;top:40px;right:0;padding-right:10%;line-height:1.4em;max-width:30%;margin:auto}#back_to_top{position:fixed;top:10px;right:10px;width:100px;visibility:hidden}blockquote{background:#f1f1f1;border-left:4px solid #ccc;padding-left:8px}code:not([class*=language-]){border-radius:.25rem;padding:.1rem;background-color:#f8f8f8;color:#863109}code{width:100px;overflow:auto;word-wrap:normal;white-space:pre}p+ul,p+ol,ul+ol,ol+ul{margin-top:-10px}ul,ol,li{padding-left:.5 em}a.footnote-ref::before{content:'['}a.footnote-ref::after{content:']'} 
             body {
@@ -78,12 +78,20 @@ if (!doNotTrack) {
 
 <div id="content">
         
+            <aside id="back_to_top">
+            <a href="#">Back to top</a>
+            </aside>
+        
         <section>
             
                 <div id="toc">
     <h4>Table of Contents</h4>
     <aside>
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-neovim">Why <code>neovim</code>?</a></li>
+  </ul>
+</nav>
     </aside>
 </div>
 
@@ -93,7 +101,7 @@ if (!doNotTrack) {
 
             
         <header>
-    <h1><a href="http://individual.utoronto.ca/chenbrian/">http://individual.utoronto.ca/chenbrian/</a></h1>
+    <h1>&ldquo;The Endless River&rdquo;, or me, myself, and editing my <code>init.vim</code></h1>
     
 
 
@@ -102,26 +110,68 @@ if (!doNotTrack) {
 
 <div class="post-meta">
     Date:
-    <time datetime="2022-02-22">Feb 22, 2022</time>,&nbsp;Last Modified:
-    <time datetime="2022-08-18">Aug 18, 2022</time>
+    <time datetime="2022-01-13">Jan 13, 2022</time>,&nbsp;Last Modified:
+    <time datetime="2022-09-27">Sep 27, 2022</time>
     <br>
     
     Tags &#x5b;
-    <a href="//chenbrian.ca/tags/engsci/">engsci</a>
-    <a href="//chenbrian.ca/tags/other/">other</a>
+    <a href="//chenbrian.ca/tags/vim/">vim</a>
+    <a href="//chenbrian.ca/tags/projects/">projects</a>
     &#x5d;
 </div>
 
 </header>
 <article>
-    <p>Turns out UofT students/faculty/etc can host a free personal site (<code>50mb</code> max) in <a href="http://individual.utoronto.ca/">individual.utoronto.ca</a>.
-This process is also entirely undocumented.</p>
-<ol>
-<li>Claim it through UTORid management <a href="https://www.utorid.utoronto.ca/cgi-bin/utorid/info.pl">here</a></li>
-<li>Connect to it through a <code>ftp</code> client. If you go back into the UTORid info page it will tell you what address to use for <code>ftp</code> which looks something like <code>ftp://yourutorid@individual.utoronto.ca</code> I just used <code>dolphin</code>&rsquo;s built in support for network drives to upload the files</li>
-<li>Upload files through ftp and enjoy!</li>
-</ol>
-<p>I just made mine redirect back to here: <a href="http://individual.utoronto.ca/chenbrian/">http://individual.utoronto.ca/chenbrian/</a>. Might put something more interesting up later&hellip;</p>
+    <blockquote>
+<p>/* work in progress */</p>
+</blockquote>
+<p>
+
+
+ <img loading="lazy" src="img/nvim_dashboard.png" alt="nvim_dashboard"  />
+
+</p>
+<p>My first text editor was the one used in my highschool intro to cs class, <a href="https://www.geany.org/">geany</a> &ndash; which is a wonderful lightweight development environment &ndash; and is, in my opinion, an excellent first editor because of its&rsquo; simple yet powerful interface, cross-platform compatibility, and support for most relevant languages.</p>
+<h1 id="the-beginning">The Beginning</h1>
+<p>But, at the time, my laptop was a 11.6&quot; chromebook with 16GB of eMMC storage and kitted out with a CPU less capable than most budget modern phones.
+Needless to say it was quite the beast of a machine, and by beast I mean it was about as beastly as an anemic worm.</p>
+<p>
+
+
+ <img loading="lazy" src="img/image_2022-09-27-00-29-30.png" alt="image_2022-09-27-00-29-30"  />
+
+</p>
+<blockquote>
+<p>Note the <a href="https://www.stickermule.com/ca/unixstickers">unix stickers</a></p>
+</blockquote>
+<p>However, I really loved that thing; I had stickerbombed it and flashed it with <a href="https://galliumos.org/">galliumOS</a> (a hacky process involving removing the physical <a href="https://chromium.googlesource.com/chromiumos/docs/+/master/write_protection.md">hardware write protect screw</a>) as to get a full Linux environment.
+Also, the battery life was great and the minimal resources lead me to value efficient code and programs &ndash; as well as push me into <em>really</em> using the terminal.</p>
+<p>
+
+
+ <img loading="lazy" src="img/image_2022-09-27-00-29-22.png" alt="image_2022-09-27-00-29-22"  />
+
+</p>
+<blockquote>
+<p>I&rsquo;m a fan of sticker-bombing my devices. It&rsquo;s like a graffiti tag, but for nerds. Someday I&rsquo;ll show off my current laptop&rsquo;s stickers, but it&rsquo;s still yet to be retired.</p>
+</blockquote>
+<p>And so because of hardware limitations and a programming teacher (<a href="http://arkiletian.com/cs1/about/">Mr. Ark</a>), who is a huge vim fan and didn&rsquo;t give us mice in the computer lab, I picked up vim.</p>
+<h1 id="the-quest">The Quest</h1>
+<blockquote>
+<p>The process, from starting out with a premade one, to making my own, to neovim, and so forth.</p>
+</blockquote>
+<h1 id="enlightenment">Enlightenment</h1>
+<blockquote>
+<p>Talk about integration with other tools; Linux is my IDE. And talk about stability i.e. not touching the <code>.vimrc</code> for a while (commit frequency graph?)</p>
+</blockquote>
+<h2 id="why-neovim">Why <code>neovim</code>?</h2>
+<ul>
+<li><a href="https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118">grok vi</a></li>
+</ul>
+<h1 id="implements-of-mass-destruction">Implements of Mass Destruction</h1>
+<blockquote>
+<p>Some plugins and tools I like</p>
+</blockquote>
 
 </article>
 

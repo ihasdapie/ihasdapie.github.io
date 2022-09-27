@@ -60,6 +60,7 @@ if (!doNotTrack) {
             <a href="/about/">about</a> &nbsp;
             <a href="/posts/">posts</a> &nbsp;
             <a href="/tags/">tags</a> &nbsp;
+            <a href="/posts/projects">projects</a> &nbsp;
             <a href="https://github.com/ihasdapie">github</a> &nbsp;
         </div>
     </h1>
@@ -80,7 +81,7 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2021-12-13">Dec 13, 2021</time>,&nbsp;Last Modified:
-    <time datetime="2022-09-12">Sep 12, 2022</time>
+    <time datetime="2022-09-27">Sep 27, 2022</time>
     <br>
     
     Tags &#x5b;
@@ -98,10 +99,11 @@ if (!doNotTrack) {
 <h2 id="overview">Overview</h2>
 <p><strong><a href="//chenbrian.ca/tags/projects/">Browse projects by tag</a></strong></p>
 <ul>
-<li><a href="https://www.ros.org/">ROS</a>: Worked on the open-source Robot Operating System (ROS)[^ros] as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their <a href="https://www.nasa.gov/viper/">VIPER</a> lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.
+<li><a href="https://www.ros.org/">ROS</a>: Worked on the open-source Robot Operating System (ROS) as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their <a href="https://www.nasa.gov/viper/">VIPER</a> lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.
 <ul>
-<li>ROS is essentially the <a href="http://www.cse.sc.edu/~jokane/agitr/">de-facto</a> standard for writing robot software and can be found in Roombas, <a href="http://wiki.ros.org/Robots/Spot">spot</a>, industrial robot arms, and even in <a href="https://www.openrobotics.org/blog/2022/2/2/rosinspace">space</a></li>
+<li>ROS is essentially the <a href="http://www.cse.sc.edu/~jokane/agitr/">de-facto</a> standard for writing robot software and can be found in Roombas, Boston Dynamic&rsquo;s <a href="http://wiki.ros.org/Robots/Spot">spot</a>, industrial robot arms, and even in <a href="https://www.openrobotics.org/blog/2022/2/2/rosinspace">space</a>!</li>
 <li><a href="#osrf-intern-presentation">Intern Presentation Slides</a></li>
+<li><a href="https://youtu.be/3qIYnQmpa1Q?t=2501">Presentation at August 2022 Gazebo Community Meeting</a></li>
 <li><a href="https://github.com/ros-infrastructure/rep/pull/360">REP2012: Service Introspection</a>: Enabling service introspection, i.e. allowing for <code>ros2 service echo</code> and <code>ros2 bag record --services</code>. This highly requested feature has been absent from ROS since the introduction of ROS services in ~2011 and I&rsquo;m excited to have been able to help make it a reality. See <a href="https://github.com/ros2/ros2/issues/1285">meta-ticket</a>
 <ul>
 <li>Lots of changes to <a href="https://github.com/ros2/rcl/pull/997"><code>rcl</code></a> core ROS library and <a href="https://github.com/ros2/rosidl/pull/700"><code>rosidl</code></a> (and <a href="https://github.com/ros2/rosidl_typesupport/pull/127">associated libs</a>) code generation pipeline plus implementing support in <a href="https://github.com/ros2/rclpy/pull/988"><code>rclpy</code></a> and <a href="https://github.com/ros2/rclcpp/pull/1985"><code>rclcpp</code></a> client libraries and adding <a href="https://github.com/ros2/ros2cli/pull/745">tooling</a></li>
@@ -154,6 +156,8 @@ if (!doNotTrack) {
 
 
 
+<h4 id="osrf-intern-presentation-demo">OSRF Intern Presentation Demo</h4>
+<iframe width="750" height="500" src="https://www.youtube.com/embed/3qIYnQmpa1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h4 id="grocercheck-cbc-interview">GrocerCheck CBC Interview</h4>
 <p><div>
     <video src="cbc_piece.webm" width=100% controls loop preload="metadata">

@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Tue, 04 Jan 2022 04:23:20 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Jan 2022 13:35:35 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&#34;The Endless River&#34;, or me, myself, and editing my `init.vim`</title>
+      <link>//chenbrian.ca/posts/endless-neovim/</link>
+      <pubDate>Thu, 13 Jan 2022 13:35:35 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/endless-neovim/</guid>
+      <description>/* work in progress */
+My first text editor was the one used in my highschool intro to cs class, geany &amp;ndash; which is a wonderful lightweight development environment &amp;ndash; and is, in my opinion, an excellent first editor because of its&amp;rsquo; simple yet powerful interface, cross-platform compatibility, and support for most relevant languages.
+The Beginning But, at the time, my laptop was a 11.6&amp;quot; chromebook with 16GB of eMMC storage and kitted out with a CPU less capable than most budget modern phones.</description>
+    </item>
+    
     <item>
       <title>My terminal-centric workflow for ROS 2</title>
       <link>//chenbrian.ca/posts/ros2_terminal_workflow/</link>

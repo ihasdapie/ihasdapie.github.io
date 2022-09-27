@@ -13,8 +13,9 @@
       <pubDate>Wed, 14 Sep 2022 17:40:49 -0400</pubDate>
       
       <guid>//chenbrian.ca/posts/engsci-year-3-fall/</guid>
-      <description>This semester I&amp;rsquo;m trying to do it all in \( \LaTeX \). There should be an embedded pdf viewer below, but if it doesn&amp;rsquo;t work, you can download the pdf here
-This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+      <description>This semester I&amp;rsquo;m trying to do it all in \( \LaTeX \). There should be an embedded pdf viewer below, but if it doesn&amp;rsquo;t work1, you can download the pdf here
+This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+This usually the case on mobile devices&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
     </item>
     
     <item>
@@ -110,6 +111,17 @@ Figured I would try to get JupyterHub going on it, maybe with a c kernel for my 
     </item>
     
     <item>
+      <title>&#34;The Endless River&#34;, or me, myself, and editing my `init.vim`</title>
+      <link>//chenbrian.ca/posts/endless-neovim/</link>
+      <pubDate>Thu, 13 Jan 2022 13:35:35 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/endless-neovim/</guid>
+      <description>/* work in progress */
+My first text editor was the one used in my highschool intro to cs class, geany &amp;ndash; which is a wonderful lightweight development environment &amp;ndash; and is, in my opinion, an excellent first editor because of its&amp;rsquo; simple yet powerful interface, cross-platform compatibility, and support for most relevant languages.
+The Beginning But, at the time, my laptop was a 11.6&amp;quot; chromebook with 16GB of eMMC storage and kitted out with a CPU less capable than most budget modern phones.</description>
+    </item>
+    
+    <item>
       <title>Engsci Year 2 Winter</title>
       <link>//chenbrian.ca/posts/engsci-year-2-winter/</link>
       <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
@@ -176,7 +188,7 @@ Dijkstra: banishing the goto statement; enforcing control flow; if, else, while,
       <description>// Page under construction //
 &amp;ldquo;If you built a project and did not write about it, did you really build a project?&amp;rdquo;
 Overview Browse projects by tag
-ROS: Worked on the open-source Robot Operating System (ROS)[^ros] as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their VIPER lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.</description>
+ROS: Worked on the open-source Robot Operating System (ROS) as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their VIPER lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.</description>
     </item>
     
     <item>
@@ -231,7 +243,7 @@ There&amp;rsquo;s also some cute figlet art</description>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>//chenbrian.ca/about/</guid>
-      <description>What am I up to right now? Just wrapped an SWE internship @ Open Source Robotics Foundation Trajectory motion planning sub-team lead @ aUToronto: This year I&amp;rsquo;m working on trajectory motion planning for our vehicles. In previous years I&amp;rsquo;ve led sub-teams for automated testing &amp;amp; evaluation of autonomous vehicles, deep learning acceleration with TensorRT, CI/CD, simulation, and more! TA-ing intro programming (ESC180) and data structures &amp;amp; algorithms (ESC190) Obsessively making pretty notes in \( \LaTeX \) Trying to make it through university!</description>
+      <description>What am I up to right now? Just wrapped an SWE internship @ Open Source Robotics Foundation, which was pretty cool because I got to work on ROS2 and Gazebo &amp;ndash; robotics libraries I deal with everyday at aUToronto. My main project was working on REP2012: Service Introspection, which is a standards-track REP &amp;amp; accompanying reference implementation which will &amp;ndash; after ~11 years &amp;ndash; finally let users run things like ros2 service echo or ros2 bag record --services1.</description>
     </item>
     
   </channel>

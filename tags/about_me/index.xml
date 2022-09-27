@@ -27,7 +27,7 @@ Cut down on icons to improve pdf-to-text conversion Change to a single-column la
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>//chenbrian.ca/about/</guid>
-      <description>What am I up to right now? Just wrapped an SWE internship @ Open Source Robotics Foundation Trajectory motion planning sub-team lead @ aUToronto: This year I&amp;rsquo;m working on trajectory motion planning for our vehicles. In previous years I&amp;rsquo;ve led sub-teams for automated testing &amp;amp; evaluation of autonomous vehicles, deep learning acceleration with TensorRT, CI/CD, simulation, and more! TA-ing intro programming (ESC180) and data structures &amp;amp; algorithms (ESC190) Obsessively making pretty notes in \( \LaTeX \) Trying to make it through university!</description>
+      <description>What am I up to right now? Just wrapped an SWE internship @ Open Source Robotics Foundation, which was pretty cool because I got to work on ROS2 and Gazebo &amp;ndash; robotics libraries I deal with everyday at aUToronto. My main project was working on REP2012: Service Introspection, which is a standards-track REP &amp;amp; accompanying reference implementation which will &amp;ndash; after ~11 years &amp;ndash; finally let users run things like ros2 service echo or ros2 bag record --services1.</description>
     </item>
     
     <item>
