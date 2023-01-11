@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Wed, 14 Sep 2022 17:40:49 -0400</lastBuildDate><atom:link href="//chenbrian.ca/tags/engsci/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Jan 2023 15:28:52 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/engsci/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Engsci Year 3 Winter</title>
+      <link>//chenbrian.ca/posts/engsci-year-3-winter/</link>
+      <pubDate>Wed, 11 Jan 2023 15:28:52 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/engsci-year-3-winter/</guid>
+      <description>I&amp;rsquo;ve come to realize that some courses lend themselves to Latex&amp;rsquo;d notes better than others. The following contains notes for:
+ECE353: Operating Systems CSC473: Advanced Algorithms This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+Or, download here</description>
+    </item>
+    
     <item>
       <title>Engsci Year 3 Fall Notes</title>
       <link>//chenbrian.ca/posts/engsci-year-3-fall/</link>
