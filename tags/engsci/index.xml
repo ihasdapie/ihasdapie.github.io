@@ -14,7 +14,7 @@
       <pubDate>Wed, 11 Jan 2023 15:28:52 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/engsci-year-3-winter/</guid>
-      <description>I&amp;rsquo;ve come to realize that some courses lend themselves to Latex&amp;rsquo;d notes better than others. The following contains notes for:
+      <description>I&amp;rsquo;ve come to realize that some courses lend themselves to Latex&amp;rsquo;d notes better than others. The following pdf contains notes for:
 ECE353: Operating Systems CSC473: Advanced Algorithms ECE568: Computer security Note that all of these were taken during class and as such are somewhat stream-of-consciousness.
 This browser does not support PDFs. Please download the PDF to view it: Download PDF.
 Or, download here</description>
@@ -35,12 +35,12 @@ Or, download here</description>
       <pubDate>Tue, 22 Feb 2022 02:52:00 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/individual.utoronto/</guid>
-      <description>Turns out UofT students/faculty/etc can host a free personal site (50mb max) in individual.utoronto.ca. This process is also entirely undocumented.
+      <description>Turns out UofT students/faculty/etc can host a free personal site (50mb max) in individual.utoronto.ca through an until-now seemingly entirely undocumented process.
 Claim it through UTORid management here Connect to it through a ftp client. If you go back into the UTORid info page it will tell you what address to use for ftp which looks something like ftp://yourutorid@individual.utoronto.ca I just used dolphin&amp;rsquo;s built in support for network drives to upload the files Upload files through ftp and enjoy!</description>
     </item>
     
     <item>
-      <title>Pi Pico on Linux</title>
+      <title>interfacing with a pi pico on linux</title>
       <link>//chenbrian.ca/posts/pi-pico-on-linux/</link>
       <pubDate>Thu, 27 Jan 2022 23:08:10 -0500</pubDate>
       
@@ -55,8 +55,10 @@ Install CircuitPython by copying .uf2 file into the Pi Pico, which can be done b
       <pubDate>Thu, 20 Jan 2022 03:26:06 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/three-laws-of-engineering/</guid>
-      <description>&amp;ldquo;The only three rules an engineer needs to learn and remember&amp;rdquo; \( F = ma \) You can&amp;rsquo;t push on a rope. To get the answer, you must first know the answer Michael P. Collins
-This, and an appreciation for elegant design (and the various types concrete aggregates used in the pantheon) is what has stuck from when I took CIV102. We were fortunate enough to be the last cohort to take it under Prof.</description>
+      <description>&amp;ldquo;The only three rules an engineer needs to learn and remember&amp;rdquo; \( F = ma \) You can&amp;rsquo;t push on a rope. To get the answer, you must first know the answer Michael P. Collins 1
+If I remember anything from my degree it might be the above three laws and the pursuit of elegance in design 2
+source
+We were fortunate enough to be the last cohort to take it under Prof.</description>
     </item>
     
     <item>

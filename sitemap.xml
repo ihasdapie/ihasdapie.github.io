@@ -2,23 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//chenbrian.ca/tags/programming/</loc>
+    <lastmod>2023-01-26T03:23:53-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/tags/robots/</loc>
+    <lastmod>2023-01-26T03:23:53-05:00</lastmod>
+  </url><url>
+    <loc>//chenbrian.ca/posts/ros2_m1/</loc>
+    <lastmod>2023-01-26T03:23:53-05:00</lastmod>
+  </url><url>
     <loc>//chenbrian.ca/tags/engsci/</loc>
-    <lastmod>2023-01-25T01:24:16-05:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/engsci-year-3-winter/</loc>
-    <lastmod>2023-01-25T01:24:16-05:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/notes/</loc>
-    <lastmod>2023-01-25T01:24:16-05:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/engsci-year-3-fall/</loc>
     <lastmod>2022-12-19T04:37:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/linux/</loc>
-    <lastmod>2022-08-18T01:18:42-07:00</lastmod>
-  </url><url>
-    <loc>//chenbrian.ca/tags/programming/</loc>
-    <lastmod>2022-10-02T00:28:12-04:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/kwin_choppy_fix/</loc>
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
@@ -30,43 +36,43 @@
     <lastmod>2022-06-14T23:10:30-07:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/individual.utoronto/</loc>
-    <lastmod>2022-12-10T02:46:40-05:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/other/</loc>
-    <lastmod>2022-12-19T04:37:44-05:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/wayland_toggle_touchscreen/</loc>
-    <lastmod>2022-08-18T01:18:42-07:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/conway.3js/</loc>
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/fun/</loc>
-    <lastmod>2022-12-19T04:37:44-05:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/projects/</loc>
-    <lastmod>2022-09-27T01:04:00-04:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/pi-pico-on-linux/</loc>
-    <lastmod>2022-08-18T01:18:42-07:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/about_me/</loc>
-    <lastmod>2023-01-26T01:00:41-05:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/latex-resume/</loc>
-    <lastmod>2022-09-27T01:04:00-04:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/three-laws-of-engineering/</loc>
-    <lastmod>2022-08-18T01:18:42-07:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/jupyterhub-rpi-binder/</loc>
-    <lastmod>2022-08-18T01:18:42-07:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/endless-neovim/</loc>
     <lastmod>2022-09-27T01:04:00-04:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/tags/vim/</loc>
-    <lastmod>2022-10-02T00:28:12-04:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/engsci-year-2-winter/</loc>
     <lastmod>2022-09-14T19:05:14-04:00</lastmod>
@@ -74,17 +80,14 @@
     <loc>//chenbrian.ca/posts/some-poems/</loc>
     <lastmod>2022-12-19T04:37:44-05:00</lastmod>
   </url><url>
-    <loc>//chenbrian.ca/tags/robots/</loc>
-    <lastmod>2022-10-02T00:28:12-04:00</lastmod>
-  </url><url>
     <loc>//chenbrian.ca/posts/ros2_lsp_setup/</loc>
-    <lastmod>2022-10-02T00:28:12-04:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/clean-architecture-notes/</loc>
-    <lastmod>2022-08-18T01:18:42-07:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/projects/</loc>
-    <lastmod>2022-09-27T01:04:00-04:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/teaching/</loc>
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
@@ -93,20 +96,20 @@
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/aoc2021/</loc>
-    <lastmod>2022-08-18T01:18:42-07:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/go-web-server/</loc>
     <lastmod>2022-08-18T01:18:42-07:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/about/</loc>
-    <lastmod>2022-09-27T01:04:00-04:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/categories/</loc>
   </url><url>
     <loc>//chenbrian.ca/</loc>
-    <lastmod>2023-01-26T01:00:41-05:00</lastmod>
+    <lastmod>2023-01-26T03:20:44-05:00</lastmod>
   </url><url>
     <loc>//chenbrian.ca/posts/</loc>
-    <lastmod>2022-12-10T02:45:54-05:00</lastmod>
+    <lastmod>2023-01-26T03:23:53-05:00</lastmod>
   </url>
 </urlset>

@@ -8,12 +8,22 @@
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright><atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>ros2 rolling on apple silicon</title>
+      <link>//chenbrian.ca/posts/ros2_m1/</link>
+      <pubDate>Sat, 21 Jan 2023 18:59:53 -0500</pubDate>
+      
+      <guid>//chenbrian.ca/posts/ros2_m1/</guid>
+      <description>It works! 1 I got a shiny new macbook and was sad that I had to dual-boot into Asahi (which is actually a surprisingly robust experience at the time of writing) to do ROS2 work. So I did the only sensible thing and spent the better part of a day making ros2 build on an m1 mac on MacOS Ventura.
+I&amp;rsquo;d like to report that ros2 runs flawlessly on apple silicon with some caveats (see below).</description>
+    </item>
+    
+    <item>
       <title>Engsci Year 3 Winter</title>
       <link>//chenbrian.ca/posts/engsci-year-3-winter/</link>
       <pubDate>Wed, 11 Jan 2023 15:28:52 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/engsci-year-3-winter/</guid>
-      <description>I&amp;rsquo;ve come to realize that some courses lend themselves to Latex&amp;rsquo;d notes better than others. The following contains notes for:
+      <description>I&amp;rsquo;ve come to realize that some courses lend themselves to Latex&amp;rsquo;d notes better than others. The following pdf contains notes for:
 ECE353: Operating Systems CSC473: Advanced Algorithms ECE568: Computer security Note that all of these were taken during class and as such are somewhat stream-of-consciousness.
 This browser does not support PDFs. Please download the PDF to view it: Download PDF.
 Or, download here</description>
@@ -53,7 +63,7 @@ source Also, this is entirely anecdotal but it appears to me that setting KWIN_T
       <pubDate>Tue, 22 Feb 2022 02:52:00 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/individual.utoronto/</guid>
-      <description>Turns out UofT students/faculty/etc can host a free personal site (50mb max) in individual.utoronto.ca. This process is also entirely undocumented.
+      <description>Turns out UofT students/faculty/etc can host a free personal site (50mb max) in individual.utoronto.ca through an until-now seemingly entirely undocumented process.
 Claim it through UTORid management here Connect to it through a ftp client. If you go back into the UTORid info page it will tell you what address to use for ftp which looks something like ftp://yourutorid@individual.utoronto.ca I just used dolphin&amp;rsquo;s built in support for network drives to upload the files Upload files through ftp and enjoy!</description>
     </item>
     
@@ -63,7 +73,7 @@ Claim it through UTORid management here Connect to it through a ftp client. If y
       <pubDate>Mon, 07 Feb 2022 15:23:04 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/wayland_toggle_touchscreen/</guid>
-      <description>Back when I was still on X11 1 , I had this little bash script to toggle my touchscreen on/off since I didn&amp;rsquo;t use it all that often except to sign the occasional PDF, and it sucked up power2.
+      <description>Back when I was still on X11 1 , I had this little bash script to toggle my touchscreen on/off, since I didn&amp;rsquo;t use it all that often except to sign the occasional PDF. And it sucked up power2.
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 #!/usr/bin/bash # toggles touchscreen on x11-based systems isOn=&amp;#34;$(xinput --list-props &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; | grep &amp;#39;Device Enabled&amp;#39;)&amp;#34; isOn=&amp;#34;${isOn: -1}&amp;#34; if [ $isOn -eq 0 ]; then xinput set-prop &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; &amp;#39;Device Enabled&amp;#39; 1 echo &amp;#34;Turning touchscreen on!</description>
     </item>
     
@@ -78,7 +88,7 @@ Claim it through UTORid management here Connect to it through a ftp client. If y
     </item>
     
     <item>
-      <title>Pi Pico on Linux</title>
+      <title>interfacing with a pi pico on linux</title>
       <link>//chenbrian.ca/posts/pi-pico-on-linux/</link>
       <pubDate>Thu, 27 Jan 2022 23:08:10 -0500</pubDate>
       
@@ -93,8 +103,7 @@ Install CircuitPython by copying .uf2 file into the Pi Pico, which can be done b
       <pubDate>Fri, 21 Jan 2022 18:31:20 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/latex-resume/</guid>
-      <description>Let&amp;rsquo;s face it &amp;ndash; \( \LaTeX \)) is unequivocally cooler than Word. And you want an unequivocally cool resume as well.
-So you tried altacv, but it always got absolutely chewed up by ATS systems.
+      <description>Let&amp;rsquo;s face it &amp;ndash; \( \LaTeX \)) is unequivocally cooler than Word. And you want an unequivocally cool resume. So you tried altacv, but it always got absolutely chewed up by ATS systems.
 And so you yearned for a 🌠cool🥶 single-column layout, but you couldn&amp;rsquo;t find one.
 I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
 Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Disabling word wrapping and hyphenation Various changes to \makecvevent, etc.</description>
@@ -106,8 +115,10 @@ Cut down on icons to improve pdf-to-text conversion Change to a single-column la
       <pubDate>Thu, 20 Jan 2022 03:26:06 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/three-laws-of-engineering/</guid>
-      <description>&amp;ldquo;The only three rules an engineer needs to learn and remember&amp;rdquo; \( F = ma \) You can&amp;rsquo;t push on a rope. To get the answer, you must first know the answer Michael P. Collins
-This, and an appreciation for elegant design (and the various types concrete aggregates used in the pantheon) is what has stuck from when I took CIV102. We were fortunate enough to be the last cohort to take it under Prof.</description>
+      <description>&amp;ldquo;The only three rules an engineer needs to learn and remember&amp;rdquo; \( F = ma \) You can&amp;rsquo;t push on a rope. To get the answer, you must first know the answer Michael P. Collins 1
+If I remember anything from my degree it might be the above three laws and the pursuit of elegance in design 2
+source
+We were fortunate enough to be the last cohort to take it under Prof.</description>
     </item>
     
     <item>
@@ -116,7 +127,7 @@ This, and an appreciation for elegant design (and the various types concrete agg
       <pubDate>Sun, 16 Jan 2022 00:44:40 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/jupyterhub-rpi-binder/</guid>
-      <description>TLDR; I wanted to do something with this Raspberry Pi 4 I had lying around.
+      <description>I wanted to do something with this Raspberry Pi 4 I had lying around.
 Figured I would try to get JupyterHub going on it, maybe with a c kernel for my students to use. Turns out there are a few issues getting jupyterhub built for ARMv7. Anyhow the primary thing is that the rust toolchain must be installed in order to build the cryptography python module, and that when installing in a docker container the --sys-prefix must be passed to install_c_kernel.</description>
     </item>
     
@@ -170,7 +181,7 @@ Look up &amp;ndash; your brains begin to swim,</description>
       <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/ros2_lsp_setup/</guid>
-      <description>This is a work in progress
+      <description>TLDR: you want code completions while working with ROS2
 LSP with clangd ROS2 puts its headers into /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. This doesn&amp;rsquo;t work out of the box with my fairly default clangd setup, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.
 For vscode setup, see this or this</description>
     </item>
@@ -183,8 +194,7 @@ For vscode setup, see this or this</description>
       <guid>//chenbrian.ca/posts/clean-architecture-notes/</guid>
       <description>&amp;ldquo;Fight for the architecture&amp;rdquo;
 The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]
-[1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed. USA: Prentice Hall Press, 2017.
-Paradigms Main paradigms:
+1 [1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed. USA: Prentice Hall Press, 2017. Paradigms Main paradigms:
 Structured: Discipline on direct transfer of control
 Dijkstra: banishing the goto statement; enforcing control flow; if, else, while, for &amp;hellip; Enabling functional decomposition; applying mathematical divide-and-conquer approach to algorithms Testing can only prove a program false but not correct Structured programming breaks down to provable chunks Object-oriented: Discipline on indirect transfer of control</description>
     </item>

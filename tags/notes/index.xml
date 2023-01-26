@@ -14,7 +14,7 @@
       <pubDate>Wed, 11 Jan 2023 15:28:52 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/engsci-year-3-winter/</guid>
-      <description>I&amp;rsquo;ve come to realize that some courses lend themselves to Latex&amp;rsquo;d notes better than others. The following contains notes for:
+      <description>I&amp;rsquo;ve come to realize that some courses lend themselves to Latex&amp;rsquo;d notes better than others. The following pdf contains notes for:
 ECE353: Operating Systems CSC473: Advanced Algorithms ECE568: Computer security Note that all of these were taken during class and as such are somewhat stream-of-consciousness.
 This browser does not support PDFs. Please download the PDF to view it: Download PDF.
 Or, download here</description>
@@ -49,8 +49,7 @@ ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combi
       <guid>//chenbrian.ca/posts/clean-architecture-notes/</guid>
       <description>&amp;ldquo;Fight for the architecture&amp;rdquo;
 The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]
-[1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed. USA: Prentice Hall Press, 2017.
-Paradigms Main paradigms:
+1 [1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed. USA: Prentice Hall Press, 2017. Paradigms Main paradigms:
 Structured: Discipline on direct transfer of control
 Dijkstra: banishing the goto statement; enforcing control flow; if, else, while, for &amp;hellip; Enabling functional decomposition; applying mathematical divide-and-conquer approach to algorithms Testing can only prove a program false but not correct Structured programming breaks down to provable chunks Object-oriented: Discipline on indirect transfer of control</description>
     </item>

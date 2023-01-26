@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta lang="en">
+
+    <title>ros2 rolling on apple silicon </title>
+
+    <style>*{box-sizing:border-box}body{margin:40px auto;max-width:800px;line-height:1.6;font-size:16px;color:#444;font-family:sans-serif;padding:0 10px}h1,h2,h3{line-height:1.2;font-family:sans-serif;color:#444}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:16px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}td,th{border:1px solid #444;padding:.5rem;text-align:left}@media only screen and (max-width:1450px){#back_to_top{visibility:visible!important}#toc{display:none}}.katex-display>.katex{overflow:auto hidden}.katex .katex-html>.newline{display:block;padding-bottom:.25em;padding-top:.25em}#toc{position:fixed;top:40px;right:0;padding-right:10%;line-height:1.4em;max-width:30%;margin:auto}#back_to_top{position:fixed;top:10px;right:10px;width:100px;visibility:hidden}blockquote{background:#f1f1f1;border-left:4px solid #ccc;padding-left:8px}code:not([class*=language-]){border-radius:.25rem;padding:.1rem;background-color:#f8f8f8;color:#863109}code{width:100px;overflow:auto;word-wrap:normal;white-space:pre}p+ul,p+ol,ul+ol,ol+ul{margin-top:-10px}ul,ol,li{padding-left:.5 em}a.footnote-ref::before{content:'['}a.footnote-ref::after{content:']'} 
+            body {
+                margin-left: 15%;   
+            }
+            @media only screen and (max-width: 1450px) {
+                body {
+                    margin: 40px auto;
+                }
+            }
+
+        
+
+
+
+
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-B0ZFV4LTG2', { 'anonymize_ip': false });
+}
+</script>
+
+
+    
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#33b884">
+<meta name="msapplication-TileColor" content="#33b884">
+<meta name="theme-color" content="#33b884">
+
+
+
+</head>
+
+<body>
+<div class="header">
+    <h1>
+        <a href="//chenbrian.ca">chenbrian</a>
+        <div class="header-menu">
+            <a href="/about/">about</a> &nbsp;
+            <a href="/posts/">posts</a> &nbsp;
+            <a href="/tags/">tags</a> &nbsp;
+            <a href="/posts/projects">projects</a> &nbsp;
+            <a href="https://github.com/ihasdapie">github</a> &nbsp;
+        </div>
+    </h1>
+</div>
+
+<div id="content">
+        
+        <section>
+            
+                <div id="toc">
+    <h4>Table of Contents</h4>
+    <aside>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#it-works-1">It works! </a></li>
+    <li><a href="#lets-get-started">Let&rsquo;s get started</a>
+      <ul>
+        <li><a href="#1-use-direnvhttpsdirenvnet-itll-make-your-life-easier">1. Use <a href="https://direnv.net">direnv</a>. It&rsquo;ll make your life easier.</a></li>
+        <li><a href="#2-create-a-python-virtual-environment">2. Create a python virtual environment.</a></li>
+        <li><a href="#3-tell-direnv-to-use-the-virtual-environment">3. Tell direnv to use the virtual environment</a></li>
+        <li><a href="#4-install-python-dependencies">4. Install python dependencies</a></li>
+        <li><a href="#5-deal-with-graphviz">5. Deal with graphviz</a></li>
+        <li><a href="#6-system-dependencies">6. System dependencies</a></li>
+        <li><a href="#7-install-some-patched-brew-packages">7. Install some patched brew packages</a></li>
+        <li><a href="#8-patch-python_cmake_module">8. Patch <code>python_cmake_module</code></a></li>
+        <li><a href="#8-deal-with-qt">8. Deal with <code>Qt</code></a></li>
+        <li><a href="#9-deal-with-ogre">9. Deal with Ogre</a></li>
+        <li><a href="#10-deal-with-orocos">10. Deal with <code>orocos</code></a></li>
+        <li><a href="#11-fix-pybind11_vendor">11. Fix <code>pybind11_vendor</code></a></li>
+        <li><a href="#12-ros-controlrealtime_tools">12. <code>ros-control/realtime_tools</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#caveats">Caveats</a></li>
+  </ul>
+</nav>
+    </aside>
+</div>
+
+
+
+
+
+            
+        <header>
+    <h1>ros2 rolling on apple silicon</h1>
+    
+
+
+
+
+
+<div class="post-meta">
+    Date:
+    <time datetime="2023-01-21">Jan 21, 2023</time>,&nbsp;Last Modified:
+    <time datetime="2023-01-26">Jan 26, 2023</time>
+    <br>
+    
+    Tags &#x5b;
+    <a href="//chenbrian.ca/tags/programming/">programming</a>
+    <a href="//chenbrian.ca/tags/robots/">robots</a>
+    &#x5d;
+</div>
+
+</header>
+<article>
+    <h2 id="it-works-1">It works! <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h2>
+<blockquote>
+<p>I got a shiny new macbook and was sad that I had to dual-boot into Asahi (which is actually a surprisingly robust experience at the time of writing) to do ROS2 work. So I did the only sensible thing and spent the better part of a day making <code>ros2</code> build on an m1 mac on MacOS Ventura.</p>
+</blockquote>
+<p>I&rsquo;d like to report that <code>ros2</code> runs <em>flawlessly</em> on apple silicon with some caveats (see below).
+But for most use cases it&rsquo;s amazing to work with and ridiculously fast. For reference, building aUToronto&rsquo;s planning stack on my old i7-8550u laptop took between 5-10 minutes, Asahi 48 seconds, and <em>18.5</em> seconds on MacOS!</p>
+<p>
+
+
+ <img loading="lazy" src="img/rviz.png" alt="rviz"  />
+
+</p>
+<blockquote>
+<p>rviz!</p>
+</blockquote>
+<p>
+
+
+ <img loading="lazy" src="img/image_2023-01-26-01-36-50.png" alt="image_2023-01-26-01-36-50"  />
+
+</p>
+<blockquote>
+<p>talker and listener in action</p>
+</blockquote>
+<h2 id="lets-get-started">Let&rsquo;s get started</h2>
+<p>I&rsquo;m going to assume you&rsquo;ve read <a href="https://docs.ros.org/en/rolling/Installation/Maintaining-a-Source-Checkout.html">how to maintain a source checkout of ROS2</a> and are familiar with how to create a workspace and the folder structure and all that. If not &ndash; go read it!</p>
+<p>Here&rsquo;s the build command to use:</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>colcon build<span style="color:#b62;font-weight:bold">\ </span>
+</span></span><span style="display:flex;"><span>--mixin compile-commands ccache <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># optional, see https://github.com/colcon/colcon-mixin-repository</span>
+</span></span><span style="display:flex;"><span>--event-handlers console_cohesion+ status+ summary+ terminal_title+ console_package_list+ <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># print things out nicer</span>
+</span></span><span style="display:flex;"><span>--cmake-args --no-warn-unused-cli <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>    -DPython_EXECUTABLE<span style="color:#666">=</span>/Users/PATH/TO/PYTHON/VENV/bin/python <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># modify this to suit your needs. Or just use $(which python3) if you have your virtualenv activated</span>
+</span></span><span style="display:flex;"><span>    -DPython_FIND_VIRTUALENV<span style="color:#666">=</span>ONLY <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>    -DCMAKE_FIND_FRAMEWORK<span style="color:#666">=</span>LAST <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># I don&#39;t recall the specific reason but it doesn&#39;t work without it. IIRC it had something to do with the system frameworks conflicting with the packages we are building and the pyenv python.</span>
+</span></span><span style="display:flex;"><span>    -DBUILD_TESTING<span style="color:#666">=</span>ON <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># not needed. I wanted to make sure ros2 worked.</span>
+</span></span><span style="display:flex;"><span>    -DINSTALL_EXAMPLES<span style="color:#666">=</span>ON <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># not needed as well. I wanted to make sure ros2 worked.</span>
+</span></span><span style="display:flex;"><span>    -DCMAKE_BUILD_TYPE<span style="color:#666">=</span>RelWithDebInfo <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># Feel free to use Release</span>
+</span></span><span style="display:flex;"><span>    -DCMAKE_OSX_SYSROOT<span style="color:#666">=</span>/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>    -DCMAKE_OSX_ARCHITECTURES<span style="color:#666">=</span><span style="color:#b44">&#39;arm64&#39;</span> <span style="color:#b62;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>    -DCMAKE_PREFIX_PATH<span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$(</span>brew --prefix jsoncpp<span style="color:#a2f;font-weight:bold">)</span>/lib:<span style="color:#a2f;font-weight:bold">$(</span>brew --prefix qt@5<span style="color:#a2f;font-weight:bold">)</span>:/opt/homebrew/Cellar/qt@5/5.15.8_1:/opt/homebrew/opt/boost/lib/cmake:/opt/homebrew <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># A bunch of these should actually be $(brew --prefix)/lib but anyhow...</span>
+</span></span><span style="display:flex;"><span>    -DPYTHON_LIBRARY<span style="color:#666">=</span>/Users/YOUR_USERNAME/.pyenv/3.10.9/lib/libpython3.10.dylib <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># you will have to modify this with your username and python version</span>
+</span></span><span style="display:flex;"><span>    -DPYTHON_INCLUDE_DIR<span style="color:#666">=</span>/Users/ihasdapie/.pyenv/versions/3.10.9/include/python3.10 <span style="color:#b62;font-weight:bold">\
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>I like joining all of the above into a single line and making an alias for the build command. Please see comments in why the command is the way it is.</p>
+</blockquote>
+<h3 id="1-use-direnvhttpsdirenvnet-itll-make-your-life-easier">1. Use <a href="https://direnv.net">direnv</a>. It&rsquo;ll make your life easier.</h3>
+<h3 id="2-create-a-python-virtual-environment">2. Create a python virtual environment.</h3>
+<p>Don&rsquo;t use pipenv or poetry, they seem to work poorly with CMAKE. You will want to avoid using your system python but instead a python installed through <code>pyenv</code> to make this virtual environment. This is so to facilitate finding the correct python Framework and so forth.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> pyenv install 3.10.9 <span style="color:#080;font-style:italic"># this is just what I used</span>
+</span></span><span style="display:flex;"><span> pyenv global 3.10.9
+</span></span><span style="display:flex;"><span> python3 -m venv .venv
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-tell-direnv-to-use-the-virtual-environment">3. Tell direnv to use the virtual environment</h3>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#a2f">echo</span> <span style="color:#b44">&#34;source .venv/bin/activate&#34;</span> &gt; .envrc
+</span></span><span style="display:flex;"><span>direnv allow
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4-install-python-dependencies">4. Install python dependencies</h3>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#080;font-style:italic"># We need numpy headers</span>
+</span></span><span style="display:flex;"><span>python -m pip install numpy --no-binary<span style="color:#666">=</span>:all:
+</span></span><span style="display:flex;"><span>python3 -m pip install -U argcomplete catkin_pkg colcon-common-extensions coverage cryptography empy flake8 flake8-blind-except flake8-builtins flake8-class-newline flake8-comprehensions flake8-deprecated flake8-docstrings flake8-import-order flake8-quotes ifcfg importlib-metadata lark-parser lxml mock <span style="color:#b8860b">mypy</span><span style="color:#666">==</span>0.761netifaces nose pep8 pydocstyle pydot <span style="color:#b44">&#34;pyparsing&gt;=2.4,&lt;3&#34;</span> pytest-mock rosdep setuptools vcstool matplotlib psutil rosdistro
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>For reference a <code>pip freeze</code> on my system gives <a href="requirements.txt">requirements.txt</a></p>
+</blockquote>
+<h3 id="5-deal-with-graphviz">5. Deal with graphviz</h3>
+<p>You will likely run into a complant about graphviz. <code>brew install graphviz</code></p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install --global-option<span style="color:#666">=</span>build_ext --global-option<span style="color:#666">=</span><span style="color:#b44">&#34;-I</span><span style="color:#a2f;font-weight:bold">$(</span>brew --prefix graphviz<span style="color:#a2f;font-weight:bold">)</span><span style="color:#b44">/include/&#34;</span> --global-option<span style="color:#666">=</span><span style="color:#b44">&#34;-L</span><span style="color:#a2f;font-weight:bold">$(</span>brew --prefix graphviz<span style="color:#a2f;font-weight:bold">)</span><span style="color:#b44">/lib/&#34;</span> pygraphviz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>You may need to run step 4 again after doing this.</p>
+<h3 id="6-system-dependencies">6. System dependencies</h3>
+<blockquote>
+<p>I probably missed some, but this is what I recall installing. Some might be for some other packages I needed. Please let me know if I missed something.</p>
+</blockquote>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>brew install freeimage pcl opengl gpsd gpatch
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Need to use gpatch instead of macos&rsquo;s built in <code>patch</code> command because a lot of the patches applied to vendored packages fail when using MacOS&rsquo;s patch. Don&rsquo;t ask why, I wouldn&rsquo;t know.</li>
+</ul>
+<h3 id="7-install-some-patched-brew-packages">7. Install some patched brew packages</h3>
+<p>This may not apply to you if you aren&rsquo;t depending on <code>jsoncpp</code> or <code>boost</code> &ndash; but if you are &ndash; there are a few versioning things and other issues that need to be patched. I&rsquo;ve created a tap for this. You will need the fixed <code>Boost</code> packages to build most of the perception packages.
+In any case, on my current system (Ventura 13.1) the system python at time of writing is 3.10.9 and the <code>boost-python3</code> version from homebrew is complaining (since it is built for python3.11).</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew tap ihasdapie/formulas https://github.com/ihasdapie/formulas
+</span></span><span style="display:flex;"><span>brew install ihasdapie/formulas/boost
+</span></span><span style="display:flex;"><span>brew install ihasdapie/formulas/jsoncpp
+</span></span><span style="display:flex;"><span>brew install ihasdapie/formulas/boost-python3
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="8-patch-python_cmake_module">8. Patch <code>python_cmake_module</code></h3>
+<p>There&rsquo;s this absurd issue where <code>python3-config --ldflags</code> doesn&rsquo;t work properly. To get around it I hardcoded a patch pointing it to the absolute path on my system.
+You will have to change <USERNAME> and your python version.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">diff --git a/cmake/Modules/FindPythonExtra.cmake b/cmake/Modules/FindPythonExtra.cmake
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">index 9e18f83..16af911 100644
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold"></span><span style="color:#a00000">--- a/cmake/Modules/FindPythonExtra.cmake
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span><span style="color:#00a000">+++ b/cmake/Modules/FindPythonExtra.cmake
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span><span style="color:#800080;font-weight:bold">@@ -101,6 +101,7 @@ if(PYTHONINTERP_FOUND)
+</span></span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold"></span>           &#34;error code ${_result}&#34;)
+</span></span><span style="display:flex;"><span>       endif()
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#00a000">+      set(_output &#34;-L/Users/&lt;USERNAME&gt;/.pyenv/versions/3.10.9/lib/python3.10/config-3.10-darwin -lpython3.10 -ldl -framework CoreFoundation&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span>       string(REPLACE &#34; &#34; &#34;;&#34; _output_list &#34;${_output}&#34;)
+</span></span><span style="display:flex;"><span>       set(PythonExtra_LIBRARIES
+</span></span><span style="display:flex;"><span>         &#34;&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="8-deal-with-qt">8. Deal with <code>Qt</code></h3>
+<p>Make sure Homebrew qt isn&rsquo;t installed or at least unlink it (CMake gets confused) since homebrew qt is qt6 now. <code>brew install qt@5</code> instead, you will need this for <code>rviz_rendering</code>.
+For some godforsaken reason you will have to bump this to the top of the PATH for CMake to pick up properly. If a Qt-related package fails try <code>export PATH=&quot;/opt/homebrew/opt/qt@5/bin:$PATH&quot;</code>, wiping <code>build/rviz_rendering</code>, building again if this issue happens.</p>
+<p>After getting past <code>rviz_rendering</code> you might be lulled into a false sense of security.
+Fear not, for <code>Qt</code> will rear its ugly head again soon.
+The Homebrew <code>qt@5</code> package is kind of a mess and will look for <code>mkspecs</code> and <code>plugins</code> at an almost malformed path. Fortunately there&rsquo;s an easy workaround via symlinking.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ln -s opt/qt@5/mkspecs /opt/homebrew/mkspecs
+</span></span><span style="display:flex;"><span>ln -s /opt/homebrew/Cellar/qt@5/5.15.8_1/plugins /opt/homebrew/plugins
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>You may have to change the qt version depending on what you have.</p>
+<h3 id="9-deal-with-ogre">9. Deal with Ogre</h3>
+<p>This package pulls in a vendored package. You will have to build once, let it fail, <em>then</em> patch the package living in <code>build/rviz_ogre_vendor</code>, <em>then</em> build again</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">diff --git a/CMakeLists.txt b/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">index faac7e1b..c36877c3 100644
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold"></span><span style="color:#a00000">--- a/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span><span style="color:#00a000">+++ b/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span><span style="color:#800080;font-weight:bold">@@ -120,7 +120,7 @@ macro(build_ogre)
+</span></span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold"></span>     set(OGRE_CXX_FLAGS &#34;${OGRE_CXX_FLAGS} /w /EHsc&#34;)
+</span></span><span style="display:flex;"><span>   elseif(APPLE)
+</span></span><span style="display:flex;"><span>     set(OGRE_CXX_FLAGS &#34;${OGRE_CXX_FLAGS} -std=c++14 -stdlib=libc++ -w&#34;)
+</span></span><span style="display:flex;"><span><span style="color:#a00000">-    list(APPEND extra_cmake_args &#34;-DCMAKE_OSX_ARCHITECTURES=&#39;x86_64&#39;&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span><span style="color:#00a000">+    list(APPEND extra_cmake_args &#34;-DCMAKE_OSX_ARCHITECTURES=&#39;arm64&#39;&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span>   else()  # Linux
+</span></span><span style="display:flex;"><span>     set(OGRE_C_FLAGS &#34;${OGRE_C_FLAGS} -w&#34;)
+</span></span><span style="display:flex;"><span>     # include Clang -Wno-everything to disable warnings in that build. GCC doesn&#39;t mind it
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Above patch is for <code>rviz_ogre_vendor</code>. You just need to tell it to build for arm64.</p>
+</blockquote>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#a00000">--- build/rviz_ogre_vendor/ogre-v1.12.1-prefix/src/ogre-v1.12.1/OgreMain/include/OgrePlatformInformation.h.orig	2021-06-02 16:28:58.000000000 -0400
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span><span style="color:#00a000">+++ build/rviz_ogre_vendor/ogre-v1.12.1-prefix/src/ogre-v1.12.1/OgreMain/include/OgrePlatformInformation.h	2021-06-02 16:30:50.000000000 -0400
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span><span style="color:#800080;font-weight:bold">@@ -50,11 +50,11 @@
+</span></span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold"></span> #   define OGRE_CPU OGRE_CPU_X86
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> #elif OGRE_PLATFORM == OGRE_PLATFORM_APPLE &amp;&amp; defined(__BIG_ENDIAN__)
+</span></span><span style="display:flex;"><span> #   define OGRE_CPU OGRE_CPU_PPC
+</span></span><span style="display:flex;"><span> #elif OGRE_PLATFORM == OGRE_PLATFORM_APPLE
+</span></span><span style="display:flex;"><span><span style="color:#a00000">-#   define OGRE_CPU OGRE_CPU_X86
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span><span style="color:#00a000">+#   define OGRE_CPU OGRE_CPU_ARM
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span> #elif OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS &amp;&amp; (defined(__i386__) || defined(__x86_64__))
+</span></span><span style="display:flex;"><span> #   define OGRE_CPU OGRE_CPU_X86
+</span></span><span style="display:flex;"><span> #elif defined(__arm__) || defined(_M_ARM) || defined(__arm64__) || defined(__aarch64__)
+</span></span><span style="display:flex;"><span> #   define OGRE_CPU OGRE_CPU_ARM
+</span></span><span style="display:flex;"><span> #elif defined(__mips64) || defined(__mips64_)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Above patch is for the vendored package (lives in <code>build/</code>)</p>
+</blockquote>
+<h3 id="10-deal-with-orocos">10. Deal with <code>orocos</code></h3>
+<p>We need to build a few more packages from source and patch a ton of packages. I think there&rsquo;s a missing dependency export or something not propagating properly&hellip;but I haven&rsquo;t looked it through.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/orocos/orocos_kinematics_dynamics --recurse-submodules src/orocos_kinematics_dynamics
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Perform the following patches:</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">diff --git a/orocos_kdl/CMakeLists.txt b/orocos_kdl/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">index a1b335c..721494a 100644
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold"></span><span style="color:#a00000">--- a/orocos_kdl/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span><span style="color:#00a000">+++ b/orocos_kdl/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span><span style="color:#800080;font-weight:bold">@@ -13,6 +13,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.0.2)
+</span></span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold"></span>PROJECT(orocos_kdl)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SET( KDL_VERSION 1.5.1)
+</span></span><span style="display:flex;"><span><span style="color:#00a000">+SET( CMAKE_CXX_STANDARD 11)
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span>STRING( REGEX MATCHALL &#34;[0-9]+&#34; KDL_VERSIONS ${KDL_VERSION} )
+</span></span><span style="display:flex;"><span>LIST( GET KDL_VERSIONS 0 KDL_VERSION_MAJOR)
+</span></span><span style="display:flex;"><span>LIST( GET KDL_VERSIONS 1 KDL_VERSION_MINOR)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">diff --git a/orocos_kdl/CMakeLists.txt b/orocos_kdl/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">index a1b335c..721494a 100644
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold"></span><span style="color:#a00000">--- a/orocos_kdl/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span><span style="color:#00a000">+++ b/orocos_kdl/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span><span style="color:#800080;font-weight:bold">@@ -13,6 +13,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.0.2)
+</span></span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold"></span>PROJECT(orocos_kdl)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SET( KDL_VERSION 1.5.1)
+</span></span><span style="display:flex;"><span><span style="color:#00a000">+SET( CMAKE_CXX_STANDARD 11)
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span>STRING( REGEX MATCHALL &#34;[0-9]+&#34; KDL_VERSIONS ${KDL_VERSION} )
+</span></span><span style="display:flex;"><span>LIST( GET KDL_VERSIONS 0 KDL_VERSION_MAJOR)
+</span></span><span style="display:flex;"><span>LIST( GET KDL_VERSIONS 1 KDL_VERSION_MINOR)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">diff --git a/kdl_parser/package.xml b/kdl_parser/package.xml
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">index 39a02d2..08baa3c 100644
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold"></span><span style="color:#a00000">--- a/kdl_parser/package.xml
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span><span style="color:#00a000">+++ b/kdl_parser/package.xml
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span><span style="color:#800080;font-weight:bold">@@ -23,6 +23,7 @@
+</span></span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold"></span>   &lt;buildtool_depend&gt;ament_cmake_ros&lt;/buildtool_depend&gt;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>   &lt;depend&gt;orocos_kdl_vendor&lt;/depend&gt;
+</span></span><span style="display:flex;"><span><span style="color:#00a000">+  &lt;depend&gt;orocos_kdl&lt;/depend&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span>   &lt;depend&gt;rcutils&lt;/depend&gt;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>   &lt;build_depend&gt;urdf&lt;/build_depend&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">diff --git a/tf2_kdl/package.xml b/tf2_kdl/package.xml
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">index b8ef997..e7b7a98 100644
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold"></span><span style="color:#a00000">--- a/tf2_kdl/package.xml
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span><span style="color:#00a000">+++ b/tf2_kdl/package.xml
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span><span style="color:#800080;font-weight:bold">@@ -16,6 +16,7 @@
+</span></span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold"></span>   &lt;depend&gt;builtin_interfaces&lt;/depend&gt;
+</span></span><span style="display:flex;"><span>   &lt;depend&gt;geometry_msgs&lt;/depend&gt;
+</span></span><span style="display:flex;"><span>   &lt;depend&gt;orocos_kdl_vendor&lt;/depend&gt;
+</span></span><span style="display:flex;"><span><span style="color:#00a000">+  &lt;depend&gt;orocos_kdl&lt;/depend&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span>   &lt;depend&gt;tf2&lt;/depend&gt;
+</span></span><span style="display:flex;"><span>   &lt;depend&gt;tf2_ros&lt;/depend&gt;
+</span></span><span style="display:flex;"><span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>By now you probably get the gist of it &ndash; you&rsquo;ll also have to add a <code>&lt;depend&gt;orocos_kdl&lt;/depend&gt;</code> to <code>tf2_geometry_msgs</code></p>
+<h3 id="11-fix-pybind11_vendor">11. Fix <code>pybind11_vendor</code></h3>
+<p>Disable the windows patch since we&rsquo;re building to macos and bump pybind11 to a newer commit with fixes for python3.11</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span>```diff
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">diff --git a/CMakeLists.txt b/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">index 309a628..f940ae0 100644
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold"></span><span style="color:#a00000">--- a/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span><span style="color:#00a000">+++ b/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span><span style="color:#800080;font-weight:bold">@@ -55,7 +55,7 @@ macro(build_pybind11)
+</span></span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold"></span>   include(ExternalProject)
+</span></span><span style="display:flex;"><span>   ExternalProject_Add(pybind11-2.9.1
+</span></span><span style="display:flex;"><span>     GIT_REPOSITORY https://github.com/pybind/pybind11.git
+</span></span><span style="display:flex;"><span><span style="color:#a00000">-    GIT_TAG ffa346860b306c9bbfb341aed9c14c067751feb8  # v2.9.1
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span><span style="color:#00a000">+    GIT_TAG 42a8e3125348d4e706e46eb410befc1422d42b3f  # v2.9.1
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span>     GIT_CONFIG advice.detachedHead=false
+</span></span><span style="display:flex;"><span>     # Suppress git update due to https://gitlab.kitware.com/cmake/cmake/-/issues/16419
+</span></span><span style="display:flex;"><span>     # See https://github.com/ament/uncrustify_vendor/pull/22 for details
+</span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold">@@ -72,9 +72,6 @@ macro(build_pybind11)
+</span></span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold"></span>     # definitions for Py_DEBUG, which MSVC complains about.  This patch switches
+</span></span><span style="display:flex;"><span>     # the internal pybind11 variable to be called PYBIND11_DEBUG, which avoids
+</span></span><span style="display:flex;"><span>     # the issue.
+</span></span><span style="display:flex;"><span><span style="color:#a00000">-    PATCH_COMMAND
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000">-      ${CMAKE_COMMAND} -E chdir &lt;SOURCE_DIR&gt; git apply -p1 --ignore-space-change --whitespace=nowarn
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000">-        ${CMAKE_CURRENT_SOURCE_DIR}/pybind11-2.9.1-fix-windows-debug.patch
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span>   )
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>   # The external project will install to the build folder, but we&#39;ll install that on make install.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="12-ros-controlrealtime_tools">12. <code>ros-control/realtime_tools</code></h3>
+<p>I needed this package but IIRC it&rsquo;s not in the <code>ros2.repos</code> file. This package uses a syscall not supported on macos &ndash; here&rsquo;s a patch to fix it</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">diff --git a/src/thread_priority.cpp b/src/thread_priority.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold">index 72749e3..4efadb9 100644
+</span></span></span><span style="display:flex;"><span><span style="color:#000080;font-weight:bold"></span><span style="color:#a00000">--- a/src/thread_priority.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span><span style="color:#00a000">+++ b/src/thread_priority.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span><span style="color:#800080;font-weight:bold">@@ -50,7 +50,11 @@ bool configure_sched_fifo(int priority)
+</span></span></span><span style="display:flex;"><span><span style="color:#800080;font-weight:bold"></span>   struct sched_param schedp;
+</span></span><span style="display:flex;"><span>   memset(&amp;schedp, 0, sizeof(schedp));
+</span></span><span style="display:flex;"><span>   schedp.sched_priority = priority;
+</span></span><span style="display:flex;"><span><span style="color:#a00000">-  return !sched_setscheduler(0, SCHED_FIFO, &amp;schedp);
+</span></span></span><span style="display:flex;"><span><span style="color:#a00000"></span><span style="color:#00a000">+#if defined(__APPLE__)
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000">+  return !pthread_setschedparam(pthread_self(), SCHED_FIFO, &amp;schedp);
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000">+#else
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000">+  return !sched_setscheduler(p, SCHED_FIFO, &amp;schedp);
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000">+#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#00a000"></span> }
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> }  // namespace realtime_tools
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="caveats">Caveats</h2>
+<ol>
+<li>
+<p>I cannot confirm if rqt tools work. This is because I did everything with python3.10 but it appears that PySide2 does not support Python3.10. I&rsquo;m trying to build it from source but have not found success. If this is a must for you, you may have to run them on Asahi.</p>
+<ol>
+<li>UPDATE: I&rsquo;m now able to build everything except for <code>qt_gui_cpp</code> and <code>rqt_gui_cpp</code> on Monterey. It appears that <a href="https://github.com/ros-visualization/python_qt_binding/issues/103#issuecomment-1235401057">these patches</a> should fix it, but I haven&rsquo;t tried it out yet.</li>
+<li>UPDATE: bizarrely it appears to build If I build specifically in the following order:
+<ol>
+<li><code>--packages-above python_qt_binding --packages-skip-by-dep qt_gui_cpp rqt_gui_cpp</code>
+2 <code>--packages-above python_qt_binding</code></li>
+</ol>
+</li>
+<li>homebrew <code>PySide2</code> appears to be not working in some way. Also current pyside for Qt5 don&rsquo;t explicitly support Python3.10+, so let&rsquo;s patch and build it from source.
+<ol>
+<li>Make sure you have <code>clang</code> and <code>llvm</code> installed.</li>
+<li>Apply patches <a href="https://code.qt.io/cgit/pyside/pyside-setup.git/commit/sources/shiboken2/libshiboken/pep384impl.cpp?h=v5.15.2.1&amp;id=298cfb2d4a9674ed00b3769fa396a292c075c51c">1</a>, <a href="https://code.qt.io/cgit/pyside/pyside-setup.git/commit/sources/shiboken6/libshiboken/pep384impl.cpp?id=81e9cff884d6b03cdf64a5dd6ec6564d99177e0c">2</a>, <a href="https://raw.githubusercontent.com/FreeCAD/homebrew-freecad/8944b8b362c7fd87c515efb07eb0fb022e946610/patches/libshiboken-numpy-1.23.compat.patch">3</a>,</li>
+<li><code>export PATH=&quot;/opt/homebrew/opt/llvm/bin:$PATH&quot;</code></li>
+<li><code>python3 setup.py build --qmake=$(which qmake)</code></li>
+<li>Now this fails at not being able to find <code>qapp_macro.h</code>. // Work in progress //</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>c++20 support is <a href="https://en.cppreference.com/w/cpp/20">patchy</a> at best in AppleClang, which may be a concern if your project is on <code>c++-20</code>. You can also use <code>g++</code> by installing it with homebrew and then adding these variables to your <code>.envrc</code></p>
+</li>
+</ol>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#a2f">export</span> <span style="color:#b8860b">CXX</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$(</span>which aarch64-apple-darwin22-g++-12<span style="color:#a2f;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">export</span> <span style="color:#b8860b">CC</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$(</span>which aarch64-apple-darwin22-gcc-12<span style="color:#a2f;font-weight:bold">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>as of time of writing&hellip;&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</article>
+
+
+        </section>
+    </div>
+<div class="footer">
+    
+    
+    <div class="footer-links">
+        <a href="https://github.com/ihasdapie">GitHub</a> &nbsp;
+        <a href="https://github.com/ihasdapie/bettermotherfuckinghugowebsite/">Theme</a> &nbsp;
+    </div>
+    
+
+    
+    
+    <div class="copyright">© 2022 — Brian Chen — All rights reserved.</div>
+    
+
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+<div id="wcb" class="carbonbadge"></div>
+
+
+</div>
+
+</body>
+
+</html>

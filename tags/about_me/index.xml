@@ -14,8 +14,7 @@
       <pubDate>Fri, 21 Jan 2022 18:31:20 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/latex-resume/</guid>
-      <description>Let&amp;rsquo;s face it &amp;ndash; \( \LaTeX \)) is unequivocally cooler than Word. And you want an unequivocally cool resume as well.
-So you tried altacv, but it always got absolutely chewed up by ATS systems.
+      <description>Let&amp;rsquo;s face it &amp;ndash; \( \LaTeX \)) is unequivocally cooler than Word. And you want an unequivocally cool resume. So you tried altacv, but it always got absolutely chewed up by ATS systems.
 And so you yearned for a 🌠cool🥶 single-column layout, but you couldn&amp;rsquo;t find one.
 I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
 Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Disabling word wrapping and hyphenation Various changes to \makecvevent, etc.</description>
@@ -27,7 +26,7 @@ Cut down on icons to improve pdf-to-text conversion Change to a single-column la
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>//chenbrian.ca/about/</guid>
-      <description>What am I up to right now? Just wrapped an SWE internship @ Open Source Robotics Foundation, which was pretty cool because I got to work on ROS2 and Gazebo &amp;ndash; robotics libraries I deal with everyday at aUToronto. My main project was working on REP2012: Service Introspection, which is a standards-track REP &amp;amp; accompanying reference implementation which will &amp;ndash; after ~11 years &amp;ndash; finally let users run things like ros2 service echo or ros2 bag record --services1.</description>
+      <description>What am I up to right now? Just wrapped an SWE internship @ Open Source Robotics Foundation Telling cars to drive themselves @ aUToronto TA-ing data structures &amp;amp; algorithms (ESC180/ESC190) Making pretty notes Trying to make it through university! Cool things I worked on in the past Research @ ISML: Accelerating machine learning tasks on memristor crossbars (paper coming soon!) Web dev &amp;amp; data collection for the BC Parks Foundation&amp;rsquo;s DiscoverParks initiative (private beta) Helping people shop for groceries more safely during COVID-19 with grocercheck.</description>
     </item>
     
     <item>
@@ -36,8 +35,8 @@ Cut down on icons to improve pdf-to-text conversion Change to a single-column la
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//chenbrian.ca/</guid>
-      <description>Hi, I&amp;rsquo;m Brian I&amp;rsquo;m an Engineering Science student at the University of Toronto majoring in Computer Engineering. When I&amp;rsquo;m not cramming for school I like to cook, play badminton, and build cool stuff like self-driving cars. Or, in more general terms: I convert bubble tea to spaghetti code1.
-While you&amp;rsquo;re here, why don&amp;rsquo;t you check out my about me page, or read more about some projects I&amp;rsquo;ve worked on? Or, take a look at my blog?</description>
+      <description>Hi, I&amp;rsquo;m Brian And I&amp;rsquo;m an Engineering Science student at the University of Toronto majoring in Computer Engineering and minoring in Robotics. While I&amp;rsquo;m not cramming for school I like to cook, play badminton, and build cool stuff like self-driving cars. In more general terms: I convert bubble tea to spaghetti code1. I also occasionally write posts on my blog, so feel free to check that out too :)
+Quick links Browse by tags Projects Notes 2 Resume Connect with me: Github: github.</description>
     </item>
     
   </channel>

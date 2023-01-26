@@ -14,12 +14,12 @@
       <pubDate>Tue, 22 Feb 2022 02:52:00 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/individual.utoronto/</guid>
-      <description>Turns out UofT students/faculty/etc can host a free personal site (50mb max) in individual.utoronto.ca. This process is also entirely undocumented.
+      <description>Turns out UofT students/faculty/etc can host a free personal site (50mb max) in individual.utoronto.ca through an until-now seemingly entirely undocumented process.
 Claim it through UTORid management here Connect to it through a ftp client. If you go back into the UTORid info page it will tell you what address to use for ftp which looks something like ftp://yourutorid@individual.utoronto.ca I just used dolphin&amp;rsquo;s built in support for network drives to upload the files Upload files through ftp and enjoy!</description>
     </item>
     
     <item>
-      <title>Pi Pico on Linux</title>
+      <title>interfacing with a pi pico on linux</title>
       <link>//chenbrian.ca/posts/pi-pico-on-linux/</link>
       <pubDate>Thu, 27 Jan 2022 23:08:10 -0500</pubDate>
       

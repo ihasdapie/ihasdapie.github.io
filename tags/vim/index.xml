@@ -25,7 +25,7 @@ The Beginning But, at the time, my laptop was a 11.6&amp;quot; chromebook with 1
       <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/ros2_lsp_setup/</guid>
-      <description>This is a work in progress
+      <description>TLDR: you want code completions while working with ROS2
 LSP with clangd ROS2 puts its headers into /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. This doesn&amp;rsquo;t work out of the box with my fairly default clangd setup, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.
 For vscode setup, see this or this</description>
     </item>

@@ -73,14 +73,16 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2022-01-16">Jan 16, 2022</time>,&nbsp;Last Modified:
-    <time datetime="2022-08-18">Aug 18, 2022</time>
+    <time datetime="2023-01-26">Jan 26, 2023</time>
     <br>
     
 </div>
 
 </header>
 <article>
-    <p>TLDR; I wanted to do <em>something</em> with this Raspberry Pi 4 I had lying around.</p>
+    <blockquote>
+<p>I wanted to do <em>something</em> with this Raspberry Pi 4 I had lying around.</p>
+</blockquote>
 <p>Figured I would try to get JupyterHub going on it, maybe with a <code>c</code> kernel for my students to use.
 Turns out there are a few <a href="https://github.com/matrix-org/synapse/issues/9403">issues</a> getting jupyterhub built for ARMv7.
 Anyhow the primary thing is that the <code>rust</code> toolchain must be installed in order to build the <code>cryptography</code> python module, and that when installing in a <code>docker</code> container the <code>--sys-prefix</code> must be passed to <code>install_c_kernel</code>.</p>
@@ -253,7 +255,8 @@ Or you can just provide a <code>Dockerfile</code> that meets <a href="https://my
 </span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">WORKDIR</span><span style="color:#b44"> ${HOME}</span><span style="">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div>
+</div><p>I ended up using this to set up an interactive \( c \) environment for my students to do some practice problems for their final exam with (see <a href="//chenbrian.ca/posts/teaching/">here</a>)</p>
+
 </article>
 
 
