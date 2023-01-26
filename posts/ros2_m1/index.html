@@ -104,6 +104,7 @@ if (!doNotTrack) {
       </ul>
     </li>
     <li><a href="#caveats">Caveats</a></li>
+    <li><a href="#misc">Misc</a></li>
   </ul>
 </nav>
     </aside>
@@ -672,6 +673,7 @@ The Homebrew <code>qt@5</code> package is kind of a mess and will look for <code
 <li><code>export PATH=&quot;/opt/homebrew/opt/llvm/bin:$PATH&quot;</code></li>
 <li><code>python3 setup.py build --qmake=$(which qmake)</code></li>
 <li>Now this fails at not being able to find <code>qapp_macro.h</code>. // Work in progress //</li>
+<li>UPDATE: homebrew just installs pyside in yet another inane location. Add <code>/opt/homebrew/Cellar/pyside@2/5.15.8/lib/python3.10/site-packages</code> to your PYTHONPATH. Now rqt launches but cannot load plugins <a href="https://github.com/ros-visualization/rqt/issues/7">Issue link</a></li>
 </ol>
 </li>
 </ol>
@@ -690,7 +692,11 @@ The Homebrew <code>qt@5</code> package is kind of a mess and will look for <code
 </span></span><span style="display:flex;"><span><span style="color:#a2f">export</span> <span style="color:#b8860b">CC</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$(</span>which aarch64-apple-darwin22-gcc-12<span style="color:#a2f;font-weight:bold">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="footnotes" role="doc-endnotes">
+</div><h2 id="misc">Misc</h2>
+<ul>
+<li>If you get a ton of &ldquo;dylib was built for newer macos version than being linked&rdquo; just add <code>export MACOSX_DEPLOYMENT_TARGET=13.1</code> or whatever your OS version is to your .envrc</li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
