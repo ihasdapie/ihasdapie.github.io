@@ -126,7 +126,7 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2023-01-21">Jan 21, 2023</time>,&nbsp;Last Modified:
-    <time datetime="2023-01-26">Jan 26, 2023</time>
+    <time datetime="2023-01-27">Jan 27, 2023</time>
     <br>
     
     Tags &#x5b;
@@ -681,8 +681,21 @@ The Homebrew <code>qt@5</code> package is kind of a mess and will look for <code
 <li>
 <p>c++20 support is <a href="https://en.cppreference.com/w/cpp/20">patchy</a> at best in AppleClang, which may be a concern if your project is on <code>c++-20</code>. You can also use <code>g++</code> by installing it with homebrew and then adding these variables to your <code>.envrc</code></p>
 </li>
+<li>
+<p>ros2 rolling <a href="https://docs.ros.org/en/rolling/The-ROS2-Project/Contributing/Code-Style-Language-Versions.html">targets c++17</a>, but you may be trying to use [c++20] for your project. This means that <code>gmock_vendor</code> is stuck at a <code>gmock</code> version that breaks in <code>c++20</code>. Patch the following header file in <code>install/gmock_vendor</code><a href="https://github.com/google/googletest/issues/2914">source</a></p>
+</li>
 </ol>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span> -using ReturnType = typename std::result_of&lt;MethodPtr(Class*)&gt;::type;
+</span></span><span style="display:flex;"><span> +using ReturnType = typename std::invoke_result_t&lt;MethodPtr, Class&gt;;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
