@@ -126,7 +126,7 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2023-01-21">Jan 21, 2023</time>,&nbsp;Last Modified:
-    <time datetime="2023-02-05">Feb 5, 2023</time>
+    <time datetime="2023-03-13">Mar 13, 2023</time>
     <br>
     
     Tags &#x5b;
@@ -181,6 +181,7 @@ But for most use cases it&rsquo;s amazing to work with and ridiculously fast. Fo
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>colcon build<span style="color:#b62;font-weight:bold">\ </span>
@@ -188,6 +189,7 @@ But for most use cases it&rsquo;s amazing to work with and ridiculously fast. Fo
 </span></span><span style="display:flex;"><span>--event-handlers console_cohesion+ status+ summary+ terminal_title+ console_package_list+ <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># print things out nicer</span>
 </span></span><span style="display:flex;"><span>--cmake-args --no-warn-unused-cli <span style="color:#b62;font-weight:bold">\
 </span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>    -DPython_EXECUTABLE<span style="color:#666">=</span>/Users/PATH/TO/PYTHON/VENV/bin/python <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># modify this to suit your needs. Or just use $(which python3) if you have your virtualenv activated</span>
+</span></span><span style="display:flex;"><span>    -DPython3_EXECUTABLE<span style="color:#666">=</span>/Users/PATH/TO/PYTHON/VENV/bin/python3 <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># I needed both?</span>
 </span></span><span style="display:flex;"><span>    -DPython_FIND_VIRTUALENV<span style="color:#666">=</span>ONLY <span style="color:#b62;font-weight:bold">\
 </span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>    -DCMAKE_FIND_FRAMEWORK<span style="color:#666">=</span>LAST <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># I don&#39;t recall the specific reason but it doesn&#39;t work without it. IIRC it had something to do with the system frameworks conflicting with the packages we are building and the pyenv python.</span>
 </span></span><span style="display:flex;"><span>    -DBUILD_TESTING<span style="color:#666">=</span>ON <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># not needed. I wanted to make sure ros2 worked.</span>
@@ -196,7 +198,7 @@ But for most use cases it&rsquo;s amazing to work with and ridiculously fast. Fo
 </span></span><span style="display:flex;"><span>    -DCMAKE_OSX_SYSROOT<span style="color:#666">=</span>/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk <span style="color:#b62;font-weight:bold">\
 </span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>    -DCMAKE_OSX_ARCHITECTURES<span style="color:#666">=</span><span style="color:#b44">&#39;arm64&#39;</span> <span style="color:#b62;font-weight:bold">\
 </span></span></span><span style="display:flex;"><span><span style="color:#b62;font-weight:bold"></span>    -DCMAKE_PREFIX_PATH<span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$(</span>brew --prefix jsoncpp<span style="color:#a2f;font-weight:bold">)</span>/lib:<span style="color:#a2f;font-weight:bold">$(</span>brew --prefix qt@5<span style="color:#a2f;font-weight:bold">)</span>:/opt/homebrew/Cellar/qt@5/5.15.8_1:/opt/homebrew/opt/boost/lib/cmake:/opt/homebrew <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># A bunch of these should actually be $(brew --prefix)/lib but anyhow...</span>
-</span></span><span style="display:flex;"><span>    -DPYTHON_LIBRARY<span style="color:#666">=</span>/Users/YOUR_USERNAME/.pyenv/3.10.9/lib/libpython3.10.dylib <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># you will have to modify this with your username and python version</span>
+</span></span><span style="display:flex;"><span>    -DPYTHON_LIBRARY<span style="color:#666">=</span>/Users/YOUR_USERNAME/.pyenv/versions/3.10.9/lib/libpython3.10.dylib <span style="color:#b62;font-weight:bold">\ </span><span style="color:#080;font-style:italic"># you will have to modify this with your username and python version</span>
 </span></span><span style="display:flex;"><span>    -DPYTHON_INCLUDE_DIR<span style="color:#666">=</span>/Users/ihasdapie/.pyenv/versions/3.10.9/include/python3.10 <span style="color:#b62;font-weight:bold">\
 </span></span></span></code></pre></td></tr></table>
 </div>
@@ -238,7 +240,7 @@ But for most use cases it&rsquo;s amazing to work with and ridiculously fast. Fo
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#080;font-style:italic"># We need numpy headers</span>
-</span></span><span style="display:flex;"><span>python -m pip install numpy --no-binary<span style="color:#666">=</span>:all:
+</span></span><span style="display:flex;"><span>python3 -m pip install numpy --no-binary<span style="color:#666">=</span>:all:
 </span></span><span style="display:flex;"><span>python3 -m pip install -U argcomplete catkin_pkg colcon-common-extensions coverage cryptography empy flake8 flake8-blind-except flake8-builtins flake8-class-newline flake8-comprehensions flake8-deprecated flake8-docstrings flake8-import-order flake8-quotes ifcfg importlib-metadata lark-parser lxml mock <span style="color:#b8860b">mypy</span><span style="color:#666">==</span>0.761netifaces nose pep8 pydocstyle pydot <span style="color:#b44">&#34;pyparsing&gt;=2.4,&lt;3&#34;</span> pytest-mock rosdep setuptools vcstool matplotlib psutil rosdistro
 </span></span></code></pre></td></tr></table>
 </div>
