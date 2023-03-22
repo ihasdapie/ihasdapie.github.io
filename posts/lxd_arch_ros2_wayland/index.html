@@ -335,7 +335,10 @@ In my case I screwed with it a little much and the file is in <code>/run/user/10
 </span></span><span style="display:flex;"><span>    type: disk
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>The downside of this is that the symlinks don&rsquo;t persist after the container restarts.
+</div><blockquote>
+<p>If you find an error with &ldquo;cannot connect to <code>/mnt/wayland1/wayland-0</code>&rdquo; you may have to <code>mkdir /mnt/wayland1</code> in the container</p>
+</blockquote>
+<p>The downside of this is that the symlinks don&rsquo;t persist after the container restarts.
 I just check for it in my <code>~/.zprofile</code>.</p>
 <ol start="5">
 <li>Set some environment variables</li>
@@ -369,7 +372,7 @@ I just check for it in my <code>~/.zprofile</code>.</p>
 </div>
 </div><ol start="6">
 <li>Enjoy!
-You should now be able to run <code>xclock</code> and find it working.</li>
+You should now be able to run <code>xclock</code> or <code>rviz</code> or any gui application and find it working.</li>
 </ol>
 <h2 id="ros">ROS</h2>
 <p>As for <code>ROS</code>, steps to get started working with <code>ROS</code> development are
