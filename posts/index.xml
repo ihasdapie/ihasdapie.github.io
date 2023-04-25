@@ -18,15 +18,14 @@ I&amp;rsquo;d like to report that ros2 runs flawlessly on apple silicon with som
     </item>
     
     <item>
-      <title>Engsci Year 3 Winter</title>
+      <title>Engsci Year 3 Winter Notes</title>
       <link>//chenbrian.ca/posts/engsci-year-3-winter/</link>
       <pubDate>Wed, 11 Jan 2023 15:28:52 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/engsci-year-3-winter/</guid>
-      <description>I&amp;rsquo;ve come to realize that some courses lend themselves to Latex&amp;rsquo;d notes better than others. The following pdf contains notes for:
-ECE353: Operating Systems CSC473: Advanced Algorithms ECE568: Computer security Note that all of these were taken during class and as such are somewhat stream-of-consciousness.
-This browser does not support PDFs. Please download the PDF to view it: Download PDF.
-Or, download here</description>
+      <description>I&amp;rsquo;ve come to realize that some courses lend themselves to Latex&amp;rsquo;d notes better than others. The following pdf contains complete (!) notes for:
+ECE353: Operating Systems CSC473: Advanced Algorithms ECE568: Computer security Note that all of these were taken during class and as such are somewhat stream-of-consciousness and can contain errors. Error reporting welcome on GitHub.
+This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
     
     <item>
@@ -143,7 +142,7 @@ The Beginning But, at the time, my laptop was a 11.6&amp;quot; chromebook with 1
     </item>
     
     <item>
-      <title>Engsci Year 2 Winter</title>
+      <title>Engsci Year 2 Winter Notes</title>
       <link>//chenbrian.ca/posts/engsci-year-2-winter/</link>
       <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
       
