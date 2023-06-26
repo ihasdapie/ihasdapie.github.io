@@ -19,6 +19,16 @@ I&amp;rsquo;d like to report that ros2 runs flawlessly on apple silicon with som
     </item>
     
     <item>
+      <title>Retrospective: Internship @ Open Robotics</title>
+      <link>//chenbrian.ca/posts/osrf-internship-retrospective/</link>
+      <pubDate>Thu, 18 Aug 2022 01:20:00 -0700</pubDate>
+      
+      <guid>//chenbrian.ca/posts/osrf-internship-retrospective/</guid>
+      <description>I spent summer 2022 interning at Open Robotics1, a non-profit organization that spawned 2 and maintains ROS, ROS2 (Robot Operating System) and the Gazebo simulator.
+Since writing up an retrospective is a lot more work than I&amp;rsquo;d like to put in right now, here&amp;rsquo;s the output of gh search prs --involves ihasdapie -L 100 in the relevant ros orgs, if that&amp;rsquo;s of interest. It&amp;rsquo;s also pretty cool to see the Iron Irwini Release Notes since I worked on a number of features there, most notably service introspection</description>
+    </item>
+    
+    <item>
       <title>ROS2 LSP Setup</title>
       <link>//chenbrian.ca/posts/ros2_lsp_setup/</link>
       <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>

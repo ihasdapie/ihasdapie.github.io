@@ -19,6 +19,16 @@ I&amp;rsquo;d like to report that ros2 runs flawlessly on apple silicon with som
     </item>
     
     <item>
+      <title>Retrospective: Internship @ Open Robotics</title>
+      <link>//chenbrian.ca/posts/osrf-internship-retrospective/</link>
+      <pubDate>Thu, 18 Aug 2022 01:20:00 -0700</pubDate>
+      
+      <guid>//chenbrian.ca/posts/osrf-internship-retrospective/</guid>
+      <description>I spent summer 2022 interning at Open Robotics1, a non-profit organization that spawned 2 and maintains ROS, ROS2 (Robot Operating System) and the Gazebo simulator.
+Since writing up an retrospective is a lot more work than I&amp;rsquo;d like to put in right now, here&amp;rsquo;s the output of gh search prs --involves ihasdapie -L 100 in the relevant ros orgs, if that&amp;rsquo;s of interest. It&amp;rsquo;s also pretty cool to see the Iron Irwini Release Notes since I worked on a number of features there, most notably service introspection</description>
+    </item>
+    
+    <item>
       <title>PSA: Delete `AnimationDurationFactor` if you have an old KDE installation</title>
       <link>//chenbrian.ca/posts/kwin_choppy_fix/</link>
       <pubDate>Wed, 25 May 2022 01:22:56 -0700</pubDate>
@@ -100,7 +110,7 @@ Dijkstra: banishing the goto statement; enforcing control flow; if, else, while,
       <pubDate>Mon, 13 Dec 2021 21:03:35 -0500</pubDate>
       
       <guid>//chenbrian.ca/posts/projects/</guid>
-      <description>// Page under construction //
+      <description>// Page under construction (Actually, this page has been abandoned since early 2022&amp;hellip;) //
 &amp;ldquo;If you built a project and did not write about it, did you really build a project?&amp;rdquo;
 Overview Browse projects by tag
 ROS: Worked on the open-source Robot Operating System (ROS) as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their VIPER lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.</description>
