@@ -62,7 +62,6 @@ if (!doNotTrack) {
             <a href="/about/">about</a> &nbsp;
             <a href="/posts/">posts</a> &nbsp;
             <a href="/tags/">tags</a> &nbsp;
-            <a href="/posts/projects">projects</a> &nbsp;
             <a href="https://github.com/ihasdapie">github</a> &nbsp;
         </div>
     </h1>
@@ -81,7 +80,9 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#method-0-colcon-mixins-compile_commands">Method 0: Colcon mixins compile_commands</a></li>
         <li><a href="#method-1-cmake">Method 1: CMake</a></li>
+        <li><a href="#method-2-bear">Method 2: Bear</a></li>
         <li><a href="#method-3-compile_flagstxt">Method 3: compile_flags.txt</a></li>
+        <li><a href="#method-4-manually-create-a-compile_commandsjson-file">METHOD 4: manually create a compile_commands.json file</a></li>
       </ul>
     </li>
   </ul>
@@ -105,7 +106,7 @@ if (!doNotTrack) {
 <div class="post-meta">
     Date:
     <time datetime="2022-01-04">Jan 4, 2022</time>,&nbsp;Last Modified:
-    <time datetime="2023-01-26">Jan 26, 2023</time>
+    <time datetime="2023-09-20">Sep 20, 2023</time>
     <br>
     
     Tags &#x5b;
@@ -139,7 +140,7 @@ Steps for use are as follows:</p>
 </ol>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>   colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
@@ -155,13 +156,13 @@ Steps for use are as follows:</p>
 It&rsquo;s also probably prudent to add this to your <code>CMakeLists.txt</code> file anyways,</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span><span style="color:#080;font-style:italic"># CMakeLists.txt
@@ -174,16 +175,21 @@ It&rsquo;s also probably prudent to add this to your <code>CMakeLists.txt</code>
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Note that this requires there to be a buildable <code>ros2</code> package in your workspace, so if one is just getting started maybe try cloning the <code>ros2_tutorials</code> package or copy-pasting a simple pub-sub just to get a <code>compile_commands.json</code> file.</p>
-<p><strong>OR</strong>, try using <a href="https://github.com/rizsotto/Bear">bear</a> which works great in my experience, i.e. <code>bear -- colcon build</code></p>
+<h3 id="method-2-bear">Method 2: Bear</h3>
+<p>Try using <a href="https://github.com/rizsotto/Bear">bear</a> which works great in my experience, i.e. <code>bear -- colcon build</code></p>
+<h3 id="method-3-compile_flagstxt">Method 3: compile_flags.txt</h3>
+<p>Place a <code>compile_flags.txt</code> file with <code>-I /opt/ros2/&lt;ROS_DISTRO&gt;/include</code> in your project root</p>
+<p>For more, see <a href="https://github.com/clangd/coc-clangd/issues/28">this</a></p>
+<h3 id="method-4-manually-create-a-compile_commandsjson-file">METHOD 4: manually create a compile_commands.json file</h3>
 <p>If all else fails, try dropping in a minimal <code>compile_commands.json</code> file with the following contents, making sure to edit the filepaths accordingly:</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#080;font-style:italic">// compile_commands.json
@@ -194,10 +200,7 @@ It&rsquo;s also probably prudent to add this to your <code>CMakeLists.txt</code>
 </span></span><span style="display:flex;"><span>} ]
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="method-3-compile_flagstxt">Method 3: compile_flags.txt</h3>
-<p>Place a <code>compile_flags.txt</code> file with <code>-I /opt/ros2/&lt;ROS_DISTRO&gt;/include</code> in your project root</p>
-<p>For more, see <a href="https://github.com/clangd/coc-clangd/issues/28">this</a></p>
-
+</div>
 </article>
 
 
