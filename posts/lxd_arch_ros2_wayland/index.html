@@ -36,16 +36,25 @@
 
 
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-B0ZFV4LTG2', { 'anonymize_ip': false });
-}
-</script>
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-B0ZFV4LTG2');
+        }
+      </script>
+    
+  
+
 
 
     
@@ -65,7 +74,7 @@ if (!doNotTrack) {
 <body>
 <div class="header">
     <h1>
-        <a href="//chenbrian.ca">chenbrian</a>
+        <a href="//chenbrian.ca/">chenbrian</a>
         <div class="header-menu">
             <a href="/about/">about</a> &nbsp;
             <a href="/posts/">posts</a> &nbsp;
@@ -417,10 +426,10 @@ With kitty it looks something like this:</li>
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo firewall-cmd --zone=trusted --change-interface=lxdbr0 --permanent
-</span></span><span style="display:flex;"><span>sudo firewall-cmd --reload
-</span></span><span style="display:flex;"><span>sudo iptables -I DOCKER-USER -o lxdbr0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
-</span></span><span style="display:flex;"><span>sudo iptables -I DOCKER-USER -i lxdbr0 -o wlp0s20f3 -j ACCEPT
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>sudo firewall<span style="color:#666">-</span>cmd <span style="color:#666">--</span>zone<span style="color:#666">=</span>trusted <span style="color:#666">--</span>change<span style="color:#666">-</span>interface<span style="color:#666">=</span>lxdbr0 <span style="color:#666">--</span>permanent
+</span></span><span style="display:flex;"><span>sudo firewall<span style="color:#666">-</span>cmd <span style="color:#666">--</span>reload
+</span></span><span style="display:flex;"><span>sudo iptables <span style="color:#666">-</span>I DOCKER<span style="color:#666">-</span>USER <span style="color:#666">-</span>o lxdbr0 <span style="color:#666">-</span>m conntrack <span style="color:#666">--</span>ctstate RELATED,ESTABLISHED <span style="color:#666">-</span>j ACCEPT
+</span></span><span style="display:flex;"><span>sudo iptables <span style="color:#666">-</span>I DOCKER<span style="color:#666">-</span>USER <span style="color:#666">-</span>i lxdbr0 <span style="color:#666">-</span>o wlp0s20f3 <span style="color:#666">-</span>j ACCEPT
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="resources">Resources</h2>

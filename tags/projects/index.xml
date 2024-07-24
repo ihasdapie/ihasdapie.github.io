@@ -1,58 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>projects on chenbrian</title>
+    <title>Projects on chenbrian</title>
     <link>//chenbrian.ca/tags/projects/</link>
-    <description>Recent content in projects on chenbrian</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Projects on chenbrian</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Sat, 05 Feb 2022 22:14:08 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jun 2023 18:10:21 -0700</lastBuildDate>
+    <atom:link href="//chenbrian.ca/tags/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>conway.3js</title>
       <link>//chenbrian.ca/posts/conway.3js/</link>
       <pubDate>Sat, 05 Feb 2022 22:14:08 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/conway.3js/</guid>
-      <description>A few weeks back one of my roommates mentioned in passing that they were thinking of writing conway&amp;rsquo;s game of life as a little widget for their website. I thought that was pretty fun and suggested that it would be really neat if it were in 3D as well.
-&amp;hellip; anyways fast-forward about two hours and I was stuck in a 3-hour lecture. So I wrote it (as is pretty evident below)</description>
+      <description>A few weeks back one of my roommates mentioned in passing that they were thinking of writing conway&amp;rsquo;s game of life as a little widget for their website. I thought that was pretty fun and suggested that it would be really neat if it were in 3D as well.&#xA;&amp;hellip; anyways fast-forward about two hours and I was stuck in a 3-hour lecture. So I wrote it (as is pretty evident below)</description>
     </item>
-    
     <item>
       <title>Writing a resume with LaTeX</title>
       <link>//chenbrian.ca/posts/latex-resume/</link>
       <pubDate>Fri, 21 Jan 2022 18:31:20 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/latex-resume/</guid>
-      <description>Let&amp;rsquo;s face it &amp;ndash; \( \LaTeX \)) is unequivocally cooler than Word. And you want an unequivocally cool resume. So you tried altacv, but it always got absolutely chewed up by ATS systems.
-And so you yearned for a 🌠cool🥶 single-column layout, but you couldn&amp;rsquo;t find one.
-I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
-Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Disabling word wrapping and hyphenation Various changes to \makecvevent, etc.</description>
+      <description>Let&amp;rsquo;s face it &amp;ndash; \( \LaTeX \)) is unequivocally cooler than Word. And you want an unequivocally cool resume. So you tried altacv, but it always got absolutely chewed up by ATS systems.&#xA;And so you yearned for a 🌠cool🥶 single-column layout, but you couldn&amp;rsquo;t find one.&#xA;I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.&#xA;Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Disabling word wrapping and hyphenation Various changes to \makecvevent, etc.</description>
     </item>
-    
     <item>
       <title>Projects</title>
       <link>//chenbrian.ca/posts/projects/</link>
       <pubDate>Mon, 13 Dec 2021 21:03:35 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/projects/</guid>
-      <description>// Page under construction (Actually, this page has been abandoned since early 2022&amp;hellip;) //
-&amp;ldquo;If you built a project and did not write about it, did you really build a project?&amp;rdquo;
-Overview Browse projects by tag
-ROS: Worked on the open-source Robot Operating System (ROS) as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their VIPER lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.</description>
+      <description>// Page under construction (Actually, this page has been abandoned since early 2022&amp;hellip;) //&#xA;&amp;ldquo;If you built a project and did not write about it, did you really build a project?&amp;rdquo;&#xA;Overview Browse projects by tag&#xA;ROS: Worked on the open-source Robot Operating System (ROS) as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their VIPER lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.</description>
     </item>
-    
     <item>
       <title>(g)o (w)eb (s)erver</title>
       <link>//chenbrian.ca/posts/go-web-server/</link>
       <pubDate>Thu, 09 Dec 2021 20:48:45 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/go-web-server/</guid>
-      <description>Deploying your personal website onto github pages is so 2013. Why avoid the hassle of self-hosting with a static site generator and server? Why not just use something tried and tested by the community?
-It&amp;rsquo;s just not as fun &amp;hellip; and I didn&amp;rsquo;t feel like studying for a final one afternoon.
-So here&amp;rsquo;s a simple 111-line golang webserver that you can use to deploy your personal website.
-There&amp;rsquo;s also some cute figlet art</description>
+      <description>Deploying your personal website onto github pages is so 2013. Why avoid the hassle of self-hosting with a static site generator and server? Why not just use something tried and tested by the community?&#xA;It&amp;rsquo;s just not as fun &amp;hellip; and I didn&amp;rsquo;t feel like studying for a final one afternoon.&#xA;So here&amp;rsquo;s a simple 111-line golang webserver that you can use to deploy your personal website.&#xA;There&amp;rsquo;s also some cute figlet art</description>
     </item>
-    
   </channel>
 </rss>

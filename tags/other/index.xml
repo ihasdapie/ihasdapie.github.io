@@ -1,53 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>other on chenbrian</title>
+    <title>Other on chenbrian</title>
     <link>//chenbrian.ca/tags/other/</link>
-    <description>Recent content in other on chenbrian</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Other on chenbrian</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Tue, 22 Feb 2022 02:52:00 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/other/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jan 2023 03:20:44 -0500</lastBuildDate>
+    <atom:link href="//chenbrian.ca/tags/other/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>individual.utoronto.ca</title>
       <link>//chenbrian.ca/posts/individual.utoronto/</link>
       <pubDate>Tue, 22 Feb 2022 02:52:00 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/individual.utoronto/</guid>
-      <description>Turns out UofT students/faculty/etc can host a free personal site (50mb max) in individual.utoronto.ca through an until-now seemingly entirely undocumented process.
-Claim it through UTORid management here Connect to it through a ftp client. If you go back into the UTORid info page it will tell you what address to use for ftp which looks something like ftp://yourutorid@individual.utoronto.ca I just used dolphin&amp;rsquo;s built in support for network drives to upload the files Upload files through ftp and enjoy!</description>
+      <description>Turns out UofT students/faculty/etc can host a free personal site (50mb max) in individual.utoronto.ca through an until-now seemingly entirely undocumented process.&#xA;Claim it through UTORid management here Connect to it through a ftp client. If you go back into the UTORid info page it will tell you what address to use for ftp which looks something like ftp://yourutorid@individual.utoronto.ca I just used dolphin&amp;rsquo;s built in support for network drives to upload the files Upload files through ftp and enjoy!</description>
     </item>
-    
     <item>
       <title>interfacing with a pi pico on linux</title>
       <link>//chenbrian.ca/posts/pi-pico-on-linux/</link>
       <pubDate>Thu, 27 Jan 2022 23:08:10 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/pi-pico-on-linux/</guid>
-      <description>Needed to use a Pi Pico for one of my courses (which mandated circuitpython &amp;hellip; for reasons unknown) and noticed that Adafruit&amp;rsquo;s documentation for using CircuitPython with something that wasn&amp;rsquo;t Mu Editor was not really up to par.
-Install CircuitPython by copying .uf2 file into the Pi Pico, which can be done by just plugging it into your computer python3 -m pip install circuitpython-stubs to get completions with your LSP of choice Connect to serial port to view prints and logging info find the appropriate port with ls /dev/ttyACM* connect using GNU screen or whatever you like to use e.</description>
+      <description>Needed to use a Pi Pico for one of my courses (which mandated circuitpython &amp;hellip; for reasons unknown) and noticed that Adafruit&amp;rsquo;s documentation for using CircuitPython with something that wasn&amp;rsquo;t Mu Editor was not really up to par.&#xA;Install CircuitPython by copying .uf2 file into the Pi Pico, which can be done by just plugging it into your computer python3 -m pip install circuitpython-stubs to get completions with your LSP of choice Connect to serial port to view prints and logging info find the appropriate port with ls /dev/ttyACM* connect using GNU screen or whatever you like to use e.</description>
     </item>
-    
     <item>
       <title>some poems</title>
       <link>//chenbrian.ca/posts/some-poems/</link>
       <pubDate>Sat, 08 Jan 2022 00:26:05 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/some-poems/</guid>
-      <description>Making it a commitment for 2022 to read some poems.
-The Jackdaw source
-William Cowper
-There is a bird who, by his coat
-And by the hoarseness of his note,
-Might be supposed a crow;
-A great frequenter of the church,
-Where, bishop-like, he finds a perch,
-And dormitory too.
-Above the steeple shines a plate,
-That turns and turns, to indicate
-From what point blows the weather.
-Look up &amp;ndash; your brains begin to swim,</description>
+      <description>Making it a commitment for 2022 to read some poems.&#xA;The Jackdaw source&#xA;William Cowper&#xA;There is a bird who, by his coat&#xA;And by the hoarseness of his note,&#xA;Might be supposed a crow;&#xA;A great frequenter of the church,&#xA;Where, bishop-like, he finds a perch,&#xA;And dormitory too.&#xA;Above the steeple shines a plate,&#xA;That turns and turns, to indicate&#xA;From what point blows the weather.&#xA;Look up &amp;ndash; your brains begin to swim,</description>
     </item>
-    
   </channel>
 </rss>

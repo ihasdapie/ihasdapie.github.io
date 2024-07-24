@@ -1,132 +1,90 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>programming on chenbrian</title>
+    <title>Programming on chenbrian</title>
     <link>//chenbrian.ca/tags/programming/</link>
-    <description>Recent content in programming on chenbrian</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Programming on chenbrian</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Sat, 21 Jan 2023 18:59:53 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Nov 2023 00:19:22 -0800</lastBuildDate>
+    <atom:link href="//chenbrian.ca/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ros2 rolling on apple silicon</title>
       <link>//chenbrian.ca/posts/ros2_m1/</link>
       <pubDate>Sat, 21 Jan 2023 18:59:53 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/ros2_m1/</guid>
-      <description>It works! 1 I got a shiny new macbook and was sad that I had to dual-boot into Asahi (which is actually a surprisingly robust experience at the time of writing) to do ROS2 work. So I did the only sensible thing and spent the better part of a day making ros2 build on an m1 mac on MacOS Ventura.
-I&amp;rsquo;d like to report that ros2 runs flawlessly on apple silicon with some caveats (see below).</description>
+      <description>It works! 1 I got a shiny new macbook and was sad that I had to dual-boot into Asahi (which is actually a surprisingly robust experience at the time of writing) to do ROS2 work. So I did the only sensible thing and spent the better part of a day making ros2 build on an m1 mac on MacOS Ventura.&#xA;I&amp;rsquo;d like to report that ros2 runs flawlessly on apple silicon with some caveats (see below).</description>
     </item>
-    
     <item>
       <title>Retrospective: Internship @ Open Robotics</title>
       <link>//chenbrian.ca/posts/osrf-internship-retrospective/</link>
       <pubDate>Thu, 18 Aug 2022 01:20:00 -0700</pubDate>
-      
       <guid>//chenbrian.ca/posts/osrf-internship-retrospective/</guid>
-      <description>I spent summer 2022 interning at Open Robotics1, a non-profit organization that spawned 2 and maintains ROS, ROS2 (Robot Operating System) and the Gazebo simulator.
-Since writing up an retrospective is a lot more work than I&amp;rsquo;d like to put in right now, here&amp;rsquo;s the output of gh search prs --involves ihasdapie -L 100 in the relevant ros orgs, if that&amp;rsquo;s of interest. It&amp;rsquo;s also pretty cool to see the Iron Irwini Release Notes since I worked on a number of features there, most notably service introspection</description>
+      <description>I spent summer 2022 interning at Open Robotics1, a non-profit organization that spawned 2 and maintains ROS, ROS2 (Robot Operating System) and the Gazebo simulator.&#xA;Since writing up an retrospective is a lot more work than I&amp;rsquo;d like to put in right now, here&amp;rsquo;s the output of gh search prs --involves ihasdapie -L 100 in the relevant ros orgs, if that&amp;rsquo;s of interest. It&amp;rsquo;s also pretty cool to see the Iron Irwini Release Notes since I worked on a number of features there, most notably service introspection</description>
     </item>
-    
     <item>
       <title>PSA: Delete `AnimationDurationFactor` if you have an old KDE installation</title>
       <link>//chenbrian.ca/posts/kwin_choppy_fix/</link>
       <pubDate>Wed, 25 May 2022 01:22:56 -0700</pubDate>
-      
       <guid>//chenbrian.ca/posts/kwin_choppy_fix/</guid>
-      <description>As per title: Delete AnimationDurationFactor from ~/.config/kwinrc if you have an old installation. This overrides the default value in kdeglobals and for me caused my animation speed to get stuck at something stupid.
-source Also, this is entirely anecdotal but it appears to me that setting KWIN_TRIPLE_BUFFER=0 in /etc/profile.d/kwin.sh to disable triple buffering results in smoother behaviour than with it on despite the typical recommendations online. This may be because my laptop runs a Intel UHD620 and two 4K displays and the puny little integrated graphics card can&amp;rsquo;t keep up with triple buffering.</description>
+      <description>As per title: Delete AnimationDurationFactor from ~/.config/kwinrc if you have an old installation. This overrides the default value in kdeglobals and for me caused my animation speed to get stuck at something stupid.&#xA;source Also, this is entirely anecdotal but it appears to me that setting KWIN_TRIPLE_BUFFER=0 in /etc/profile.d/kwin.sh to disable triple buffering results in smoother behaviour than with it on despite the typical recommendations online. This may be because my laptop runs a Intel UHD620 and two 4K displays and the puny little integrated graphics card can&amp;rsquo;t keep up with triple buffering.</description>
     </item>
-    
     <item>
       <title>Toggling laptop touchsreen on Wayland</title>
       <link>//chenbrian.ca/posts/wayland_toggle_touchscreen/</link>
       <pubDate>Mon, 07 Feb 2022 15:23:04 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/wayland_toggle_touchscreen/</guid>
-      <description>Back when I was still on X11 1 , I had this little bash script to toggle my touchscreen on/off, since I didn&amp;rsquo;t use it all that often except to sign the occasional PDF. And it sucked up power2.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 #!/usr/bin/bash # toggles touchscreen on x11-based systems isOn=&amp;#34;$(xinput --list-props &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; | grep &amp;#39;Device Enabled&amp;#39;)&amp;#34; isOn=&amp;#34;${isOn: -1}&amp;#34; if [ $isOn -eq 0 ]; then xinput set-prop &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; &amp;#39;Device Enabled&amp;#39; 1 echo &amp;#34;Turning touchscreen on!</description>
+      <description>Back when I was still on X11 1 , I had this little bash script to toggle my touchscreen on/off, since I didn&amp;rsquo;t use it all that often except to sign the occasional PDF. And it sucked up power2.&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 #!/usr/bin/bash # toggles touchscreen on x11-based systems isOn=&amp;#34;$(xinput --list-props &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; | grep &amp;#39;Device Enabled&amp;#39;)&amp;#34; isOn=&amp;#34;${isOn: -1}&amp;#34; if [ $isOn -eq 0 ]; then xinput set-prop &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; &amp;#39;Device Enabled&amp;#39; 1 echo &amp;#34;Turning touchscreen on!</description>
     </item>
-    
     <item>
       <title>conway.3js</title>
       <link>//chenbrian.ca/posts/conway.3js/</link>
       <pubDate>Sat, 05 Feb 2022 22:14:08 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/conway.3js/</guid>
-      <description>A few weeks back one of my roommates mentioned in passing that they were thinking of writing conway&amp;rsquo;s game of life as a little widget for their website. I thought that was pretty fun and suggested that it would be really neat if it were in 3D as well.
-&amp;hellip; anyways fast-forward about two hours and I was stuck in a 3-hour lecture. So I wrote it (as is pretty evident below)</description>
+      <description>A few weeks back one of my roommates mentioned in passing that they were thinking of writing conway&amp;rsquo;s game of life as a little widget for their website. I thought that was pretty fun and suggested that it would be really neat if it were in 3D as well.&#xA;&amp;hellip; anyways fast-forward about two hours and I was stuck in a 3-hour lecture. So I wrote it (as is pretty evident below)</description>
     </item>
-    
     <item>
       <title>interfacing with a pi pico on linux</title>
       <link>//chenbrian.ca/posts/pi-pico-on-linux/</link>
       <pubDate>Thu, 27 Jan 2022 23:08:10 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/pi-pico-on-linux/</guid>
-      <description>Needed to use a Pi Pico for one of my courses (which mandated circuitpython &amp;hellip; for reasons unknown) and noticed that Adafruit&amp;rsquo;s documentation for using CircuitPython with something that wasn&amp;rsquo;t Mu Editor was not really up to par.
-Install CircuitPython by copying .uf2 file into the Pi Pico, which can be done by just plugging it into your computer python3 -m pip install circuitpython-stubs to get completions with your LSP of choice Connect to serial port to view prints and logging info find the appropriate port with ls /dev/ttyACM* connect using GNU screen or whatever you like to use e.</description>
+      <description>Needed to use a Pi Pico for one of my courses (which mandated circuitpython &amp;hellip; for reasons unknown) and noticed that Adafruit&amp;rsquo;s documentation for using CircuitPython with something that wasn&amp;rsquo;t Mu Editor was not really up to par.&#xA;Install CircuitPython by copying .uf2 file into the Pi Pico, which can be done by just plugging it into your computer python3 -m pip install circuitpython-stubs to get completions with your LSP of choice Connect to serial port to view prints and logging info find the appropriate port with ls /dev/ttyACM* connect using GNU screen or whatever you like to use e.</description>
     </item>
-    
     <item>
       <title>Writing a resume with LaTeX</title>
       <link>//chenbrian.ca/posts/latex-resume/</link>
       <pubDate>Fri, 21 Jan 2022 18:31:20 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/latex-resume/</guid>
-      <description>Let&amp;rsquo;s face it &amp;ndash; \( \LaTeX \)) is unequivocally cooler than Word. And you want an unequivocally cool resume. So you tried altacv, but it always got absolutely chewed up by ATS systems.
-And so you yearned for a 🌠cool🥶 single-column layout, but you couldn&amp;rsquo;t find one.
-I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
-Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Disabling word wrapping and hyphenation Various changes to \makecvevent, etc.</description>
+      <description>Let&amp;rsquo;s face it &amp;ndash; \( \LaTeX \)) is unequivocally cooler than Word. And you want an unequivocally cool resume. So you tried altacv, but it always got absolutely chewed up by ATS systems.&#xA;And so you yearned for a 🌠cool🥶 single-column layout, but you couldn&amp;rsquo;t find one.&#xA;I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.&#xA;Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Disabling word wrapping and hyphenation Various changes to \makecvevent, etc.</description>
     </item>
-    
     <item>
       <title>ROS2 LSP Setup</title>
       <link>//chenbrian.ca/posts/ros2_lsp_setup/</link>
       <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/ros2_lsp_setup/</guid>
-      <description>TLDR: you want code completions while working with ROS2
-LSP with clangd ROS2 puts its headers into /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. This doesn&amp;rsquo;t work out of the box with my fairly default clangd setup, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.
-For vscode setup, see this or this</description>
+      <description>TLDR: you want code completions while working with ROS2&#xA;LSP with clangd ROS2 puts its headers into /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. This doesn&amp;rsquo;t work out of the box with my fairly default clangd setup, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.&#xA;For vscode setup, see this or this</description>
     </item>
-    
     <item>
       <title>Notes on &#39;Clean Architecture: A Craftsman&#39;s Guide to Software Structure and Design&#39;</title>
       <link>//chenbrian.ca/posts/clean-architecture-notes/</link>
       <pubDate>Sun, 26 Dec 2021 16:39:21 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/clean-architecture-notes/</guid>
-      <description>&amp;ldquo;Fight for the architecture&amp;rdquo;
-The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]
-1 [1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed. USA: Prentice Hall Press, 2017. Paradigms Main paradigms:
-Structured: Discipline on direct transfer of control
-Dijkstra: banishing the goto statement; enforcing control flow; if, else, while, for &amp;hellip; Enabling functional decomposition; applying mathematical divide-and-conquer approach to algorithms Testing can only prove a program false but not correct Structured programming breaks down to provable chunks Object-oriented: Discipline on indirect transfer of control</description>
+      <description>&amp;ldquo;Fight for the architecture&amp;rdquo;&#xA;The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]&#xA;1 [1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed. USA: Prentice Hall Press, 2017. Paradigms Main paradigms:&#xA;Structured: Discipline on direct transfer of control&#xA;Dijkstra: banishing the goto statement; enforcing control flow; if, else, while, for &amp;hellip; Enabling functional decomposition; applying mathematical divide-and-conquer approach to algorithms Testing can only prove a program false but not correct Structured programming breaks down to provable chunks Object-oriented: Discipline on indirect transfer of control</description>
     </item>
-    
     <item>
       <title>Projects</title>
       <link>//chenbrian.ca/posts/projects/</link>
       <pubDate>Mon, 13 Dec 2021 21:03:35 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/projects/</guid>
-      <description>// Page under construction (Actually, this page has been abandoned since early 2022&amp;hellip;) //
-&amp;ldquo;If you built a project and did not write about it, did you really build a project?&amp;rdquo;
-Overview Browse projects by tag
-ROS: Worked on the open-source Robot Operating System (ROS) as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their VIPER lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.</description>
+      <description>// Page under construction (Actually, this page has been abandoned since early 2022&amp;hellip;) //&#xA;&amp;ldquo;If you built a project and did not write about it, did you really build a project?&amp;rdquo;&#xA;Overview Browse projects by tag&#xA;ROS: Worked on the open-source Robot Operating System (ROS) as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their VIPER lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.</description>
     </item>
-    
     <item>
       <title>Advent of Code 2021</title>
       <link>//chenbrian.ca/posts/aoc2021/</link>
       <pubDate>Thu, 09 Dec 2021 21:20:53 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/aoc2021/</guid>
-      <description>This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.
-Solutions are hosted here. If a day isn&amp;rsquo;t very interesting, I won&amp;rsquo;t post a writeup for it.
-Day 6 Problem Solution
-So many lanternfish! The key to this puzzle is to represent the lanternfish as a histogram rather than creating a list of all the lanternfish. See solution.</description>
+      <description>This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.&#xA;Solutions are hosted here. If a day isn&amp;rsquo;t very interesting, I won&amp;rsquo;t post a writeup for it.&#xA;Day 6 Problem Solution&#xA;So many lanternfish! The key to this puzzle is to represent the lanternfish as a histogram rather than creating a list of all the lanternfish. See solution.</description>
     </item>
-    
   </channel>
 </rss>

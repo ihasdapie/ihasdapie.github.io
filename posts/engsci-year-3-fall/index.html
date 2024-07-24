@@ -26,16 +26,25 @@
 
 
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-B0ZFV4LTG2', { 'anonymize_ip': false });
-}
-</script>
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-B0ZFV4LTG2');
+        }
+      </script>
+    
+  
+
 
 
     
@@ -55,7 +64,7 @@ if (!doNotTrack) {
 <body>
 <div class="header">
     <h1>
-        <a href="//chenbrian.ca">chenbrian</a>
+        <a href="//chenbrian.ca/">chenbrian</a>
         <div class="header-menu">
             <a href="/about/">about</a> &nbsp;
             <a href="/posts/">posts</a> &nbsp;

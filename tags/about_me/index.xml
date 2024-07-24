@@ -1,52 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>about_me on chenbrian</title>
+    <title>About_me on chenbrian</title>
     <link>//chenbrian.ca/tags/about_me/</link>
-    <description>Recent content in about_me on chenbrian</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in About_me on chenbrian</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Thu, 18 Aug 2022 01:20:00 -0700</lastBuildDate><atom:link href="//chenbrian.ca/tags/about_me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Dec 2023 03:16:35 -0800</lastBuildDate>
+    <atom:link href="//chenbrian.ca/tags/about_me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Retrospective: Internship @ Open Robotics</title>
       <link>//chenbrian.ca/posts/osrf-internship-retrospective/</link>
       <pubDate>Thu, 18 Aug 2022 01:20:00 -0700</pubDate>
-      
       <guid>//chenbrian.ca/posts/osrf-internship-retrospective/</guid>
-      <description>I spent summer 2022 interning at Open Robotics1, a non-profit organization that spawned 2 and maintains ROS, ROS2 (Robot Operating System) and the Gazebo simulator.
-Since writing up an retrospective is a lot more work than I&amp;rsquo;d like to put in right now, here&amp;rsquo;s the output of gh search prs --involves ihasdapie -L 100 in the relevant ros orgs, if that&amp;rsquo;s of interest. It&amp;rsquo;s also pretty cool to see the Iron Irwini Release Notes since I worked on a number of features there, most notably service introspection</description>
+      <description>I spent summer 2022 interning at Open Robotics1, a non-profit organization that spawned 2 and maintains ROS, ROS2 (Robot Operating System) and the Gazebo simulator.&#xA;Since writing up an retrospective is a lot more work than I&amp;rsquo;d like to put in right now, here&amp;rsquo;s the output of gh search prs --involves ihasdapie -L 100 in the relevant ros orgs, if that&amp;rsquo;s of interest. It&amp;rsquo;s also pretty cool to see the Iron Irwini Release Notes since I worked on a number of features there, most notably service introspection</description>
     </item>
-    
     <item>
       <title>Writing a resume with LaTeX</title>
       <link>//chenbrian.ca/posts/latex-resume/</link>
       <pubDate>Fri, 21 Jan 2022 18:31:20 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/latex-resume/</guid>
-      <description>Let&amp;rsquo;s face it &amp;ndash; \( \LaTeX \)) is unequivocally cooler than Word. And you want an unequivocally cool resume. So you tried altacv, but it always got absolutely chewed up by ATS systems.
-And so you yearned for a 🌠cool🥶 single-column layout, but you couldn&amp;rsquo;t find one.
-I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
-Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Disabling word wrapping and hyphenation Various changes to \makecvevent, etc.</description>
+      <description>Let&amp;rsquo;s face it &amp;ndash; \( \LaTeX \)) is unequivocally cooler than Word. And you want an unequivocally cool resume. So you tried altacv, but it always got absolutely chewed up by ATS systems.&#xA;And so you yearned for a 🌠cool🥶 single-column layout, but you couldn&amp;rsquo;t find one.&#xA;I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.&#xA;Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Disabling word wrapping and hyphenation Various changes to \makecvevent, etc.</description>
     </item>
-    
     <item>
       <title>chenbrian/about</title>
       <link>//chenbrian.ca/about/</link>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
-      
       <guid>//chenbrian.ca/about/</guid>
       <description>What am I up to right now? Trying to get through university :) Connect with me: Email: brianchen.chen (at) mail.utoronto.ca Github Some things I&amp;rsquo;ve worked on in the past: Autopilot @ Tesla ROS2 for NASA&amp;rsquo;s VIPER lunar rover @ Open Robotics (Now an Alphabet company) Research @ ISML: Accelerating machine learning tasks on memristor crossbars Telling cars to drive themselves @ aUToronto TA-ing data structures &amp;amp; algorithms (ESC180/ESC190) Building discoverparks.ca for BC Parks Foundation.</description>
     </item>
-    
     <item>
       <title>chenbrian.ca</title>
       <link>//chenbrian.ca/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>//chenbrian.ca/</guid>
       <description>Hi, I&amp;rsquo;m Brian And I&amp;rsquo;m an Engineering Science student at the University of Toronto majoring in Computer Engineering and minoring in Robotics. While I&amp;rsquo;m not cramming for school I like to cook, play badminton, and sometimes build cool stuff like self-driving cars. Or, in more general terms: I convert bubble tea to spaghetti code1. I also occasionally write posts on my blog, so feel free to check that out too :)</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on chenbrian</title>
+    <title>Linux on chenbrian</title>
     <link>//chenbrian.ca/tags/linux/</link>
-    <description>Recent content in linux on chenbrian</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Linux on chenbrian</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Wed, 25 May 2022 01:22:56 -0700</lastBuildDate><atom:link href="//chenbrian.ca/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jan 2023 03:20:44 -0500</lastBuildDate>
+    <atom:link href="//chenbrian.ca/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PSA: Delete `AnimationDurationFactor` if you have an old KDE installation</title>
       <link>//chenbrian.ca/posts/kwin_choppy_fix/</link>
       <pubDate>Wed, 25 May 2022 01:22:56 -0700</pubDate>
-      
       <guid>//chenbrian.ca/posts/kwin_choppy_fix/</guid>
-      <description>As per title: Delete AnimationDurationFactor from ~/.config/kwinrc if you have an old installation. This overrides the default value in kdeglobals and for me caused my animation speed to get stuck at something stupid.
-source Also, this is entirely anecdotal but it appears to me that setting KWIN_TRIPLE_BUFFER=0 in /etc/profile.d/kwin.sh to disable triple buffering results in smoother behaviour than with it on despite the typical recommendations online. This may be because my laptop runs a Intel UHD620 and two 4K displays and the puny little integrated graphics card can&amp;rsquo;t keep up with triple buffering.</description>
+      <description>As per title: Delete AnimationDurationFactor from ~/.config/kwinrc if you have an old installation. This overrides the default value in kdeglobals and for me caused my animation speed to get stuck at something stupid.&#xA;source Also, this is entirely anecdotal but it appears to me that setting KWIN_TRIPLE_BUFFER=0 in /etc/profile.d/kwin.sh to disable triple buffering results in smoother behaviour than with it on despite the typical recommendations online. This may be because my laptop runs a Intel UHD620 and two 4K displays and the puny little integrated graphics card can&amp;rsquo;t keep up with triple buffering.</description>
     </item>
-    
     <item>
       <title>Toggling laptop touchsreen on Wayland</title>
       <link>//chenbrian.ca/posts/wayland_toggle_touchscreen/</link>
       <pubDate>Mon, 07 Feb 2022 15:23:04 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/wayland_toggle_touchscreen/</guid>
-      <description>Back when I was still on X11 1 , I had this little bash script to toggle my touchscreen on/off, since I didn&amp;rsquo;t use it all that often except to sign the occasional PDF. And it sucked up power2.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 #!/usr/bin/bash # toggles touchscreen on x11-based systems isOn=&amp;#34;$(xinput --list-props &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; | grep &amp;#39;Device Enabled&amp;#39;)&amp;#34; isOn=&amp;#34;${isOn: -1}&amp;#34; if [ $isOn -eq 0 ]; then xinput set-prop &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; &amp;#39;Device Enabled&amp;#39; 1 echo &amp;#34;Turning touchscreen on!</description>
+      <description>Back when I was still on X11 1 , I had this little bash script to toggle my touchscreen on/off, since I didn&amp;rsquo;t use it all that often except to sign the occasional PDF. And it sucked up power2.&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 #!/usr/bin/bash # toggles touchscreen on x11-based systems isOn=&amp;#34;$(xinput --list-props &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; | grep &amp;#39;Device Enabled&amp;#39;)&amp;#34; isOn=&amp;#34;${isOn: -1}&amp;#34; if [ $isOn -eq 0 ]; then xinput set-prop &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; &amp;#39;Device Enabled&amp;#39; 1 echo &amp;#34;Turning touchscreen on!</description>
     </item>
-    
   </channel>
 </rss>

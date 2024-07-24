@@ -1,43 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>robots on chenbrian</title>
+    <title>Robots on chenbrian</title>
     <link>//chenbrian.ca/tags/robots/</link>
-    <description>Recent content in robots on chenbrian</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Robots on chenbrian</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Sat, 21 Jan 2023 18:59:53 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/robots/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Nov 2023 00:19:22 -0800</lastBuildDate>
+    <atom:link href="//chenbrian.ca/tags/robots/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ros2 rolling on apple silicon</title>
       <link>//chenbrian.ca/posts/ros2_m1/</link>
       <pubDate>Sat, 21 Jan 2023 18:59:53 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/ros2_m1/</guid>
-      <description>It works! 1 I got a shiny new macbook and was sad that I had to dual-boot into Asahi (which is actually a surprisingly robust experience at the time of writing) to do ROS2 work. So I did the only sensible thing and spent the better part of a day making ros2 build on an m1 mac on MacOS Ventura.
-I&amp;rsquo;d like to report that ros2 runs flawlessly on apple silicon with some caveats (see below).</description>
+      <description>It works! 1 I got a shiny new macbook and was sad that I had to dual-boot into Asahi (which is actually a surprisingly robust experience at the time of writing) to do ROS2 work. So I did the only sensible thing and spent the better part of a day making ros2 build on an m1 mac on MacOS Ventura.&#xA;I&amp;rsquo;d like to report that ros2 runs flawlessly on apple silicon with some caveats (see below).</description>
     </item>
-    
     <item>
       <title>Retrospective: Internship @ Open Robotics</title>
       <link>//chenbrian.ca/posts/osrf-internship-retrospective/</link>
       <pubDate>Thu, 18 Aug 2022 01:20:00 -0700</pubDate>
-      
       <guid>//chenbrian.ca/posts/osrf-internship-retrospective/</guid>
-      <description>I spent summer 2022 interning at Open Robotics1, a non-profit organization that spawned 2 and maintains ROS, ROS2 (Robot Operating System) and the Gazebo simulator.
-Since writing up an retrospective is a lot more work than I&amp;rsquo;d like to put in right now, here&amp;rsquo;s the output of gh search prs --involves ihasdapie -L 100 in the relevant ros orgs, if that&amp;rsquo;s of interest. It&amp;rsquo;s also pretty cool to see the Iron Irwini Release Notes since I worked on a number of features there, most notably service introspection</description>
+      <description>I spent summer 2022 interning at Open Robotics1, a non-profit organization that spawned 2 and maintains ROS, ROS2 (Robot Operating System) and the Gazebo simulator.&#xA;Since writing up an retrospective is a lot more work than I&amp;rsquo;d like to put in right now, here&amp;rsquo;s the output of gh search prs --involves ihasdapie -L 100 in the relevant ros orgs, if that&amp;rsquo;s of interest. It&amp;rsquo;s also pretty cool to see the Iron Irwini Release Notes since I worked on a number of features there, most notably service introspection</description>
     </item>
-    
     <item>
       <title>ROS2 LSP Setup</title>
       <link>//chenbrian.ca/posts/ros2_lsp_setup/</link>
       <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/ros2_lsp_setup/</guid>
-      <description>TLDR: you want code completions while working with ROS2
-LSP with clangd ROS2 puts its headers into /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. This doesn&amp;rsquo;t work out of the box with my fairly default clangd setup, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.
-For vscode setup, see this or this</description>
+      <description>TLDR: you want code completions while working with ROS2&#xA;LSP with clangd ROS2 puts its headers into /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. This doesn&amp;rsquo;t work out of the box with my fairly default clangd setup, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.&#xA;For vscode setup, see this or this</description>
     </item>
-    
   </channel>
 </rss>

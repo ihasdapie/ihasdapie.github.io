@@ -4,256 +4,163 @@
     <title>chenbrian/posts on chenbrian</title>
     <link>//chenbrian.ca/posts/</link>
     <description>Recent content in chenbrian/posts on chenbrian</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>© 2022 — Brian Chen — All rights reserved.</copyright><atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
+    <atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ros2 rolling on apple silicon</title>
       <link>//chenbrian.ca/posts/ros2_m1/</link>
       <pubDate>Sat, 21 Jan 2023 18:59:53 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/ros2_m1/</guid>
-      <description>It works! 1 I got a shiny new macbook and was sad that I had to dual-boot into Asahi (which is actually a surprisingly robust experience at the time of writing) to do ROS2 work. So I did the only sensible thing and spent the better part of a day making ros2 build on an m1 mac on MacOS Ventura.
-I&amp;rsquo;d like to report that ros2 runs flawlessly on apple silicon with some caveats (see below).</description>
+      <description>It works! 1 I got a shiny new macbook and was sad that I had to dual-boot into Asahi (which is actually a surprisingly robust experience at the time of writing) to do ROS2 work. So I did the only sensible thing and spent the better part of a day making ros2 build on an m1 mac on MacOS Ventura.&#xA;I&amp;rsquo;d like to report that ros2 runs flawlessly on apple silicon with some caveats (see below).</description>
     </item>
-    
     <item>
       <title>Engsci Year 3 Winter Notes</title>
       <link>//chenbrian.ca/posts/engsci-year-3-winter/</link>
       <pubDate>Wed, 11 Jan 2023 15:28:52 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/engsci-year-3-winter/</guid>
-      <description>I&amp;rsquo;ve come to realize that some courses lend themselves to Latex&amp;rsquo;d notes better than others. The following pdf contains complete (!) notes for:
-ECE353: Operating Systems CSC473: Advanced Algorithms ECE568: Computer security Note that all of these were taken during class and as such are somewhat stream-of-consciousness and can contain errors. Error reporting welcome on GitHub.
-This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+      <description>I&amp;rsquo;ve come to realize that some courses lend themselves to Latex&amp;rsquo;d notes better than others. The following pdf contains complete (!) notes for:&#xA;ECE353: Operating Systems CSC473: Advanced Algorithms ECE568: Computer security Note that all of these were taken during class and as such are somewhat stream-of-consciousness and can contain errors. Error reporting welcome on GitHub.&#xA;This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
-    
     <item>
       <title>Engsci Year 3 Fall Notes</title>
       <link>//chenbrian.ca/posts/engsci-year-3-fall/</link>
       <pubDate>Wed, 14 Sep 2022 17:40:49 -0400</pubDate>
-      
       <guid>//chenbrian.ca/posts/engsci-year-3-fall/</guid>
       <description>This semester I&amp;rsquo;m trying to do it all in \( \LaTeX \). There should be an embedded pdf viewer below, but if it doesn&amp;rsquo;t work1, you can download the pdf here. These notes are pretty good for the first half of most courses, then I got rather preoccupied with catching the flu and PEY co-op applications. In any case it should be a reasonably decent resource. Notes are somewhat better for ECE352 and ECE358 but definitely has holes.</description>
     </item>
-    
     <item>
       <title>Retrospective: Internship @ Open Robotics</title>
       <link>//chenbrian.ca/posts/osrf-internship-retrospective/</link>
       <pubDate>Thu, 18 Aug 2022 01:20:00 -0700</pubDate>
-      
       <guid>//chenbrian.ca/posts/osrf-internship-retrospective/</guid>
-      <description>I spent summer 2022 interning at Open Robotics1, a non-profit organization that spawned 2 and maintains ROS, ROS2 (Robot Operating System) and the Gazebo simulator.
-Since writing up an retrospective is a lot more work than I&amp;rsquo;d like to put in right now, here&amp;rsquo;s the output of gh search prs --involves ihasdapie -L 100 in the relevant ros orgs, if that&amp;rsquo;s of interest. It&amp;rsquo;s also pretty cool to see the Iron Irwini Release Notes since I worked on a number of features there, most notably service introspection</description>
+      <description>I spent summer 2022 interning at Open Robotics1, a non-profit organization that spawned 2 and maintains ROS, ROS2 (Robot Operating System) and the Gazebo simulator.&#xA;Since writing up an retrospective is a lot more work than I&amp;rsquo;d like to put in right now, here&amp;rsquo;s the output of gh search prs --involves ihasdapie -L 100 in the relevant ros orgs, if that&amp;rsquo;s of interest. It&amp;rsquo;s also pretty cool to see the Iron Irwini Release Notes since I worked on a number of features there, most notably service introspection</description>
     </item>
-    
     <item>
       <title>PSA: Delete `AnimationDurationFactor` if you have an old KDE installation</title>
       <link>//chenbrian.ca/posts/kwin_choppy_fix/</link>
       <pubDate>Wed, 25 May 2022 01:22:56 -0700</pubDate>
-      
       <guid>//chenbrian.ca/posts/kwin_choppy_fix/</guid>
-      <description>As per title: Delete AnimationDurationFactor from ~/.config/kwinrc if you have an old installation. This overrides the default value in kdeglobals and for me caused my animation speed to get stuck at something stupid.
-source Also, this is entirely anecdotal but it appears to me that setting KWIN_TRIPLE_BUFFER=0 in /etc/profile.d/kwin.sh to disable triple buffering results in smoother behaviour than with it on despite the typical recommendations online. This may be because my laptop runs a Intel UHD620 and two 4K displays and the puny little integrated graphics card can&amp;rsquo;t keep up with triple buffering.</description>
+      <description>As per title: Delete AnimationDurationFactor from ~/.config/kwinrc if you have an old installation. This overrides the default value in kdeglobals and for me caused my animation speed to get stuck at something stupid.&#xA;source Also, this is entirely anecdotal but it appears to me that setting KWIN_TRIPLE_BUFFER=0 in /etc/profile.d/kwin.sh to disable triple buffering results in smoother behaviour than with it on despite the typical recommendations online. This may be because my laptop runs a Intel UHD620 and two 4K displays and the puny little integrated graphics card can&amp;rsquo;t keep up with triple buffering.</description>
     </item>
-    
     <item>
       <title>`LXD`, Arch Linux, ROS 2, and Wayland</title>
       <link>//chenbrian.ca/posts/lxd_arch_ros2_wayland/</link>
       <pubDate>Wed, 18 May 2022 17:05:30 -0700</pubDate>
-      
       <guid>//chenbrian.ca/posts/lxd_arch_ros2_wayland/</guid>
       <description>Rationale: I started my internship at Open Robotics and I needed to get a development environment set up on my laptop and could not be arsed to set up an ubuntu partition (and I&amp;rsquo;m a little too bound to my current rat&amp;rsquo;s nest of config files). So, like any other rational being, I invested twice the time and effort than it would&amp;rsquo;ve taken to get an ubuntu partition running into using LXD to fire up something that would compile ROS 2 1.</description>
     </item>
-    
     <item>
       <title>individual.utoronto.ca</title>
       <link>//chenbrian.ca/posts/individual.utoronto/</link>
       <pubDate>Tue, 22 Feb 2022 02:52:00 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/individual.utoronto/</guid>
-      <description>Turns out UofT students/faculty/etc can host a free personal site (50mb max) in individual.utoronto.ca through an until-now seemingly entirely undocumented process.
-Claim it through UTORid management here Connect to it through a ftp client. If you go back into the UTORid info page it will tell you what address to use for ftp which looks something like ftp://yourutorid@individual.utoronto.ca I just used dolphin&amp;rsquo;s built in support for network drives to upload the files Upload files through ftp and enjoy!</description>
+      <description>Turns out UofT students/faculty/etc can host a free personal site (50mb max) in individual.utoronto.ca through an until-now seemingly entirely undocumented process.&#xA;Claim it through UTORid management here Connect to it through a ftp client. If you go back into the UTORid info page it will tell you what address to use for ftp which looks something like ftp://yourutorid@individual.utoronto.ca I just used dolphin&amp;rsquo;s built in support for network drives to upload the files Upload files through ftp and enjoy!</description>
     </item>
-    
     <item>
       <title>Toggling laptop touchsreen on Wayland</title>
       <link>//chenbrian.ca/posts/wayland_toggle_touchscreen/</link>
       <pubDate>Mon, 07 Feb 2022 15:23:04 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/wayland_toggle_touchscreen/</guid>
-      <description>Back when I was still on X11 1 , I had this little bash script to toggle my touchscreen on/off, since I didn&amp;rsquo;t use it all that often except to sign the occasional PDF. And it sucked up power2.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 #!/usr/bin/bash # toggles touchscreen on x11-based systems isOn=&amp;#34;$(xinput --list-props &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; | grep &amp;#39;Device Enabled&amp;#39;)&amp;#34; isOn=&amp;#34;${isOn: -1}&amp;#34; if [ $isOn -eq 0 ]; then xinput set-prop &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; &amp;#39;Device Enabled&amp;#39; 1 echo &amp;#34;Turning touchscreen on!</description>
+      <description>Back when I was still on X11 1 , I had this little bash script to toggle my touchscreen on/off, since I didn&amp;rsquo;t use it all that often except to sign the occasional PDF. And it sucked up power2.&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 #!/usr/bin/bash # toggles touchscreen on x11-based systems isOn=&amp;#34;$(xinput --list-props &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; | grep &amp;#39;Device Enabled&amp;#39;)&amp;#34; isOn=&amp;#34;${isOn: -1}&amp;#34; if [ $isOn -eq 0 ]; then xinput set-prop &amp;#39;SYNA2393:00 06CB:19AC&amp;#39; &amp;#39;Device Enabled&amp;#39; 1 echo &amp;#34;Turning touchscreen on!</description>
     </item>
-    
     <item>
       <title>conway.3js</title>
       <link>//chenbrian.ca/posts/conway.3js/</link>
       <pubDate>Sat, 05 Feb 2022 22:14:08 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/conway.3js/</guid>
-      <description>A few weeks back one of my roommates mentioned in passing that they were thinking of writing conway&amp;rsquo;s game of life as a little widget for their website. I thought that was pretty fun and suggested that it would be really neat if it were in 3D as well.
-&amp;hellip; anyways fast-forward about two hours and I was stuck in a 3-hour lecture. So I wrote it (as is pretty evident below)</description>
+      <description>A few weeks back one of my roommates mentioned in passing that they were thinking of writing conway&amp;rsquo;s game of life as a little widget for their website. I thought that was pretty fun and suggested that it would be really neat if it were in 3D as well.&#xA;&amp;hellip; anyways fast-forward about two hours and I was stuck in a 3-hour lecture. So I wrote it (as is pretty evident below)</description>
     </item>
-    
     <item>
       <title>interfacing with a pi pico on linux</title>
       <link>//chenbrian.ca/posts/pi-pico-on-linux/</link>
       <pubDate>Thu, 27 Jan 2022 23:08:10 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/pi-pico-on-linux/</guid>
-      <description>Needed to use a Pi Pico for one of my courses (which mandated circuitpython &amp;hellip; for reasons unknown) and noticed that Adafruit&amp;rsquo;s documentation for using CircuitPython with something that wasn&amp;rsquo;t Mu Editor was not really up to par.
-Install CircuitPython by copying .uf2 file into the Pi Pico, which can be done by just plugging it into your computer python3 -m pip install circuitpython-stubs to get completions with your LSP of choice Connect to serial port to view prints and logging info find the appropriate port with ls /dev/ttyACM* connect using GNU screen or whatever you like to use e.</description>
+      <description>Needed to use a Pi Pico for one of my courses (which mandated circuitpython &amp;hellip; for reasons unknown) and noticed that Adafruit&amp;rsquo;s documentation for using CircuitPython with something that wasn&amp;rsquo;t Mu Editor was not really up to par.&#xA;Install CircuitPython by copying .uf2 file into the Pi Pico, which can be done by just plugging it into your computer python3 -m pip install circuitpython-stubs to get completions with your LSP of choice Connect to serial port to view prints and logging info find the appropriate port with ls /dev/ttyACM* connect using GNU screen or whatever you like to use e.</description>
     </item>
-    
     <item>
       <title>Writing a resume with LaTeX</title>
       <link>//chenbrian.ca/posts/latex-resume/</link>
       <pubDate>Fri, 21 Jan 2022 18:31:20 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/latex-resume/</guid>
-      <description>Let&amp;rsquo;s face it &amp;ndash; \( \LaTeX \)) is unequivocally cooler than Word. And you want an unequivocally cool resume. So you tried altacv, but it always got absolutely chewed up by ATS systems.
-And so you yearned for a 🌠cool🥶 single-column layout, but you couldn&amp;rsquo;t find one.
-I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.
-Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Disabling word wrapping and hyphenation Various changes to \makecvevent, etc.</description>
+      <description>Let&amp;rsquo;s face it &amp;ndash; \( \LaTeX \)) is unequivocally cooler than Word. And you want an unequivocally cool resume. So you tried altacv, but it always got absolutely chewed up by ATS systems.&#xA;And so you yearned for a 🌠cool🥶 single-column layout, but you couldn&amp;rsquo;t find one.&#xA;I present: my fork of altacv with a few 🌟 revolutionary 🌟 features.&#xA;Cut down on icons to improve pdf-to-text conversion Change to a single-column layout \itag{asdf} command to draw an inline &amp;ldquo;tag&amp;rdquo; \chref command for hyperlinks Disabling word wrapping and hyphenation Various changes to \makecvevent, etc.</description>
     </item>
-    
     <item>
       <title>Prof. Collin&#39;s Three Laws of Engineering</title>
       <link>//chenbrian.ca/posts/three-laws-of-engineering/</link>
       <pubDate>Thu, 20 Jan 2022 03:26:06 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/three-laws-of-engineering/</guid>
-      <description>&amp;ldquo;The only three rules an engineer needs to learn and remember&amp;rdquo; \( F = ma \) You can&amp;rsquo;t push on a rope. To get the answer, you must first know the answer Michael P. Collins 1
-If I remember anything from my degree it might be the above three laws and the pursuit of elegance in design 2
-source
-We were fortunate enough to be the last cohort to take it under Prof.</description>
+      <description>&amp;ldquo;The only three rules an engineer needs to learn and remember&amp;rdquo; \( F = ma \) You can&amp;rsquo;t push on a rope. To get the answer, you must first know the answer Michael P. Collins 1&#xA;If I remember anything from my degree it might be the above three laws and the pursuit of elegance in design 2&#xA;source&#xA;We were fortunate enough to be the last cohort to take it under Prof.</description>
     </item>
-    
     <item>
       <title>Setting up JupyterHub with `c` kernel on raspberry pi and/or binder</title>
       <link>//chenbrian.ca/posts/jupyterhub-rpi-binder/</link>
       <pubDate>Sun, 16 Jan 2022 00:44:40 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/jupyterhub-rpi-binder/</guid>
-      <description>I wanted to do something with this Raspberry Pi 4 I had lying around.
-Figured I would try to get JupyterHub going on it, maybe with a c kernel for my students to use. Turns out there are a few issues getting jupyterhub built for ARMv7. Anyhow the primary thing is that the rust toolchain must be installed in order to build the cryptography python module, and that when installing in a docker container the --sys-prefix must be passed to install_c_kernel.</description>
+      <description>I wanted to do something with this Raspberry Pi 4 I had lying around.&#xA;Figured I would try to get JupyterHub going on it, maybe with a c kernel for my students to use. Turns out there are a few issues getting jupyterhub built for ARMv7. Anyhow the primary thing is that the rust toolchain must be installed in order to build the cryptography python module, and that when installing in a docker container the --sys-prefix must be passed to install_c_kernel.</description>
     </item>
-    
     <item>
       <title>Engsci Year 2 Winter Notes</title>
       <link>//chenbrian.ca/posts/engsci-year-2-winter/</link>
       <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/engsci-year-2-winter/</guid>
-      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.
-Or, download here
-Notes prior to reading week can be found below. Right before reading week my roommate introduced me to the NotesTeX template and I&amp;rsquo;m currently using that.
-ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combining probabilities Outcomes denoted by variables, i.e. for coin clip \( H \), \( T \). Probability of outcome is denoted by \( P(X) \), where \( X \) is the outcome.</description>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.&#xA;Or, download here&#xA;Notes prior to reading week can be found below. Right before reading week my roommate introduced me to the NotesTeX template and I&amp;rsquo;m currently using that.&#xA;ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combining probabilities Outcomes denoted by variables, i.e. for coin clip \( H \), \( T \). Probability of outcome is denoted by \( P(X) \), where \( X \) is the outcome.</description>
     </item>
-    
     <item>
       <title>some poems</title>
       <link>//chenbrian.ca/posts/some-poems/</link>
       <pubDate>Sat, 08 Jan 2022 00:26:05 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/some-poems/</guid>
-      <description>Making it a commitment for 2022 to read some poems.
-The Jackdaw source
-William Cowper
-There is a bird who, by his coat
-And by the hoarseness of his note,
-Might be supposed a crow;
-A great frequenter of the church,
-Where, bishop-like, he finds a perch,
-And dormitory too.
-Above the steeple shines a plate,
-That turns and turns, to indicate
-From what point blows the weather.
-Look up &amp;ndash; your brains begin to swim,</description>
+      <description>Making it a commitment for 2022 to read some poems.&#xA;The Jackdaw source&#xA;William Cowper&#xA;There is a bird who, by his coat&#xA;And by the hoarseness of his note,&#xA;Might be supposed a crow;&#xA;A great frequenter of the church,&#xA;Where, bishop-like, he finds a perch,&#xA;And dormitory too.&#xA;Above the steeple shines a plate,&#xA;That turns and turns, to indicate&#xA;From what point blows the weather.&#xA;Look up &amp;ndash; your brains begin to swim,</description>
     </item>
-    
     <item>
       <title>ROS2 LSP Setup</title>
       <link>//chenbrian.ca/posts/ros2_lsp_setup/</link>
       <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/ros2_lsp_setup/</guid>
-      <description>TLDR: you want code completions while working with ROS2
-LSP with clangd ROS2 puts its headers into /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. This doesn&amp;rsquo;t work out of the box with my fairly default clangd setup, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.
-For vscode setup, see this or this</description>
+      <description>TLDR: you want code completions while working with ROS2&#xA;LSP with clangd ROS2 puts its headers into /opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include. This doesn&amp;rsquo;t work out of the box with my fairly default clangd setup, and it would be too easy if it just worked out of the box with vim! Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a c_cpp_properties.json file.&#xA;For vscode setup, see this or this</description>
     </item>
-    
     <item>
       <title>Notes on &#39;Clean Architecture: A Craftsman&#39;s Guide to Software Structure and Design&#39;</title>
       <link>//chenbrian.ca/posts/clean-architecture-notes/</link>
       <pubDate>Sun, 26 Dec 2021 16:39:21 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/clean-architecture-notes/</guid>
-      <description>&amp;ldquo;Fight for the architecture&amp;rdquo;
-The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]
-1 [1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed. USA: Prentice Hall Press, 2017. Paradigms Main paradigms:
-Structured: Discipline on direct transfer of control
-Dijkstra: banishing the goto statement; enforcing control flow; if, else, while, for &amp;hellip; Enabling functional decomposition; applying mathematical divide-and-conquer approach to algorithms Testing can only prove a program false but not correct Structured programming breaks down to provable chunks Object-oriented: Discipline on indirect transfer of control</description>
+      <description>&amp;ldquo;Fight for the architecture&amp;rdquo;&#xA;The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]&#xA;1 [1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed. USA: Prentice Hall Press, 2017. Paradigms Main paradigms:&#xA;Structured: Discipline on direct transfer of control&#xA;Dijkstra: banishing the goto statement; enforcing control flow; if, else, while, for &amp;hellip; Enabling functional decomposition; applying mathematical divide-and-conquer approach to algorithms Testing can only prove a program false but not correct Structured programming breaks down to provable chunks Object-oriented: Discipline on indirect transfer of control</description>
     </item>
-    
     <item>
       <title>Projects</title>
       <link>//chenbrian.ca/posts/projects/</link>
       <pubDate>Mon, 13 Dec 2021 21:03:35 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/projects/</guid>
-      <description>// Page under construction (Actually, this page has been abandoned since early 2022&amp;hellip;) //
-&amp;ldquo;If you built a project and did not write about it, did you really build a project?&amp;rdquo;
-Overview Browse projects by tag
-ROS: Worked on the open-source Robot Operating System (ROS) as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their VIPER lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.</description>
+      <description>// Page under construction (Actually, this page has been abandoned since early 2022&amp;hellip;) //&#xA;&amp;ldquo;If you built a project and did not write about it, did you really build a project?&amp;rdquo;&#xA;Overview Browse projects by tag&#xA;ROS: Worked on the open-source Robot Operating System (ROS) as a summer intern in 2022. What was really cool about this experience was that I got to work directly with NASA on their VIPER lunar rover project, supporting their use of ROS2 and Gazebo on their simulation, ground control, and autonomy systems.</description>
     </item>
-    
     <item>
       <title>Teaching</title>
       <link>//chenbrian.ca/posts/teaching/</link>
       <pubDate>Sun, 12 Dec 2021 16:49:34 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/teaching/</guid>
-      <description>(Currently) all content is in jupyter notebook format and is hosted on my on GitHub at github.com/ihasdapie/teaching. I&amp;rsquo;ve also set up a binder enviroment so that you can work with them interactively by using clicking on this badge: or following this link mybinder.org/v2/gh/ihasdapie/teaching/HEAD
-ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.
-ESC190 Tutorial 1 Tutorial 2 Notes Midterm review Heaps and DP handout (\( \LaTeX&amp;rsquo;d \)) Heaps and DP Office hours notes Final exam review 2022 Heaps and graphs office hours notes 2022 (All else currently WIP), see: github.</description>
+      <description>(Currently) all content is in jupyter notebook format and is hosted on my on GitHub at github.com/ihasdapie/teaching. I&amp;rsquo;ve also set up a binder enviroment so that you can work with them interactively by using clicking on this badge: or following this link mybinder.org/v2/gh/ihasdapie/teaching/HEAD&#xA;ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.&#xA;ESC190 Tutorial 1 Tutorial 2 Notes Midterm review Heaps and DP handout (\( \LaTeX&amp;rsquo;d \)) Heaps and DP Office hours notes Final exam review 2022 Heaps and graphs office hours notes 2022 (All else currently WIP), see: github.</description>
     </item>
-    
     <item>
       <title>Engsci Y2S1 Exam Review</title>
       <link>//chenbrian.ca/posts/engsci-y2s1-exam-review/</link>
       <pubDate>Sat, 11 Dec 2021 22:16:12 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/engsci-y2s1-exam-review/</guid>
-      <description>Exam &amp;lsquo;cheat sheets&amp;rsquo; for EngSci 2nd year semester fall semester. These were made as part of my own studying for the exams. As 3/6 of my exams were cancelled due to the omicron covid variant, AER210, MAT292, and PHY293 are missing.
-I do not guarantee content correctness &amp;ndash; but if you find a mistake, please let me know!
-CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>
+      <description>Exam &amp;lsquo;cheat sheets&amp;rsquo; for EngSci 2nd year semester fall semester. These were made as part of my own studying for the exams. As 3/6 of my exams were cancelled due to the omicron covid variant, AER210, MAT292, and PHY293 are missing.&#xA;I do not guarantee content correctness &amp;ndash; but if you find a mistake, please let me know!&#xA;CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>
     </item>
-    
     <item>
       <title>Advent of Code 2021</title>
       <link>//chenbrian.ca/posts/aoc2021/</link>
       <pubDate>Thu, 09 Dec 2021 21:20:53 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/aoc2021/</guid>
-      <description>This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.
-Solutions are hosted here. If a day isn&amp;rsquo;t very interesting, I won&amp;rsquo;t post a writeup for it.
-Day 6 Problem Solution
-So many lanternfish! The key to this puzzle is to represent the lanternfish as a histogram rather than creating a list of all the lanternfish. See solution.</description>
+      <description>This page will track some notes and TILs for AoC2021, which I will be completing in rust &amp;ndash; a language I am still learning.&#xA;Solutions are hosted here. If a day isn&amp;rsquo;t very interesting, I won&amp;rsquo;t post a writeup for it.&#xA;Day 6 Problem Solution&#xA;So many lanternfish! The key to this puzzle is to represent the lanternfish as a histogram rather than creating a list of all the lanternfish. See solution.</description>
     </item>
-    
     <item>
       <title>(g)o (w)eb (s)erver</title>
       <link>//chenbrian.ca/posts/go-web-server/</link>
       <pubDate>Thu, 09 Dec 2021 20:48:45 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/go-web-server/</guid>
-      <description>Deploying your personal website onto github pages is so 2013. Why avoid the hassle of self-hosting with a static site generator and server? Why not just use something tried and tested by the community?
-It&amp;rsquo;s just not as fun &amp;hellip; and I didn&amp;rsquo;t feel like studying for a final one afternoon.
-So here&amp;rsquo;s a simple 111-line golang webserver that you can use to deploy your personal website.
-There&amp;rsquo;s also some cute figlet art</description>
+      <description>Deploying your personal website onto github pages is so 2013. Why avoid the hassle of self-hosting with a static site generator and server? Why not just use something tried and tested by the community?&#xA;It&amp;rsquo;s just not as fun &amp;hellip; and I didn&amp;rsquo;t feel like studying for a final one afternoon.&#xA;So here&amp;rsquo;s a simple 111-line golang webserver that you can use to deploy your personal website.&#xA;There&amp;rsquo;s also some cute figlet art</description>
     </item>
-    
   </channel>
 </rss>

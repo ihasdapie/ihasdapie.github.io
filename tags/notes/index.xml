@@ -1,79 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>notes on chenbrian</title>
+    <title>Notes on chenbrian</title>
     <link>//chenbrian.ca/tags/notes/</link>
-    <description>Recent content in notes on chenbrian</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Notes on chenbrian</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
-    <lastBuildDate>Wed, 11 Jan 2023 15:28:52 -0500</lastBuildDate><atom:link href="//chenbrian.ca/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Apr 2023 15:02:23 -0400</lastBuildDate>
+    <atom:link href="//chenbrian.ca/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Engsci Year 3 Winter Notes</title>
       <link>//chenbrian.ca/posts/engsci-year-3-winter/</link>
       <pubDate>Wed, 11 Jan 2023 15:28:52 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/engsci-year-3-winter/</guid>
-      <description>I&amp;rsquo;ve come to realize that some courses lend themselves to Latex&amp;rsquo;d notes better than others. The following pdf contains complete (!) notes for:
-ECE353: Operating Systems CSC473: Advanced Algorithms ECE568: Computer security Note that all of these were taken during class and as such are somewhat stream-of-consciousness and can contain errors. Error reporting welcome on GitHub.
-This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
+      <description>I&amp;rsquo;ve come to realize that some courses lend themselves to Latex&amp;rsquo;d notes better than others. The following pdf contains complete (!) notes for:&#xA;ECE353: Operating Systems CSC473: Advanced Algorithms ECE568: Computer security Note that all of these were taken during class and as such are somewhat stream-of-consciousness and can contain errors. Error reporting welcome on GitHub.&#xA;This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
     </item>
-    
     <item>
       <title>Engsci Year 3 Fall Notes</title>
       <link>//chenbrian.ca/posts/engsci-year-3-fall/</link>
       <pubDate>Wed, 14 Sep 2022 17:40:49 -0400</pubDate>
-      
       <guid>//chenbrian.ca/posts/engsci-year-3-fall/</guid>
       <description>This semester I&amp;rsquo;m trying to do it all in \( \LaTeX \). There should be an embedded pdf viewer below, but if it doesn&amp;rsquo;t work1, you can download the pdf here. These notes are pretty good for the first half of most courses, then I got rather preoccupied with catching the flu and PEY co-op applications. In any case it should be a reasonably decent resource. Notes are somewhat better for ECE352 and ECE358 but definitely has holes.</description>
     </item>
-    
     <item>
       <title>Engsci Year 2 Winter Notes</title>
       <link>//chenbrian.ca/posts/engsci-year-2-winter/</link>
       <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/engsci-year-2-winter/</guid>
-      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.
-Or, download here
-Notes prior to reading week can be found below. Right before reading week my roommate introduced me to the NotesTeX template and I&amp;rsquo;m currently using that.
-ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combining probabilities Outcomes denoted by variables, i.e. for coin clip \( H \), \( T \). Probability of outcome is denoted by \( P(X) \), where \( X \) is the outcome.</description>
+      <description>This browser does not support PDFs. Please download the PDF to view it: Download PDF.&#xA;Or, download here&#xA;Notes prior to reading week can be found below. Right before reading week my roommate introduced me to the NotesTeX template and I&amp;rsquo;m currently using that.&#xA;ECE286: Probability and Statistics Probability Coin flip example &amp;amp; combining probabilities Outcomes denoted by variables, i.e. for coin clip \( H \), \( T \). Probability of outcome is denoted by \( P(X) \), where \( X \) is the outcome.</description>
     </item>
-    
     <item>
       <title>Notes on &#39;Clean Architecture: A Craftsman&#39;s Guide to Software Structure and Design&#39;</title>
       <link>//chenbrian.ca/posts/clean-architecture-notes/</link>
       <pubDate>Sun, 26 Dec 2021 16:39:21 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/clean-architecture-notes/</guid>
-      <description>&amp;ldquo;Fight for the architecture&amp;rdquo;
-The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]
-1 [1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed. USA: Prentice Hall Press, 2017. Paradigms Main paradigms:
-Structured: Discipline on direct transfer of control
-Dijkstra: banishing the goto statement; enforcing control flow; if, else, while, for &amp;hellip; Enabling functional decomposition; applying mathematical divide-and-conquer approach to algorithms Testing can only prove a program false but not correct Structured programming breaks down to provable chunks Object-oriented: Discipline on indirect transfer of control</description>
+      <description>&amp;ldquo;Fight for the architecture&amp;rdquo;&#xA;The following is a Work in progress collection of notes on &amp;lsquo;Clean Architecture: A Craftsman&amp;rsquo;s Guide to Software Structure and Design&amp;rsquo; by Robert C. Martin. [1]&#xA;1 [1] R. C. Martin, Clean Architecture: A Craftsman’s Guide to Software Structure and Design, 1st ed. USA: Prentice Hall Press, 2017. Paradigms Main paradigms:&#xA;Structured: Discipline on direct transfer of control&#xA;Dijkstra: banishing the goto statement; enforcing control flow; if, else, while, for &amp;hellip; Enabling functional decomposition; applying mathematical divide-and-conquer approach to algorithms Testing can only prove a program false but not correct Structured programming breaks down to provable chunks Object-oriented: Discipline on indirect transfer of control</description>
     </item>
-    
     <item>
       <title>Teaching</title>
       <link>//chenbrian.ca/posts/teaching/</link>
       <pubDate>Sun, 12 Dec 2021 16:49:34 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/teaching/</guid>
-      <description>(Currently) all content is in jupyter notebook format and is hosted on my on GitHub at github.com/ihasdapie/teaching. I&amp;rsquo;ve also set up a binder enviroment so that you can work with them interactively by using clicking on this badge: or following this link mybinder.org/v2/gh/ihasdapie/teaching/HEAD
-ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.
-ESC190 Tutorial 1 Tutorial 2 Notes Midterm review Heaps and DP handout (\( \LaTeX&amp;rsquo;d \)) Heaps and DP Office hours notes Final exam review 2022 Heaps and graphs office hours notes 2022 (All else currently WIP), see: github.</description>
+      <description>(Currently) all content is in jupyter notebook format and is hosted on my on GitHub at github.com/ihasdapie/teaching. I&amp;rsquo;ve also set up a binder enviroment so that you can work with them interactively by using clicking on this badge: or following this link mybinder.org/v2/gh/ihasdapie/teaching/HEAD&#xA;ESC180 Exam review Jupyter notebook for exam review based on student-requested content. Either download it and run locally, use Google Colab, or this Binder link.&#xA;ESC190 Tutorial 1 Tutorial 2 Notes Midterm review Heaps and DP handout (\( \LaTeX&amp;rsquo;d \)) Heaps and DP Office hours notes Final exam review 2022 Heaps and graphs office hours notes 2022 (All else currently WIP), see: github.</description>
     </item>
-    
     <item>
       <title>Engsci Y2S1 Exam Review</title>
       <link>//chenbrian.ca/posts/engsci-y2s1-exam-review/</link>
       <pubDate>Sat, 11 Dec 2021 22:16:12 -0500</pubDate>
-      
       <guid>//chenbrian.ca/posts/engsci-y2s1-exam-review/</guid>
-      <description>Exam &amp;lsquo;cheat sheets&amp;rsquo; for EngSci 2nd year semester fall semester. These were made as part of my own studying for the exams. As 3/6 of my exams were cancelled due to the omicron covid variant, AER210, MAT292, and PHY293 are missing.
-I do not guarantee content correctness &amp;ndash; but if you find a mistake, please let me know!
-CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>
+      <description>Exam &amp;lsquo;cheat sheets&amp;rsquo; for EngSci 2nd year semester fall semester. These were made as part of my own studying for the exams. As 3/6 of my exams were cancelled due to the omicron covid variant, AER210, MAT292, and PHY293 are missing.&#xA;I do not guarantee content correctness &amp;ndash; but if you find a mistake, please let me know!&#xA;CHE260 Note: the following only contains materials for the final exam, so it will only cover the heat-transfer portion of CHE260.</description>
     </item>
-    
   </channel>
 </rss>
