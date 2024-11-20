@@ -36,8 +36,6 @@
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
       <script>
         var doNotTrack = false;
@@ -52,10 +50,6 @@
           gtag('config', 'G-B0ZFV4LTG2');
         }
       </script>
-    
-  
-
-
 
     
 
@@ -556,26 +550,26 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </ul>
 <p>For example, taking the initial stack pointer value of <code>0x2000</code> we applying <code>PUSH {R0, R3, LR}</code> we get:</p>
 <table>
-<thead>
-<tr>
-<th>memory</th>
-<th>value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0x2000</td>
-<td>LR</td>
-</tr>
-<tr>
-<td>0x1FFC</td>
-<td>R3</td>
-</tr>
-<tr>
-<td>0x1FF8</td>
-<td>R0</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>memory</th>
+          <th>value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0x2000</td>
+          <td>LR</td>
+      </tr>
+      <tr>
+          <td>0x1FFC</td>
+          <td>R3</td>
+      </tr>
+      <tr>
+          <td>0x1FF8</td>
+          <td>R0</td>
+      </tr>
+  </tbody>
 </table>
 <h4 id="recursion">Recursion</h4>
 <p>The following are assuming SP, etc has been init&rsquo;d</p>
@@ -838,34 +832,34 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </li>
 </ul>
 <table>
-<thead>
-<tr>
-<th>31</th>
-<th>30</th>
-<th>29</th>
-<th>28</th>
-<th>..</th>
-<th>7</th>
-<th>6</th>
-<th>5</th>
-<th>4 .. 0</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>N</td>
-<td>Z</td>
-<td>C</td>
-<td>V</td>
-<td>..</td>
-<td>[I]nterrupt</td>
-<td>F</td>
-<td>T</td>
-<td>mode</td>
-<td></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>31</th>
+          <th>30</th>
+          <th>29</th>
+          <th>28</th>
+          <th>..</th>
+          <th>7</th>
+          <th>6</th>
+          <th>5</th>
+          <th>4 .. 0</th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>N</td>
+          <td>Z</td>
+          <td>C</td>
+          <td>V</td>
+          <td>..</td>
+          <td>[I]nterrupt</td>
+          <td>F</td>
+          <td>T</td>
+          <td>mode</td>
+          <td></td>
+      </tr>
+  </tbody>
 </table>
 <p>CPSR is saved when an interrupt occurs so that flags and mode it can be restored when the interrupt is handled.</p>
 <ul>
