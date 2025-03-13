@@ -7,7 +7,7 @@
 
     <title>PEY @ Uber </title>
 
-    <style>*{box-sizing:border-box}body{margin:40px auto;max-width:800px;line-height:1.6;font-size:16px;color:#444;font-family:sans-serif;padding:0 10px}h1,h2,h3{line-height:1.2;font-family:sans-serif;color:#444}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:16px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}td,th{border:1px solid #444;padding:.5rem;text-align:left}@media only screen and (max-width:1450px){#back_to_top{visibility:visible!important}#toc{display:none}}.katex-display>.katex{overflow:auto hidden}.katex .katex-html>.newline{display:block;padding-bottom:.25em;padding-top:.25em}#toc{position:fixed;top:40px;right:0;padding-right:10%;line-height:1.4em;max-width:30%;margin:auto}#back_to_top{position:fixed;top:10px;right:10px;width:100px;visibility:hidden}blockquote{background:#f1f1f1;border-left:4px solid #ccc;padding-left:8px}code:not([class*=language-]){border-radius:.25rem;padding:.1rem;background-color:#f8f8f8;color:#863109}code{width:100px;overflow:auto;word-wrap:normal;white-space:pre;text-size-adjust:100%;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%}p+ul,p+ol,ul+ol,ol+ul{margin-top:-10px}ul,ol,li{padding-left:.5 em}a.footnote-ref::before{content:'['}a.footnote-ref::after{content:']'} 
+    <style>*{box-sizing:border-box}body{margin:40px auto;max-width:800px;line-height:1.6;font-size:16px;color:#444;font-family:sans-serif;padding:0 10px}h1,h2,h3{line-height:1.2;font-family:sans-serif;color:#444}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:16px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}td,th{border:1px solid #444;padding:.5rem;text-align:left}@media only screen and (max-width:1450px){#back_to_top{visibility:visible!important}#toc{display:none}}.katex-display>.katex{overflow:auto hidden}.katex .katex-html>.newline{display:block;padding-bottom:.25em;padding-top:.25em}#toc{position:fixed;top:40px;right:0;padding-right:10%;line-height:1.4em;max-width:30%;margin:auto}#back_to_top{position:fixed;top:10px;right:10px;width:100px;visibility:hidden}blockquote{background:#f1f1f1;border-left:4px solid #ccc;padding-left:8px}code:not([class*=language-]){border-radius:.25rem;padding:.1rem;background-color:#f8f8f8;color:#863109}code{width:100px;overflow:auto;word-wrap:normal;white-space:pre}p+ul,p+ol,ul+ol,ol+ul{margin-top:-10px}ul,ol,li{padding-left:.5 em}a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"} 
             body {
                 margin-left: 15%;   
             }
@@ -70,10 +70,9 @@
     <h1>
         <a href="//localhost:1313/">chenbrian</a>
         <div class="header-menu">
-            <a href="/about/">about</a> &nbsp;
             <a href="/posts/">posts</a> &nbsp;
-            <a href="/tags/">tags</a> &nbsp;
             <a href="https://github.com/ihasdapie">github</a> &nbsp;
+            <a href="/resume.pdf">cv</a> &nbsp;
         </div>
     </h1>
 </div>
@@ -86,10 +85,6 @@
     <h4>Table of Contents</h4>
     <aside>
         <nav id="TableOfContents">
-  <ul>
-    <li><a href="#what-i-worked-on">What I Worked on</a></li>
-  </ul>
-
   <ul>
     <li><a href="#how-to-be-a-good-engineer">How to be a good engineer</a></li>
   </ul>
@@ -113,7 +108,7 @@
 <div class="post-meta">
     Date:
     <time datetime="2024-11-14">Nov 14, 2024</time>,&nbsp;Last Modified:
-    <time datetime="2024-11-19">Nov 19, 2024</time>
+    <time datetime="2025-01-19">Jan 19, 2025</time>
     <br>
     
 </div>
@@ -142,15 +137,24 @@ I found this to be a great learning experience, and I was able to grow a lot as 
 <li>In particular, I worked on a project to improve the efficiency and safety of the <a href="https://www.uber.com/en-CA/blog/capacity-recommendation-engine/">CRE</a> autoscaler, which manages the scaling of most of Uber&rsquo;s stateless services at the time.</li>
 <li>gc signals, base fx libs</li>
 <li>memory based scaling</li>
-<li>non-linear</li>
+<li>nonlinear garbage collector behaviour (exponential)</li>
+<li>memory optimizations (cross-functional)</li>
 </ul>
+<p>One thing I appreciated about the engineering process at Uber was the RFC process.
+New features began as an ERD (Engineering Review Document), which is a document that outlines the problem, the proposed solution, and the trade-offs involved.
+Security considerations, performance, cost, etc. are all considered. Once this goes through sufficient review, possibly backed in tandem with proof-of-concept implementation work, the project is implemented.
+That being said, what I appreciated most about the process was that it was not a hard requirement.
+Smaller features did not necessarily need to go through this process, and the process was flexible enough to be adapted to the needs of the project.
+I felt like this was a good balance between the rigidity of a process and the flexibility needed to get things done.</p>
+<p>, since it was a core multimillion dollar service, I received comments from across the company, including from the language foundations teams, the service owners, SREs, etc. I recall replying to one comment with a little bit of snark, and then realizing that the person I was replying to was a distinguished engineer.</p>
+<p>In summary, as an intern, I had the opportunity to receive top-notch mentorship, work on impactful projects, and grow as an engineer.
+Not only was there well-scoped projects that the team was excited to offer me (the typical intern experience), I was also given the leg room to engage with the day-to-day work of the team and to identify and solve problems that I found interesting inside <em>and out (!)</em> of the team&rsquo;s scope.</p>
 <!-- -    \item I help ensure reliable and efficient operation of Uber's mapping and core services via participating in on-call rotation, incident response, and service ownership on the mapping production engineering (SRE) team, primarily focusing on capacity safety, efficiency, and performance
     \item Designed \& delivered extension to \chref{https://www.uber.com/blog/capacity-recommendation-engine/}{CRE} to build CPU \& throughput-informed rectangular auto-scaling system for Uber's stateless microservices to improve failover safety and reduce cost. Approximately half of Uber's stateless compute is managed by this system.
     \item Diagnosed and fixed severe memory allocation issue causing excess garbage collector load, service degradation, and outages in a critical core service (>2.5 mil RPS) via `hacking' the go runtime; reduced service compute cost by >\$700,000 while improving latency and reliability
     \item Worked with language foundation teams to improve go and java service observability into garbage collector performance. For example, I identified a non-linear relationship in GC signals for use to predict service performance degradation under high load
     \item Developing end-to-end memory leak detection system including Go \& JVM garbage collector monitoring, auto-scaling, and load-testing tooling -->
 <p><a href="https://www.tournamentsoftware.com/sport/teamstats.aspx?id=2F4ED393-50FB-44F4-B72C-D8C2883CF5B3&amp;tid=142">https://www.tournamentsoftware.com/sport/teamstats.aspx?id=2F4ED393-50FB-44F4-B72C-D8C2883CF5B3&amp;tid=142</a></p>
-<h2 id="what-i-worked-on">What I Worked on</h2>
 <h1 id="team-cristian-haarith-etc">Team; Cristian, Haarith, etc</h1>
 <h1 id="food">FOOD</h1>
 <h1 id="12-month-or-not-to-12-month">12 month or not to 12 month</h1>
@@ -172,6 +176,9 @@ Taxes</p>
 <li>Kirk Ireland</li>
 <li>Haarith Deverjan</li>
 <li>Cristian Velequez</li>
+<li>Jianing He</li>
+<li>Shuming Peng</li>
+<li></li>
 </ul>
 
 </article>
@@ -190,7 +197,7 @@ Taxes</p>
 
     
     
-    <div class="copyright">© 2022 — Brian Chen — All rights reserved.</div>
+    <div class="copyright">© 2025 — Brian Chen — All rights reserved.</div>
     
 
     <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>

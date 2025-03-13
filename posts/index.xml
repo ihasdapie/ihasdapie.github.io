@@ -6,8 +6,15 @@
     <description>Recent content in chenbrian/posts on chenbrian</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
+    <copyright>© 2025 — Brian Chen — All rights reserved.</copyright>
     <atom:link href="//chenbrian.ca/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SAMBA file share for time machine</title>
+      <link>//chenbrian.ca/posts/samba_timemachine/</link>
+      <pubDate>Fri, 10 Mar 2023 22:56:58 -0500</pubDate>
+      <guid>//chenbrian.ca/posts/samba_timemachine/</guid>
+      <description>&lt;p&gt;Short post.&lt;/p&gt;&#xA;&lt;p&gt;I wanted to repurpose an old external hard drive into a NAS and do time machine backups on it as well.&#xA;Here&amp;rsquo;s the &lt;code&gt;smb.conf&lt;/code&gt; I used &amp;ndash; some special stuff needs to be done to make it work with time machine.&#xA;Mostly just adding &lt;code&gt;fruit:time machine = yes&lt;/code&gt; and the accompanying parameters.&lt;/p&gt;&#xA;&lt;p&gt;One important thing to note is that your external hard drive &lt;em&gt;cannot be&lt;/em&gt; formatted as any &lt;code&gt;FAT&lt;/code&gt; since it doesn&amp;rsquo;t support extended attributes which SAMBA needs to make time machine work. I used btrfs.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>ros2 rolling on apple silicon</title>
       <link>//chenbrian.ca/posts/ros2_m1/</link>
@@ -105,13 +112,6 @@
       <pubDate>Mon, 10 Jan 2022 19:53:48 -0500</pubDate>
       <guid>//chenbrian.ca/posts/engsci-year-2-winter/</guid>
       <description>&lt;p&gt;&lt;object data=&#34;notes.pdf#toolbar=0&amp;navpanes=0&#34; type=&#34;application/pdf&#34; width=100% height=&#34;700px&#34;&gt;&#xA;    &lt;embed src=&#34;notes.pdf&#34;&gt;&#xA;        &lt;p&gt;This browser does not support PDFs. Please download the PDF to view it: &lt;a href=&#34;notes.pdf&#34;&gt;Download PDF&lt;/a&gt;.&lt;/p&gt;&#xA;    &lt;/object&gt;&#xA;&lt;/object&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;Or, download &lt;a href=&#34;notes.pdf&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Notes prior to reading week can be found below.&#xA;Right before reading week my roommate introduced me to the &lt;a href=&#34;https://github.com/Adhumunt/NotesTeX&#34;&gt;NotesTeX&lt;/a&gt; template and I&amp;rsquo;m currently using that.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ece286-probability-and-statistics&#34;&gt;ECE286: Probability and Statistics&lt;/h2&gt;&#xA;&lt;h3 id=&#34;probability&#34;&gt;Probability&lt;/h3&gt;&#xA;&lt;h4 id=&#34;coin-flip-example--combining-probabilities&#34;&gt;Coin flip example &amp;amp; combining probabilities&lt;/h4&gt;&#xA;&lt;p&gt;Outcomes denoted by variables, i.e. for coin clip \( H \), \( T \). Probability of outcome is denoted by \( P(X) \), where \( X \) is the outcome. We must have \( \sum(P) = 1 \) since \( 100% \).&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>some poems</title>
-      <link>//chenbrian.ca/posts/some-poems/</link>
-      <pubDate>Sat, 08 Jan 2022 00:26:05 -0500</pubDate>
-      <guid>//chenbrian.ca/posts/some-poems/</guid>
-      <description>&lt;p&gt;Making it a commitment for 2022 to &lt;a href=&#34;https://www.poetryfoundation.org/poems/poem-of-the-day&#34;&gt;read some poems&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-jackdaw&#34;&gt;The Jackdaw&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://allpoetry.com/The-Jackdaw&#34;&gt;source&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;William Cowper&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;There is a bird who, by his coat&lt;br&gt;&#xA;And by the hoarseness of his note,&lt;br&gt;&#xA;Might be supposed a crow;&lt;br&gt;&#xA;A great frequenter of the church,&lt;br&gt;&#xA;Where, bishop-like, he finds a perch,&lt;br&gt;&#xA;And dormitory too.&lt;/p&gt;&#xA;&lt;p&gt;Above the steeple shines a plate,&lt;br&gt;&#xA;That turns and turns, to indicate&lt;br&gt;&#xA;From what point blows the weather.&lt;br&gt;&#xA;Look up &amp;ndash; your brains begin to swim,&lt;br&gt;&#xA;&amp;lsquo;Tis in the clouds &amp;ndash; that pleases him,&lt;br&gt;&#xA;He chooses it the rather.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ROS2 LSP Setup</title>

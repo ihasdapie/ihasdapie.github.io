@@ -6,7 +6,7 @@
     <description>Recent content in Other on chenbrian</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
+    <copyright>© 2025 — Brian Chen — All rights reserved.</copyright>
     <lastBuildDate>Thu, 26 Jan 2023 03:20:44 -0500</lastBuildDate>
     <atom:link href="//chenbrian.ca/tags/other/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -22,13 +22,6 @@
       <pubDate>Thu, 27 Jan 2022 23:08:10 -0500</pubDate>
       <guid>//chenbrian.ca/posts/pi-pico-on-linux/</guid>
       <description>&lt;p&gt;Needed to use a Pi Pico for one of my courses (which mandated circuitpython &amp;hellip; for reasons unknown) and noticed that Adafruit&amp;rsquo;s documentation for using CircuitPython with something that wasn&amp;rsquo;t Mu Editor was not really up to par.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Install CircuitPython by copying &lt;code&gt;.uf2&lt;/code&gt; file into the Pi Pico, which can be done by just plugging it into your computer&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;python3 -m pip install circuitpython-stubs&lt;/code&gt; to get completions with your LSP of choice&lt;/li&gt;&#xA;&lt;li&gt;Connect to serial port to view &lt;code&gt;print&lt;/code&gt;s and logging info&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;find the appropriate port with &lt;code&gt;ls /dev/ttyACM*&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;connect using GNU &lt;code&gt;screen&lt;/code&gt; or whatever you like to use&#xA;&lt;ul&gt;&#xA;&lt;li&gt;e.x. &lt;code&gt;screen /dev/ttyACM0 115200&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;If you get a permissions error, add &lt;code&gt;sudo&lt;/code&gt; or add yourself to the appropriate group&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>some poems</title>
-      <link>//chenbrian.ca/posts/some-poems/</link>
-      <pubDate>Sat, 08 Jan 2022 00:26:05 -0500</pubDate>
-      <guid>//chenbrian.ca/posts/some-poems/</guid>
-      <description>&lt;p&gt;Making it a commitment for 2022 to &lt;a href=&#34;https://www.poetryfoundation.org/poems/poem-of-the-day&#34;&gt;read some poems&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-jackdaw&#34;&gt;The Jackdaw&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://allpoetry.com/The-Jackdaw&#34;&gt;source&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;William Cowper&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;There is a bird who, by his coat&lt;br&gt;&#xA;And by the hoarseness of his note,&lt;br&gt;&#xA;Might be supposed a crow;&lt;br&gt;&#xA;A great frequenter of the church,&lt;br&gt;&#xA;Where, bishop-like, he finds a perch,&lt;br&gt;&#xA;And dormitory too.&lt;/p&gt;&#xA;&lt;p&gt;Above the steeple shines a plate,&lt;br&gt;&#xA;That turns and turns, to indicate&lt;br&gt;&#xA;From what point blows the weather.&lt;br&gt;&#xA;Look up &amp;ndash; your brains begin to swim,&lt;br&gt;&#xA;&amp;lsquo;Tis in the clouds &amp;ndash; that pleases him,&lt;br&gt;&#xA;He chooses it the rather.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

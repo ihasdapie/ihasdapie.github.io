@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>chenbrian.ca on chenbrian</title>
+    <title>Brian Chen on chenbrian</title>
     <link>//chenbrian.ca/</link>
-    <description>Recent content in chenbrian.ca on chenbrian</description>
+    <description>Recent content in Brian Chen on chenbrian</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>© 2022 — Brian Chen — All rights reserved.</copyright>
+    <copyright>© 2025 — Brian Chen — All rights reserved.</copyright>
     <atom:link href="//chenbrian.ca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SAMBA file share for time machine</title>
+      <link>//chenbrian.ca/posts/samba_timemachine/</link>
+      <pubDate>Fri, 10 Mar 2023 22:56:58 -0500</pubDate>
+      <guid>//chenbrian.ca/posts/samba_timemachine/</guid>
+      <description>&lt;p&gt;Short post.&lt;/p&gt;&#xA;&lt;p&gt;I wanted to repurpose an old external hard drive into a NAS and do time machine backups on it as well.&#xA;Here&amp;rsquo;s the &lt;code&gt;smb.conf&lt;/code&gt; I used &amp;ndash; some special stuff needs to be done to make it work with time machine.&#xA;Mostly just adding &lt;code&gt;fruit:time machine = yes&lt;/code&gt; and the accompanying parameters.&lt;/p&gt;&#xA;&lt;p&gt;One important thing to note is that your external hard drive &lt;em&gt;cannot be&lt;/em&gt; formatted as any &lt;code&gt;FAT&lt;/code&gt; since it doesn&amp;rsquo;t support extended attributes which SAMBA needs to make time machine work. I used btrfs.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>ros2 rolling on apple silicon</title>
       <link>//chenbrian.ca/posts/ros2_m1/</link>
@@ -107,13 +114,6 @@
       <description>&lt;p&gt;&lt;object data=&#34;notes.pdf#toolbar=0&amp;navpanes=0&#34; type=&#34;application/pdf&#34; width=100% height=&#34;700px&#34;&gt;&#xA;    &lt;embed src=&#34;notes.pdf&#34;&gt;&#xA;        &lt;p&gt;This browser does not support PDFs. Please download the PDF to view it: &lt;a href=&#34;notes.pdf&#34;&gt;Download PDF&lt;/a&gt;.&lt;/p&gt;&#xA;    &lt;/object&gt;&#xA;&lt;/object&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;Or, download &lt;a href=&#34;notes.pdf&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Notes prior to reading week can be found below.&#xA;Right before reading week my roommate introduced me to the &lt;a href=&#34;https://github.com/Adhumunt/NotesTeX&#34;&gt;NotesTeX&lt;/a&gt; template and I&amp;rsquo;m currently using that.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ece286-probability-and-statistics&#34;&gt;ECE286: Probability and Statistics&lt;/h2&gt;&#xA;&lt;h3 id=&#34;probability&#34;&gt;Probability&lt;/h3&gt;&#xA;&lt;h4 id=&#34;coin-flip-example--combining-probabilities&#34;&gt;Coin flip example &amp;amp; combining probabilities&lt;/h4&gt;&#xA;&lt;p&gt;Outcomes denoted by variables, i.e. for coin clip \( H \), \( T \). Probability of outcome is denoted by \( P(X) \), where \( X \) is the outcome. We must have \( \sum(P) = 1 \) since \( 100% \).&lt;/p&gt;</description>
     </item>
     <item>
-      <title>some poems</title>
-      <link>//chenbrian.ca/posts/some-poems/</link>
-      <pubDate>Sat, 08 Jan 2022 00:26:05 -0500</pubDate>
-      <guid>//chenbrian.ca/posts/some-poems/</guid>
-      <description>&lt;p&gt;Making it a commitment for 2022 to &lt;a href=&#34;https://www.poetryfoundation.org/poems/poem-of-the-day&#34;&gt;read some poems&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-jackdaw&#34;&gt;The Jackdaw&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://allpoetry.com/The-Jackdaw&#34;&gt;source&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;William Cowper&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;There is a bird who, by his coat&lt;br&gt;&#xA;And by the hoarseness of his note,&lt;br&gt;&#xA;Might be supposed a crow;&lt;br&gt;&#xA;A great frequenter of the church,&lt;br&gt;&#xA;Where, bishop-like, he finds a perch,&lt;br&gt;&#xA;And dormitory too.&lt;/p&gt;&#xA;&lt;p&gt;Above the steeple shines a plate,&lt;br&gt;&#xA;That turns and turns, to indicate&lt;br&gt;&#xA;From what point blows the weather.&lt;br&gt;&#xA;Look up &amp;ndash; your brains begin to swim,&lt;br&gt;&#xA;&amp;lsquo;Tis in the clouds &amp;ndash; that pleases him,&lt;br&gt;&#xA;He chooses it the rather.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>ROS2 LSP Setup</title>
       <link>//chenbrian.ca/posts/ros2_lsp_setup/</link>
       <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
@@ -167,7 +167,7 @@
       <link>//chenbrian.ca/about/</link>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       <guid>//chenbrian.ca/about/</guid>
-      <description>&lt;h2 id=&#34;what-am-i-up-to-right-now&#34;&gt;What am I up to right now?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Incoming @ Tesla Autopilot&lt;/li&gt;&#xA;&lt;li&gt;Building &lt;a href=&#34;https://www.kortex.co/&#34;&gt;kortex&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Research @ &lt;a href=&#34;https://tisl.cs.utoronto.ca/&#34;&gt;TISL&lt;/a&gt;, co-supervised by nvidia research&lt;/li&gt;&#xA;&lt;li&gt;Trying to get through university :)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;connect-with-me&#34;&gt;Connect with me:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Email: &lt;code&gt;brianchen.chen (at) mail.utoronto.ca&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ihasdapie&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;some-things-ive-worked-on-in-the-past&#34;&gt;Some things I&amp;rsquo;ve worked on in the past:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ProdEng @ Uber&lt;/li&gt;&#xA;&lt;li&gt;Autopilot @ Tesla&lt;/li&gt;&#xA;&lt;li&gt;SWE @ &lt;a href=&#34;https://openrobotics.org/&#34;&gt;Open Robotics&lt;/a&gt; (Now an Alphabet company)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Got to work on NASA&amp;rsquo;s &lt;a href=&#34;https://www.nasa.gov/viper&#34;&gt;VIPER&lt;/a&gt; lunar rover!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Research @ &lt;a href=&#34;https://www.eecg.utoronto.ca/~roman/&#34;&gt;ISML&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Accelerating machine learning tasks on memristor crossbars&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Teaching cars to drive themselves @ &lt;a href=&#34;https://www.autodrive.utoronto.ca/&#34;&gt;aUToronto&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//chenbrian.ca/posts/teaching/&#34;&gt;TA&lt;/a&gt;-ing data structures &amp;amp; algorithms (ESC180/ESC190)&lt;/li&gt;&#xA;&lt;li&gt;Building &lt;a href=&#34;discoverparks.ca&#34;&gt;discoverparks.ca&lt;/a&gt; for &lt;a href=&#34;https://bcparksfoundation.ca/&#34;&gt;BC Parks Foundation&lt;/a&gt;.  (&lt;a href=&#34;./bcpf_dp_ad.jpg&#34;&gt;cool discoverparks ad at YVR&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//chenbrian.ca/tags/notes/&#34;&gt;Making pretty notes&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Helping people shop for groceries more safely during COVID-19 with &lt;a href=&#34;https://grocercheck.ca/&#34;&gt;grocercheck.ca&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;//chenbrian.ca/posts/projects/&#34;&gt;And more&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;For more details, see my &lt;a href=&#34;//chenbrian.ca/posts/projects/&#34;&gt;projects page&lt;/a&gt; or &lt;a href=&#34;#connect-with-me&#34;&gt;contact me&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;resume&#34;&gt;Resume&lt;/h2&gt;&#xA;&lt;object data=&#34;../resume.pdf#toolbar=0&amp;navpanes=0&#34; type=&#34;application/pdf&#34; width=100% height=&#34;700px&#34;&gt;&#xA;    &lt;embed src=&#34;../resume.pdf&#34;&gt;&#xA;        &lt;p&gt;This browser does not support PDFs. Please download the PDF to view it: &lt;a href=&#34;../resume.pdf&#34;&gt;Download PDF&lt;/a&gt;.&lt;/p&gt;&#xA;    &lt;/object&gt;&#xA;&lt;/object&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;details&gt;&#xA;  &lt;summary&gt;View as image&lt;/summary&gt;&#xA;  &lt;img src=&#34;//chenbrian.ca/&#xA;/resume.png&#34; alt=&#34;Resume&#34; style=&#34;width:100%&#34;&gt;&#xA;&lt;/details&gt; &#xA;&lt;p&gt;If the PDF preview doesn&amp;rsquo;t work for you, you may download it instead by clicking on &lt;a href=&#34;//chenbrian.ca/&#xA;/resume.pdf&#34;&gt;this link&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;misc&#34;&gt;Misc&lt;/h2&gt;&#xA;&lt;p&gt;Fun fact: I have an Erdős number of 4. Not particularly impressive, but I think it&amp;rsquo;s cool.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Q: How can you tell if someone uses Linux?&lt;br&gt;&#xA;A: They&amp;rsquo;ll tell you.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;I&amp;rsquo;m currently on &lt;del&gt;Manjaro&lt;/del&gt;  [^1] &lt;del&gt;Tumbleweed&lt;/del&gt; &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; Arch!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
