@@ -213,13 +213,11 @@ $$ P(A\cup B) = P(A) + P(B) - P(A\cap B)$$</p>
 <h5 id="conditional-probability">Conditional Probability</h5>
 <p>$$ P(B|A) = \frac{P(A\cap B)}{P(A)}$$</p>
 <blockquote>
-<p>The probability of B occurring, given that A occurs</p>
-</blockquote>
+<p>The probability of B occurring, given that A occurs</p></blockquote>
 <h4 id="total-probability">Total probability</h4>
 <p>Suppose A is an event and \(B_1, &hellip; B_k\) is a partition.</p>
 <blockquote>
-<p>Recall: \( B_1 &hellip; B_k \)) is a partition if \( B_i \cap B_j \neq 0\) and \( B_1 \cup &hellip; B_k = S\)</p>
-</blockquote>
+<p>Recall: \( B_1 &hellip; B_k \)) is a partition if \( B_i \cap B_j \neq 0\) and \( B_1 \cup &hellip; B_k = S\)</p></blockquote>
 <p>$$ P(A) = \sum_{i=1}^k P(A \cap B_i) $$</p>
 <p>For example, if we have machines \( B_1, B_2, B_3 \) that make products  30%, 45%, 25% of the time (note that this forms a partition)</p>
 <p>And that they produce 2%, 3%, 2% defective products, we can find the probability of there being a defect as</p>
@@ -234,8 +232,7 @@ $$ P(C_n|A) = \frac{P(C_n)P(A|C_n)}{\sum^k_{i=1}  P(C_i)P(A|C_i)} $$</p>
 <p>E.x. Probability that a defective product comes from machine 3 \( B_3 \)</p>
 <p>$$P(B_3|D) = \frac{P(B_3)P(D|B_3)}{P(D)} = \frac{0.25*0.02}{0.0245} = 10/49$$</p>
 <blockquote>
-<p><em>Given</em> that the product is defective, what is the chance it came from machine 3?</p>
-</blockquote>
+<p><em>Given</em> that the product is defective, what is the chance it came from machine 3?</p></blockquote>
 <p>Bayes&rsquo; rule is useful when we have limited information.
 For example if we&rsquo;re trying to check if we have a disease:
 Given:</p>
@@ -244,15 +241,13 @@ Given:</p>
 <li>A test kit that has a true positive rate \( P(T = 1|D) = 0.7 \), false positive \(P(T=1| not D) = 0.05\)</li>
 </ol>
 <blockquote>
-<p>What is \(  P(D|T = 1) \)? (Chance of having disease given test kit is true positive?)</p>
-</blockquote>
+<p>What is \(  P(D|T = 1) \)? (Chance of having disease given test kit is true positive?)</p></blockquote>
 <p>$$ P(D|T=1) = \frac{P(T=1|D)P(D)}{P(T=1|D)P(D)+P(T=1|not D)P(not D) } \\
 = (0.7 \times 0.001 ) / (0.7 \times 0.001 + 0.05 \times 0.999) \approx 0.014 $$</p>
 <blockquote>
 <p>This may look like a number that&rsquo;s really off. Why would a positive test result only
 indicate a 1.4% change of having the disease?
-Must recall: this as the &ldquo;inverse&rdquo; of the true positive rate (chance of testing positive if you have the disease).</p>
-</blockquote>
+Must recall: this as the &ldquo;inverse&rdquo; of the true positive rate (chance of testing positive if you have the disease).</p></blockquote>
 <p>This can be applied in sequential state estimation.
 Given</p>
 <ul>
@@ -261,8 +256,7 @@ Given</p>
 <li>Dynamics \( P(X_{t+1} | X_t) \) (typically Markov chain<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>/LTI (Linear Time-Invariant)<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> system)</li>
 </ul>
 <blockquote>
-<p>Markov chains are a stochastic model where the probability of each state depends only on the previous state</p>
-</blockquote>
+<p>Markov chains are a stochastic model where the probability of each state depends only on the previous state</p></blockquote>
 <p>We can build an estimator&hellip;</p>
 <p>$$ P(Y_{t+1}|X_{t+1}) = \frac{P(Y_{t+1}|X_{t+1},X_t)P(X_{t+1}|X_t)}{P(Y_{t+1})}$$</p>
 <ul>
@@ -275,8 +269,7 @@ Given</p>
 </ul>
 <h4 id="random-variables">Random Variables</h4>
 <blockquote>
-<p>A <strong>Random</strong> variable is a function that associates a real number with each element in the sample space</p>
-</blockquote>
+<p>A <strong>Random</strong> variable is a function that associates a real number with each element in the sample space</p></blockquote>
 <p>E.x if we&rsquo;re testing some components and \( N \) denotes non-defective and \( D \) denotes defective,</p>
 <p>$$ S = \{NNN, NND, NDN, DNN, NDD, DND, DDN, DDD\} $$</p>
 <p>and we are concerned about the number of defective items,
@@ -295,8 +288,7 @@ For example \(  x = 2 \) corresponds to a subset \( \{DDN, DND, NDD\} \).</p>
 <h3 id="distributions">Distributions</h3>
 <h4 id="discrete-probability-distributions">Discrete Probability Distributions</h4>
 <blockquote>
-<p>Probability that a discrete RV takes on each value</p>
-</blockquote>
+<p>Probability that a discrete RV takes on each value</p></blockquote>
 <p>I.e. if \( X \) is the # of heads for 3 coin flips</p>
 <ul>
 <li>\( P(X=0) = 1/8 \)</li>
@@ -315,19 +307,16 @@ For example \(  x = 2 \) corresponds to a subset \( \{DDN, DND, NDD\} \).</p>
 <hr>
 <h4 id="cumulative-distribution-function">Cumulative Distribution Function</h4>
 <blockquote>
-<p>When we want to find if the observed value of a random variable will be less than or equal to some real number \( x \).</p>
-</blockquote>
+<p>When we want to find if the observed value of a random variable will be less than or equal to some real number \( x \).</p></blockquote>
 <hr>
 <p><em>Define</em>: Cumulative Distribution Function (\( CDF \))</p>
 <p>$$ F(x) = P(X \leq x) = \sum_{t\leq x} f(t), \hspace{1cm} - \infty &lt; x &lt; \infty $$</p>
 <hr>
 <blockquote>
-<p>Note that this function is not only defined for the values assumed by the random variable, but for all real numbers as well.</p>
-</blockquote>
+<p>Note that this function is not only defined for the values assumed by the random variable, but for all real numbers as well.</p></blockquote>
 <h4 id="continuous-probability-distributions">Continuous Probability Distributions</h4>
 <blockquote>
-<p>Recall: Continuous RV have a probability of 0 of assuming <em>exactly</em> any of its values.</p>
-</blockquote>
+<p>Recall: Continuous RV have a probability of 0 of assuming <em>exactly</em> any of its values.</p></blockquote>
 <p>Consider a RV whose values are the lengths of hair on one&rsquo;s head. There are an infinite number of hair lengths between any two values, and as such we assign a probability of 0 to each event.
 Instead we concern ourselves with probabilities across intervals.</p>
 <hr>
@@ -340,8 +329,7 @@ Instead we concern ourselves with probabilities across intervals.</p>
 </ol>
 <hr>
 <blockquote>
-<p>We can apply the CDF concept to a continuous RV with a density function as well</p>
-</blockquote>
+<p>We can apply the CDF concept to a continuous RV with a density function as well</p></blockquote>
 <hr>
 <p><em>Define</em>: Cumulative Distribution Function (\( CDF \))</p>
 <p>$$ F(x) = P(X \leq x) = \int_{-\infty}^x f(t) dt, \hspace{1cm} - \infty &lt; x &lt; \infty $$</p>
@@ -351,12 +339,10 @@ Instead we concern ourselves with probabilities across intervals.</p>
 <p>and</p>
 <p>$$ f(x) = \frac{dF(x)}{dx} $$</p>
 <blockquote>
-<p>NOTE: Probability <em>mass</em> functions describe the probability of <em>discrete</em> distributions, whereas probability <em>density</em> functions describe <em>continuous</em> distributions.</p>
-</blockquote>
+<p>NOTE: Probability <em>mass</em> functions describe the probability of <em>discrete</em> distributions, whereas probability <em>density</em> functions describe <em>continuous</em> distributions.</p></blockquote>
 <h4 id="joint-probability-distributions">Joint Probability Distributions</h4>
 <blockquote>
-<p>What if we want to deal with more than one random variable at a time?</p>
-</blockquote>
+<p>What if we want to deal with more than one random variable at a time?</p></blockquote>
 <hr>
 <p><em>Define</em>: \( f(x, y) \) is a joint probability distribution / probability mass function  of discrete RV \( X, Y \) if:</p>
 <ol>
@@ -366,8 +352,7 @@ Instead we concern ourselves with probabilities across intervals.</p>
 </ol>
 <p>\( \forall \) region \( A \) in the \( xy \) plane, \( P[(X,Y) \in A] = \sum \sum_A f(x, y) \)</p>
 <blockquote>
-<p>e.x if, for a car that needs service, \( X \) denotes distance driven on a set of tires and \( Y \) denotes no. of tires to be replaced, then \( f(10000, 2) \) is the probability that it has driven for over 10000 distance units and the car needs 2 new tires.</p>
-</blockquote>
+<p>e.x if, for a car that needs service, \( X \) denotes distance driven on a set of tires and \( Y \) denotes no. of tires to be replaced, then \( f(10000, 2) \) is the probability that it has driven for over 10000 distance units and the car needs 2 new tires.</p></blockquote>
 <hr>
 <p>For example, if we select 2 ballpoint pens from a box containing 3 blue/2 red/3 green pens, and if \( X \) is the no. of blue pens selected and \( Y \) the no. of red pens selected,</p>
 <p>The joint probability function is the set is</p>
@@ -384,8 +369,7 @@ Instead we concern ourselves with probabilities across intervals.</p>
 <li>\( P[(X, Y) \in A] = \int \int_A f(x, y) dx dy\) for any region A in the \( xy \) plane</li>
 </ol>
 <blockquote>
-<p>TLDR; integrating over whole region gives probability of 1, integrating over a subregion gives the probability of an event within that range.</p>
-</blockquote>
+<p>TLDR; integrating over whole region gives probability of 1, integrating over a subregion gives the probability of an event within that range.</p></blockquote>
 <hr>
 <p>But what if we want to inspect the probabilities dist. of a specific RV within the joint distribution?</p>
 <hr>
@@ -395,8 +379,7 @@ Instead we concern ourselves with probabilities across intervals.</p>
 <p>for continuous case:</p>
 <p>$$ g(x) = \int_{-\infty}^{\infty} f(x, y) dy$$</p>
 <blockquote>
-<p>The same follows for finding the marginal distribution of \( Y \), \( h(y) \)</p>
-</blockquote>
+<p>The same follows for finding the marginal distribution of \( Y \), \( h(y) \)</p></blockquote>
 <hr>
 <hr>
 <p><em>Define</em>: Conditional probability distribution \( P(y|x) \)</p>
@@ -413,14 +396,12 @@ Instead we concern ourselves with probabilities across intervals.</p>
 <p>\( X, Y, Z, &hellip; \) are statistically independent <em>if and only if</em></p>
 <p>$$ f(x, y, z, &hellip;) = f_x(x) f_y (y)f_z(z)&hellip;$$</p>
 <blockquote>
-<p>Recall: doesn&rsquo;t this look a lot like when we did all the linear independence stuff back in MAT185?</p>
-</blockquote>
+<p>Recall: doesn&rsquo;t this look a lot like when we did all the linear independence stuff back in MAT185?</p></blockquote>
 <hr>
 <hr>
 <p><em>Define</em>: Expectation/Mean of RV</p>
 <blockquote>
-<p>Or: What would the average value be in the long run if we keep on sampling from the distribution</p>
-</blockquote>
+<p>Or: What would the average value be in the long run if we keep on sampling from the distribution</p></blockquote>
 <p>Let \( X \) be a random variable with probability distribution \( f(x) \)</p>
 <p>$$ \mu = E[X] = \int_{-\infty}^\infty x f(x) dx $$</p>
 <p>if \( g(X) \) is a function of \( X \),</p>
@@ -432,16 +413,14 @@ Instead we concern ourselves with probabilities across intervals.</p>
 <hr>
 <p><em>Define</em>: Variance</p>
 <blockquote>
-<p>Or: how much the distribution spreads out</p>
-</blockquote>
+<p>Or: how much the distribution spreads out</p></blockquote>
 <p>For finding the variance of a random variable \( g(X) \):</p>
 <p>Discrete:
 $$ \sigma^2 = E[(g(X)-\mu)^2] = \sum_x (x-\mu)^2 f(x)$$</p>
 <p>Continuous:
 $$ \sigma^2 = E[(g(X)-\mu)^2] = \int_{-\infty}^{\infty} (x-\mu)^2 f(x)dx   $$</p>
 <blockquote>
-<p>to find the variance of just \( X \), use \( g(X) = X \)</p>
-</blockquote>
+<p>to find the variance of just \( X \), use \( g(X) = X \)</p></blockquote>
 <p>A simplified form of the above to find variance of RV \( X \):</p>
 <p>$$ \sigma^2 = E(X^2) - \mu^2 $$</p>
 <hr>
@@ -462,8 +441,7 @@ $$ \sigma_{XY} = E[(X-\mu_X)(Y-\mu_Y)] = \sum_x \sum_y f(x,y) (x-\mu_X)(y-\mu_Y)
 <li>If \( X, Y \) are statistically independent, the covariance is 0.</li>
 </ul>
 <blockquote>
-<p>Note: the reverse is not always true since covariance only describes a linear relationship between two RV</p>
-</blockquote>
+<p>Note: the reverse is not always true since covariance only describes a linear relationship between two RV</p></blockquote>
 </li>
 </ul>
 <p>Correlation coefficient of \( X, Y \):</p>
@@ -482,15 +460,13 @@ $$ \sigma_{XY} = E[(X-\mu_X)(Y-\mu_Y)] = \sum_x \sum_y f(x,y) (x-\mu_X)(y-\mu_Y)
 This leads to a number of properties, the one of note that isn&rsquo;t immediately obvious is that</p>
 <p>$$ E(XY) = E(X)E(Y)$$</p>
 <blockquote>
-<p>the above theorem may be applied to show that if X, Y are two independent random variables, then \( \sigma_{XY} = 0 \)</p>
-</blockquote>
+<p>the above theorem may be applied to show that if X, Y are two independent random variables, then \( \sigma_{XY} = 0 \)</p></blockquote>
 <hr>
 <p><em>Theorem</em>: if \( X \) and \( Y \) are random variables with joint probability distribution \( f(x, y) \) and \( b, c \) are constants, then</p>
 <p>$$ \sigma_{aX + bY + c} = a^2\sigma_X^2 + b^2\sigma_Y^2 + 2ab\sigma_{XY} $$</p>
 <blockquote>
 <p>If \( X \) and \( Y \) are random variables, what would the covariance of a linear combination of them be?
-Note that the covariance doesn&rsquo;t depend on \( c \)</p>
-</blockquote>
+Note that the covariance doesn&rsquo;t depend on \( c \)</p></blockquote>
 <hr>
 <h4 id="discrete-distributions">Discrete Distributions</h4>
 <hr>
@@ -512,23 +488,20 @@ $$ \binom{n}{x} $$</p>
 $$ E[X] = \sum_{x=0}^n x \binom{n}{x} p^x(1-p)^{n-x} = np $$</p>
 <p>Variance:</p>
 <blockquote>
-<p>Note: each trial is independent \( \sigma_{Y_j Y_k} = 0 \qquad, k \neq j \)</p>
-</blockquote>
+<p>Note: each trial is independent \( \sigma_{Y_j Y_k} = 0 \qquad, k \neq j \)</p></blockquote>
 <p>$$ \sigma_X^2 = np(1-p) $$</p>
 <hr>
 <hr>
 <p><em>Define</em>: Multinomial Distribution</p>
 <blockquote>
-<p>A discrete distribution that can have \( m \) outcomes instead of the  \( 2 \) of the binomial distribution.</p>
-</blockquote>
+<p>A discrete distribution that can have \( m \) outcomes instead of the  \( 2 \) of the binomial distribution.</p></blockquote>
 <p>$$ f(x_1, x_2 &hellip;, x_k; p_1, p_2, &hellip; p_k, n) \\
 = \binom{n}{ x_1 &hellip; x_k } p_1^{x_1}, p_2^{x_2} &hellip; p_k^{x_k}  $$</p>
 <hr>
 <hr>
 <p><em>Define</em>: Hypergeometric Distribution</p>
 <blockquote>
-<p>Hypergeometric distributions model sampling without replacement, whereas multinomial distributions model sampling with replacement</p>
-</blockquote>
+<p>Hypergeometric distributions model sampling without replacement, whereas multinomial distributions model sampling with replacement</p></blockquote>
 <p>A hypergeometric distribution \( h(x; N, n, k) \) is the probability distribution of the hypergeometric random variable which represents the no. of successes of a hypergeometric experiment (that&rsquo;s a lot of hypergeometric), which is an experiment where:</p>
 <ol>
 <li>A random sample of size \( n \) is drawn \( N \) items without replacement</li>
@@ -543,8 +516,7 @@ $$ \sigma^2 = \frac{N-n}{N-1} \cdot n \cdot \frac{k}{N} ( 1 - \frac{k}{N} ) $$</
 <hr>
 <h4 id="negative-binomial--geometric-distributions">Negative Binomial &amp; Geometric Distributions</h4>
 <blockquote>
-<p>Instead of finding the probability of \( x \) successes in a fixed \( n \) trials, negative experiments are interested in the probability that the \( k \)th success occurs on the \( x \)th trial</p>
-</blockquote>
+<p>Instead of finding the probability of \( x \) successes in a fixed \( n \) trials, negative experiments are interested in the probability that the \( k \)th success occurs on the \( x \)th trial</p></blockquote>
 <hr>
 <p><em>Define</em>: Negative Binomial</p>
 <p>$$ b*(x; k, p) = \binom{x-1}{k-1} p^k(1-p)^{x-k} $$</p>
@@ -557,8 +529,7 @@ $$ \sigma^2 = \frac{N-n}{N-1} \cdot n \cdot \frac{k}{N} ( 1 - \frac{k}{N} ) $$</
 <hr>
 <p><em>Define</em>: Geometric Distribution</p>
 <blockquote>
-<p>Repeated trials with probability of success \( p \); can be thought of as a negative binomial distribution with \( k = 1 \)</p>
-</blockquote>
+<p>Repeated trials with probability of success \( p \); can be thought of as a negative binomial distribution with \( k = 1 \)</p></blockquote>
 <p>$$ g(x;p) = b*(x; 1, p) = p(1-p)^{x-1} $$</p>
 <p>Properties</p>
 <ul>
@@ -566,14 +537,12 @@ $$ \sigma^2 = \frac{N-n}{N-1} \cdot n \cdot \frac{k}{N} ( 1 - \frac{k}{N} ) $$</
 <li>\(  \sigma^2 = \frac{(1-p)}{p^2} \)</li>
 </ul>
 <blockquote>
-<p>Example application: playing a game where the opponent wins 90% of the time. How many games until the first win? \( g(x; 0.1) = 0.1(0.9)^{x-1} = 1/0.1 = 10 \)</p>
-</blockquote>
+<p>Example application: playing a game where the opponent wins 90% of the time. How many games until the first win? \( g(x; 0.1) = 0.1(0.9)^{x-1} = 1/0.1 = 10 \)</p></blockquote>
 <hr>
 <h4 id="poisson-distribution">Poisson Distribution</h4>
 <p>A Poisson distribution models the probability distribution of the Poisson random variable which represents the numerical output of Poisson experiments in a Poisson process</p>
 <blockquote>
-<p>That&rsquo;s a lot of Poisson!</p>
-</blockquote>
+<p>That&rsquo;s a lot of Poisson!</p></blockquote>
 <p>A Poisson process has the following properties:</p>
 <ol>
 <li>The number of outcomes occurring during one interval is independent of others, i.e. the process is stateless</li>
@@ -611,8 +580,7 @@ $$ \sigma^2 = E[(x-a)^2] = \frac{(B-A)^2}{12} $$</p>
 <p>Often used in describing nature. Rolling dies (discrete uniform distribution). Is also really easy to do calculations with.</p>
 <h4 id="normal-gaussian-distribution">Normal (Gaussian) Distribution</h4>
 <blockquote>
-<p>It&rsquo;s somewhat special so we denote it by \( u \)</p>
-</blockquote>
+<p>It&rsquo;s somewhat special so we denote it by \( u \)</p></blockquote>
 <p>$$ u(x; \mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi} } \exp(-\frac{(x-\mu)^2}{2\sigma^2}) \qquad x \in \mathbb{R} $$</p>
 <p>
 
@@ -621,8 +589,7 @@ $$ \sigma^2 = E[(x-a)^2] = \frac{(B-A)^2}{12} $$</p>
 
 </p>
 <blockquote>
-<p>\( \sigma \) will tell us how &ldquo;flat&rdquo; or &ldquo;peaked&rdquo; it is; the spread, whereas \( \mu \) tells us its shift to the left/right</p>
-</blockquote>
+<p>\( \sigma \) will tell us how &ldquo;flat&rdquo; or &ldquo;peaked&rdquo; it is; the spread, whereas \( \mu \) tells us its shift to the left/right</p></blockquote>
 <p>This seems like an awfully unintuitive distribution. Let&rsquo;s break it down and build intuition.</p>
 <h5 id="is-it-a-pdf">Is it a PDF?</h5>
 <p>If we integrate it over the whole domain, do we get
@@ -632,13 +599,11 @@ $$ \int_{-\infty}^{\infty} n(x; \mi, \sigma) dx = 1 \qquad ?$$</p>
 <li>Try multiplying them together.</li>
 </ol>
 <blockquote>
-<p>1 x 1 = 1</p>
-</blockquote>
+<p>1 x 1 = 1</p></blockquote>
 <p>$$ \int_{-\infty}^{\infty} n(x; \mu, \sigma) dx \cdot \int_{-\infty}^{\infty} n(y; \mu, \sigma) dy \\
 =\int_{-\infty}^{\infty}  \int_{-\infty}^{\infty}  n(x, \mu, \sigma)n(y; \mu, \sigma) dx dy$$</p>
 <blockquote>
-<p>Recall: \( r^2 = x^2 + y^2\) and \( dxdy = r dr d\theta \)</p>
-</blockquote>
+<p>Recall: \( r^2 = x^2 + y^2\) and \( dxdy = r dr d\theta \)</p></blockquote>
 <p>$$ = \frac{1}{2\pi\sigma^2} \int_0^{2\pi} \int_0^\infty \exp{\frac{-r^2}{2\sigma^2}} r dr d\theta \\
 = \frac{2\pi}{2\pi\sigma^2} \int_0^\infty \exp{\frac{-r^2}{2\theta^2}} r dr$$</p>
 <p>Apply u-substitution to the integral, \( s = r^2, ds = 2rdr\)</p>
@@ -661,11 +626,9 @@ The 2nd term is a normal PDF, i.e. \( n(x; 0, 1) \) which will integrate to \( 1
 
 </p>
 <blockquote>
-<p>Notice the relation between \( \sigma \) and the spread of the PDF.</p>
-</blockquote>
+<p>Notice the relation between \( \sigma \) and the spread of the PDF.</p></blockquote>
 <blockquote>
-<p>Recall, <em>PDF</em> is the probability density function which when integrated over the whole domain, gives 1. The <em>CDF</em> is the <em>running integral</em> of the PDF, i.e. is increasing, of range \( (0, 1)\), and approaches 1 as \( X \rightarrow \infty \). From this result it is fairly intuitive that \( P(A \leq X \leq B) \) = \( P(B) - P(A) \)</p>
-</blockquote>
+<p>Recall, <em>PDF</em> is the probability density function which when integrated over the whole domain, gives 1. The <em>CDF</em> is the <em>running integral</em> of the PDF, i.e. is increasing, of range \( (0, 1)\), and approaches 1 as \( X \rightarrow \infty \). From this result it is fairly intuitive that \( P(A \leq X \leq B) \) = \( P(B) - P(A) \)</p></blockquote>
 <h5 id="standard-normal-distribution">Standard normal distribution</h5>
 <p>A special form of the normal distribution is the standard normal distribution</p>
 <p>$$ n(x; 0, 1) = \frac{1}{\sqrt{2\pi}} \exp{x^2/2} $$</p>
@@ -677,8 +640,7 @@ The 2nd term is a normal PDF, i.e. \( n(x; 0, 1) \) which will integrate to \( 1
 <p>Consider any \( n(x; \mu, \sigma) \) distribution &ndash; there is no analytical solution to the integral \( \int_{-\infty}^x n(t; 0, 1) dt \) <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.</p>
 <p>So we can only computationally get the CDF of the normal distribution, which is not ideal.</p>
 <blockquote>
-<p>But can we compute \( n(x; \mu, \sigma) \) using \( \Phi(X) \)?</p>
-</blockquote>
+<p>But can we compute \( n(x; \mu, \sigma) \) using \( \Phi(X) \)?</p></blockquote>
 <p>As it turns out &ndash; yes we can. Let</p>
 <p>$$ Z = \frac{x-\mu}{\sigma} \qquad \text{where} X \text{has} n(x; \mu, \sigma) $$</p>
 <p>Consider</p>
@@ -728,8 +690,7 @@ it is not very intuitive.</p>
 <p><em>Define</em>: Chi-Squared (\( \chi^2 \)) distribution</p>
 <p>$$ f(x; v) = \frac{1}{2^{\frac{v}{2}}\Gamma(\frac{v}{2})} x^{\frac{v}{2} -1} e^{-\frac{x}{2}} \qquad x &gt; 0 $$</p>
 <blockquote>
-<p>This is the gamma distribution with \( \alpha = 2 \).</p>
-</blockquote>
+<p>This is the gamma distribution with \( \alpha = 2 \).</p></blockquote>
 <p>Good for describing confidence intervals, and for describing the distribution of a sample of a population.
 See: <a href="https://en.wikipedia.org/wiki/Chi-squared_test">chi-squared test</a></p>
 <hr>
@@ -740,8 +701,7 @@ See: <a href="https://en.wikipedia.org/wiki/Chi-squared_test">chi-squared test</
 0 &amp; \text{otherwise}
 \end{cases} $$</p>
 <blockquote>
-<p>this is the gamma distribution with \( \alpha = 1 \).</p>
-</blockquote>
+<p>this is the gamma distribution with \( \alpha = 1 \).</p></blockquote>
 <p>Properties:</p>
 <ul>
 <li>\( E[X] = \beta \)</li>
@@ -753,22 +713,19 @@ See: <a href="https://en.wikipedia.org/wiki/Chi-squared_test">chi-squared test</
 <h5 id="exponential-distribution--poisson-distribution">Exponential Distribution &amp; Poisson Distribution</h5>
 <blockquote>
 <p>Recall: for a Poisson distribution, \( p(x; \lambda) = \frac{e^{-\lambda} x^\lambda}{x!} \), \( \mu = \lambda \)
-We can interpret this as \( \lambda = rt \).</p>
-</blockquote>
+We can interpret this as \( \lambda = rt \).</p></blockquote>
 <p>If buses arriving at a bus stop was a Poisson process, then the time interval between the bus arrivals would be an exponential distribution.</p>
 <p>For example, if we&rsquo;re trying to find the probability of <em>no arrivals</em> within \( x \),</p>
 <p>$$ p(0, rx) = e^{-rx} $$</p>
 <p>Let \( X \) be a RV for the time of the first arrival.</p>
 <blockquote>
-<p>The probability of no arrivals in that time frame is the same as the probability of the first arrival to be after time \( x \).</p>
-</blockquote>
+<p>The probability of no arrivals in that time frame is the same as the probability of the first arrival to be after time \( x \).</p></blockquote>
 <p>Then, given</p>
 <p>$$ P(X \geq x) = p(0; rx) = e^{-rx}  $$</p>
 <p>We have</p>
 <p>$$ P(X &lt; x) = p(0; rx) = 1 - e^{-rx}  $$</p>
 <blockquote>
-<p>This is the CDF of the RV \( X \)</p>
-</blockquote>
+<p>This is the CDF of the RV \( X \)</p></blockquote>
 <p>Apply fundamental theorem of calculus</p>
 <p>$$  F(X) = 1-e^{-rx} $$</p>
 <p>then we get the PDF</p>
@@ -795,8 +752,7 @@ e^{-\frac{s}{\beta}}
 &amp;= P(X \geq t) \cr
 \end{aligned} $$</p>
 <blockquote>
-<p>i.e. what&rsquo;s the probability of \( s+t \) if we&rsquo;ve already waited up to \( s \)? I.e. if we&rsquo;ve already waited \( s \) seconds, then the following probability  (\( s + t \)) is entirely unaffected by those initial \( s \) seconds.</p>
-</blockquote>
+<p>i.e. what&rsquo;s the probability of \( s+t \) if we&rsquo;ve already waited up to \( s \)? I.e. if we&rsquo;ve already waited \( s \) seconds, then the following probability  (\( s + t \)) is entirely unaffected by those initial \( s \) seconds.</p></blockquote>
 <h2 id="ece259-electromagnetism">ECE259: Electromagnetism</h2>
 <p>Electromagnetic field is a vector quantity given by a magnitude \( E \) and unit vector \( \hat{a} \), and is commonly found as the force exerted on a positive test charge \( q \).</p>
 <p>$$ \vec{E}= E\hat{a}_E = \frac{\hat{F}}{q} = q\vec{E}$$</p>
@@ -809,8 +765,7 @@ e^{-\frac{s}{\beta}}
 <p><strong>Cylindrical \(( r_p, \phi_p, z_p)\)</strong>:</p>
 <p><strong>Note</strong>: When adding vectors in non-Cartesian coordinate systems we cannot just add the components because the <em>direction</em> of the unit vectors can change.</p>
 <blockquote>
-<p>When adding vectors in non-Cartesian coordinate systems we must first convert the vectors to Cartesian coordinates</p>
-</blockquote>
+<p>When adding vectors in non-Cartesian coordinate systems we must first convert the vectors to Cartesian coordinates</p></blockquote>
 <p><strong>Cylindrical -&gt; Cartesian</strong>:
 $$ r_p = \sqrt{x_p^2 + y_p^2}  $$
 $$ \phi_p = \arctan(y_p/x_p) $$
@@ -821,8 +776,7 @@ $$ y_p = r_p \sin(\phi_p) $$
 $$ z_p = z_p $$</p>
 <p><strong>Spherical \(( r_p, \theta_p, \phi_p)\)</strong>:</p>
 <blockquote>
-<p>\( \theta \) gives angle w.r.t the z-axis, \( \phi \) gives angle w.r.t the x-axis</p>
-</blockquote>
+<p>\( \theta \) gives angle w.r.t the z-axis, \( \phi \) gives angle w.r.t the x-axis</p></blockquote>
 <p><strong>Cartesian -&gt; Spherical</strong>:
 $$ r_p = \sqrt{x_p^2 + y_p^2 + x_p^2}  $$
 $$ \theta_p = \arccos{\frac{z}{\sqrt{x_p^2 + y_p^2 + z_p^2}  }}$$
@@ -838,8 +792,7 @@ $$ z_p = r_p \cos{\theta_p}$$</p>
 
 </p>
 <blockquote>
-<p>From reference sheet</p>
-</blockquote>
+<p>From reference sheet</p></blockquote>
 <h4 id="integration">Integration</h4>
 <p>Multidimensional integration in different coordinate systems can largely be done just by finding the appropriate differential element and then inserting it into the appropriate formula.</p>
 <ul>
@@ -847,22 +800,19 @@ $$ z_p = r_p \cos{\theta_p}$$</p>
 $$ -\int_A^B{\vec{E} \cdot d \vec{l}} $$</li>
 </ul>
 <blockquote>
-<p>example application: finding potential difference</p>
-</blockquote>
+<p>example application: finding potential difference</p></blockquote>
 <ul>
 <li>Surface integrals:</li>
 </ul>
 <p>$$ \int_S{\vec{D}\cdot d\vec{s}} $$</p>
 <blockquote>
-<p>Example application: finding flux, etc.</p>
-</blockquote>
+<p>Example application: finding flux, etc.</p></blockquote>
 <ul>
 <li>Volume integrals:</li>
 </ul>
 <p>$$\int_V{ P dV } $$</p>
 <blockquote>
-<p>example application: finding total charge</p>
-</blockquote>
+<p>example application: finding total charge</p></blockquote>
 <ul>
 <li>
 <p>Cartesian
@@ -900,13 +850,11 @@ This can be done with the following theorems:
 
 </p>
 <blockquote>
-<p><a href="http://furqaanyusaf.com/notes/vectors/stokes-apply">source</a></p>
-</blockquote>
+<p><a href="http://furqaanyusaf.com/notes/vectors/stokes-apply">source</a></p></blockquote>
 <h3 id="electric-fields">Electric Fields</h3>
 <h4 id="continuous-charge-distribution">Continuous charge distribution</h4>
 <blockquote>
-<p>Recall: \( \vec{E_{sys}} = \frac{1}{4\pi\varepsilon_o}\sum_k \frac{q_k}{|\vec{R}-\vec{R&rsquo;_k}|^3}(\vec{R} - \vec{R&rsquo;_k}) \)</p>
-</blockquote>
+<p>Recall: \( \vec{E_{sys}} = \frac{1}{4\pi\varepsilon_o}\sum_k \frac{q_k}{|\vec{R}-\vec{R&rsquo;_k}|^3}(\vec{R} - \vec{R&rsquo;_k}) \)</p></blockquote>
 <p>In continuous form, \( \int{d\vec{E}} \)</p>
 <p>Steps for solving charge distribution problem:</p>
 <ol>
@@ -930,8 +878,7 @@ This can be done with the following theorems:
 <h5 id="volume-charge">Volume Charge</h5>
 <p>$$ dQ = P_v dv&rsquo; $$</p>
 <blockquote>
-<p>Contribution to \( \vec{E} \). \( P \) denotes volume charge density [C/m^3]</p>
-</blockquote>
+<p>Contribution to \( \vec{E} \). \( P \) denotes volume charge density [C/m^3]</p></blockquote>
 <p>$$ \vec{E} = \frac{1}{4\pi\varepsilon_o}  \int_{V&rsquo;} \frac{P_v}{|\vec{R}-\vec{R&rsquo;}|^2} \hat{a}_{\vec{R} - \vec{R&rsquo;}} dV&rsquo; $$</p>
 <p>Noting that</p>
 <p>$$ \hat{a}_{\vec{R} - \vec{R}} = \frac{\vec{R} - \vec{R&rsquo;}}{|\vec{R} - \vec{R&rsquo;}|}$$</p>
@@ -958,8 +905,7 @@ $$ \vec{E} = \frac{1}{4\pi\varepsilon_o}  \int_{V&rsquo;} \frac{P_v}{|\vec{R}-\v
 <p>$$ \Phi = \int_s \vec{E} \cdot d\vec{s} $$</p>
 <p>where \( d\vec{s} \) denotes a normal vector to the surface.</p>
 <blockquote>
-<p>Note the dot product! This also means that a surface parallel to the field lines will have a flux of 0.</p>
-</blockquote>
+<p>Note the dot product! This also means that a surface parallel to the field lines will have a flux of 0.</p></blockquote>
 <hr>
 <hr>
 <p><em>Define</em>: Gauss&rsquo;s law (Integral form)</p>
@@ -970,17 +916,14 @@ $$ \vec{E} = \frac{1}{4\pi\varepsilon_o}  \int_{V&rsquo;} \frac{P_v}{|\vec{R}-\v
 </ul>
 <blockquote>
 <p>Total flux <em>out</em> of a surface is equal to the (total charge enclosed by surface)/(permittivity of free space)<br>
-if \( \oint \vec{E} \cdot d\vec{s} \) &gt; 0; net flux out (+&rsquo;ve charge enclosed), &lt; 0; net flux in (-&rsquo;ve charge enclosed)</p>
-</blockquote>
+if \( \oint \vec{E} \cdot d\vec{s} \) &gt; 0; net flux out (+&rsquo;ve charge enclosed), &lt; 0; net flux in (-&rsquo;ve charge enclosed)</p></blockquote>
 <p>It can also be written in differential form using the divergence theorem:</p>
 <blockquote>
-<p>Recall: \( \int_v \vec{\nabla} \cdot \vec{A} dv = \oint_s \vec{A} \cdot d\vec{s} \))</p>
-</blockquote>
+<p>Recall: \( \int_v \vec{\nabla} \cdot \vec{A} dv = \oint_s \vec{A} \cdot d\vec{s} \))</p></blockquote>
 <p>$$ \vec{\nabla} \cdot A = \lim_{\Delta V \to 0} \frac{\oint_S \vec{A} \cdot d \vec{s}}{\Delta V} $$</p>
 <p>where the value in the limit denotes the net outward flux of A per unit volume</p>
 <blockquote>
-<p>Recall: \( \vec{\nabla} = \frac{d}{dx}\vec{a_x} +  \frac{d}{dy}\vec{a_y} + \frac{d}{dz}\vec{a_z} + \)</p>
-</blockquote>
+<p>Recall: \( \vec{\nabla} = \frac{d}{dx}\vec{a_x} +  \frac{d}{dy}\vec{a_y} + \frac{d}{dz}\vec{a_z} + \)</p></blockquote>
 <p>we may then apply the divergence theorem to gauss&rsquo;s law to obtain</p>
 <p>$$ \oint_s \vec{E}\cdot d\vec{s} = \frac{\int_v Pv dv}{\varepsilon_o}
 , \therefore \vec{\nabla \cdot E} = \frac{P_v}{\varepsilon_o} $$</p>
@@ -998,8 +941,7 @@ if \( \oint \vec{E} \cdot d\vec{s} \) &gt; 0; net flux out (+&rsquo;ve charge en
 
 </p>
 <blockquote>
-<p>The electric field reaches a maximum at \( R = b \), then is the maximum value multiplied by a factor of \( \frac{1}{R^2} \) after \( R &gt; b \). Like how a point charge behaves,  which is what we expect.</p>
-</blockquote>
+<p>The electric field reaches a maximum at \( R = b \), then is the maximum value multiplied by a factor of \( \frac{1}{R^2} \) after \( R &gt; b \). Like how a point charge behaves,  which is what we expect.</p></blockquote>
 <h4 id="gausss-law-differential-form">Gauss&rsquo;s law: differential form</h4>
 <p>Recall:</p>
 <ul>
@@ -1008,8 +950,7 @@ if \( \oint \vec{E} \cdot d\vec{s} \) &gt; 0; net flux out (+&rsquo;ve charge en
 <li>\( \vec{\nabla} \times \vec{A} = curl A \)  &lt;- curl</li>
 </ul>
 <blockquote>
-<p>Previously we used the integral form to solve Gauss&rsquo;s law &ndash; but the differential form is equally valid:</p>
-</blockquote>
+<p>Previously we used the integral form to solve Gauss&rsquo;s law &ndash; but the differential form is equally valid:</p></blockquote>
 <p>
 
 
@@ -1024,8 +965,7 @@ Combining this with the definition of work, we can write the work done by an ext
 <p>$$ W_{B\to A} = -W_{A \to B} $$</p>
 <p>and it follows that</p>
 <blockquote>
-<p>Apply Stoke&rsquo;s theorem</p>
-</blockquote>
+<p>Apply Stoke&rsquo;s theorem</p></blockquote>
 <p>$$ \oint_l \vec{E} \cdot d\vec{l} = \vec{\nabla} \times \vec{E} 0$$</p>
 <p>which leads to two fundamental electrostatic properties&hellip;</p>
 <h4 id="postulates-of-electrostatics-in-free-space">Postulates of Electrostatics (in free space)</h4>
@@ -1044,12 +984,10 @@ define \qquad \vec{E} = -\vec{\nabla } V  $$</p>
 <li>\(  q \) is a test charge</li>
 </ul>
 <blockquote>
-<p>Potential is relative and is associated with the field (it is independent of the test charge)</p>
-</blockquote>
+<p>Potential is relative and is associated with the field (it is independent of the test charge)</p></blockquote>
 <p>We may define potential a little more rigorously to inspect its differential form:</p>
 <blockquote>
-<p>Recall: the gradient points in the direction of maximum slope</p>
-</blockquote>
+<p>Recall: the gradient points in the direction of maximum slope</p></blockquote>
 <p>$$
 \begin{aligned}
 \Delta V_{A \to B} &amp;= -\int_A^B \vec{E} \cdot d\vec{l} \cr
@@ -1070,18 +1008,15 @@ V &amp;= -\int_\infty^R \vec{E} \cdot d\vec{l}\cr
 V(R) &amp;= \frac{q_1}{4\pi \varepsilon_0 R}
 \end{aligned} $$</p>
 <blockquote>
-<p>V(R) denotes the potential at a point of interest \( P \) that is distance \( R \) from the charge</p>
-</blockquote>
+<p>V(R) denotes the potential at a point of interest \( P \) that is distance \( R \) from the charge</p></blockquote>
 <ol start="2">
 <li>Potential due to discrete charge distribution (i.e. many point charges)</li>
 </ol>
 <blockquote>
-<p>Electric field is conservative, so we can just sum up a modified version of the single point charge form found in 1.</p>
-</blockquote>
+<p>Electric field is conservative, so we can just sum up a modified version of the single point charge form found in 1.</p></blockquote>
 <p>$$ V(R) = \sum_k \frac{q_k}{4\pi\varepsilon_o |\vec{R} - \vec{R&rsquo;_k}| } $$</p>
 <blockquote>
-<p>Specify \( R \) as the distance from the point of interest and the charge source, \( | \vec{R} - \vec{R&rsquo;_k} | \)</p>
-</blockquote>
+<p>Specify \( R \) as the distance from the point of interest and the charge source, \( | \vec{R} - \vec{R&rsquo;_k} | \)</p></blockquote>
 <ol start="3">
 <li>Electric dipole: a pair of equal and opposite charges separated by a small distance \( d \  \)</li>
 </ol>
@@ -1095,8 +1030,7 @@ V(R) &amp;= \frac{q_1}{4\pi \varepsilon_0 R}
 <p>Potential of a dipole can be written as the sum of two closely spaced charges:</p>
 <p>$$ V = \frac{1}{4\pi\varepsilon_o} (\frac{-q}{| \vec{R} + \frac{\vec{d}}{2} |} + \frac{q}{| \vec{R} - \frac{\vec{d}}{2} |} ) $$</p>
 <blockquote>
-<p>Note directions of the charges and \( d \). Also we&rsquo;re only going to consider \( R \gg d \)</p>
-</blockquote>
+<p>Note directions of the charges and \( d \). Also we&rsquo;re only going to consider \( R \gg d \)</p></blockquote>
 <p>Begin by simplifying the expressions for the distances</p>
 <p>$$ \begin{aligned}
 \frac{1}{|\vec{R} - \frac{\vec{d}}{2}|}&amp;= \frac{1}{\sqrt{(\vec{R} - \vec{d}/{2})\cdot(\vec{R} - \vec{d}/{2})}}   \cr
@@ -1108,8 +1042,7 @@ V(R) &amp;= \frac{q_1}{4\pi \varepsilon_0 R}
 Plugging into the expression for the potential we get:</p>
 <p>$$ V = \frac{1}{4\pi\varepsilon_o R^2} p \cos \theta $$</p>
 <blockquote>
-<p>V is a function of \( R \) and \( \theta \)</p>
-</blockquote>
+<p>V is a function of \( R \) and \( \theta \)</p></blockquote>
 <p>Next we find the field associated with this dipole.
 This is made easy via \( \vec{E} = -\vec{\nabla} V \)</p>
 <p>$$ \begin{aligned}
@@ -1117,8 +1050,7 @@ This is made easy via \( \vec{E} = -\vec{\nabla} V \)</p>
 &amp;= \frac{2P\cos\theta}{4\pi\varepsilon R^3} \vec{a_R} + \frac{P\sin\theta}{4\pi\varepsilon R^3} \vec{a_\theta} \cr
 \end{aligned} $$</p>
 <blockquote>
-<p>Notice now \( \vec{e} \propto 1/R^3 \)</p>
-</blockquote>
+<p>Notice now \( \vec{e} \propto 1/R^3 \)</p></blockquote>
 <h4 id="electric-potential-for-continuous-charges">Electric Potential for continuous charges</h4>
 <p>$$ V = \frac{1}{4\pi \varepsilon_o} \int_x \frac{\rho_x}{R} dx  $$</p>
 <p>where \( x \) can be either a line, surface, or a volume (and the integral would be dimensioned accordingly) depending on the charge distribution.</p>
@@ -1158,8 +1090,7 @@ Intuition: electric field induces charges to move around in the conductor. This 
 
 </p>
 <blockquote>
-<p>If the conductor has a charge, i.e. some electrons scattered about</p>
-</blockquote>
+<p>If the conductor has a charge, i.e. some electrons scattered about</p></blockquote>
 <p>In an \( \vec{E} \) field they will redistribute in order for the internal field to fully cancel out the external one.</p>
 <h5 id="perfect-conductors-in--vece--field-summary">Perfect conductors in \( \vec{E} \) field: summary</h5>
 <ol>
@@ -1199,8 +1130,7 @@ This is because we are looking at \( \int_{\text{at surface}} \), which is <em>t
 
 </p>
 <blockquote>
-<p>There is an error here somewhere since potential should go higher and higher as \( R \) increases&hellip; &ldquo;Exercise left for the reader&rdquo;</p>
-</blockquote>
+<p>There is an error here somewhere since potential should go higher and higher as \( R \) increases&hellip; &ldquo;Exercise left for the reader&rdquo;</p></blockquote>
 <h5 id="perfect-dielectric-conductors-in--vece-">Perfect Dielectric conductors in \( \vec{E} \)</h5>
 <ul>
 <li>Dielectrics have no moving charges ( no free electrons ), however there can be bond charges; dielectrics can be polarized (and hence contribute to electric potential)</li>
@@ -1237,8 +1167,7 @@ V(\vec{R}) &amp;=  \cr
 <li>The second term is the potential produced by a volume charge distribution in \( v\prime \) with a density of \( \rho_{pv} = -\vec{\nabla} \cdot \vec{p} \)</li>
 </ul>
 <blockquote>
-<p>Katex isn&rsquo;t allowing me to do a \( \int_{v&rsquo;} \) in the above so just pretend that the \( \int_v \) is \( \int_{v&rsquo;} \)</p>
-</blockquote>
+<p>Katex isn&rsquo;t allowing me to do a \( \int_{v&rsquo;} \) in the above so just pretend that the \( \int_v \) is \( \int_{v&rsquo;} \)</p></blockquote>
 <p>The physical interpretation is that a dielectric material may have its dipoles aligned after being in a \( \vec{E} \) field and thus be able to produce an \( \vec{E} \) field itself.</p>
 <p>$$  $$</p>
 <h4 id="generalized-gausss-law">Generalized Gauss&rsquo;s Law</h4>
@@ -1255,8 +1184,7 @@ $$ \oint_s \vec{E} \cdot d\vec{s} = \frac{Q_end}{\varepsilon_o} $$</p>
 Define displacement vector \( \vec{D} \) as:</p>
 <p>$$ \vec{D} = \varepsilon \vec{E} + \vec{p} $$</p>
 <blockquote>
-<p>Units of static flux density \( [C/m^2] \)</p>
-</blockquote>
+<p>Units of static flux density \( [C/m^2] \)</p></blockquote>
 <p>This brings us to the generalized Gauss&rsquo;s law:</p>
 <hr>
 <p><em>Define</em>: Generalized Gauss&rsquo;s Law</p>
@@ -1271,8 +1199,7 @@ Define displacement vector \( \vec{D} \) as:</p>
 </ul>
 <p><strong>For a linear and isotropic material</strong>&hellip;</p>
 <blockquote>
-<p>isotropic means that \( \vec{p} and \vec{E} \) is in the same direction, i.e. if we apply a field to the material it will polarize \( p \) in the same direction as the electric field.</p>
-</blockquote>
+<p>isotropic means that \( \vec{p} and \vec{E} \) is in the same direction, i.e. if we apply a field to the material it will polarize \( p \) in the same direction as the electric field.</p></blockquote>
 <p>$$ \vec{p} = \varepsilon_o \chi_e \vec{E} $$</p>
 <ul>
 <li>\( \chi \) denotes electrical susceptibility which is unitless. \( \chi = 0 \) in a vacuum.</li>
@@ -1291,12 +1218,10 @@ Define displacement vector \( \vec{D} \) as:</p>
 </p>
 <h2 id="bme205-introduction-to-biomedical-engineering">BME205: Introduction to Biomedical Engineering</h2>
 <blockquote>
-<p>Textbook: Human Physiology From Cells to Systems, 5th Canadian Edition by Sherwood and Ward (ISBN-13 978-0-17-691235-2).</p>
-</blockquote>
+<p>Textbook: Human Physiology From Cells to Systems, 5th Canadian Edition by Sherwood and Ward (ISBN-13 978-0-17-691235-2).</p></blockquote>
 <h3 id="cells">Cells</h3>
 <blockquote>
-<p>Reference: Chapter 2</p>
-</blockquote>
+<p>Reference: Chapter 2</p></blockquote>
 <h4 id="components">Components</h4>
 <ul>
 <li>
@@ -1406,8 +1331,7 @@ Define displacement vector \( \vec{D} \) as:</p>
 
 </p>
 <blockquote>
-<p>Illustration of \( Na^+/K^+ \) pump</p>
-</blockquote>
+<p>Illustration of \( Na^+/K^+ \) pump</p></blockquote>
 <h5 id="ion-leak-channels">Ion Leak Channels</h5>
 <p>&ldquo;Ion leak channels&rdquo; are passive highly selective channels that allow for passage of ions in and out of the cell.
 Some can be gated and some are not.</p>
@@ -1418,8 +1342,7 @@ Some can be gated and some are not.</p>
 
 </p>
 <blockquote>
-<p>Key concentrations and relative permeability of ion leak channels</p>
-</blockquote>
+<p>Key concentrations and relative permeability of ion leak channels</p></blockquote>
 <hr>
 <p><em>Define</em>: Nernst Equation</p>
 <p>$$ E_x = \frac{61}{Z_x}\log_10\frac{[C]_o}{[C]_i}$$</p>
@@ -1431,8 +1354,7 @@ Some can be gated and some are not.</p>
 </ul>
 <p>There is also a full form of the equation:</p>
 <blockquote>
-<p>Idea: there is an osmosis concentration gradient across the membrane as well as a charge gradient</p>
-</blockquote>
+<p>Idea: there is an osmosis concentration gradient across the membrane as well as a charge gradient</p></blockquote>
 <p><em>Example</em>: Sodium ions across a cell membrane, outside concentration of 150, inside concentration of 15</p>
 <p>$$ E_{Na^+} = \frac{61}{+1}\log \frac{150}{15} = +61mV$$</p>
 <ul>
@@ -1443,8 +1365,7 @@ Some can be gated and some are not.</p>
 <p>ATP (<strong>A</strong>denosine <strong>T</strong>ri<strong>P</strong>hosphate) enables cellular activity through the energy released from breaking the high-energy phosphate bonds it contains.</p>
 <p>$$\text{ATP} \rightarrow \text{ADP} + \text{P} + \text{energy}$$</p>
 <blockquote>
-<p><em>Anabolic</em> activities forms complex molecules from simple ones; <em>Catabolic</em> activities decompose complex molecules into simple ones.</p>
-</blockquote>
+<p><em>Anabolic</em> activities forms complex molecules from simple ones; <em>Catabolic</em> activities decompose complex molecules into simple ones.</p></blockquote>
 <p>ATP involves three different pathways:</p>
 <ul>
 <li>substrate-level phosphorylation</li>
@@ -1494,8 +1415,7 @@ A and G have double ring structures while C and T have single ring structures.</
 </p>
 <h5 id="replication">Replication</h5>
 <blockquote>
-<p>Note: DNA is formed of two complimentary strands <a href="https://en.wikipedia.org/wiki/Directionality_(molecular_biology)">(5&rsquo;, 3&rsquo; strands)</a>.</p>
-</blockquote>
+<p>Note: DNA is formed of two complimentary strands <a href="https://en.wikipedia.org/wiki/Directionality_(molecular_biology)">(5&rsquo;, 3&rsquo; strands)</a>.</p></blockquote>
 <ol>
 <li>DNA is first split apart by proteins called <strong>initiators</strong> which look for <em>origin</em> base sequences
 <ul>
@@ -1518,8 +1438,7 @@ And then it is put into the chromosomal form</li>
 </ol>
 <h5 id="gene-expression">Gene Expression</h5>
 <blockquote>
-<p>Why don&rsquo;t skin sprout eyeballs or livers grow toes?</p>
-</blockquote>
+<p>Why don&rsquo;t skin sprout eyeballs or livers grow toes?</p></blockquote>
 <p>Gene expression is the mechanism by which only the appropriate genes are called upon to produce the desired function.
 Usually the default setting for gene expression is to be off.</p>
 <p>Things that can impact gene expression:</p>
@@ -1530,16 +1449,14 @@ Usually the default setting for gene expression is to be off.</p>
 </ul>
 <p>When a gene gets switched on it gets &ldquo;transcribed&rdquo; into a piece of <em>messenger RNA</em>, which is a single stranded nucleic acid which carries the information out of the nucleus and into the cell.</p>
 <blockquote>
-<p>Note: RNA contains Uracil (U) instead of Thymine (T) as a compliment to Adenine (A).</p>
-</blockquote>
+<p>Note: RNA contains Uracil (U) instead of Thymine (T) as a compliment to Adenine (A).</p></blockquote>
 <p>A key property of RNA is its additional oxygenation, which makes it a lot more reactive.
 This, combined with the fact that U can bond with all the other bases gives the ability for RNA to form complex non-linear shapes.</p>
 <p>Another property of RNA is that it is is single-use; each piece of mRNA ceases functioning after it&rsquo;s task has been completed.</p>
 <h5 id="transcription">Transcription</h5>
 <h4 id="nerve-cells">Nerve Cells</h4>
 <blockquote>
-<p>Recall: there are ion channels in the cell membrane. T</p>
-</blockquote>
+<p>Recall: there are ion channels in the cell membrane. T</p></blockquote>
 <h2 id="phy294-quantum-and-thermal-physics">PHY294: Quantum and Thermal Physics</h2>
 <h3 id="schrodinger--the-hydrogen-atom">Schrodinger &amp; the Hydrogen Atom</h3>
 <hr>
@@ -1560,8 +1477,7 @@ This, combined with the fact that U can bond with all the other bases gives the 
 <hr>
 <blockquote>
 <p>Recall: for a 1D particle in a box we use \( \psi = Asin(kx) + Bcos(kx)\) and then we can apply the boundary conditions at the bounds of the box.
-We may then find \( \psi \) to be \( \sqrt{\frac{2}{L}}sin()\frac{n\pi}{L})x\) and \( E_n = \frac{n^2h^2}{8mL^2} \)) where \( n \)) is a integer &gt; 0.</p>
-</blockquote>
+We may then find \( \psi \) to be \( \sqrt{\frac{2}{L}}sin()\frac{n\pi}{L})x\) and \( E_n = \frac{n^2h^2}{8mL^2} \)) where \( n \)) is a integer &gt; 0.</p></blockquote>
 <p>In 2D and 3D potential wells this is more complicated but the same idea follows; we apply separation of variables and the boundary conditions.</p>
 <h4 id="2d-potential-well">2D Potential Well</h4>
 <ol>
@@ -1588,8 +1504,7 @@ Therefore we can reduce the Schrodinger equation to</li>
 <p>$$ \psi(x, y) = X(x) Y(y) $$</p>
 <p>$$ \frac{\delta^2\psi}{\delta x^2} + \frac{\delta^2\psi}{\delta y^2} = \frac{2ME}{\hbar^2}(X(x) Y(y))$$</p>
 <blockquote>
-<p>Equations like the above reduced Schrodinger equation guarantee that <em>any</em> solution can be expressed as a sum of separated solutions \( \rightarrow \) once we find all solutions of form \( X(x) Y(y) \) we will have found all possible solutions.</p>
-</blockquote>
+<p>Equations like the above reduced Schrodinger equation guarantee that <em>any</em> solution can be expressed as a sum of separated solutions \( \rightarrow \) once we find all solutions of form \( X(x) Y(y) \) we will have found all possible solutions.</p></blockquote>
 <p>&hellip; and then do a bunch of math.</p>
 <p>$$ \begin{aligned}
 \frac{\partial^2 \psi}{\partial x^2} &amp;= Y(y) \frac{\partial^2  }{\partial x^2} X(x)   \cr
@@ -1599,8 +1514,7 @@ Therefore we can reduce the Schrodinger equation to</li>
 &amp; \therefore \frac{\partial^2 \psi}{\partial y^2} = X(x)Y&rsquo;&rsquo;(y) \cr
 \end{aligned} $$</p>
 <blockquote>
-<p>Can be simplified by taking \( y \) to be fixed while looking for \( \frac{\partial^2 \psi}{\partial x^2} \) and vice-versa</p>
-</blockquote>
+<p>Can be simplified by taking \( y \) to be fixed while looking for \( \frac{\partial^2 \psi}{\partial x^2} \) and vice-versa</p></blockquote>
 <p>Next substitute them into the Schrodinger equation</p>
 <p>$$ Y(y) X&rsquo;&rsquo;(x) + X(x) Y&rsquo;&rsquo;(y) = -\frac{2ME}{\hbar^2} X(x) Y(y) $$</p>
 <p>divide through with \( Y(y) X(x) \) to get something of form \( f(x) + g(y) = C \)</p>
@@ -1635,8 +1549,7 @@ $$ Y(y) X&rsquo;&rsquo;(x) + X(x) Y&rsquo;&rsquo;(y) = -\frac{2ME}{\hbar^2} X(x)
 <p>Substitute what we have derived since (i.e. \( X&rsquo;&rsquo;/X = -k_x^2 \)) and we get
 $$ E = \frac{\hbar^2 \pi^2}{2Ma^2}n^2 \qquad [n = 1,2,3\dots] $$</p>
 <blockquote>
-<p>Note quantized energy</p>
-</blockquote>
+<p>Note quantized energy</p></blockquote>
 <h4 id="central-force-problem">Central Force Problem</h4>
 <p>When applying to a hydrogen a few changes have to be made since it is not linear/square/cubic/etc and is spherical instead.
 This problem is called the &ldquo;<a href="https://en.wikipedia.org/wiki/Hydrogen-like_atom">central force problem</a>&rdquo; and is solved in much the same way as the square/rectangular potential wells, except using spherical coordinates.
@@ -1647,8 +1560,7 @@ This has much the same procedure as before so will skip over it to find that we 
 Applying Euler&rsquo;s identity we note that \( \psi(r, \phi) = \psi(r, \phi + 2\pi) \) which implies that the wave function (and the separated \( \Phi(\phi) \)) takes on discrete solutions, i.e. \( m = 0, \pm 1, \pm 2, \dots \)</p>
 <p>Extending on this we may also derive that angular momentum is quantized.</p>
 <blockquote>
-<p>I&rsquo;m behind on class so the derivations for angular momentum and energy levels will not be typed out.</p>
-</blockquote>
+<p>I&rsquo;m behind on class so the derivations for angular momentum and energy levels will not be typed out.</p></blockquote>
 <p>$$ L_z = m\hbar \qquad[ m = 0, \pm 1, \pm2, \dots] $$</p>
 <p>Much the same approach applies to the three dimensional case.
 The solution is a bit of work to write out, so <a href="https://chem.libretexts.org/Courses/University_of_California_Davis/UCD_Chem_107B%3A_Physical_Chemistry_for_Life_Scientists/Chapters/4%3A_Quantum_Theory/4.10%3A_The_Schr%C3%B6dinger_Wave_Equation_for_the_Hydrogen_Atom">see this</a>.</p>
@@ -1676,8 +1588,7 @@ It turns out that it has unique solutions for each \( k \) of form \( k = l(l+1)
  <img loading="lazy" src="img/ang_momentum_vector.png" alt="ang_momentum_vector"  />
 
 
-The \( z \) component can take on \( 2l+1 \) values</p>
-</blockquote>
+The \( z \) component can take on \( 2l+1 \) values</p></blockquote>
 <ol start="3">
 <li>The \( R \) equation
 $$ \frac{d^2}{dr^2} (rR) = \frac{2M}{\hbar} [U(r) + \frac{l(l+1)\hbar^2}{2Mr^2} - E] (rR) $$</li>
@@ -1685,8 +1596,7 @@ $$ \frac{d^2}{dr^2} (rR) = \frac{2M}{\hbar} [U(r) + \frac{l(l+1)\hbar^2}{2Mr^2} 
 <blockquote>
 <ul>
 <li>\( k = l(l+1) \)</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <p>This equation determines the form of the potential \( U(r) \).
 Notice that it does not depend on \( m \), therefore for a given \( L \) we will find the same allowed energies for all \( 2l + 1 \) orientations; it is spherically symmetric. Therefore a level will always be <em>at least</em> \( 2l + 1 \) fold degenerate.
 It turns out that the energies of the hydrogen atom are described by</p>
@@ -1696,8 +1606,7 @@ It turns out that the energies of the hydrogen atom are described by</p>
 <h5 id="wave-function">Wave Function</h5>
 <p>$$ \phi_{nlm} = R_{nl}(r) \Theta_{lm}(\theta) e^{im\phi} $$</p>
 <blockquote>
-<p>Expressions for \( R \) and \( \Theta \) are given in tables</p>
-</blockquote>
+<p>Expressions for \( R \) and \( \Theta \) are given in tables</p></blockquote>
 <p>
 
 
@@ -1705,8 +1614,7 @@ It turns out that the energies of the hydrogen atom are described by</p>
 
 </p>
 <blockquote>
-<p>Solutions from textbook. I think these would be provided if applicable.</p>
-</blockquote>
+<p>Solutions from textbook. I think these would be provided if applicable.</p></blockquote>
 <h4 id="probability-density-functions">Probability Density Functions</h4>
 <ul>
 <li>We can derive probability density functions for different shells of the hydrogen atom. For example for the ground state \( P_{1s}(r) = 4\pi A^2 r^2 e^{-2r/a_B} \).
@@ -1722,16 +1630,14 @@ It turns out that the energies of the hydrogen atom are described by</p>
  <img loading="lazy" src="img/1s_prob_density.png" alt="1s_prob_density"  />
 
 
-Notice maximum probability  at \( r = a_B \), which is the Bohr radius</p>
-</blockquote>
+Notice maximum probability  at \( r = a_B \), which is the Bohr radius</p></blockquote>
 <ul>
 <li>More probability density functions can found with a google search.</li>
 </ul>
 <h4 id="hydrogen-like-atoms">Hydrogen-like atoms</h4>
 <p>Hydrogen-like atoms can be approached in much the same way; whereas the potential of an electron in hydrogen is \( U = -ke^2/r \), it is \( U = -Zke^2/r \) in a hydrogen-like ion.</p>
 <blockquote>
-<p>\( Z \) is the atomic number</p>
-</blockquote>
+<p>\( Z \) is the atomic number</p></blockquote>
 <p>Allowed energies of a hydrogen-like ion:</p>
 <p>$$ E = -Z^2 \frac{E_R}{n^2} $$</p>
 <p>And for finding the wave function apply much the same procedure as before but incorporate \( Z \), i.e. the parameter becomes</p>
@@ -1749,8 +1655,7 @@ Notice maximum probability  at \( r = a_B \), which is the Bohr radius</p>
 <p><code>// following notes will be rather rough ... //</code></p>
 <h3 id="electron-spin">Electron Spin</h3>
 <blockquote>
-<p>Electrons have a spin. But they don&rsquo;t really spin. Don&rsquo;t question it.</p>
-</blockquote>
+<p>Electrons have a spin. But they don&rsquo;t really spin. Don&rsquo;t question it.</p></blockquote>
 <p>$$ J = L + S $$</p>
 <ul>
 <li>\( J \) is the total angular momentum of the electron</li>
@@ -1758,8 +1663,7 @@ Notice maximum probability  at \( r = a_B \), which is the Bohr radius</p>
 <li>\( S \) is the spin of the electron</li>
 </ul>
 <blockquote>
-<p>Think of the earth orbiting the sun; earth&rsquo;s spin is \( S \) and it&rsquo;s orbit is \( L \)</p>
-</blockquote>
+<p>Think of the earth orbiting the sun; earth&rsquo;s spin is \( S \) and it&rsquo;s orbit is \( L \)</p></blockquote>
 <ul>
 <li>Spin is denoted via the spin quantum number, \( \pm \frac{1}{2} \)</li>
 <li>We saw prior that \( L \) is quantized by \( L = \sqrt{l(l+1)} \hbar \)</li>
@@ -1784,8 +1688,7 @@ Since \( m \) can have \( 2l+1 \) values \( \longrightarrow \) separation of the
 <p>Now, considering the spin up/down case, we expect the <em>total</em> spin to be proportional to the spin angular momentum, i.e.</p>
 <p>$$ \vec{\mu}_{\text{spin}}= -\gamma \vec{S} = -\frac{e}{m_e}\vec{S} $$</p>
 <blockquote>
-<p>\( \gamma \) is the spin gyromagnetic ratio</p>
-</blockquote>
+<p>\( \gamma \) is the spin gyromagnetic ratio</p></blockquote>
 <p>and the total moment of an electron is</p>
 <p>$$ \vec{\mu_{\text{tot}}} = \vec{\mu_{\text{orb}}} + \vec{\mu_{\text{spin}}} = -\frac{e}{2m_e}(\vec{L} + 2\vec{S}) $$</p>
 <p>armed with the above we can calculate the <em>anomalous</em> Zeeman effect (where the spin does contribute) to find that the separation of levels is</p>
@@ -1802,8 +1705,7 @@ Z_{eff}(r) \approx Z &amp; r \text{inside all other electrons} \\
 Z_eff \approx 1 &amp; r \text{outside all other electrons} \\
 \end{cases} $$</p>
 <blockquote>
-<p>Can model it as a superposition of two cases depending on distance from other electrons/nucleus</p>
-</blockquote>
+<p>Can model it as a superposition of two cases depending on distance from other electrons/nucleus</p></blockquote>
 <p>\( U(r) \) is pretty similar to the hydrogen potential function we know and love so we can use that as a starting off point.</p>
 <ul>
 <li>Each level has degeneracy of at least \( 2(2l+1) \)</li>
@@ -1814,8 +1716,7 @@ Z_eff \approx 1 &amp; r \text{outside all other electrons} \\
 <hr>
 <blockquote>
 <p>anything with full subshells (i.e. all paired electrons) will have spin 0; non-full subshells e.g. alkali metals and halogens will have spin \( \frac{\sqrt{3}}{2} \).
-For getting the angular momentum just take the \( l \) of the valence electron and plug it into \( L = \sqrt{l(l+1)} \hbar \)</p>
-</blockquote>
+For getting the angular momentum just take the \( l \) of the valence electron and plug it into \( L = \sqrt{l(l+1)} \hbar \)</p></blockquote>
 <h3 id="molecules-and-bonding">Molecules and Bonding</h3>
 <ul>
 <li>
@@ -1874,8 +1775,7 @@ For getting the angular momentum just take the \( l \) of the valence electron a
 <p><code>// coming ... maybe? //</code></p>
 <h2 id="tep327-engineering-and-law">TEP327: Engineering and Law</h2>
 <blockquote>
-<p>** &ldquo;It depends&rdquo; **</p>
-</blockquote>
+<p>** &ldquo;It depends&rdquo; **</p></blockquote>
 <p>Why do engineers need to know about law?</p>
 <ul>
 <li>Engineering ends up stepping across a lot of jurisdictions, so we kinda need to know about it.</li>
@@ -1929,8 +1829,7 @@ For getting the angular momentum just take the \( l \) of the valence electron a
 <li>Facts:</li>
 </ol>
 <blockquote>
-<p>Note that with with law we first enter the facts and evidence, <em>then</em> apply the relevant law to it.</p>
-</blockquote>
+<p>Note that with with law we first enter the facts and evidence, <em>then</em> apply the relevant law to it.</p></blockquote>
 <ol start="2">
 <li>Issues</li>
 <li>Rule/Ratio</li>

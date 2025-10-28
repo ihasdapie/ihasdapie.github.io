@@ -137,8 +137,7 @@
 </header>
 <article>
     <blockquote>
-<p><strong>&ldquo;Fight for the architecture&rdquo;</strong></p>
-</blockquote>
+<p><strong>&ldquo;Fight for the architecture&rdquo;</strong></p></blockquote>
 <p>The following is a <strong>Work in progress</strong> collection of notes on &lsquo;Clean Architecture: A Craftsman&rsquo;s Guide to Software Structure and Design&rsquo; by Robert C. Martin. [1]</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -193,36 +192,30 @@
 <li><strong>S</strong>ingle Responsibility</li>
 </ul>
 <blockquote>
-<p>There should never be more than one reason for a class to change</p>
-</blockquote>
+<p>There should never be more than one reason for a class to change</p></blockquote>
 <ul>
 <li><strong>O</strong>pen-closed</li>
 </ul>
 <blockquote>
-<p>For software systems to be easy to change they must be designed to allow for the behaviour to be changed by adding new code, rather than changing existing code</p>
-</blockquote>
+<p>For software systems to be easy to change they must be designed to allow for the behaviour to be changed by adding new code, rather than changing existing code</p></blockquote>
 <ul>
 <li><strong>L</strong>iskov Substitution</li>
 </ul>
 <blockquote>
-<p>Functions that use pointers to base classes must be able to use objects of derived classes without knowing it (See: generics)</p>
-</blockquote>
+<p>Functions that use pointers to base classes must be able to use objects of derived classes without knowing it (See: generics)</p></blockquote>
 <ul>
 <li><strong>I</strong>nterface Segregation</li>
 </ul>
 <blockquote>
-<p>Many client-specific interfaces are better than one general-purpose interface</p>
-</blockquote>
+<p>Many client-specific interfaces are better than one general-purpose interface</p></blockquote>
 <ul>
 <li><strong>D</strong>ependency Inversion</li>
 </ul>
 <blockquote>
-<p>Code that implement high-level policy should not depend on code that implements low-level details, rather details should depend on policies</p>
-</blockquote>
+<p>Code that implement high-level policy should not depend on code that implements low-level details, rather details should depend on policies</p></blockquote>
 <h3 id="srp">SRP</h3>
 <blockquote>
-<p>A module should be responsible to only one actor</p>
-</blockquote>
+<p>A module should be responsible to only one actor</p></blockquote>
 <p>For example, consider module <code>employee</code> with methods <code>calcPay</code> and <code>reportHours</code>.
 It is reasonable to think that both <code>calcPay</code> and <code>reportHours</code> share a method for finding no. hours worked, <code>calcHours</code>.
 However each one of these methods report to different &lsquo;real-world&rsquo; owners (finance, HR).
@@ -240,8 +233,7 @@ This also helps deal with things like merge conflicts.</p>
 </ul>
 <h3 id="ocp">OCP</h3>
 <blockquote>
-<p>Behaviour of a software artifact should be extendible without modifying the artifact</p>
-</blockquote>
+<p>Behaviour of a software artifact should be extendible without modifying the artifact</p></blockquote>
 <p>For example: what if we had a webpage that calculates a report that must be rendered for the web and then a stakeholder requests that it work for a black-and white printer?
 Approach: 1) separate things that change for different reasons, 2) organize dependencies well.
 I.e. in this case define a report builder that outputs to an universal format which can then be rendered by a renderer for each medium.</p>
@@ -256,8 +248,7 @@ I.e. in this case define a report builder that outputs to an universal format wh
 </ul>
 <h3 id="lsp">LSP</h3>
 <blockquote>
-<p>If for each object o1 of type S there is an object o2 of type T s.t. for all programs P defined in terms of T, the behaviour of P is unchanged when o1 is subsisted for o2 then S is a subtype of T (Barbara Liskov, 1988)</p>
-</blockquote>
+<p>If for each object o1 of type S there is an object o2 of type T s.t. for all programs P defined in terms of T, the behaviour of P is unchanged when o1 is subsisted for o2 then S is a subtype of T (Barbara Liskov, 1988)</p></blockquote>
 <p>Example: A algo that sorts a list of polygons by area should work for all things that subclass polygon, not necessarily only squares for example.</p>
 <h3 id="isp">ISP</h3>
 <p>Consider class <code>C</code> that implements <code>op1</code>, <code>op2</code> for users 1 and 2.
@@ -266,8 +257,7 @@ We can get around this by segregating operations into interfaces.</p>
 <p>This is also a word of warning for avoiding excessive module dependencies and vetting them (and their dependencies!) carefully.</p>
 <h3 id="dip">DIP</h3>
 <blockquote>
-<p>We want to <code>depend</code> on abstractions, not the concrete; whereas every change to an abstract interface corresponds to a change to concrete implementations, not all concrete changes require changes to the interface they implement.</p>
-</blockquote>
+<p>We want to <code>depend</code> on abstractions, not the concrete; whereas every change to an abstract interface corresponds to a change to concrete implementations, not all concrete changes require changes to the interface they implement.</p></blockquote>
 <ol>
 <li>Don&rsquo;t refer to volatile concrete classes</li>
 <li>Don&rsquo;t derive from volatile concrete classes</li>
@@ -302,14 +292,14 @@ So we introduce the <code>factory</code> design pattern; A <code>{class}Factory<
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#080;font-style:italic"># serializers.py</span>
 </span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">SerializerFactory</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">def</span> __init__(self):
-</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>_creators <span style="color:#666">=</span> {}
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">def</span> <span style="color:#00a000">__init__</span>(<span style="color:#a2f">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f">self</span><span style="color:#666">.</span>_creators <span style="color:#666">=</span> {}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">def</span> <span style="color:#00a000">register_format</span>(self, <span style="color:#a2f">format</span>, creator):
-</span></span><span style="display:flex;"><span>        self<span style="color:#666">.</span>_creators[<span style="color:#a2f">format</span>] <span style="color:#666">=</span> creator
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">def</span> <span style="color:#00a000">register_format</span>(<span style="color:#a2f">self</span>, <span style="color:#a2f">format</span>, creator):
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f">self</span><span style="color:#666">.</span>_creators[<span style="color:#a2f">format</span>] <span style="color:#666">=</span> creator
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">def</span> <span style="color:#00a000">get_serializer</span>(self, <span style="color:#a2f">format</span>):
-</span></span><span style="display:flex;"><span>        creator <span style="color:#666">=</span> self<span style="color:#666">.</span>_creators<span style="color:#666">.</span>get(<span style="color:#a2f">format</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">def</span> <span style="color:#00a000">get_serializer</span>(<span style="color:#a2f">self</span>, <span style="color:#a2f">format</span>):
+</span></span><span style="display:flex;"><span>        creator <span style="color:#666">=</span> <span style="color:#a2f">self</span><span style="color:#666">.</span>_creators<span style="color:#666">.</span>get(<span style="color:#a2f">format</span>)
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span> <span style="color:#a2f;font-weight:bold">not</span> creator:
 </span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">raise</span> <span style="color:#d2413a;font-weight:bold">ValueError</span>(<span style="color:#a2f">format</span>)
 </span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> creator()
@@ -344,16 +334,15 @@ So we introduce the <code>factory</code> design pattern; A <code>{class}Factory<
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">YamlSerializer</span>(serializers<span style="color:#666">.</span>JsonSerializer): 
 </span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic"># assuming that we have the json serializer already implemented</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">def</span> <span style="color:#00a000">to_str</span>(self):
-</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> yaml<span style="color:#666">.</span>dump(self<span style="color:#666">.</span>_current_object)
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">def</span> <span style="color:#00a000">to_str</span>(<span style="color:#a2f">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> yaml<span style="color:#666">.</span>dump(<span style="color:#a2f">self</span><span style="color:#666">.</span>_current_object)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>serializers<span style="color:#666">.</span>factory<span style="color:#666">.</span>register_format(<span style="color:#b44">&#39;YAML&#39;</span>, YamlSerializer)
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="components">Components</h2>
 <blockquote>
-<p>Components are the smallest <em>deployable</em> units of a software system.</p>
-</blockquote>
+<p>Components are the smallest <em>deployable</em> units of a software system.</p></blockquote>
 <ul>
 <li>Originally developed to address issue of compile/linking/loading times.
 Modern day systems are often linked at runtime, but this is not always the case.</li>
@@ -363,8 +352,7 @@ Modern day systems are often linked at runtime, but this is not always the case.
 <li><strong>R</strong>EP: Reuse/Release Equivalence Principle</li>
 </ul>
 <blockquote>
-<p>The granule of reuse is the granule of release</p>
-</blockquote>
+<p>The granule of reuse is the granule of release</p></blockquote>
 <p>Things that are used together should be grouped and released (with appropriate release tracking, see <a href="https://semver.org/">semver</a>) together.
 This means that software that are formed into a component must belong to a cohesive group that is <em>releasable</em>.</p>
 <ul>
@@ -372,22 +360,19 @@ This means that software that are formed into a component must belong to a cohes
 </ul>
 <blockquote>
 <p>Gather into components those classes that change for the same reason and at the same times.
-Separate into different components those classes that change at different times and for different reasons.</p>
-</blockquote>
+Separate into different components those classes that change at different times and for different reasons.</p></blockquote>
 <p>This is similar to the SRP (Single Responsibility Principle) &amp; helps with maintainability.</p>
 <ul>
 <li><strong>C</strong>RP: Common Reuse Principle</li>
 </ul>
 <blockquote>
-<p>Don&rsquo;t force users of a component to depend on things that they don&rsquo;t need</p>
-</blockquote>
+<p>Don&rsquo;t force users of a component to depend on things that they don&rsquo;t need</p></blockquote>
 <p>This is similar to the ISP (Interface Segregation Principle) but is more general.</p>
 <p>If things are used together, then they should be grouped together.
 For example a container class and its iterators should be grouped together as they are used together.</p>
 <h3 id="component-coupling">Component Coupling</h3>
 <blockquote>
-<p>Allow no cycles in the component dependency graph</p>
-</blockquote>
+<p>Allow no cycles in the component dependency graph</p></blockquote>
 <p>If it is not immediately obvious, realize that making a change in a cyclic dependency graph <code>A-&gt;B-&gt;C-&gt;A</code> looks an <em>awful</em> lot like the <a href="https://en.wikipedia.org/wiki/Dining_philosophers_problem">dining philosophers problem</a>.</p>
 <p>But if you do encounter one, try breaking the cycle by&hellip;</p>
 <ul>
@@ -401,8 +386,7 @@ For example a container class and its iterators should be grouped together as th
 </ul>
 <h4 id="stable-dependencies-principle-sdp">Stable Dependencies Principle (SDP)</h4>
 <blockquote>
-<p>Depend in the direction of stability</p>
-</blockquote>
+<p>Depend in the direction of stability</p></blockquote>
 <p>TLDR; depend on stable things first, then volatile things.</p>
 <p>A heuristic for the instability, \( I \) of a component is \(I = \frac{\texttt{outgoing dependencies}}{\texttt{ingoing dependencies + outgoing dependencies}} \).</p>
 <p>A <em>stable</em> component has low \( I \) and does not depend much on external components though others depend on it.
@@ -410,8 +394,7 @@ A <em>volatile</em> component has high \( I \) and depends on external component
 <p>Not all components should be stable. However we should keep the unstable components in check; it is an useful convention to draw component diagrams such that unstable ones on top; this way dependency arrows going upwards indicate violation of the SDP.</p>
 <h4 id="stable-abstractions-principle-sap">Stable Abstractions Principle (SAP)</h4>
 <blockquote>
-<p>A component should be as abstract as it is stable</p>
-</blockquote>
+<p>A component should be as abstract as it is stable</p></blockquote>
 <p>A stable component should be abstract so that it&rsquo;s stability doesn&rsquo;t prevent it from being extended.
 An unstable component should be concrete since it&rsquo;s instability allows for the concrete code to be easily changed.</p>
 

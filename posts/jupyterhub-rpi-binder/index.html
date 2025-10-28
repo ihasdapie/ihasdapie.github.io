@@ -81,8 +81,7 @@
 </header>
 <article>
     <blockquote>
-<p>I wanted to do <em>something</em> with this Raspberry Pi 4 I had lying around.</p>
-</blockquote>
+<p>I wanted to do <em>something</em> with this Raspberry Pi 4 I had lying around.</p></blockquote>
 <p>Figured I would try to get JupyterHub going on it, maybe with a <code>c</code> kernel for my students to use.
 Turns out there are a few <a href="https://github.com/matrix-org/synapse/issues/9403">issues</a> getting jupyterhub built for ARMv7.
 Anyhow the primary thing is that the <code>rust</code> toolchain must be installed in order to build the <code>cryptography</code> python module, and that when installing in a <code>docker</code> container the <code>--sys-prefix</code> must be passed to <code>install_c_kernel</code>.</p>
@@ -141,14 +140,14 @@ Anyhow the primary thing is that the <code>rust</code> toolchain must be install
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">LABEL</span> <span style="color:#b8860b">maintainer</span><span style="color:#666">=</span><span style="color:#b44">&#34;Brian Chen&lt;brianchen.chen@mail.utoronto.ca&#34;</span><span style="">
-</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">FROM</span><span style="color:#b44"> arm32v7/python:3.9-bullseye</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">FROM</span><span style="color:#bbb"> </span><span style="color:#b44">arm32v7/python:3.9-bullseye</span><span style="">
 </span></span></span><span style="display:flex;"><span><span style="">
 </span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#080;font-style:italic"># Set the variables</span><span style="">
 </span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">ENV</span> DEBIAN_FRONTEND noninteractive<span style="">
 </span></span></span><span style="display:flex;"><span><span style="">
-</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">WORKDIR</span><span style="color:#b44"> /root</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">WORKDIR</span><span style="color:#bbb"> </span><span style="color:#b44">/root</span><span style="">
 </span></span></span><span style="display:flex;"><span><span style="">
-</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">USER</span><span style="color:#b44"> root</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">USER</span><span style="color:#bbb"> </span><span style="color:#b44">root</span><span style="">
 </span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;CHANGEME&#34;</span> | passwd --stdin root<span style="">
 </span></span></span><span style="display:flex;"><span><span style="">
 </span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#080;font-style:italic"># Install both Python 2 and 3</span><span style="">
@@ -188,7 +187,7 @@ Anyhow the primary thing is that the <code>rust</code> toolchain must be install
 </span></span></span><span style="display:flex;"><span><span style="">
 </span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">COPY</span> jupyterhub_config.py jupyterhub_config.py<span style="">
 </span></span></span><span style="display:flex;"><span><span style="">
-</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">EXPOSE</span><span style="color:#b44"> 8000</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">EXPOSE</span><span style="color:#bbb"> </span><span style="color:#b44">8000</span><span style="">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>But turns out my ISP doesn&rsquo;t provide me with a static IP address &hellip; so <a href="https://mybinder.org/">binder</a> it is.</p>
@@ -226,8 +225,8 @@ Or you can just provide a <code>Dockerfile</code> that meets <a href="https://my
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">FROM</span><span style="color:#b44"> python:3.9-slim</span><span style="">
-</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">MAINTAINER</span><span style="color:#b44"> Brian Chen &lt;brianchen.chen@mail.utoronto.ca</span><span style="">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">FROM</span><span style="color:#bbb"> </span><span style="color:#b44">python:3.9-slim</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">MAINTAINER</span><span style="color:#bbb"> </span><span style="color:#b44">Brian</span> Chen &lt;brianchen.chen@mail.utoronto.ca<span style="">
 </span></span></span><span style="display:flex;"><span><span style="">
 </span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> apt-get update <span style="color:#666">&amp;&amp;</span> apt-get install -y build-essential<span style="">
 </span></span></span><span style="display:flex;"><span><span style="">
@@ -248,11 +247,11 @@ Or you can just provide a <code>Dockerfile</code> that meets <a href="https://my
 </span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> install_c_kernel<span style="">
 </span></span></span><span style="display:flex;"><span><span style="">
 </span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">COPY</span> . <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">HOME</span><span style="color:#b68;font-weight:bold">}</span><span style="">
-</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">USER</span><span style="color:#b44"> root</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">USER</span><span style="color:#bbb"> </span><span style="color:#b44">root</span><span style="">
 </span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">RUN</span> chown -R <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">NB_UID</span><span style="color:#b68;font-weight:bold">}</span> <span style="color:#b68;font-weight:bold">${</span><span style="color:#b8860b">HOME</span><span style="color:#b68;font-weight:bold">}</span><span style="">
-</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">USER</span><span style="color:#b44"> ${NB_USER}</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">USER</span><span style="color:#bbb"> </span><span style="color:#b44">${NB_USER</span><span style="color:#666">}</span><span style="">
 </span></span></span><span style="display:flex;"><span><span style="">
-</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">WORKDIR</span><span style="color:#b44"> ${HOME}</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span><span style="color:#a2f;font-weight:bold">WORKDIR</span><span style="color:#bbb"> </span><span style="color:#b44">${HOME</span><span style="color:#666">}</span><span style="">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>I ended up using this to set up an interactive \( c \) environment for my students to do some practice problems for their final exam with (see <a href="//chenbrian.ca/posts/teaching/">here</a>)</p>

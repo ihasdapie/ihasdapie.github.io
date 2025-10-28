@@ -120,15 +120,13 @@
 </header>
 <article>
     <blockquote>
-<p>TLDR: you want code completions while working with ROS2</p>
-</blockquote>
+<p>TLDR: you want code completions while working with ROS2</p></blockquote>
 <h2 id="lsp-with-clangd">LSP with <code>clangd</code></h2>
 <p>ROS2 puts its headers into <code>/opt/ros2/&lt;ROS_DISTRO&gt;/include</code>.
 This doesn&rsquo;t work out of the box with my fairly default <code>clangd</code> setup, and it would be <em>too</em> easy if it just worked out of the box with <code>vim</code>!
 Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a <code>c_cpp_properties.json</code> file.</p>
 <blockquote>
-<p>For vscode setup, see <a href="https://www.allisonthackston.com/articles/vscode-docker-ros2.html">this</a> or <a href="https://erdalpekel.de/?p=157">this</a></p>
-</blockquote>
+<p>For vscode setup, see <a href="https://www.allisonthackston.com/articles/vscode-docker-ros2.html">this</a> or <a href="https://erdalpekel.de/?p=157">this</a></p></blockquote>
 <p>With vim this is as little uglier.
 Nothing that <code>clang</code> supports using either a <code>compile_commands.json</code> file or a <code>compile_flags.txt</code> file <a href="https://clangd.llvm.org/installation.html#project-setup">source</a>, we can either:</p>
 <h3 id="method-0-colcon-mixins-compile_commands">Method 0: Colcon mixins compile_commands</h3>

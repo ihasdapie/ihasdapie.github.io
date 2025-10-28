@@ -279,7 +279,7 @@ So:</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#bbb">      </span><span style="color:#a2f;font-weight:bold">let</span><span style="color:#bbb"> </span>insertable<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>rules.get(pair).unwrap();<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">      </span><span style="color:#a2f;font-weight:bold">let</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">mut</span><span style="color:#bbb"> </span>new_pair<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>pair.chars().next().unwrap().to_string()<span style="color:#bbb"> </span><span style="color:#666">+</span><span style="color:#bbb"> </span><span style="color:#666">&amp;</span>insertable.to_string();<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">      </span><span style="color:#666">*</span>update.entry(new_pair.clone()).or_insert(<span style="color:#666">0</span>)<span style="color:#bbb"> </span><span style="color:#666">+=</span><span style="color:#bbb"> </span>state.get(pair).unwrap();<span style="color:#bbb">
-</span></span></span><span style="display:flex;"><span><span style="color:#bbb">      </span>new_pair<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>format!(<span style="color:#b44">&#34;</span><span style="color:#b68;font-weight:bold">{}{}</span><span style="color:#b44">&#34;</span>,<span style="color:#bbb"> </span><span style="color:#666">*</span>insertable,<span style="color:#bbb"> </span>pair.chars().nth(<span style="color:#666">1</span>).unwrap());<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">      </span>new_pair<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#00a000">format!</span>(<span style="color:#b44">&#34;</span><span style="color:#b68;font-weight:bold">{}{}</span><span style="color:#b44">&#34;</span>,<span style="color:#bbb"> </span><span style="color:#666">*</span>insertable,<span style="color:#bbb"> </span>pair.chars().nth(<span style="color:#666">1</span>).unwrap());<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">      </span><span style="color:#666">*</span>update.entry(new_pair).or_insert(<span style="color:#666">0</span>)<span style="color:#bbb"> </span><span style="color:#666">+=</span><span style="color:#bbb"> </span>state.get(pair).unwrap();<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>}<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#080;font-style:italic">// and update the state
@@ -385,8 +385,7 @@ Fortunately <code>rust</code> has this built in in the form of <code>std::collec
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p>Finals season got to me after the 15th :(</p>
-</blockquote>
+<p>Finals season got to me after the 15th :(</p></blockquote>
 <h2 id="day-16">Day 16</h2>
 <p><a href="https://adventofcode.com/2021/day/16">Problem</a></p>
 <h2 id="day-17">Day 17</h2>

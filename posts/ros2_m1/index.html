@@ -85,10 +85,10 @@
     <aside>
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#it-works-1">It works! </a></li>
+    <li><a href="#it-works">It works! </a></li>
     <li><a href="#lets-get-started">Let&rsquo;s get started</a>
       <ul>
-        <li><a href="#1-use-direnvhttpsdirenvnet-itll-make-your-life-easier">1. Use <a href="https://direnv.net">direnv</a>. It&rsquo;ll make your life easier.</a></li>
+        <li><a href="#1-use-direnv-itll-make-your-life-easier">1. Use direnv. It’ll make your life easier.</a></li>
         <li><a href="#2-create-a-python-virtual-environment">2. Create a python virtual environment.</a></li>
         <li><a href="#3-tell-direnv-to-use-the-virtual-environment">3. Tell direnv to use the virtual environment</a></li>
         <li><a href="#4-install-python-dependencies">4. Install python dependencies</a></li>
@@ -137,10 +137,9 @@
 
 </header>
 <article>
-    <h2 id="it-works-1">It works! <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h2>
+    <h2 id="it-works">It works! <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h2>
 <blockquote>
-<p>I got a shiny new macbook and was sad that I had to dual-boot into Asahi (which is actually a surprisingly robust experience at the time of writing) to do ROS2 work. So I did the only sensible thing and spent the better part of a day making <code>ros2</code> build on an m1 mac on MacOS Ventura.</p>
-</blockquote>
+<p>I got a shiny new macbook and was sad that I had to dual-boot into Asahi (which is actually a surprisingly robust experience at the time of writing) to do ROS2 work. So I did the only sensible thing and spent the better part of a day making <code>ros2</code> build on an m1 mac on MacOS Ventura.</p></blockquote>
 <p>I&rsquo;d like to report that <code>ros2</code> runs <em>flawlessly</em> on apple silicon with some caveats (see below).
 But for most use cases it&rsquo;s amazing to work with and ridiculously fast. For reference, building aUToronto&rsquo;s planning stack on my old i7-8550u laptop took between 5-10 minutes, Asahi 48 seconds, and <em>18.5</em> seconds on MacOS!</p>
 <p>
@@ -150,8 +149,7 @@ But for most use cases it&rsquo;s amazing to work with and ridiculously fast. Fo
 
 </p>
 <blockquote>
-<p>rviz!</p>
-</blockquote>
+<p>rviz!</p></blockquote>
 <p>
 
 
@@ -159,8 +157,7 @@ But for most use cases it&rsquo;s amazing to work with and ridiculously fast. Fo
 
 </p>
 <blockquote>
-<p>talker and listener in action</p>
-</blockquote>
+<p>talker and listener in action</p></blockquote>
 <h2 id="lets-get-started">Let&rsquo;s get started</h2>
 <p>I&rsquo;m going to assume you&rsquo;ve read <a href="https://docs.ros.org/en/rolling/Installation/Maintaining-a-Source-Checkout.html">how to maintain a source checkout of ROS2</a> and are familiar with how to create a workspace and the folder structure and all that. If not &ndash; go read it!</p>
 <p>Here&rsquo;s the build command to use:</p>
@@ -203,9 +200,8 @@ But for most use cases it&rsquo;s amazing to work with and ridiculously fast. Fo
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p>I like joining all of the above into a single line and making an alias for the build command. Please see comments in why the command is the way it is.</p>
-</blockquote>
-<h3 id="1-use-direnvhttpsdirenvnet-itll-make-your-life-easier">1. Use <a href="https://direnv.net">direnv</a>. It&rsquo;ll make your life easier.</h3>
+<p>I like joining all of the above into a single line and making an alias for the build command. Please see comments in why the command is the way it is.</p></blockquote>
+<h3 id="1-use-direnv-itll-make-your-life-easier">1. Use <a href="https://direnv.net">direnv</a>. It&rsquo;ll make your life easier.</h3>
 <h3 id="2-create-a-python-virtual-environment">2. Create a python virtual environment.</h3>
 <p>Don&rsquo;t use pipenv or poetry, they seem to work poorly with CMAKE. You will want to avoid using your system python but instead a python installed through <code>pyenv</code> to make this virtual environment. This is so to facilitate finding the correct python Framework and so forth.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -245,8 +241,7 @@ But for most use cases it&rsquo;s amazing to work with and ridiculously fast. Fo
 </span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p>For reference a <code>pip freeze</code> on my system gives <a href="requirements.txt">requirements.txt</a></p>
-</blockquote>
+<p>For reference a <code>pip freeze</code> on my system gives <a href="requirements.txt">requirements.txt</a></p></blockquote>
 <h3 id="5-deal-with-graphviz">5. Deal with graphviz</h3>
 <p>You will likely run into a complant about graphviz. <code>brew install graphviz</code></p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -260,8 +255,7 @@ But for most use cases it&rsquo;s amazing to work with and ridiculously fast. Fo
 </div><p>You may need to run step 4 again after doing this.</p>
 <h3 id="6-system-dependencies">6. System dependencies</h3>
 <blockquote>
-<p>I probably missed some, but this is what I recall installing. Some might be for some other packages I needed. Please let me know if I missed something.</p>
-</blockquote>
+<p>I probably missed some, but this is what I recall installing. Some might be for some other packages I needed. Please let me know if I missed something.</p></blockquote>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -377,8 +371,7 @@ The Homebrew <code>qt@5</code> package is kind of a mess and will look for <code
 </span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p>Above patch is for <code>rviz_ogre_vendor</code>. You just need to tell it to build for arm64.</p>
-</blockquote>
+<p>Above patch is for <code>rviz_ogre_vendor</code>. You just need to tell it to build for arm64.</p></blockquote>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -416,8 +409,7 @@ The Homebrew <code>qt@5</code> package is kind of a mess and will look for <code
 </span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p>Above patch is for the vendored package (lives in <code>build/</code>)</p>
-</blockquote>
+<p>Above patch is for the vendored package (lives in <code>build/</code>)</p></blockquote>
 <h3 id="10-deal-with-orocos">10. Deal with <code>orocos</code></h3>
 <p>We need to build a few more packages from source and patch a ton of packages. I think there&rsquo;s a missing dependency export or something not propagating properly&hellip;but I haven&rsquo;t looked it through.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
