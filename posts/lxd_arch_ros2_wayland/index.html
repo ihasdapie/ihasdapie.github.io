@@ -7,23 +7,7 @@
 
     <title>`LXD`, Arch Linux, ROS 2, and Wayland </title>
 
-    <style>*{box-sizing:border-box}body{margin:40px auto;max-width:800px;line-height:1.6;font-size:16px;color:#444;font-family:sans-serif;padding:0 10px}h1,h2,h3{line-height:1.2;font-family:sans-serif;color:#444}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:16px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}td,th{border:1px solid #444;padding:.5rem;text-align:left}@media only screen and (max-width:1450px){#back_to_top{visibility:visible!important}#toc{display:none}}.katex-display>.katex{overflow:auto hidden}.katex .katex-html>.newline{display:block;padding-bottom:.25em;padding-top:.25em}#toc{position:fixed;top:40px;right:0;padding-right:10%;line-height:1.4em;max-width:30%;margin:auto}#back_to_top{position:fixed;top:10px;right:10px;width:100px;visibility:hidden}blockquote{background:#f1f1f1;border-left:4px solid #ccc;padding-left:8px}code:not([class*=language-]){border-radius:.25rem;padding:.1rem;background-color:#f8f8f8;color:#863109}code{width:100px;overflow:auto;word-wrap:normal;white-space:pre}p+ul,p+ol,ul+ol,ol+ul{margin-top:-10px}ul,ol,li{padding-left:.5 em}a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"} 
-            body {
-                margin-left: 15%;   
-            }
-            @media only screen and (max-width: 1450px) {
-                body {
-                    margin: 40px auto;
-                }
-            }
-
-        
-
-
-
-
-
-    </style>
+    <style>img{max-width:100%}table{display:block;overflow-x:auto}.katex-display>.katex{overflow:auto hidden}#back_to_top{display:none}img[src$="profile-picture.jpg"]{width:200px}</style>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
 
@@ -39,7 +23,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -66,14 +50,6 @@
 </head>
 
 <body>
-<div class="header">
-    <h1>
-        <a href="//chenbrian.ca/">chenbrian</a>
-        <div class="header-menu">
-            <a href="/"></a> &nbsp;
-        </div>
-    </h1>
-</div>
 
 <div id="content">
         
@@ -145,28 +121,29 @@ The general steps for me were:</p>
 <li>Enter the system: <code>lxc exec &lt;container_name&gt; -- sudo --login --user ubuntu</code></li>
 </ol>
 <blockquote>
-<p>I think you may need to use <code>-- su</code> instead of <code>-- sudo</code> depending on your lxd version</p></blockquote>
+<p>I think you may need to use <code>-- su</code> instead of <code>-- sudo</code> depending on your lxd version</p>
+</blockquote>
 <h2 id="mount-a-directory">Mount a directory</h2>
 <p>It is also useful to mount a directory and share it with your host
 machine. This way you can use your host editors while building/running
 in the container.</p>
 <p><code>lxc config device add osrf osrf disk source=/home/ihasdapie/osrf path=/home/ihasdapie/osrf</code></p>
 <p>In my case I wanted to keep paths consistent between my container and its host, so I just renamed the default &lsquo;ubuntu&rsquo; user to &lsquo;ihasdapie&rsquo;. The following command from <a href="https://unix.stackexchange.com/questions/98461/proper-way-of-changing-username-in-ubuntu-or-any-linux">stackoverflow</a> will change the name, group, home directory, and ownership over appropriately.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> usermod -d /home/ihasdapie -m -g ihasdapie -l ihasdapie ubuntu
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> usermod -d /home/ihasdapie -m -g ihasdapie -l ihasdapie ubuntu
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>The directory can then be mounted with the following command:</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> lxc config device add &lt;container_name&gt; &lt;device_name&gt; disk <span style="color:#b8860b">source</span><span style="color:#666">=</span>/path/in/host <span style="color:#b8860b">path</span><span style="color:#666">=</span>/path/in/container
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> lxc config device add &lt;container_name&gt; &lt;device_name&gt; disk <span style="color:#b8860b">source</span><span style="color:#666">=</span>/path/in/host <span style="color:#b8860b">path</span><span style="color:#666">=</span>/path/in/container
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="fix-permissions">Fix permissions</h2>
@@ -179,32 +156,32 @@ It is also a good idea to make the containers <a href="https://wiki.archlinux.or
 See <code>subuid(5)</code>, <code>subgid(5)</code> for more.</p>
 <p>Create or edit your files to resemble the following.
 Or if you have a different setup&hellip;you probably already know what you&rsquo;re doing so just map it out however makes sense for your system.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># /etc/subgid
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># /etc/subgid
 </span></span><span style="display:flex;"><span>root:100000:65536
 </span></span><span style="display:flex;"><span>ihasdapie:100000:65536
 </span></span><span style="display:flex;"><span>ihasdapie:0:65536
 </span></span><span style="display:flex;"><span>root:0:65536
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># /etc/subuid
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># /etc/subuid
 </span></span><span style="display:flex;"><span>root:100000:65536
 </span></span><span style="display:flex;"><span>ihasdapie:100000:65536
 </span></span><span style="display:flex;"><span>ihasdapie:0:65536
@@ -218,15 +195,15 @@ A reboot of the host system usually triggers the recognition.</p>
 </ol>
 <p>These config entries tell <code>lxc</code> to map the subordinate ids inside the container to the host ids we delegated in <code>/etc/{u,g}id</code>.</p>
 <p>I had the same entries for both.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># /etc/lxc/default.conf AND ~/.config/lxc/default.conf
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># /etc/lxc/default.conf AND ~/.config/lxc/default.conf
 </span></span><span style="display:flex;"><span>lxc.idmap = u 0 100000 65565
 </span></span><span style="display:flex;"><span>lxc.idmap = g 0 100000 65565
 </span></span><span style="display:flex;"><span>lxc.net.0.type = empty
@@ -241,7 +218,8 @@ same goes for the user in the container. If not then you would have to
 modify that command a little bit. Alternatively, just use
 <code>lxc config edit container</code></p>
 <blockquote>
-<p>If your user inside the container does not have the correct uid/gid then file access will not work properly. The easiest way to do this is with some <code>usermod</code>/<code>groupmod</code> commands to change their <code>gid</code> and <code>uid</code>. See <a href="https://www.cyberciti.biz/faq/linux-change-user-group-uid-gid-for-all-owned-files/">this link</a></p></blockquote>
+<p>If your user inside the container does not have the correct uid/gid then file access will not work properly. The easiest way to do this is with some <code>usermod</code>/<code>groupmod</code> commands to change their <code>gid</code> and <code>uid</code>. See <a href="https://www.cyberciti.biz/faq/linux-change-user-group-uid-gid-for-all-owned-files/">this link</a></p>
+</blockquote>
 <p>In any case with this done you should be able to seamlessly work on a
 directory inside and out of the container.</p>
 <h2 id="networking">Networking</h2>
@@ -255,14 +233,14 @@ What this entailed was the sharing of a few <code>unix</code> sockets.</p>
 </ol>
 <ol start="2">
 <li>Add your GPU to the container
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">devices</span>:<span style="color:#bbb">
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">devices</span>:<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#008000;font-weight:bold">mygpu</span>:<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#008000;font-weight:bold">type</span>:<span style="color:#bbb"> </span>gpu<span style="color:#bbb">
 </span></span></span></code></pre></td></tr></table>
@@ -276,9 +254,9 @@ In my case I screwed with it a little much and the file is in <code>/run/user/10
 </li>
 <li>Add these to your container. Here I link them to the container and then symlink it to the desired location.</li>
 </ol>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -305,7 +283,7 @@ In my case I screwed with it a little much and the file is in <code>/run/user/10
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>devices:
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>devices:
 </span></span><span style="display:flex;"><span>  Waylandsocket:
 </span></span><span style="display:flex;"><span>    bind: container
 </span></span><span style="display:flex;"><span>    connect: unix:/run/user/1000/wayland-0
@@ -333,16 +311,17 @@ In my case I screwed with it a little much and the file is in <code>/run/user/10
 </span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p>If you find an error with &ldquo;cannot connect to <code>/mnt/wayland1/wayland-0</code>&rdquo; you may have to <code>mkdir /mnt/wayland1</code> in the container</p></blockquote>
+<p>If you find an error with &ldquo;cannot connect to <code>/mnt/wayland1/wayland-0</code>&rdquo; you may have to <code>mkdir /mnt/wayland1</code> in the container</p>
+</blockquote>
 <p>The downside of this is that the symlinks don&rsquo;t persist after the container restarts.
 I just check for it in my <code>~/.zprofile</code>.</p>
 <ol start="5">
 <li>Set some environment variables</li>
 </ol>
 <p>I put these into the <code>~/.zprofile</code> inside the container. You can do the same with your <code>~/.profile</code> or however you choose to handle environment variables. I think <code>lxc</code> provides some tools to set them in the <code>lxc</code> config for the container.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -354,7 +333,7 @@ I just check for it in my <code>~/.zprofile</code>.</p>
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  <span style="color:#a2f">export</span> <span style="color:#b8860b">WAYLAND_DISPLAY</span><span style="color:#666">=</span>wayland-0
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  <span style="color:#a2f">export</span> <span style="color:#b8860b">WAYLAND_DISPLAY</span><span style="color:#666">=</span>wayland-0
 </span></span><span style="display:flex;"><span>  <span style="color:#a2f">export</span> <span style="color:#b8860b">XDG_RUNTIME_DIR</span><span style="color:#666">=</span>/run/user/1000
 </span></span><span style="display:flex;"><span>  <span style="color:#a2f">export</span> <span style="color:#b8860b">DISPLAY</span><span style="color:#666">=</span>:1
 </span></span><span style="display:flex;"><span>  <span style="color:#a2f">export</span> <span style="color:#b8860b">XSOCKET</span><span style="color:#666">=</span>/tmp/.X11-unix/X1
@@ -381,16 +360,16 @@ For more, see <a href="//chenbrian.ca/posts/ros2_lsp_setup/">this post</a></p>
 <li>Make a bash function for changing the terminal theme while inside the container.
 With kitty it looks something like this:</li>
 </ol>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>los <span style="color:#666">()</span> <span style="color:#666">{</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>los <span style="color:#666">()</span> <span style="color:#666">{</span>
 </span></span><span style="display:flex;"><span>    kitty @set-colors ~/.config/kitty/kitty-themes/themes/Argonaut.conf
 </span></span><span style="display:flex;"><span>    lxc <span style="color:#a2f">exec</span> osrf -- sudo --login --user ihasdapie
 </span></span><span style="display:flex;"><span>    kitty @set-colors ~/.config/kitty/kitty-themes/themes/kanagawa.conf
@@ -398,22 +377,23 @@ With kitty it looks something like this:</li>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p>Not the best way to do this but it works.</p></blockquote>
+<p>Not the best way to do this but it works.</p>
+</blockquote>
 <ol start="2">
 <li>If networking doesn&rsquo;t work</li>
 </ol>
 <ul>
 <li>allow lxd in firewalld and fix iptables</li>
 </ul>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>sudo firewall<span style="color:#666">-</span>cmd <span style="color:#666">--</span>zone<span style="color:#666">=</span>trusted <span style="color:#666">--</span>change<span style="color:#666">-</span>interface<span style="color:#666">=</span>lxdbr0 <span style="color:#666">--</span>permanent
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>sudo firewall<span style="color:#666">-</span>cmd <span style="color:#666">--</span>zone<span style="color:#666">=</span>trusted <span style="color:#666">--</span>change<span style="color:#666">-</span>interface<span style="color:#666">=</span>lxdbr0 <span style="color:#666">--</span>permanent
 </span></span><span style="display:flex;"><span>sudo firewall<span style="color:#666">-</span>cmd <span style="color:#666">--</span>reload
 </span></span><span style="display:flex;"><span>sudo iptables <span style="color:#666">-</span>I DOCKER<span style="color:#666">-</span>USER <span style="color:#666">-</span>o lxdbr0 <span style="color:#666">-</span>m conntrack <span style="color:#666">--</span>ctstate RELATED,ESTABLISHED <span style="color:#666">-</span>j ACCEPT
 </span></span><span style="display:flex;"><span>sudo iptables <span style="color:#666">-</span>I DOCKER<span style="color:#666">-</span>USER <span style="color:#666">-</span>i lxdbr0 <span style="color:#666">-</span>o wlp0s20f3 <span style="color:#666">-</span>j ACCEPT

@@ -7,13 +7,7 @@
 
     <title>Toggling laptop touchsreen on Wayland </title>
 
-    <style>*{box-sizing:border-box}body{margin:40px auto;max-width:800px;line-height:1.6;font-size:16px;color:#444;font-family:sans-serif;padding:0 10px}h1,h2,h3{line-height:1.2;font-family:sans-serif;color:#444}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:16px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}td,th{border:1px solid #444;padding:.5rem;text-align:left}@media only screen and (max-width:1450px){#back_to_top{visibility:visible!important}#toc{display:none}}.katex-display>.katex{overflow:auto hidden}.katex .katex-html>.newline{display:block;padding-bottom:.25em;padding-top:.25em}#toc{position:fixed;top:40px;right:0;padding-right:10%;line-height:1.4em;max-width:30%;margin:auto}#back_to_top{position:fixed;top:10px;right:10px;width:100px;visibility:hidden}blockquote{background:#f1f1f1;border-left:4px solid #ccc;padding-left:8px}code:not([class*=language-]){border-radius:.25rem;padding:.1rem;background-color:#f8f8f8;color:#863109}code{width:100px;overflow:auto;word-wrap:normal;white-space:pre}p+ul,p+ol,ul+ol,ol+ul{margin-top:-10px}ul,ol,li{padding-left:.5 em}a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
-
-
-
-
-
-    </style>
+    <style>img{max-width:100%}table{display:block;overflow-x:auto}.katex-display>.katex{overflow:auto hidden}#back_to_top{display:none}img[src$="profile-picture.jpg"]{width:200px}</style>
 
     
 
@@ -21,7 +15,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -48,14 +42,6 @@
 </head>
 
 <body>
-<div class="header">
-    <h1>
-        <a href="//chenbrian.ca/">chenbrian</a>
-        <div class="header-menu">
-            <a href="/"></a> &nbsp;
-        </div>
-    </h1>
-</div>
 
 <div id="content">
         
@@ -84,9 +70,9 @@
 </header>
 <article>
     <p>Back when I was still on X11 <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> , I had this little <code>bash</code> script to toggle my touchscreen on/off, since I didn&rsquo;t use it all that often except to sign the occasional PDF. And it sucked up power<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -102,8 +88,8 @@
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#080">#!/usr/bin/bash
-</span></span></span><span style="display:flex;"><span><span style="color:#080"></span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#080">#!/usr/bin/bash
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"># toggles touchscreen on x11-based systems</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#b8860b">isOn</span><span style="color:#666">=</span><span style="color:#b44">&#34;</span><span style="color:#a2f;font-weight:bold">$(</span>xinput --list-props <span style="color:#b44">&#39;SYNA2393:00 06CB:19AC&#39;</span> | grep <span style="color:#b44">&#39;Device Enabled&#39;</span><span style="color:#a2f;font-weight:bold">)</span><span style="color:#b44">&#34;</span>
@@ -123,10 +109,11 @@
 <li>Find your device ID. You can do this with <code>libinput --list-devices</code> or just <code>cat /proc/bus/input/devices</code> and look through the output for the touchscreen. For me (I have a 2018 Matebook X Pro) it&rsquo;s <code>0018:06CB:19AC.0001</code>.</li>
 </ol>
 <blockquote>
-<p>Example output from <code>cat /proc/bus/input/devices</code></p></blockquote>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<p>Example output from <code>cat /proc/bus/input/devices</code></p>
+</blockquote>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -139,7 +126,7 @@
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>...
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>...
 </span></span><span style="display:flex;"><span>B: MSC=10
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>I: Bus=0018 Vendor=06cb Product=19ac Version=0100
@@ -164,9 +151,9 @@
 </ul>
 <p><code>sudo sh -c &quot;echo '0018:06CB:19AC.0001' &gt; /sys/bus/hid/drivers/hid-multitouch/bind&quot;</code></p>
 <p>Alternatively, make a script to toggle it</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -176,8 +163,8 @@
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#080">#!/usr/bin/bash
-</span></span></span><span style="display:flex;"><span><span style="color:#080"></span><span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">[</span> -d <span style="color:#b44">&#34;/sys/bus/hid/drivers/hid-multitouch/0018:06CB:19AC.0001&#34;</span> <span style="color:#666">]</span>; <span style="color:#a2f;font-weight:bold">then</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#080">#!/usr/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">if</span> <span style="color:#666">[</span> -d <span style="color:#b44">&#34;/sys/bus/hid/drivers/hid-multitouch/0018:06CB:19AC.0001&#34;</span> <span style="color:#666">]</span>; <span style="color:#a2f;font-weight:bold">then</span>
 </span></span><span style="display:flex;"><span>  sudo sh -c <span style="color:#b44">&#34;echo &#39;0018:06CB:19AC.0001&#39; &gt; /sys/bus/hid/drivers/hid-multitouch/unbind&#34;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Turning touchscreen off!&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">else</span>
@@ -188,7 +175,8 @@
 </div>
 </div><blockquote>
 <p>This script should work for toggling other input devices as well! I have these commands <code>alias</code>&lsquo;ed in <code>~/.zshrc</code><br>
-<a href="https://askubuntu.com/questions/927022/how-can-i-disable-touchscreen-while-using-wayland">source</a> for how to unbind devices</p></blockquote>
+<a href="https://askubuntu.com/questions/927022/how-can-i-disable-touchscreen-while-using-wayland">source</a> for how to unbind devices</p>
+</blockquote>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>

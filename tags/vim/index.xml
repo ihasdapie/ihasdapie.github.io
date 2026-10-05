@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Vim on chenbrian</title>
-    <link>//chenbrian.ca/tags/vim/</link>
-    <description>Recent content in Vim on chenbrian</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 30 Sep 2023 23:42:12 -0700</lastBuildDate>
-    <atom:link href="//chenbrian.ca/tags/vim/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>ROS2 LSP Setup</title>
-      <link>//chenbrian.ca/posts/ros2_lsp_setup/</link>
-      <pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
-      <guid>//chenbrian.ca/posts/ros2_lsp_setup/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;TLDR: you want code completions while working with ROS2&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;lsp-with-clangd&#34;&gt;LSP with &lt;code&gt;clangd&lt;/code&gt;&lt;/h2&gt;&#xA;&lt;p&gt;ROS2 puts its headers into &lt;code&gt;/opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include&lt;/code&gt;.&#xA;This doesn&amp;rsquo;t work out of the box with my fairly default &lt;code&gt;clangd&lt;/code&gt; setup, and it would be &lt;em&gt;too&lt;/em&gt; easy if it just worked out of the box with &lt;code&gt;vim&lt;/code&gt;!&#xA;Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a &lt;code&gt;c_cpp_properties.json&lt;/code&gt; file.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;For vscode setup, see &lt;a href=&#34;https://www.allisonthackston.com/articles/vscode-docker-ros2.html&#34;&gt;this&lt;/a&gt; or &lt;a href=&#34;https://erdalpekel.de/?p=157&#34;&gt;this&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Vim on chenbrian</title>
+		<link>//chenbrian.ca/tags/vim/</link>
+		<description>Recent content in Vim on chenbrian</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 30 Sep 2023 23:42:12 -0700</lastBuildDate>
+		
+			<atom:link href="//chenbrian.ca/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>ROS2 LSP Setup</title>
+				<link>//chenbrian.ca/posts/ros2_lsp_setup/</link>
+				<pubDate>Tue, 04 Jan 2022 04:23:20 -0500</pubDate>
+				<guid>//chenbrian.ca/posts/ros2_lsp_setup/</guid>
+				<description>&lt;blockquote&gt;&#xA;&lt;p&gt;TLDR: you want code completions while working with ROS2&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;lsp-with-clangd&#34;&gt;LSP with &lt;code&gt;clangd&lt;/code&gt;&lt;/h2&gt;&#xA;&lt;p&gt;ROS2 puts its headers into &lt;code&gt;/opt/ros2/&amp;lt;ROS_DISTRO&amp;gt;/include&lt;/code&gt;.&#xA;This doesn&amp;rsquo;t work out of the box with my fairly default &lt;code&gt;clangd&lt;/code&gt; setup, and it would be &lt;em&gt;too&lt;/em&gt; easy if it just worked out of the box with &lt;code&gt;vim&lt;/code&gt;!&#xA;Most editors like vscode or clion have their own way of handling scenarios like this, e.g. vscode using a &lt;code&gt;c_cpp_properties.json&lt;/code&gt; file.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;For vscode setup, see &lt;a href=&#34;https://www.allisonthackston.com/articles/vscode-docker-ros2.html&#34;&gt;this&lt;/a&gt; or &lt;a href=&#34;https://erdalpekel.de/?p=157&#34;&gt;this&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

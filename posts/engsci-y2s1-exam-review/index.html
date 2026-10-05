@@ -7,23 +7,7 @@
 
     <title>Engsci Y2S1 Exam Review </title>
 
-    <style>*{box-sizing:border-box}body{margin:40px auto;max-width:800px;line-height:1.6;font-size:16px;color:#444;font-family:sans-serif;padding:0 10px}h1,h2,h3{line-height:1.2;font-family:sans-serif;color:#444}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:16px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}button{border:none;background:0 0;border-radius:5px}button:hover{background:#f1f1f1}table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}td,th{border:1px solid #444;padding:.5rem;text-align:left}@media only screen and (max-width:1450px){#back_to_top{visibility:visible!important}#toc{display:none}}.katex-display>.katex{overflow:auto hidden}.katex .katex-html>.newline{display:block;padding-bottom:.25em;padding-top:.25em}#toc{position:fixed;top:40px;right:0;padding-right:10%;line-height:1.4em;max-width:30%;margin:auto}#back_to_top{position:fixed;top:10px;right:10px;width:100px;visibility:hidden}blockquote{background:#f1f1f1;border-left:4px solid #ccc;padding-left:8px}code:not([class*=language-]){border-radius:.25rem;padding:.1rem;background-color:#f8f8f8;color:#863109}code{width:100px;overflow:auto;word-wrap:normal;white-space:pre}p+ul,p+ol,ul+ol,ol+ul{margin-top:-10px}ul,ol,li{padding-left:.5 em}a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"} 
-            body {
-                margin-left: 15%;   
-            }
-            @media only screen and (max-width: 1450px) {
-                body {
-                    margin: 40px auto;
-                }
-            }
-
-        
-
-
-
-
-
-    </style>
+    <style>img{max-width:100%}table{display:block;overflow-x:auto}.katex-display>.katex{overflow:auto hidden}#back_to_top{display:none}img[src$="profile-picture.jpg"]{width:200px}</style>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
 
@@ -39,7 +23,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0ZFV4LTG2"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -66,14 +50,6 @@
 </head>
 
 <body>
-<div class="header">
-    <h1>
-        <a href="//chenbrian.ca/">chenbrian</a>
-        <div class="header-menu">
-            <a href="/"></a> &nbsp;
-        </div>
-    </h1>
-</div>
 
 <div id="content">
         
@@ -449,16 +425,16 @@ Gated latch</p>
 
 </p>
 <p>We can load the top and bottom halves of registers into another like this:</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#080;font-style:italic">; load the top half of R1 into R0</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#080;font-style:italic">; load the top half of R1 into R0</span>
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">; and the bottom half of R3 into R0</span>
 </span></span><span style="display:flex;"><span><span style="color:#00a000">MOV</span> <span style="color:#b8860b">R0</span>, <span style="color:#b8860b">R1</span>
 </span></span><span style="display:flex;"><span><span style="color:#00a000">LSL</span> <span style="color:#b8860b">R0</span>, <span style="">#</span><span style="color:#666">16</span>
@@ -488,13 +464,13 @@ When <code>LDR</code> is used with a literal it first loads the literal into mem
 Do CMP, then apply <code>INSTR{COND}</code> or do a branch
 Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal to&rdquo;. <code>S</code> for add, subs updates N, Z, C, V flags</li>
 </ul>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#00a000">CMP</span> <span style="color:#b8860b">R0</span>, <span style="">#</span><span style="color:#666">3</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#00a000">CMP</span> <span style="color:#b8860b">R0</span>, <span style="">#</span><span style="color:#666">3</span>
 </span></span><span style="display:flex;"><span><span style="color:#00a000">ADDLT</span> <span style="color:#b8860b">R0</span>, <span style="color:#b8860b">R0</span>, <span style="">#</span><span style="color:#666">1</span> <span style="color:#080;font-style:italic">; adds 1 to R0 if R0 &lt; 3</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -502,9 +478,9 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 <p>At instruction <code>i</code>, <code>PC</code> stores the address of the next instruction at <code>i+1</code>. The current instruction can be obtained via a negative offset <code>,#-4</code>
 <code>LR</code> by convention stores what we want to return to after a subroutine.</p>
 <p>So, assuming that the first instruction of the following code chunk is stored at <code>0x0</code>,</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -512,7 +488,7 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#00a000">LDR</span> <span style="color:#b8860b">R0</span>, <span style="">=</span><span style="color:#666">0x2000</span> <span style="color:#080;font-style:italic">; 0x00000000, PC: 0x00000004</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#00a000">LDR</span> <span style="color:#b8860b">R0</span>, <span style="">=</span><span style="color:#666">0x2000</span> <span style="color:#080;font-style:italic">; 0x00000000, PC: 0x00000004</span>
 </span></span><span style="display:flex;"><span><span style="color:#00a000">MOV</span> <span style="color:#b8860b">R2</span>, <span style="">#</span><span style="color:#666">4</span>    <span style="color:#080;font-style:italic">; 0x00000004, PC: 0x00000008</span>
 </span></span><span style="display:flex;"><span><span style="color:#00a000">BL</span> <span style="color:#b8860b">ROUTINE</span> <span style="color:#080;font-style:italic">; 0x00000008, PC: 0x0000000C, LR 0x0000000C</span>
 </span></span><span style="display:flex;"><span><span style="color:#00a000">MOV</span> <span style="color:#b8860b">R2</span>, <span style="">#</span><span style="color:#666">5</span> <span style="color:#080;font-style:italic">; 0x0000000C, PC: 0x00000010</span>
@@ -547,32 +523,32 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </ul>
 <p>For example, taking the initial stack pointer value of <code>0x2000</code> we applying <code>PUSH {R0, R3, LR}</code> we get:</p>
 <table>
-  <thead>
-      <tr>
-          <th>memory</th>
-          <th>value</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>0x2000</td>
-          <td>LR</td>
-      </tr>
-      <tr>
-          <td>0x1FFC</td>
-          <td>R3</td>
-      </tr>
-      <tr>
-          <td>0x1FF8</td>
-          <td>R0</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>memory</th>
+					<th>value</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>0x2000</td>
+					<td>LR</td>
+			</tr>
+			<tr>
+					<td>0x1FFC</td>
+					<td>R3</td>
+			</tr>
+			<tr>
+					<td>0x1FF8</td>
+					<td>R0</td>
+			</tr>
+	</tbody>
 </table>
 <h4 id="recursion">Recursion</h4>
 <p>The following are assuming SP, etc has been init&rsquo;d</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -583,7 +559,7 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#a0a000">FINDSUM:</span> <span style="color:#080;font-style:italic">;; calc 1+2+...N</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#a0a000">FINDSUM:</span> <span style="color:#080;font-style:italic">;; calc 1+2+...N</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">PUSH</span> <span style="">{</span><span style="color:#b8860b">R0</span>, <span style="color:#b8860b">LR</span><span style="">}</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">CMP</span> <span style="color:#b8860b">R0</span>, <span style="">#</span><span style="color:#666">2</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">BLT</span> <span style="color:#b8860b">RETURN</span>
@@ -594,9 +570,9 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">POP</span> <span style="">{</span><span style="color:#b8860b">R0</span>, <span style="color:#b8860b">PC</span><span style="">}</span> <span style="color:#080;font-style:italic">;; puts LR into PC</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -610,7 +586,7 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#a0a000">FIB:</span> <span style="color:#080;font-style:italic">;; returns in R1</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#a0a000">FIB:</span> <span style="color:#080;font-style:italic">;; returns in R1</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">PUSH</span> <span style="">{</span><span style="color:#b8860b">R0</span>, <span style="color:#b8860b">LR</span><span style="">}</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">MOV</span> <span style="color:#b8860b">R2</span>, <span style="color:#b8860b">R0</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">CMP</span> <span style="color:#b8860b">R2</span>, <span style="">#</span><span style="color:#666">2</span> 
@@ -650,9 +626,9 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 <li>Clear interrupt in GIC</li>
 </ol>
 <p>Steps 1-5:</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -672,7 +648,7 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span>	<span style="color:#00a000">MOV</span> <span style="color:#b8860b">R0</span>, <span style="">#</span><span style="color:#666">0b</span><span style="color:#666">11010010</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span>	<span style="color:#00a000">MOV</span> <span style="color:#b8860b">R0</span>, <span style="">#</span><span style="color:#666">0b</span><span style="color:#666">11010010</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#00a000">MSR</span> <span style="color:#b8860b">CPSR</span>, <span style="color:#b8860b">R0</span> <span style="color:#080;font-style:italic">;; now in irq mode</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#00a000">LDR</span> <span style="color:#a2f">SP</span>, <span style="">=</span><span style="color:#666">0x20000</span> <span style="color:#080;font-style:italic">;; irq sp</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#00a000">MOV</span> <span style="color:#b8860b">R0</span>, <span style="">#</span><span style="color:#666">0b</span><span style="color:#666">11010011</span>
@@ -693,9 +669,9 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Steps 6, 8:</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -711,7 +687,7 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#a0a000">IRQ_HANDLER:</span> 
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#a0a000">IRQ_HANDLER:</span> 
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">PUSH</span> <span style="">{</span><span style="color:#b8860b">R0</span><span style="color:#666">-</span><span style="color:#b8860b">R5</span>, <span style="color:#b8860b">LR</span><span style="">}</span> <span style="color:#080;font-style:italic">; save registers</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">LDR</span> <span style="color:#b8860b">R4</span>, <span style="">=</span><span style="color:#b8860b">MPCORE_GIC</span> <span style="color:#b8860b">CPUIF</span> <span style="color:#080;font-style:italic">;; memory offset to get to GIC</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">LDR</span> <span style="color:#b8860b">R5</span>, [<span style="color:#b8860b">R4</span>, <span style="">#</span><span style="color:#b8860b">ICCIAR</span>] <span style="color:#080;font-style:italic">;; read interrupt ID</span>
@@ -728,9 +704,9 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Step 7:</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -742,7 +718,7 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#a0a000">KEY_ISR:</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#a0a000">KEY_ISR:</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">LDR</span> <span style="color:#b8860b">R0</span>, <span style="">=</span><span style="color:#b8860b">KEY_ADDR</span> <span style="color:#080;font-style:italic">;; base key addr</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">LDR</span> <span style="color:#b8860b">R1</span>, [<span style="color:#b8860b">R0</span>, <span style="">#</span><span style="color:#666">0xC</span>] <span style="color:#080;font-style:italic">;; edge capture register</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">STR</span> <span style="color:#b8860b">R1</span>, [<span style="color:#b8860b">R0</span>, <span style="">#</span><span style="color:#666">0xC</span>] <span style="color:#080;font-style:italic">;; clear interrupt</span>
@@ -754,9 +730,9 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">MOV</span> <span style="color:#b8860b">PC</span>, <span style="color:#b8860b">LR</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -788,7 +764,7 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#a0a000">TIMER_ISR:</span> <span style="color:#080;font-style:italic">;; ISR to increment ones, tens in memory</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#a0a000">TIMER_ISR:</span> <span style="color:#080;font-style:italic">;; ISR to increment ones, tens in memory</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">PUSH</span> <span style="">{</span><span style="color:#b8860b">R6</span><span style="color:#666">-</span><span style="color:#b8860b">R10</span>, <span style="color:#b8860b">LR</span><span style="">}</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">LDR</span> <span style="color:#b8860b">R6</span>, <span style="">=</span><span style="color:#b8860b">COUNT_ONES</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">LDR</span> <span style="color:#b8860b">R7</span>, [<span style="color:#b8860b">R6</span>]
@@ -829,34 +805,34 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </li>
 </ul>
 <table>
-  <thead>
-      <tr>
-          <th>31</th>
-          <th>30</th>
-          <th>29</th>
-          <th>28</th>
-          <th>..</th>
-          <th>7</th>
-          <th>6</th>
-          <th>5</th>
-          <th>4 .. 0</th>
-          <th></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>N</td>
-          <td>Z</td>
-          <td>C</td>
-          <td>V</td>
-          <td>..</td>
-          <td>[I]nterrupt</td>
-          <td>F</td>
-          <td>T</td>
-          <td>mode</td>
-          <td></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>31</th>
+					<th>30</th>
+					<th>29</th>
+					<th>28</th>
+					<th>..</th>
+					<th>7</th>
+					<th>6</th>
+					<th>5</th>
+					<th>4 .. 0</th>
+					<th></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>N</td>
+					<td>Z</td>
+					<td>C</td>
+					<td>V</td>
+					<td>..</td>
+					<td>[I]nterrupt</td>
+					<td>F</td>
+					<td>T</td>
+					<td>mode</td>
+					<td></td>
+			</tr>
+	</tbody>
 </table>
 <p>CPSR is saved when an interrupt occurs so that flags and mode it can be restored when the interrupt is handled.</p>
 <ul>
@@ -866,9 +842,9 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 <li>V: Signed overflow</li>
 </ul>
 <p>There are a few modes and each one of them have a different stack pointer</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -876,7 +852,7 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>FIQ: 0b10001
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>FIQ: 0b10001
 </span></span><span style="display:flex;"><span>IRQ: 0b10010
 </span></span><span style="display:flex;"><span>SVC: 0b10011
 </span></span><span style="display:flex;"><span>Monitor: 0b10110
@@ -885,9 +861,9 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>We only care about the IRQ and Supervisor modes. These can be set by loading the appropriate value into the CPSR.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -895,7 +871,7 @@ Conditions: <code>EQ, NE, GT, LT, GE, LE, S</code>, -E denotes &ldquo;or equal t
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#00a000">MOV</span> <span style="color:#b8860b">R0</span>, <span style="">#</span><span style="color:#666">0b</span><span style="color:#666">10010</span> <span style="color:#080;font-style:italic">;; irq mode</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#00a000">MOV</span> <span style="color:#b8860b">R0</span>, <span style="">#</span><span style="color:#666">0b</span><span style="color:#666">10010</span> <span style="color:#080;font-style:italic">;; irq mode</span>
 </span></span><span style="display:flex;"><span><span style="color:#00a000">MSR</span> <span style="color:#b8860b">CPSR</span>, <span style="color:#b8860b">R0</span> <span style="color:#080;font-style:italic">;; change to irq mode</span>
 </span></span><span style="display:flex;"><span><span style="color:#00a000">LDR</span> <span style="color:#a2f">SP</span> ,<span style="">=</span> <span style="color:#666">0x10000</span> <span style="color:#080;font-style:italic">;; set stack pointer</span>
 </span></span><span style="display:flex;"><span><span style="color:#00a000">MOV</span> <span style="color:#b8860b">R0</span>, <span style="">#</span><span style="color:#666">0b</span><span style="color:#666">10011</span> <span style="color:#080;font-style:italic">;; supervisor mode</span>
@@ -915,9 +891,9 @@ Takes a load value which is the starting counter value. Current value at an offs
 <li><code>I</code>: Interrupt enable</li>
 <li><code>E</code>: Starts timer</li>
 </ul>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -931,7 +907,7 @@ Takes a load value which is the starting counter value. Current value at an offs
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#a0a000">CONFIG_TIMER:</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#a0a000">CONFIG_TIMER:</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">LDR</span> <span style="color:#b8860b">R8</span>, <span style="">=</span><span style="color:#b8860b">TIMER_BASE</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">LDR</span> <span style="color:#b8860b">R0</span>, <span style="">=</span><span style="color:#666">20000000</span> <span style="color:#080;font-style:italic">;; (1/200MHz*20000000)=0.1s</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a000">STR</span> <span style="color:#b8860b">R0</span>, [<span style="color:#b8860b">R8</span>] <span style="color:#080;font-style:italic">;; set timer counter</span>
@@ -957,14 +933,14 @@ Takes a load value which is the starting counter value. Current value at an offs
 
 Apply a mask onto the relevant memory location.
 E.g. to enables <code>KEY3</code> and <code>KEY0</code>, we would:</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#00a000">LDR</span> <span style="color:#b8860b">R1</span>, <span style="">=</span><span style="color:#666">0xFF20058</span> <span style="color:#080;font-style:italic">;; int mask addr</span>
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nasm" data-lang="nasm"><span style="display:flex;"><span><span style="color:#00a000">LDR</span> <span style="color:#b8860b">R1</span>, <span style="">=</span><span style="color:#666">0xFF20058</span> <span style="color:#080;font-style:italic">;; int mask addr</span>
 </span></span><span style="display:flex;"><span><span style="color:#00a000">MOV</span> <span style="color:#b8860b">R2</span>, <span style="">#</span><span style="color:#666">0b</span><span style="color:#666">1001</span> <span style="color:#080;font-style:italic">;; we want to enable KEY3 and KEY0</span>
 </span></span><span style="display:flex;"><span><span style="color:#00a000">STR</span> <span style="color:#b8860b">R2</span>, [<span style="color:#b8860b">R1</span>] <span style="color:#080;font-style:italic">;; write mask onto enable bits</span>
 </span></span></code></pre></td></tr></table>
@@ -974,13 +950,13 @@ When using interrupts <code>LDR</code> the <code>edge capture</code> register to
 <h5 id="using-ledr">Using LEDR</h5>
 <p>To display using LEDR we just need to write the value we want to the appropriate memory location.
 Here, assuming that what we want to display is stored in <code>R1</code>:</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>LDR R2, =0xFF2000000 ;; LEDR addr
+<pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>LDR R2, =0xFF2000000 ;; LEDR addr
 </span></span><span style="display:flex;"><span>STR [R1], R2 ;; write to LEDR
 </span></span></code></pre></td></tr></table>
 </div>

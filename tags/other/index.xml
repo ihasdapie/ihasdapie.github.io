@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Other on chenbrian</title>
-    <link>//chenbrian.ca/tags/other/</link>
-    <description>Recent content in Other on chenbrian</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 26 Jan 2023 03:20:44 -0500</lastBuildDate>
-    <atom:link href="//chenbrian.ca/tags/other/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>individual.utoronto.ca</title>
-      <link>//chenbrian.ca/posts/individual.utoronto/</link>
-      <pubDate>Tue, 22 Feb 2022 02:52:00 -0500</pubDate>
-      <guid>//chenbrian.ca/posts/individual.utoronto/</guid>
-      <description>&lt;p&gt;Turns out UofT students/faculty/etc can host a free personal site (&lt;code&gt;50mb&lt;/code&gt; max) in &lt;a href=&#34;http://individual.utoronto.ca/&#34;&gt;individual.utoronto.ca&lt;/a&gt; through an until-now seemingly entirely undocumented process.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Claim it through UTORid management &lt;a href=&#34;https://www.utorid.utoronto.ca/cgi-bin/utorid/info.pl&#34;&gt;here&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Connect to it through a &lt;code&gt;ftp&lt;/code&gt; client. If you go back into the UTORid info page it will tell you what address to use for &lt;code&gt;ftp&lt;/code&gt; which looks something like &lt;code&gt;ftp://yourutorid@individual.utoronto.ca&lt;/code&gt; I just used &lt;code&gt;dolphin&lt;/code&gt;&amp;rsquo;s built in support for network drives to upload the files&lt;/li&gt;&#xA;&lt;li&gt;Upload files through ftp and enjoy!&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;I just made mine redirect back to here: &lt;a href=&#34;http://individual.utoronto.ca/chenbrian/&#34;&gt;http://individual.utoronto.ca/chenbrian/&lt;/a&gt;. Might put something more interesting up later&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>interfacing with a pi pico on linux</title>
-      <link>//chenbrian.ca/posts/pi-pico-on-linux/</link>
-      <pubDate>Thu, 27 Jan 2022 23:08:10 -0500</pubDate>
-      <guid>//chenbrian.ca/posts/pi-pico-on-linux/</guid>
-      <description>&lt;p&gt;Needed to use a Pi Pico for one of my courses (which mandated circuitpython &amp;hellip; for reasons unknown) and noticed that Adafruit&amp;rsquo;s documentation for using CircuitPython with something that wasn&amp;rsquo;t Mu Editor was not really up to par.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Install CircuitPython by copying &lt;code&gt;.uf2&lt;/code&gt; file into the Pi Pico, which can be done by just plugging it into your computer&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;python3 -m pip install circuitpython-stubs&lt;/code&gt; to get completions with your LSP of choice&lt;/li&gt;&#xA;&lt;li&gt;Connect to serial port to view &lt;code&gt;print&lt;/code&gt;s and logging info&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;find the appropriate port with &lt;code&gt;ls /dev/ttyACM*&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;connect using GNU &lt;code&gt;screen&lt;/code&gt; or whatever you like to use&#xA;&lt;ul&gt;&#xA;&lt;li&gt;e.x. &lt;code&gt;screen /dev/ttyACM0 115200&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;If you get a permissions error, add &lt;code&gt;sudo&lt;/code&gt; or add yourself to the appropriate group&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Other on chenbrian</title>
+		<link>//chenbrian.ca/tags/other/</link>
+		<description>Recent content in Other on chenbrian</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 26 Jan 2023 03:20:44 -0500</lastBuildDate>
+		
+			<atom:link href="//chenbrian.ca/tags/other/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>individual.utoronto.ca</title>
+				<link>//chenbrian.ca/posts/individual.utoronto/</link>
+				<pubDate>Tue, 22 Feb 2022 02:52:00 -0500</pubDate>
+				<guid>//chenbrian.ca/posts/individual.utoronto/</guid>
+				<description>&lt;p&gt;Turns out UofT students/faculty/etc can host a free personal site (&lt;code&gt;50mb&lt;/code&gt; max) in &lt;a href=&#34;http://individual.utoronto.ca/&#34;&gt;individual.utoronto.ca&lt;/a&gt; through an until-now seemingly entirely undocumented process.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Claim it through UTORid management &lt;a href=&#34;https://www.utorid.utoronto.ca/cgi-bin/utorid/info.pl&#34;&gt;here&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Connect to it through a &lt;code&gt;ftp&lt;/code&gt; client. If you go back into the UTORid info page it will tell you what address to use for &lt;code&gt;ftp&lt;/code&gt; which looks something like &lt;code&gt;ftp://yourutorid@individual.utoronto.ca&lt;/code&gt; I just used &lt;code&gt;dolphin&lt;/code&gt;&amp;rsquo;s built in support for network drives to upload the files&lt;/li&gt;&#xA;&lt;li&gt;Upload files through ftp and enjoy!&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;I just made mine redirect back to here: &lt;a href=&#34;http://individual.utoronto.ca/chenbrian/&#34;&gt;http://individual.utoronto.ca/chenbrian/&lt;/a&gt;. Might put something more interesting up later&amp;hellip;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>interfacing with a pi pico on linux</title>
+				<link>//chenbrian.ca/posts/pi-pico-on-linux/</link>
+				<pubDate>Thu, 27 Jan 2022 23:08:10 -0500</pubDate>
+				<guid>//chenbrian.ca/posts/pi-pico-on-linux/</guid>
+				<description>&lt;p&gt;Needed to use a Pi Pico for one of my courses (which mandated circuitpython &amp;hellip; for reasons unknown) and noticed that Adafruit&amp;rsquo;s documentation for using CircuitPython with something that wasn&amp;rsquo;t Mu Editor was not really up to par.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Install CircuitPython by copying &lt;code&gt;.uf2&lt;/code&gt; file into the Pi Pico, which can be done by just plugging it into your computer&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;python3 -m pip install circuitpython-stubs&lt;/code&gt; to get completions with your LSP of choice&lt;/li&gt;&#xA;&lt;li&gt;Connect to serial port to view &lt;code&gt;print&lt;/code&gt;s and logging info&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;find the appropriate port with &lt;code&gt;ls /dev/ttyACM*&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;connect using GNU &lt;code&gt;screen&lt;/code&gt; or whatever you like to use&#xA;&lt;ul&gt;&#xA;&lt;li&gt;e.x. &lt;code&gt;screen /dev/ttyACM0 115200&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;If you get a permissions error, add &lt;code&gt;sudo&lt;/code&gt; or add yourself to the appropriate group&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+	</channel>
 </rss>
